@@ -1,0 +1,21 @@
+version: "3"
+services:
+  experiments:
+    build: ./experiments
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    volumes:
+      - ./experiments/:/home/jovyan/
+    ports:
+      - 8820:8888
+    container_name: experiments
+
+  app:
+    build: ./app
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    volumes:
+      - ./app/:/app
+    working_dir: /app
+    container_name: app
+    command: tail -F anything
