@@ -1,14 +1,27 @@
 class NLU:
+    def __init__(self):
+        self.domains = {}
 
-  def getResponse(self, text):
-    return text
+    def handle(self, action):
+        self.domains[action.command] = action
 
-  def identifyDomain(self, text):
-    # SALUDAR, IDENTIFICAR USUARIO, MEDICINAS, BITÁCORA, NO ENTENDER...
-    return 'NO_ENTENDER'
+    def executeCommand(self, user, command):
+        action = self.domains[command]
+        return action.execute(user, command)
 
-  def getIntent(self, domain, text):
-    return ""
-  
-  def extractEntities(self, domain, intent, text):
-    return {}
+    def getResponse(self, user, text):
+        domain = self.identifyDomain(text)
+        domains = list(self.domains.keys())
+        if domain not in domains:
+          domain = domains[0]
+        action = self.domains[domain]
+        return action.execute(user, text)
+
+    def identifyDomain(self, text):
+        pass
+
+    def getIntent(self, domain, text):
+        pass
+
+    def extractEntities(self, domain, intent, text):
+        pass

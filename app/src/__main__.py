@@ -1,10 +1,11 @@
 import os
 import logging
 
-from telegram import Update
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
+from infrastructure.gpt3.gpt3 import GPT3
 from infrastructure.telegram.handler import Handler
-from domain.nlu import NLU
+from actions.default import Default
+from actions.say_hello import SayHello
+from actions.introduce_oneself import IntroduceOnself
 
 print("BOT STARTING")
 
@@ -15,5 +16,10 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 TOKEN = os.getenv("TELEGRAM_TOKEN")
-handler = Handler(TOKEN, logger, NLU)
+print(TOKEN)
+nlu = GPT3()
+nlu.handle(Default('DEFAULT'))
+nlu.handle(SayHello('SALUDAR'))
+nlu.handle(IntroduceOnself('/start'))
+handler = Handler(TOKEN, logger, nlu)
 handler.init()
