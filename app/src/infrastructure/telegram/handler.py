@@ -6,10 +6,11 @@ from domain.user import User
 
 
 class Handler:
-    def __init__(self, token, logger, nlu):
+    def __init__(self, token, logger, nlu, knowledgeRepository):
         self.token = token
         self.logger = logger
         self.nlu = nlu
+        self.knowledges = knowledgeRepository.list()
 
     def init(self):
         updater = Updater(token=self.token, use_context=True)
@@ -37,12 +38,13 @@ class Handler:
         )
         text = update["message"]["text"]
         user = User(update.effective_chat.id, update.effective_chat.first_name)
-        domain, p, response = self.nlu.getResponse(user, text)
+        domain, p, response = self.nlu.getResponse(user, self.knowledges, text)
+        # response = self.nlu.response(self.knowledges, text)
         self.log(user, domain, p, text, response)
-        status = self.nlu.identifyEmotion(user, text)
-        self.log(user, 'emotion', status['probability'], text, status['log'])
+        # status = self.nlu.identifyEmotion(user, text)
+        # self.log(user, 'emotion', status['probability'], text, status['log'])
         context.bot.send_message(chat_id=update.effective_chat.id, text=response)
-        context.bot.send_message(chat_id=update.effective_chat.id, text=status['response'])        
+        # context.bot.send_message(chat_id=update.effective_chat.id, text=status['response'])        
 
     def log(self, user, domain, p, request, response):
         text = (

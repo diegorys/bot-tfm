@@ -18,6 +18,14 @@ services:
     volumes:
       - ./app/:/app
       - ./logs/:/logs
+      - ./database/:/database
     working_dir: /app
     container_name: app
     command: tail -F anything
+
+  sqlite3:
+    image: nouchka/sqlite3:latest
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./database/:/database/

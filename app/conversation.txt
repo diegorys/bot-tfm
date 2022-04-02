@@ -1,0 +1,4 @@
+|Text|Domain|Intent|Entities|Response|
+|Hola|SALUDAR|DECIR_HOLA||Hola ${USUARIO_NOMBRE}|
+|Tengo que tomar un ibuprofeno los lunes|MEDICACION|RECORDAR_MEDICINA|medicina=ibuprofeno;cuando=lunes|Vale, el ibuprofeno los lunes|
+|A las 12:00 me toca el paracetamol|MEDICACION|RECORDAR_MEDICINA|medicina=paracetamol;cuando=12:00|De acuerdo, a las 12:00 te tienes que tomar el paracetamol|
