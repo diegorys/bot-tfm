@@ -5,9 +5,10 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, Callb
 
 class Handler:
 
-  def __init__(self, token, logger):
+  def __init__(self, token, logger, nlu):
     self.token = token
     self.logger = logger
+    self.nlu = nlu
   
   def init(self):
     updater = Updater(token=self.token, use_context=True)
