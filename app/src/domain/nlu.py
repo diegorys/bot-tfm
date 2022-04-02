@@ -1,31 +1,28 @@
 class NLU:
-    def __init__(self):
-        self.domains = {}
+    def __init__(self, knowledgeRepository):
+        self.intents = {}
+        self.knowledgeRepository = knowledgeRepository
 
     def handle(self, action):
-        self.domains[action.command] = action
+        self.intents[action.command] = action
 
     def executeCommand(self, user, command):
-        action = self.domains[command]
+        action = self.intents[command]
         return action.execute(user, command)
 
-    def getResponse(self, user, knowledges, text):
-        domain, p = self.identifyDomain(knowledges, text)
-        print('DOMINIO', domain)
-        domains = list(self.domains.keys())
-        if domain not in domains:
-            domain = domains[0]
-        action = self.domains[domain]
-        return domain, p, action.execute(user, text)
+    def getResponse(self, user, text):
+        domain, p = self.identifyDomain(text)
+        print(f"Dominio {domain}")
+        intent, p = self.identifyIntent(domain, text)
+        print(f"Intención {intent}")
+        response, p = self.identifyResponse(intent, text)
+        return domain, intent, p, response
 
-    def identifyDomain(self, knowledges, text):
+    def identifyDomain(self, text):
         pass
 
-    def identifyEmotion(self, user, text):
+    def identifyIntent(self, domain, text):
         pass
 
-    def getIntent(self, domain, text):
-        pass
-
-    def extractEntities(self, domain, intent, text):
+    def identifyResponse(self, intent, text):
         pass
