@@ -28,7 +28,7 @@ class Handler:
         user = User(update.effective_chat.id, update.effective_chat.first_name)
         response = f"Hola {update.effective_user.first_name}"
         response = self.nlu.executeCommand(user, "/start")
-        self.log(user, "/start", "", response)
+        self.log(user, "/start", 100, "", response)
         context.bot.send_message(chat_id=update.effective_chat.id, text=response)
 
     def process_message(self, update: Update, context: CallbackContext):
@@ -37,9 +37,29 @@ class Handler:
         )
         text = update["message"]["text"]
         user = User(update.effective_chat.id, update.effective_chat.first_name)
-        domain, response = self.nlu.getResponse(user, text)
-        self.log(user, domain, text, response)
+        domain, p, response = self.nlu.getResponse(user, text)
+        self.log(user, domain, p, text, response)
+        status = self.nlu.identifyEmotion(user, text)
+        self.log(user, 'emotion', status['probability'], text, status['log'])
         context.bot.send_message(chat_id=update.effective_chat.id, text=response)
+        context.bot.send_message(chat_id=update.effective_chat.id, text=status['response'])        
 
-    def log(self, user, domain, request, response):
-        print(str(user.id) + "|" + user.name + "|" + domain + "|" + request + "|" + response)
+    def log(self, user, domain, p, request, response):
+        text = (
+            str(user.id)
+            + "|"
+            + user.name
+            + "|"
+            + domain
+            + "|"
+            + str(p)
+            + "|"
+            + request
+            + "|"
+            + response
+            + "\n"
+        )
+        print(text)
+        f = open("/logs/log.txt", "a")
+        f.write(text)
+        f.close()

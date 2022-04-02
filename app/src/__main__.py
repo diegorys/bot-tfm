@@ -6,6 +6,7 @@ from infrastructure.telegram.handler import Handler
 from actions.default import Default
 from actions.say_hello import SayHello
 from actions.introduce_oneself import IntroduceOnself
+from actions.remember_medicine import RememberMedicine
 
 print("BOT STARTING")
 
@@ -20,6 +21,7 @@ print(TOKEN)
 nlu = GPT3()
 nlu.handle(Default('DEFAULT'))
 nlu.handle(SayHello('SALUDAR'))
+nlu.handle(RememberMedicine('RECORDAR_MEDICINA'))
 nlu.handle(IntroduceOnself('/start'))
 handler = Handler(TOKEN, logger, nlu)
 handler.init()

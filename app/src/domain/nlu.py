@@ -10,14 +10,17 @@ class NLU:
         return action.execute(user, command)
 
     def getResponse(self, user, text):
-        domain = self.identifyDomain(text)
+        domain, p = self.identifyDomain(text)
         domains = list(self.domains.keys())
         if domain not in domains:
-          domain = domains[0]
+            domain = domains[0]
         action = self.domains[domain]
-        return domain, action.execute(user, text)
+        return domain, p, action.execute(user, text)
 
     def identifyDomain(self, text):
+        pass
+
+    def identifyEmotion(self, user, text):
         pass
 
     def getIntent(self, domain, text):
