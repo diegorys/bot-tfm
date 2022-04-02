@@ -15,7 +15,7 @@ class NLU:
         if domain not in domains:
           domain = domains[0]
         action = self.domains[domain]
-        return action.execute(user, text)
+        return domain, action.execute(user, text)
 
     def identifyDomain(self, text):
         pass
