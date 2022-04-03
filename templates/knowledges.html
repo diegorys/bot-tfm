@@ -1,0 +1,33 @@
+<!doctype html>
+<title>Knowledges</title>
+<section class="content">
+  <header>
+    {% block header %}{% endblock %}
+    <h1>Knowledges</h1>
+  </header>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Texto del usuario</th>
+        <th>Dominio</th>
+        <th>Intención</th>
+        <!-- <th>Probabilidad</th> -->
+        <th>Comando</th>
+        <th>Respuesta</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for knowledge in knowledges %}
+      <tr>
+        <td>{{ knowledge.text }}</td>
+        <td>{{ knowledge.domain }}</td>
+        <td>{{ knowledge.intent }}</td>
+        <!-- <td>{{ knowledge.probability }}</td> -->
+        <td>{{ knowledge.entities }}</td>
+        <td>{{ knowledge.response }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% block content %}{% endblock %}
+</section>

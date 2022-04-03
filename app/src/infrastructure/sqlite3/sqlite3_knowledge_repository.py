@@ -10,7 +10,7 @@ class SQLite3KnowledgeRepository(KnowledgeRepository):
         cur = con.cursor()
         cur.execute(
             """CREATE TABLE IF NOT EXISTS knowledge
-               (input text, domain text, intent text, entities text, response text)"""
+               (id INTEGER PRIMARY KEY AUTOINCREMENT, input TEXT, domain TEXT, intent TEXT, entities TEXT, response TEXT)"""
         )
         con.commit()
         con.close()

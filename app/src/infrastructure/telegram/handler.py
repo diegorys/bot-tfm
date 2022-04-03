@@ -3,6 +3,7 @@ import os
 from telegram import Update
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 from domain.user import User
+from domain.knowledge import Knowledge
 
 
 class Handler:
@@ -29,8 +30,8 @@ class Handler:
         user = User(update.effective_chat.id, update.effective_chat.first_name)
         response = f"Hola {update.effective_user.first_name}"
         response = self.nlu.executeCommand(user, "/start")
-        self.log(user, "/start", "", 100, "", response)
-        context.bot.send_message(chat_id=update.effective_chat.id, text=response)
+        self.log("", response)
+        context.bot.send_message(chat_id=update.effective_chat.id, text=response.text)
 
     def process_message(self, update: Update, context: CallbackContext):
         self.logger.info(
@@ -38,30 +39,33 @@ class Handler:
         )
         text = update["message"]["text"]
         user = User(update.effective_chat.id, update.effective_chat.first_name)
-        intent, p, response = self.nlu.getResponse(text)
-        self.log(user, intent, intent, p, text, response)
-        # status = self.nlu.identifyEmotion(user, text)
-        # self.log(user, 'emotion', status['probability'], text, status['log'])
-        context.bot.send_message(chat_id=update.effective_chat.id, text=response)
-        # context.bot.send_message(chat_id=update.effective_chat.id, text=status['response'])
+        response = self.nlu.getResponse(user, text)
+        self.log(text, response)
+        context.bot.send_message(chat_id=update.effective_chat.id, text=response.text)
 
-    def log(self, user, domain, intent, p, request, response):
+    def log(self, request, response):
         text = (
-            str(user.id)
+            str(response.user.id)
             + "|"
-            + user.name
+            + response.user.name
             + "|"
-            + domain
+            + response.domain
             + "|"
-            + intent
+            + response.intent
             + "|"
-            + str(p)
+            + str(response.probability)
             + "|"
             + request
             + "|"
-            + response
+            + response.text
+            + "|"
+            + response.command
             + "\n"
         )
+        knowledge = Knowledge(
+            request, response.domain, response.intent, response.command, response.text
+        )
+        self.knowledgeRepository.save(knowledge)
         print(text)
         f = open("/logs/log.txt", "a")
         f.write(text)
