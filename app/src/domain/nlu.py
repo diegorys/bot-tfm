@@ -10,13 +10,8 @@ class NLU:
         action = self.intents[command]
         return action.execute(user, command)
 
-    def getResponse(self, user, text):
-        domain, p = self.identifyDomain(text)
-        print(f"Dominio {domain}")
-        intent, p = self.identifyIntent(domain, text)
-        print(f"Intención {intent}")
-        response, p = self.identifyResponse(intent, text)
-        return domain, intent, p, response
+    def getResponse(self, text):
+        pass
 
     def identifyDomain(self, text):
         pass
@@ -25,4 +20,7 @@ class NLU:
         pass
 
     def identifyResponse(self, intent, text):
+        pass
+
+    def generateText(self, request):
         pass

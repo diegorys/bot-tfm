@@ -38,8 +38,8 @@ class Handler:
         )
         text = update["message"]["text"]
         user = User(update.effective_chat.id, update.effective_chat.first_name)
-        domain, intent, p, response = self.nlu.getResponse(user, text)
-        self.log(user, domain, intent, p, text, response)
+        intent, p, response = self.nlu.getResponse(text)
+        self.log(user, intent, intent, p, text, response)
         # status = self.nlu.identifyEmotion(user, text)
         # self.log(user, 'emotion', status['probability'], text, status['log'])
         context.bot.send_message(chat_id=update.effective_chat.id, text=response)

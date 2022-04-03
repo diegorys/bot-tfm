@@ -2,7 +2,7 @@ import os
 import logging
 from domain.knowledge import Knowledge
 
-from infrastructure.gpt3.gpt3 import GPT3
+from infrastructure.gpt3.gpt3_nlu import GPT3NLU
 from infrastructure.telegram.handler import Handler
 from infrastructure.sqlite3.sqlite3_knowledge_repository import SQLite3KnowledgeRepository
 from actions.default import Default
@@ -51,7 +51,7 @@ for knowledge in knowledges:
 
 TOKEN = os.getenv("TELEGRAM_TOKEN")
 print(TOKEN)
-nlu = GPT3(knowledgeRepository)
+nlu = GPT3NLU(knowledgeRepository)
 nlu.handle(Default("DEFAULT"))
 nlu.handle(SayHello("SALUDAR"))
 nlu.handle(RememberMedicine("RECORDAR_MEDICINA"))
