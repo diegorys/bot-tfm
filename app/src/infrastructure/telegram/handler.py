@@ -63,9 +63,9 @@ class Handler:
             + "\n"
         )
         knowledge = Knowledge(
-            request, response.domain, response.intent, response.command, response.text
+            response.user.id, response.user.name, request, response.domain, response.intent, response.command, response.text
         )
-        self.knowledgeRepository.save(knowledge)
+        self.knowledgeRepository.save(response.user, knowledge)
         print(text)
         f = open("/logs/log.txt", "a")
         f.write(text)

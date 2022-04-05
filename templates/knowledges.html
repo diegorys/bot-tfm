@@ -8,6 +8,8 @@
   <table border="1">
     <thead>
       <tr>
+        <th>ID</th>
+        <th>Nombre de usuario</th>
         <th>Texto del usuario</th>
         <th>Dominio</th>
         <th>Intención</th>
@@ -19,6 +21,8 @@
     <tbody>
       {% for knowledge in knowledges %}
       <tr>
+        <td>{{ knowledge.userid }}</td>
+        <td>{{ knowledge.username }}</td>
         <td>{{ knowledge.text }}</td>
         <td>{{ knowledge.domain }}</td>
         <td>{{ knowledge.intent }}</td>

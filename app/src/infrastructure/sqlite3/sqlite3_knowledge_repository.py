@@ -10,13 +10,14 @@ class SQLite3KnowledgeRepository(KnowledgeRepository):
         cur = con.cursor()
         cur.execute(
             """CREATE TABLE IF NOT EXISTS knowledge
-               (id INTEGER PRIMARY KEY AUTOINCREMENT, input TEXT, domain TEXT, intent TEXT, entities TEXT, response TEXT)"""
+               (userid INTEGER, username TEXT, input TEXT, domain TEXT, intent TEXT, entities TEXT, response TEXT)"""
         )
         con.commit()
         con.close()
 
-    def save(self, knowledge):
-        query = f"INSERT INTO knowledge VALUES ('{knowledge.text}','{knowledge.domain}','{knowledge.intent}','{knowledge.entities}', '{knowledge.response}')"
+    def save(self, user, knowledge):
+        # query = f"INSERT INTO knowledge VALUES ('{knowledge.text}','{knowledge.domain}','{knowledge.intent}','{knowledge.entities}', '{knowledge.response}')"
+        query = f"INSERT INTO knowledge VALUES ({user.id}, '{user.name}', '{knowledge.text}','{knowledge.domain}','{knowledge.intent}','{knowledge.entities}', '{knowledge.response}')"
         con = sqlite3.connect("/database/" + self.name + ".db")
         cur = con.cursor()
         cur.execute(query)
@@ -31,7 +32,7 @@ class SQLite3KnowledgeRepository(KnowledgeRepository):
         knowledges = []
         for row in rows:
             data = list(row)
-            knowledge = Knowledge(data[0], data[1], data[2], data[3], data[4])
+            knowledge = Knowledge(data[0], data[1], data[2], data[3], data[4], data[5], data[6])
             knowledges.append(knowledge)
         con.close()
         return knowledges
@@ -44,7 +45,7 @@ class SQLite3KnowledgeRepository(KnowledgeRepository):
         knowledges = []
         for row in rows:
             data = list(row)
-            knowledge = Knowledge(data[0], data[1], data[2], data[3], data[4])
+            knowledge = Knowledge(data[0], data[1], data[2], data[3], data[4], data[5], data[6])
             knowledges.append(knowledge)
         con.close()
         return knowledges
@@ -57,7 +58,7 @@ class SQLite3KnowledgeRepository(KnowledgeRepository):
         knowledges = []
         for row in rows:
             data = list(row)
-            knowledge = Knowledge(data[0], data[1], data[2], data[3], data[4])
+            knowledge = Knowledge(data[0], data[1], data[2], data[3], data[4], data[5], data[6])
             knowledges.append(knowledge)
         con.close()
         return knowledges
