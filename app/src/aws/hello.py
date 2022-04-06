@@ -7,7 +7,7 @@ openai.api_key = (
 )
 
 
-def hello(event, context):
+def handle(event, context):
     request = event["request"]
     print(f"User input: {request}")
     openAIResponse = openai.Completion.create(

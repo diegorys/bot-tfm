@@ -65,8 +65,10 @@ package:
     - "**/*"
   include:
     - "*.py"
+    - "actions/*.py"
     - "aws/*.py"
     - "domain/*.py"
+    - "infrastructure/**/*.py"
     - openai
 
 functions:
@@ -85,11 +87,15 @@ functions:
       include:
         - aws/dialogs.py
   hello:
-    handler: aws/handler.hello
+    handler: aws/hello.handle
     package:
       include:
         - aws/handler.py
         - openai
+  telegram:
+    handler: aws/telegram.handle
+    include:
+      - infrastructure/**/*.py
 
 #    Define function environment variables here
 #    environment:
