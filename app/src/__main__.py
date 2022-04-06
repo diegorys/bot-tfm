@@ -1,6 +1,6 @@
 import os
 import logging
-from domain.knowledge import Knowledge
+from app.src.domain.dialog import Knowledge
 
 from infrastructure.gpt3.gpt3_nlu import GPT3NLU
 from infrastructure.telegram.handler import Handler

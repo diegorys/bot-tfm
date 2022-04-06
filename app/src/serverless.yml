@@ -23,6 +23,8 @@ frameworkVersion: "3"
 provider:
   name: aws
   runtime: python3.8
+  environment:
+    DIALOGS_TABLE: "${self:service}-${opt:stage, self:provider.stage}-dialogs"
 
 plugins:
   - serverless-python-requirements
@@ -30,35 +32,21 @@ plugins:
 stage: test
 region: eu-west-1
 
-# you can add statements to the Lambda function's IAM Role here
-#  iam:
-#    role:
-#      statements:
-#        - Effect: "Allow"
-#          Action:
-#            - "s3:ListBucket"
-#          Resource: { "Fn::Join" : ["", ["arn:aws:s3:::", { "Ref" : "ServerlessDeploymentBucket" } ] ]  }
-#        - Effect: "Allow"
-#          Action:
-#            - "s3:PutObject"
-#          Resource:
-#            Fn::Join:
-#              - ""
-#              - - "arn:aws:s3:::"
-#                - "Ref" : "ServerlessDeploymentBucket"
-#                - "/*"
+# iamRoleStatements:
+#   - Effect: Allow
+#     Action:
+#       - dynamodb:Query
+#       - dynamodb:Scan
+#       - dynamodb:GetItem
+#       - dynamodb:PutItem
+#       - dynamodb:UpdateItem
+#       - dynamodb:DeleteItem
+#     Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.EXPENSES_TABLE}"
 
 # you can define service wide environment variables here
-#  environment:
-#    variable1: value1
-
-# you can add packaging information here
-#package:
-#  patterns:
-#    - '!exclude-me.py'
-#    - '!exclude-me-dir/**'
-#    - include-me.py
-#    - include-me-dir/**
+# environment:
+#   OPENAI_API_KEY: x
+#   TELEGRAM_TOKEN: x
 
 package:
   exclude:
@@ -99,19 +87,27 @@ functions:
       - httpApi:
           path: /telegram
           method: post
-
 #    Define function environment variables here
 #    environment:
 #      variable2: value2
 
 # you can add CloudFormation resource templates here
-#resources:
-#  Resources:
-#    NewResource:
-#      Type: AWS::S3::Bucket
-#      Properties:
-#        BucketName: my-new-bucket
-#  Outputs:
-#     NewOutput:
-#       Description: "Description for the output"
-#       Value: "Some output value"
+resources:
+  Resources:
+    DialogsTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:provider.environment.DIALOGS_TABLE}
+        AttributeDefinitions:
+          - AttributeName: userid
+            AttributeType: S
+          - AttributeName: date
+            AttributeType: S
+        KeySchema:
+          - AttributeName: userid
+            KeyType: HASH
+          - AttributeName: date
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1

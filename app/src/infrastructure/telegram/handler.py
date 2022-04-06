@@ -3,7 +3,7 @@ import os
 from telegram import Update
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 from domain.user import User
-from domain.knowledge import Knowledge
+from app.src.domain.dialog import Knowledge
 
 
 class Handler:

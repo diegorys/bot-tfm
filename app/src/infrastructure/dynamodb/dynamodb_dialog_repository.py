@@ -1,9 +1,9 @@
 import sqlite3
-from app.src.domain.dialog import Knowledge
-from app.src.domain.dialog_repository import KnowledgeRepository
+from app.src.domain.dialog import Dialog
+from app.src.domain.dialog_repository import DialogRepository
 
 
-class SQLite3KnowledgeRepository(KnowledgeRepository):
+class DynamoDBDialogRepository(DialogRepository):
     def __init__(self, name):
         self.name = name
         con = sqlite3.connect("/database/" + name + ".db")
@@ -32,7 +32,7 @@ class SQLite3KnowledgeRepository(KnowledgeRepository):
         knowledges = []
         for row in rows:
             data = list(row)
-            knowledge = Knowledge(data[0], data[1], data[2], data[3], data[4], data[5], data[6])
+            knowledge = Dialog(data[0], data[1], data[2], data[3], data[4], data[5], data[6])
             knowledges.append(knowledge)
         con.close()
         return knowledges
@@ -45,7 +45,7 @@ class SQLite3KnowledgeRepository(KnowledgeRepository):
         knowledges = []
         for row in rows:
             data = list(row)
-            knowledge = Knowledge(data[0], data[1], data[2], data[3], data[4], data[5], data[6])
+            knowledge = Dialog(data[0], data[1], data[2], data[3], data[4], data[5], data[6])
             knowledges.append(knowledge)
         con.close()
         return knowledges
@@ -58,7 +58,7 @@ class SQLite3KnowledgeRepository(KnowledgeRepository):
         knowledges = []
         for row in rows:
             data = list(row)
-            knowledge = Knowledge(data[0], data[1], data[2], data[3], data[4], data[5], data[6])
+            knowledge = Dialog(data[0], data[1], data[2], data[3], data[4], data[5], data[6])
             knowledges.append(knowledge)
         con.close()
         return knowledges

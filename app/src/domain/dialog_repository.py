@@ -1,4 +1,4 @@
-class KnowledgeRepository:
+class DialogRepository:
     def save(self, knowledge):
         pass
 
