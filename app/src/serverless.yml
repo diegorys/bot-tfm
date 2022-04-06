@@ -70,6 +70,7 @@ package:
     - "domain/*.py"
     - "infrastructure/**/*.py"
     - openai
+    - python-telegram-bot
 
 functions:
   ping:
@@ -94,8 +95,10 @@ functions:
         - openai
   telegram:
     handler: aws/telegram.handle
-    include:
-      - infrastructure/**/*.py
+    events:
+      - httpApi:
+          path: /telegram
+          method: post
 
 #    Define function environment variables here
 #    environment:
