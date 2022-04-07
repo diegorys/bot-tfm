@@ -1,23 +1,4 @@
-# Welcome to Serverless!
-#
-# This file is the main config file for your service.
-# It's very minimal at this point and uses default values.
-# You can always add more config options for more control.
-# We've included some commented out config examples here.
-# Just uncomment any of them to get that config option.
-#
-# For full config options, check the docs:
-#    docs.serverless.com
-#
-# Happy Coding!
-
 service: tfm
-# app and org for use with dashboard.serverless.com
-#app: your-app-name
-#org: your-org-name
-
-# You can pin your service to only deploy with a specific Serverless version
-# Check out our docs for more details
 frameworkVersion: "3"
 
 provider:
@@ -32,18 +13,21 @@ plugins:
 stage: test
 region: eu-west-1
 
-# iamRoleStatements:
-#   - Effect: Allow
-#     Action:
-#       - dynamodb:Query
-#       - dynamodb:Scan
-#       - dynamodb:GetItem
-#       - dynamodb:PutItem
-#       - dynamodb:UpdateItem
-#       - dynamodb:DeleteItem
-#     Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.EXPENSES_TABLE}"
+iamRoleStatements:
+  - Effect: Allow
+    Action:
+      - dynamodb:Query
+      - dynamodb:Scan
+      - dynamodb:GetItem
+      - dynamodb:PutItem
+      - dynamodb:UpdateItem
+      - dynamodb:DeleteItem
+      - dynamodb:DescribeStream
+      - dynamodb:GetRecords
+      - dynamodb:GetShardIterator
+      - dynamodb:ListStreams
+    Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:${AWS::AccountId}:table/${self:provider.environment.DIALOGS_TABLE}"
 
-# you can define service wide environment variables here
 # environment:
 #   OPENAI_API_KEY: x
 #   TELEGRAM_TOKEN: x
@@ -57,6 +41,7 @@ package:
     - "aws/*.py"
     - "domain/*.py"
     - "infrastructure/**/*.py"
+    - boto3
     - openai
     - python-telegram-bot
 
@@ -87,27 +72,24 @@ functions:
       - httpApi:
           path: /telegram
           method: post
-#    Define function environment variables here
-#    environment:
-#      variable2: value2
-
-# you can add CloudFormation resource templates here
+custom:
+  pythonRequirements:
+    zip: true
 resources:
   Resources:
     DialogsTable:
       Type: AWS::DynamoDB::Table
+      DeletionPolicy: Retain
       Properties:
         TableName: ${self:provider.environment.DIALOGS_TABLE}
         AttributeDefinitions:
-          - AttributeName: userid
-            AttributeType: S
           - AttributeName: date
             AttributeType: S
         KeySchema:
-          - AttributeName: userid
-            KeyType: HASH
           - AttributeName: date
             KeyType: HASH
         ProvisionedThroughput:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
+        StreamSpecification:
+          StreamViewType: NEW_AND_OLD_IMAGES
