@@ -53,18 +53,18 @@ def handle(event, context):
         #     response = nlu.executeCommand(user, "/start")
         # else:
         #     response = getResponse(user, text)
-        # dialog = Dialog(
-        #     user.id,
-        #     user.name,
-        #     text,
-        #     response.domain,
-        #     response.intent,
-        #     response.command,
-        #     response.text,
-        #     str(update.message.date)
-        # )
-        # repository = DynamoDBDialogRepository('dialog')
-        # repository.save(dialog)
+        dialog = Dialog(
+            user.id,
+            user.name,
+            text,
+            response.domain,
+            response.intent,
+            response.command,
+            response.text,
+            str(update.message.date)
+        )
+        repository = DynamoDBDialogRepository()
+        repository.save(dialog)
         bot.sendMessage(chat_id=chat_id, text=output)
         print("Message sent")
 

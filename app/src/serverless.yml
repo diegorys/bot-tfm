@@ -6,27 +6,25 @@ provider:
   runtime: python3.8
   environment:
     DIALOGS_TABLE: "${self:service}-${opt:stage, self:provider.stage}-dialogs"
+  iam:
+    role:
+      statements:
+      - Effect: Allow
+        Action:
+          - dynamodb:Query
+          - dynamodb:Scan
+          - dynamodb:GetItem
+          - dynamodb:PutItem
+          - dynamodb:UpdateItem
+          - dynamodb:DeleteItem
+          - dynamodb:DescribeStream
+          - dynamodb:GetRecords
+          - dynamodb:GetShardIterator
+          - dynamodb:ListStreams
+        Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.DIALOGS_TABLE}"
 
 plugins:
   - serverless-python-requirements
-
-stage: test
-region: eu-west-1
-
-iamRoleStatements:
-  - Effect: Allow
-    Action:
-      - dynamodb:Query
-      - dynamodb:Scan
-      - dynamodb:GetItem
-      - dynamodb:PutItem
-      - dynamodb:UpdateItem
-      - dynamodb:DeleteItem
-      - dynamodb:DescribeStream
-      - dynamodb:GetRecords
-      - dynamodb:GetShardIterator
-      - dynamodb:ListStreams
-    Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:${AWS::AccountId}:table/${self:provider.environment.DIALOGS_TABLE}"
 
 # environment:
 #   OPENAI_API_KEY: x
@@ -57,6 +55,7 @@ functions:
       - httpApi:
           path: /admin/dialogs
           method: get
+          cors: true
     package:
       include:
         - aws/dialogs.py
@@ -78,18 +77,16 @@ custom:
 resources:
   Resources:
     DialogsTable:
-      Type: AWS::DynamoDB::Table
+      Type: 'AWS::DynamoDB::Table'
       DeletionPolicy: Retain
       Properties:
         TableName: ${self:provider.environment.DIALOGS_TABLE}
         AttributeDefinitions:
-          - AttributeName: date
+          - AttributeName: id
             AttributeType: S
         KeySchema:
-          - AttributeName: date
+          - AttributeName: id
             KeyType: HASH
         ProvisionedThroughput:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
-        StreamSpecification:
-          StreamViewType: NEW_AND_OLD_IMAGES
