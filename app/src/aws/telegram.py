@@ -1,7 +1,7 @@
 try:
-  import unzip_requirements
+    import unzip_requirements
 except ImportError:
-  pass
+    pass
 
 import json
 import openai
@@ -41,31 +41,31 @@ def handle(event, context):
     method = event.get("requestContext")["http"]["method"]
     if method == "POST" and event.get("body"):
         update = telegram.Update.de_json(json.loads(event.get("body")), bot)
-        print(f"Message received at {update.message.date}")
+        print(f"Message {update.message.message_id} received at {update.message.date}")
         print(event.get("body"))
         chat_id = update.message.chat.id
         text = update.message.text
+        output = f"{update.message.message_id}: {text}"
         user = User(update.effective_chat.id, update.effective_chat.first_name)
 
-        response = Response(user, "vale")
+        response = Response(user, text)
         # if text == "/start":
         #     response = nlu.executeCommand(user, "/start")
         # else:
         #     response = getResponse(user, text)
-        bot.sendMessage(chat_id=chat_id, text=response.text)
-        dialog = Dialog(
-            user.id,
-            user.name,
-            text,
-            response.domain,
-            response.intent,
-            response.command,
-            response.text,
-            str(update.message.date)
-        )
-        repository = DynamoDBDialogRepository('dialog')
-        repository.save(dialog)
-        bot.sendMessage(chat_id=chat_id, text=response.text)
+        # dialog = Dialog(
+        #     user.id,
+        #     user.name,
+        #     text,
+        #     response.domain,
+        #     response.intent,
+        #     response.command,
+        #     response.text,
+        #     str(update.message.date)
+        # )
+        # repository = DynamoDBDialogRepository('dialog')
+        # repository.save(dialog)
+        bot.sendMessage(chat_id=chat_id, text=output)
         print("Message sent")
 
         return OK_RESPONSE

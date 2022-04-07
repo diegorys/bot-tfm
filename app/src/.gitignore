@@ -18,4 +18,5 @@ var/
 
 # Serverless directories
 .serverless
+.requirements.zip
 node_modules
