@@ -45,14 +45,14 @@ def handle(event, context):
         print(event.get("body"))
         chat_id = update.message.chat.id
         text = update.message.text
-        output = f"{update.message.message_id}: {text}"
         user = User(update.effective_chat.id, update.effective_chat.first_name)
 
-        response = Response(user, text)
-        # if text == "/start":
-        #     response = nlu.executeCommand(user, "/start")
-        # else:
-        #     response = getResponse(user, text)
+        if text == "/start":
+            response = nlu.executeCommand(user, "/start")
+        elif not hasCredits(user):
+            response = generateNoCreditsText(user)
+        else:
+            response = getResponse(user, text)
         dialog = Dialog(
             user.id,
             user.name,
@@ -65,7 +65,7 @@ def handle(event, context):
         )
         repository = DynamoDBDialogRepository()
         repository.save(dialog)
-        bot.sendMessage(chat_id=chat_id, text=output)
+        bot.sendMessage(chat_id=chat_id, text=response.text)
         print("Message sent")
 
         return OK_RESPONSE
@@ -78,6 +78,13 @@ def getResponse(user, text):
     nlu.handle(RegisterStatus("REGISTRAR_ESTADO"))
     nlu.handle(IntroduceOnself("/start"))
     response = nlu.getResponse(user, text)
-    # self.log(text, response)
-    # context.bot.send_message(chat_id=update.effective_chat.id, text=response.text)
+    print(text, response)
+    return response
+
+def hasCredits(user):
+    return False
+
+def generateNoCreditsText(user):
+    text = f"Por limitaciones técnicas, no podemos hablar más por hoy. Mañana seguimos. Muchas gracias!"
+    response = Response(user, text)
     return response

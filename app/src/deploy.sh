@@ -1,0 +1,1 @@
+sls deploy --stage $1 --region eu-west-1
