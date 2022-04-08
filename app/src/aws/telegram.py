@@ -45,6 +45,8 @@ def handle(event, context):
             nlu = GPT3NLU()
             nlu.handle(IntroduceOnself("/start"))
             response = nlu.executeCommand(user, "/start")
+        elif isInModeTFM():
+            response = generateTFMText(user)
         elif not isServiceAvailable():
             response = generateUnavailableService(user)
         elif not hasCredits(user):
@@ -82,6 +84,11 @@ def getResponse(user, text):
 def isServiceAvailable():
     return False
 
+def generateUnavailableService(user):
+    text = f"Estoy descansando, volveré más adelante. Muchas gracias!"
+    response = Response(user, text)
+    return response
+
 def hasCredits(user):
     return True
 
@@ -90,7 +97,10 @@ def generateNoCreditsText(user):
     response = Response(user, text)
     return response
 
-def generateUnavailableService(user):
-    text = f"Estoy descansando, volveré más adelante. Muchas gracias!"
+def isInModeTFM():
+    return True
+
+def generateTFMText(user):
+    text = f"He registrado tu necesidad, gracias por colaborar en el experimento! Próximamente aprenderé a responderte."
     response = Response(user, text)
     return response
