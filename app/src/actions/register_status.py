@@ -1,17 +1,21 @@
+import os
 import openai
 from domain.response import Response
+
+GPT3_ENGINE = os.environ["GPT3_ENGINE"]
 
 
 class RegisterStatus:
     def __init__(self, intent):
-        self.domain = 'status'
+        self.domain = "status"
         self.intent = intent
 
     def execute(self, user, text):
         openAIResponse = openai.Completion.create(
-            engine="text-davinci-002",
+            engine=GPT3_ENGINE,
             prompt="Convierte este texto a un comando.\nEjemplo: Estoy solo\nComando: registrar-estado estado='soledad'\n\nEjemplo: Me siento triste\nComando: registrar-estado estado='tristeza'\n\nViva la alegría\n\nComando: registrar-estado estado='alegría'\n\n"
-            + text,
+            + text
+            + ".\nComando:",
             temperature=0,
             max_tokens=100,
             top_p=1,
@@ -29,7 +33,7 @@ class RegisterStatus:
 
     def responseStatusAdded(self, request):
         response = openai.Completion.create(
-            engine="text-davinci-002",
+            engine=GPT3_ENGINE,
             prompt="A partir de un comando de registro de estado, se genera un texto para responder al usuario.\n\nCommand: registrar-estado estado='tristeza'\nAI: Entiendo que estás triste, ¿qué puedo hacer por ti?\nCommand: registrar-estado estado='soledad'\nAI: Yo estoy contigo, no te preocupes\nCommand: registrar-estado estado='alegría'\nAI: ¡Qué bien que estés alegre!\nCommand: "
             + request
             + "\nAI:",

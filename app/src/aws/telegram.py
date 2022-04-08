@@ -3,6 +3,7 @@ try:
 except ImportError:
     pass
 
+import os
 import json
 import openai
 import telegram
@@ -17,20 +18,13 @@ from domain.user import User
 from infrastructure.gpt3.gpt3_nlu import GPT3NLU
 from infrastructure.dynamodb.dynamodb_dialog_repository import DynamoDBDialogRepository
 
-# openai.api_key = (
-#     "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"
-#     # "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"  # os.getenv("OPENAI_API_KEY")
-# )
-# TELEGRAM_TOKEN = os.environ.get('TELEGRAM_TOKEN')
-TELEGRAM_TOKEN = "***REMOVED***"
+TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
 
 OK_RESPONSE = {
     "statusCode": 200,
     "headers": {"Content-Type": "application/json"},
     "body": json.dumps("ok"),
 }
-nlu = GPT3NLU()
-
 
 def handle(event, context):
     print("HANDLE TELEGRAM")
@@ -48,7 +42,10 @@ def handle(event, context):
         user = User(update.effective_chat.id, update.effective_chat.first_name)
 
         if text == "/start":
+            nlu = GPT3NLU()
             response = nlu.executeCommand(user, "/start")
+        elif not isServiceAvailable():
+            response = generateUnavailableService(user)
         elif not hasCredits(user):
             response = generateNoCreditsText(user)
         else:
@@ -61,7 +58,7 @@ def handle(event, context):
             response.intent,
             response.command,
             response.text,
-            str(update.message.date)
+            str(update.message.date),
         )
         repository = DynamoDBDialogRepository()
         repository.save(dialog)
@@ -72,6 +69,7 @@ def handle(event, context):
 
 
 def getResponse(user, text):
+    nlu = GPT3NLU()
     nlu.handle(Default("DESCONOCIDA"))
     nlu.handle(SayHello("SALUDAR"))
     nlu.handle(RegisterMedicine("REGISTRAR_MEDICACION"))
@@ -81,10 +79,18 @@ def getResponse(user, text):
     print(text, response)
     return response
 
-def hasCredits(user):
+def isServiceAvailable():
     return False
+
+def hasCredits(user):
+    return True
 
 def generateNoCreditsText(user):
     text = f"Por limitaciones técnicas, no podemos hablar más por hoy. Mañana seguimos. Muchas gracias!"
+    response = Response(user, text)
+    return response
+
+def generateUnavailableService(user):
+    text = f"Estoy descansando, volveré más adelante. Muchas gracias!"
     response = Response(user, text)
     return response

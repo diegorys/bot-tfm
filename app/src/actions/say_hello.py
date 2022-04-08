@@ -1,16 +1,18 @@
+import os
 import openai
-
 from domain.response import Response
+
+GPT3_ENGINE = os.environ["GPT3_ENGINE"]
 
 
 class SayHello:
     def __init__(self, intent):
-        self.domain = 'basic'
+        self.domain = "basic"
         self.intent = intent
 
     def execute(self, user, text):
         openAIResponse = openai.Completion.create(
-            engine="text-davinci-002",
+            engine=GPT3_ENGINE,
             prompt="Conversación de saludo:\n\nHuman: Hola \nAI: Hola, encantando de saludarte.\nHuman: Hola, ¿quién eres?\nAI: Hola, soy tu asistente.\nHuman: Hola, ¿para qué sirves?\nAI: Hola, estoy aquí para cuidarte.\nHuman: Hola, ¿qué tal estás?\nAI: Hola, soy tu asistente. ¿Cómo estás?\nHuman: Hola, ¿quién eres?\nAI: Hola, soy tu cuidador. ¿En qué te puedo ayudar?\nHuman: Buenos días\nAI: Hola, ¿en qué te puedo ayudar?\nHuman: Buenas tardes\nAI: Buenas tardes, ¿qué tal estás?\nHuman: Buenas noches\nAI: Buenas noches\nHuman: "
             + text
             + "\nAI:",

@@ -6,30 +6,29 @@ provider:
   runtime: python3.8
   environment:
     DIALOGS_TABLE: "${self:service}-${opt:stage, self:provider.stage}-dialogs"
+    GPT3_ENGINE: "text-ada-001"
+    # GPT3_ENGINE: "text-davinci-002"
+    OPENAI_API_KEY: "***REMOVED***"
+    TELEGRAM_TOKEN: "***REMOVED***"
   iam:
     role:
       statements:
-      - Effect: Allow
-        Action:
-          - dynamodb:Query
-          - dynamodb:Scan
-          - dynamodb:GetItem
-          - dynamodb:PutItem
-          - dynamodb:UpdateItem
-          - dynamodb:DeleteItem
-          - dynamodb:DescribeStream
-          - dynamodb:GetRecords
-          - dynamodb:GetShardIterator
-          - dynamodb:ListStreams
-        Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.DIALOGS_TABLE}"
+        - Effect: Allow
+          Action:
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+            - dynamodb:DescribeStream
+            - dynamodb:GetRecords
+            - dynamodb:GetShardIterator
+            - dynamodb:ListStreams
+          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.DIALOGS_TABLE}"
 
 plugins:
   - serverless-python-requirements
-
-# environment:
-#   OPENAI_API_KEY: x
-#   TELEGRAM_TOKEN: x
-
 package:
   exclude:
     - "**/*"
@@ -44,27 +43,6 @@ package:
     - python-telegram-bot
 
 functions:
-  ping:
-    handler: aws/ping.handle
-    package:
-      include:
-        - aws/ping.py
-  dialogs:
-    handler: aws/dialogs.handle
-    events:
-      - httpApi:
-          path: /admin/dialogs
-          method: get
-          cors: true
-    package:
-      include:
-        - aws/dialogs.py
-  hello:
-    handler: aws/hello.handle
-    package:
-      include:
-        - aws/handler.py
-        - openai
   telegram:
     handler: aws/telegram.handle
     events:
@@ -77,8 +55,7 @@ custom:
 resources:
   Resources:
     DialogsTable:
-      Type: 'AWS::DynamoDB::Table'
-      DeletionPolicy: Retain
+      Type: "AWS::DynamoDB::Table"
       Properties:
         TableName: ${self:provider.environment.DIALOGS_TABLE}
         AttributeDefinitions:
