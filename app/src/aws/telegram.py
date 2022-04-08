@@ -43,6 +43,7 @@ def handle(event, context):
 
         if text == "/start":
             nlu = GPT3NLU()
+            nlu.handle(IntroduceOnself("/start"))
             response = nlu.executeCommand(user, "/start")
         elif not isServiceAvailable():
             response = generateUnavailableService(user)
@@ -74,7 +75,6 @@ def getResponse(user, text):
     nlu.handle(SayHello("SALUDAR"))
     nlu.handle(RegisterMedicine("REGISTRAR_MEDICACION"))
     nlu.handle(RegisterStatus("REGISTRAR_ESTADO"))
-    nlu.handle(IntroduceOnself("/start"))
     response = nlu.getResponse(user, text)
     print(text, response)
     return response
