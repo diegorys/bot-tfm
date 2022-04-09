@@ -6,9 +6,9 @@ provider:
   runtime: python3.8
   environment:
     DIALOGS_TABLE: "${self:service}-${opt:stage, self:provider.stage}-dialogs"
-    GPT3_ENGINE: "text-ada-001"
-    # GPT3_ENGINE: "text-davinci-002"
-    OPENAI_API_KEY: "***REMOVED***"
+    # GPT3_ENGINE: "text-ada-001"
+    GPT3_ENGINE: "text-davinci-002"
+    OPENAI_API_KEY: "***REMOVED***" # Diego de pago
     TELEGRAM_TOKEN: "***REMOVED***"
   iam:
     role:

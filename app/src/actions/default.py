@@ -13,7 +13,7 @@ class Default:
     def execute(self, user, request):
         openAIResponse = openai.Completion.create(
             engine=GPT3_ENGINE,
-            prompt="A partir de un texto aleatorio, el BOT dice que no entiende.\n\nHuman: Hablemos del tiempo\nAI: No estoy programado para hablar del tiempo\nHuman: ¿qué quieres comer?\nAI: Todavía no sé hablar de comida\nHuman: "
+            prompt="Human: Hablemos del tiempo\nAI: No estoy programado para hablar del tiempo\nHuman: ¿qué quieres comer?\nAI: Todavía no sé hablar de comida\nHuman: "
             + request
             + "\nAI:",
             temperature=0.9,
@@ -21,9 +21,9 @@ class Default:
             top_p=1,
             frequency_penalty=0,
             presence_penalty=0.6,
-            stop=[" Human:", " AI:"],
+            stop=["Human:", "AI:"],
         )
-        response = Response(user, openAIResponse["choices"][0]["text"])
+        response = Response(user, openAIResponse["choices"][0]["text"]).strip()
         response.domain = self.domain
         response.intent = self.intent
         return response

@@ -20,7 +20,7 @@ class DynamoDBDialogRepository(DialogRepository):
         print('PUT ITEM')
         response = table.put_item(
             Item={
-                "id": str(uuid.uuid1()),
+                "id": str(dialog.id),
                 "date": str(dialog.date),
                 "user": {"id": dialog.userid, "name": dialog.username},
                 "text": dialog.text,

@@ -9,17 +9,22 @@ GPT3_ENGINE = os.environ["GPT3_ENGINE"]
 
 class GPT3NLU(NLU):
     def identifyIntent(self, request):
+        prompt = (
+            "Ej: Hola.\nIntent: SALUDAR\nEj: Buenas tardes.\nIntent: SALUDAR\nEj: Tomar ibuprofeno.\nIntent: REGISTRAR_MEDICACION\nEj: Digo algo por decir.\nIntent: DESCONOCIDA\nEj: Me siento triste.\nIntent: REGISTRAR_ESTADO\nEj: "
+            + request
+            + ".\nIntent:"
+        )
+        print('IDENTIFICAR INTENCIÓN!!!')
+        print(prompt)
         response = openai.Completion.create(
             engine=GPT3_ENGINE,
-            prompt="Lista de intenciones:\n\nSALUDAR, REGISTRAR_MEDICACION, DESCONOCIDA, REGISTRAR_ESTADO\n\nHola. Intención:SALUDAR\nTomar ibuprofeno. Intención:REGISTRAR_MEDICACION\nDigo algo por decir. Intención:DESCONOCIDA\nHey, qué tal?. Intención:SALUDAR\nEn un lugar de la mancha... Intención:DESCONOCIDA\nHola, buenas tardes, ¿quién eres?. Intención:SALUDAR\nMe siento triste. Intención:REGISTRAR_ESTADO\nEstoy alegre. Intención:REGISTRAR_ESTADO\n"
-            + request
-            + ". Intención:",
+            prompt=prompt,
             temperature=0,
             max_tokens=10,
             top_p=1,
             frequency_penalty=0,
             presence_penalty=0,
-            stop=["\n"],
+            stop=["Ej:", "Intent:"],
         )
 
-        return response["choices"][0]["text"]
+        return response["choices"][0]["text"].strip()

@@ -12,17 +12,18 @@ class RegisterMedicine:
     def execute(self, user, text):
         openAIResponse = openai.Completion.create(
             engine=GPT3_ENGINE,
-            prompt="Convierte este texto a un comando:\nEjemplo: Recuérdame tomar el ibuprofeno el lunes a las 8\nComando: recordar-medicamento medicamento='ibuprofeno' hora='8:00' frecuencia='semanal' dia='lunes'\n\nEjemplo: Me toca tomar calcio a las 6 y media\nComando: recordar-medicamento medicamento='calcio' hora='18:30'\n\n"
+            prompt="Ej: Recuérdame tomar el ibuprofeno el lunes a las 8\nCommand: recordar-medicamento medicamento='ibuprofeno' hora='8:00' frecuencia='semanal' dia='lunes'\nEj: Me toca tomar calcio a las 6 y media\nCommand: recordar-medicamento medicamento='calcio' hora='18:30'\nEj: "
             + text
-            + ".\nComando:",
+            + ".\nCommand:",
             temperature=0,
             max_tokens=100,
             top_p=1,
             frequency_penalty=0.2,
             presence_penalty=0,
+            stop=["Ej:", "Command:"]
         )
 
-        command = openAIResponse["choices"][0]["text"].replace("\n", "")
+        command = openAIResponse["choices"][0]["text"].strip()
         print("COMMAND MEDICATION ADDED: " + command)
         response = Response(user, self.responseMedicationAdded(command))
         response.domain = self.domain
@@ -33,14 +34,14 @@ class RegisterMedicine:
     def responseMedicationAdded(self, request):
         response = openai.Completion.create(
             engine=GPT3_ENGINE,
-            prompt="A partir de un comando de toma de medicamentos, se genera un texto para indicar al usuario que lo has entendido.\n\nCommand: recordar-medicamento medicamento='antihistamínico' hora='10:00'\nAI: Vale, me he apuntado que te tomas antihistamínico a las 10:00\nCommand: recordar-medicamento medicamento='ibuprofeno' hora='16:00'\nAI: De acuerdo, a las 16:00 te tomas el ibuprofeno\nCommand: "
+            prompt="Command: recordar-medicamento medicamento='antihistamínico' hora='10:00'\nAI: Vale, me he apuntado que te tomas antihistamínico a las 10:00\nCommand: recordar-medicamento medicamento='ibuprofeno' hora='16:00'\nAI: De acuerdo, a las 16:00 te tomas el ibuprofeno\nCommand: "
             + request
-            + ".\nAI:",
+            + "\nAI:",
             temperature=0.9,
             max_tokens=150,
             top_p=1,
             frequency_penalty=0,
             presence_penalty=0.6,
-            stop=[" AI:", "Command"],
+            stop=["AI:", "Command:"],
         )
-        return response["choices"][0]["text"]
+        return response["choices"][0]["text"].strip()

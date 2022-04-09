@@ -13,7 +13,7 @@ class SayHello:
     def execute(self, user, text):
         openAIResponse = openai.Completion.create(
             engine=GPT3_ENGINE,
-            prompt="Conversación de saludo:\n\nHuman: Hola \nAI: Hola, encantando de saludarte.\nHuman: Hola, ¿quién eres?\nAI: Hola, soy tu asistente.\nHuman: Hola, ¿para qué sirves?\nAI: Hola, estoy aquí para cuidarte.\nHuman: Hola, ¿qué tal estás?\nAI: Hola, soy tu asistente. ¿Cómo estás?\nHuman: Hola, ¿quién eres?\nAI: Hola, soy tu cuidador. ¿En qué te puedo ayudar?\nHuman: Buenos días\nAI: Hola, ¿en qué te puedo ayudar?\nHuman: Buenas tardes\nAI: Buenas tardes, ¿qué tal estás?\nHuman: Buenas noches\nAI: Buenas noches\nHuman: "
+            prompt="Human: Hola \nAI: Hola, encantando de saludarte.\nHuman: Buenas tardes, ¿quién eres?\nAI: Buenas tardes, soy tu asistente.\nHuman: "
             + text
             + "\nAI:",
             temperature=0.9,
@@ -21,10 +21,10 @@ class SayHello:
             top_p=1,
             frequency_penalty=0,
             presence_penalty=0.6,
-            stop=[" Human:", " AI:"],
+            stop=["Human:", "AI:"],
         )
 
-        response = Response(user, openAIResponse["choices"][0]["text"].replace("\n", ""))
+        response = Response(user, openAIResponse["choices"][0]["text"].strip())
         response.domain = self.domain
         response.intent = self.intent
         return response

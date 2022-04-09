@@ -3,6 +3,7 @@ try:
 except ImportError:
     pass
 
+from ast import Try
 import os
 import json
 import openai
@@ -27,6 +28,14 @@ OK_RESPONSE = {
 }
 
 def handle(event, context):
+    try:
+        execute(event)
+    except:
+        print("Error!!!")
+    finally: 
+        return OK_RESPONSE
+
+def execute(event):
     print("HANDLE TELEGRAM")
     if not TELEGRAM_TOKEN:
         raise NotImplementedError
@@ -54,6 +63,7 @@ def handle(event, context):
         else:
             response = getResponse(user, text)
         dialog = Dialog(
+            update.message.message_id,
             user.id,
             user.name,
             text,
@@ -68,8 +78,6 @@ def handle(event, context):
         bot.sendMessage(chat_id=chat_id, text=response.text)
         print("Message sent")
 
-        return OK_RESPONSE
-
 
 def getResponse(user, text):
     nlu = GPT3NLU()
@@ -82,7 +90,7 @@ def getResponse(user, text):
     return response
 
 def isServiceAvailable():
-    return False
+    return True
 
 def generateUnavailableService(user):
     text = f"Estoy descansando, volveré más adelante. Muchas gracias!"
