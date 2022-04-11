@@ -20,6 +20,8 @@ from infrastructure.gpt3.gpt3_nlu import GPT3NLU
 from infrastructure.dynamodb.dynamodb_dialog_repository import DynamoDBDialogRepository
 
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
+SERVICE_STATUS = os.environ.get("SERVICE_STATUS")
+TFM_MODE = os.environ.get("TFM_MODE")
 
 OK_RESPONSE = {
     "statusCode": 200,
@@ -90,7 +92,7 @@ def getResponse(user, text):
     return response
 
 def isServiceAvailable():
-    return True
+    return SERVICE_STATUS == 1
 
 def generateUnavailableService(user):
     text = f"Estoy descansando, volveré más adelante. Muchas gracias!"
@@ -106,9 +108,9 @@ def generateNoCreditsText(user):
     return response
 
 def isInModeTFM():
-    return True
+    return TFM_MODE == 1
 
 def generateTFMText(user):
-    text = f"He registrado tu necesidad, gracias por colaborar en el experimento! Próximamente aprenderé a responderte."
+    text = f"Gracias por colaborar en el experimento! Te avisaré cuando esté activo para que podamos hablar."
     response = Response(user, text)
     return response

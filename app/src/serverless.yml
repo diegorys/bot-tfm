@@ -6,10 +6,9 @@ provider:
   runtime: python3.8
   environment:
     DIALOGS_TABLE: "${self:service}-${opt:stage, self:provider.stage}-dialogs"
-    # GPT3_ENGINE: "text-ada-001"
     GPT3_ENGINE: "text-davinci-002"
-    OPENAI_API_KEY: "***REMOVED***" # Diego de pago
-    TELEGRAM_TOKEN: "***REMOVED***"
+    OPENAI_API_KEY: ${self:custom.env.OPENAI_API_KEY.${opt:stage, self:provider.stage}}
+    TELEGRAM_TOKEN: ${self:custom.env.TELEGRAM_TOKEN.${opt:stage, self:provider.stage}}
   iam:
     role:
       statements:
@@ -52,6 +51,19 @@ functions:
 custom:
   pythonRequirements:
     zip: true
+  env:
+    OPENAI_API_KEY: 
+      test: "***REMOVED***" # Diego de pago
+      prod: "***REMOVED***"
+    TELEGRAM_TOKEN:
+      test: "***REMOVED***"
+      prod: "***REMOVED***"
+    TFM_MODE:
+      test: 1
+      prod: 1
+    SERVICE_STATUS:
+      test: 1
+      prod: 1
 resources:
   Resources:
     DialogsTable:
