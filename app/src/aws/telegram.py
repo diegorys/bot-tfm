@@ -21,7 +21,6 @@ from infrastructure.dynamodb.dynamodb_dialog_repository import DynamoDBDialogRep
 
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
 SERVICE_STATUS = os.environ.get("SERVICE_STATUS")
-TFM_MODE = os.environ.get("TFM_MODE")
 
 OK_RESPONSE = {
     "statusCode": 200,
@@ -38,7 +37,7 @@ def handle(event, context):
         return OK_RESPONSE
 
 def execute(event):
-    print(f"HANDLE TELEGRAM. SERVICE STATUS: {SERVICE_STATUS}, TFM MODE {TFM_MODE}")
+    print(f"HANDLE TELEGRAM. SERVICE STATUS: {SERVICE_STATUS}")
     if not TELEGRAM_TOKEN:
         raise NotImplementedError
 
@@ -56,8 +55,6 @@ def execute(event):
             nlu = GPT3NLU()
             nlu.handle(IntroduceOnself("/start"))
             response = nlu.executeCommand(user, "/start")
-        elif isInModeTFM():
-            response = generateTFMText(user)
         elif not isServiceAvailable():
             response = generateUnavailableService(user)
         elif not hasCredits(user):
@@ -92,10 +89,10 @@ def getResponse(user, text):
     return response
 
 def isServiceAvailable():
-    return SERVICE_STATUS == 1
+    return int(SERVICE_STATUS) == 1
 
 def generateUnavailableService(user):
-    text = f"Estoy descansando, volveré más adelante. Muchas gracias!"
+    text = f"¡Gracias por colaborar en el experimento! Voy a registrar lo que me has escrito y te avisaré cuando esté activo para que podamos hablar."
     response = Response(user, text)
     return response
 
@@ -104,13 +101,5 @@ def hasCredits(user):
 
 def generateNoCreditsText(user):
     text = f"Por limitaciones técnicas, no podemos hablar más por hoy. Mañana seguimos. Muchas gracias!"
-    response = Response(user, text)
-    return response
-
-def isInModeTFM():
-    return TFM_MODE == 1
-
-def generateTFMText(user):
-    text = f"Gracias por colaborar en el experimento! Te avisaré cuando esté activo para que podamos hablar."
     response = Response(user, text)
     return response

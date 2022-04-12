@@ -6,6 +6,11 @@ provider:
   runtime: python3.8
   environment:
     DIALOGS_TABLE: "${self:service}-${opt:stage, self:provider.stage}-dialogs"
+    USERS_TABLE: "${self:service}-${opt:stage, self:provider.stage}-users"
+    STATUS_TABLE: "${self:service}-${opt:stage, self:provider.stage}-status"
+    MEDICINES_TABLE: "${self:service}-${opt:stage, self:provider.stage}-medicines"
+    DATES_TABLE: "${self:service}-${opt:stage, self:provider.stage}-dates"
+    ANECDOTES_TABLE: "${self:service}-${opt:stage, self:provider.stage}-anecdotes"
     GPT3_ENGINE: "text-davinci-002"
     OPENAI_API_KEY: ${self:custom.env.OPENAI_API_KEY.${opt:stage, self:provider.stage}}
     TELEGRAM_TOKEN: ${self:custom.env.TELEGRAM_TOKEN.${opt:stage, self:provider.stage}}
@@ -25,7 +30,71 @@ provider:
             - dynamodb:GetShardIterator
             - dynamodb:ListStreams
           Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.DIALOGS_TABLE}"
-
+        - Effect: Allow
+          Action:
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+            - dynamodb:DescribeStream
+            - dynamodb:GetRecords
+            - dynamodb:GetShardIterator
+            - dynamodb:ListStreams
+          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.USERS_TABLE}"
+        - Effect: Allow
+          Action:
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+            - dynamodb:DescribeStream
+            - dynamodb:GetRecords
+            - dynamodb:GetShardIterator
+            - dynamodb:ListStreams
+          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.STATUS_TABLE}"
+        - Effect: Allow
+          Action:
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+            - dynamodb:DescribeStream
+            - dynamodb:GetRecords
+            - dynamodb:GetShardIterator
+            - dynamodb:ListStreams
+          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.MEDICINES_TABLE}"
+        - Effect: Allow
+          Action:
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+            - dynamodb:DescribeStream
+            - dynamodb:GetRecords
+            - dynamodb:GetShardIterator
+            - dynamodb:ListStreams
+          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.DATES_TABLE}"
+        - Effect: Allow
+          Action:
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+            - dynamodb:DescribeStream
+            - dynamodb:GetRecords
+            - dynamodb:GetShardIterator
+            - dynamodb:ListStreams
+          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.ANECDOTES_TABLE}"
 plugins:
   - serverless-python-requirements
 package:
@@ -70,6 +139,71 @@ resources:
       Type: "AWS::DynamoDB::Table"
       Properties:
         TableName: ${self:provider.environment.DIALOGS_TABLE}
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+    UsersTable:
+      Type: "AWS::DynamoDB::Table"
+      Properties:
+        TableName: ${self:provider.environment.USERS_TABLE}
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+    StatusTable:
+      Type: "AWS::DynamoDB::Table"
+      Properties:
+        TableName: ${self:provider.environment.STATUS_TABLE}
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+    MedicinesTable:
+      Type: "AWS::DynamoDB::Table"
+      Properties:
+        TableName: ${self:provider.environment.MEDICINES_TABLE}
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+    DatesTable:
+      Type: "AWS::DynamoDB::Table"
+      Properties:
+        TableName: ${self:provider.environment.DATES_TABLE}
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+    AnecdotesTable:
+      Type: "AWS::DynamoDB::Table"
+      Properties:
+        TableName: ${self:provider.environment.ANECDOTES_TABLE}
         AttributeDefinitions:
           - AttributeName: id
             AttributeType: S
