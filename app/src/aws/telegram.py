@@ -38,7 +38,7 @@ def handle(event, context):
         return OK_RESPONSE
 
 def execute(event):
-    print("HANDLE TELEGRAM")
+    print(f"HANDLE TELEGRAM. SERVICE STATUS: {SERVICE_STATUS}, TFM MODE {TFM_MODE}")
     if not TELEGRAM_TOKEN:
         raise NotImplementedError
 
