@@ -1,5 +1,5 @@
 class DialogRepository:
-    def save(self, knowledge):
+    def save(self, dialog):
         pass
 
     def list(self):

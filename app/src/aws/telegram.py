@@ -17,9 +17,10 @@ from domain.response import Response
 from domain.user import User
 from infrastructure.gpt3.gpt3_nlu import GPT3NLU
 from infrastructure.dynamodb.dynamodb_dialog_repository import DynamoDBDialogRepository
+from infrastructure.configuration import Config
 
-TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
-SERVICE_STATUS = os.environ.get("SERVICE_STATUS")
+config = Config()
+pendingIdempotency = []
 
 OK_RESPONSE = {
     "statusCode": 200,
@@ -27,37 +28,46 @@ OK_RESPONSE = {
     "body": json.dumps("ok"),
 }
 
+
 def handle(event, context):
     try:
         execute(event)
-    except:
+    except Exception as e:
         print("Error!!!")
-    finally: 
+        print(e)
+    finally:
         return OK_RESPONSE
 
+
 def execute(event):
-    print(f"HANDLE TELEGRAM. SERVICE STATUS: {SERVICE_STATUS}")
-    if not TELEGRAM_TOKEN:
+    print(f"HANDLE TELEGRAM. SERVICE STATUS: {config.SERVICE_STATUS}")
+    if not config.TELEGRAM_TOKEN:
         raise NotImplementedError
 
-    bot = telegram.Bot(TELEGRAM_TOKEN)
+    bot = telegram.Bot(config.TELEGRAM_TOKEN)
     method = event.get("requestContext")["http"]["method"]
     if method == "POST" and event.get("body"):
         update = telegram.Update.de_json(json.loads(event.get("body")), bot)
+        idempotency = str(update.message.message_id) + "_" + str(update.effective_chat.id)
+        print(f"Check idempotency with {idempotency}")
+        print(pendingIdempotency)
+        if idempotency in pendingIdempotency:
+            raise Exception(f"Duplicated: {idempotency}")
+        pendingIdempotency.append(idempotency)
         print(f"Message {update.message.message_id} received at {update.message.date}")
         print(event.get("body"))
         chat_id = update.message.chat.id
         text = update.message.text
         user = User(update.effective_chat.id, update.effective_chat.first_name)
         print(f"Text: {text}")
-        print(f"Service available? {SERVICE_STATUS}")
+        print(f"Service available? {config.SERVICE_STATUS}")
         if text == "/start":
-            print('/START')
+            print("/START")
             nlu = GPT3NLU()
             nlu.handle(IntroduceOnself("/start"))
             response = nlu.executeCommand(user, "/start")
             print(f"Response {response}")
-        elif not isServiceAvailable():
+        elif not config.SERVICE_AVAILABLE:
             response = generateUnavailableService(user)
         else:
             response = getResponse(user, text)
@@ -88,12 +98,9 @@ def getResponse(user, text):
     print(text, response)
     return response
 
-def isServiceAvailable():
-    print(f"Vamos {int(SERVICE_STATUS)}")
-    return int(SERVICE_STATUS) == 1
 
 def generateUnavailableService(user):
-    print('servicio no disponible')
+    print("servicio no disponible")
     text = f"¡Gracias por colaborar en el experimento! Voy a registrar lo que me has escrito y te avisaré cuando esté activo para que podamos hablar."
     response = Response(user, text)
     print(response)

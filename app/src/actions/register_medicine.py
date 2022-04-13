@@ -1,7 +1,8 @@
 import os
 import openai
 from domain.response import Response
-# from frames.medication import Medication
+# from domain.medication.medication import Medication
+# from use_cases.register_medicine_use_case import RegisterMedicineUseCase
 
 GPT3_ENGINE = os.environ["GPT3_ENGINE"]
 
@@ -12,9 +13,21 @@ class RegisterMedicine:
         self.intent = intent
 
     def execute(self, user, text):
+        command = self.extractCommand(text) # NLU: Extrae el comando
+        # medication = Medication.fromCommand(command) # NLU: Crea el frame
+        uc = RegisterMedicineUseCase() # Command Manager
+        # uc.execute(medication)
+        responseText = self.responseMedicationAdded(command) # Response generator
+        response = Response(user, responseText)
+        response.domain = self.domain
+        response.intent = self.intent
+        response.command = command
+        return response
+
+    def extractCommand(self, text):
         openAIResponse = openai.Completion.create(
             engine=GPT3_ENGINE,
-            prompt="Ej: Recuérdame tomar el ibuprofeno el lunes a las 8\nCommand: recordar-medicamento medicamento='ibuprofeno' hora='8:00' frecuencia='semanal' dia='lunes'\nEj: Me toca tomar calcio a las 6 y media\nCommand: recordar-medicamento medicamento='calcio' hora='18:30'\nEj: "
+            prompt="Ej: Recuérdame tomar el ibuprofeno el lunes a las 8\nCommand: registrar-medicamento medicamento='ibuprofeno' hora='8:00' frecuencia='semanal' dia='lunes'\nEj: Me toca tomar calcio a las 6 y media\nCommand: registrar-medicamento medicamento='calcio' hora='18:30'\nEj: "
             + text
             + ".\nCommand:",
             temperature=0,
@@ -26,15 +39,10 @@ class RegisterMedicine:
         )
 
         command = openAIResponse["choices"][0]["text"].strip()
-        print("COMMAND MEDICATION ADDED: " + command)
-        response = Response(user, self.responseMedicationAdded(command))
-        response.domain = self.domain
-        response.intent = self.intent
-        response.command = command
-        return response
+        return command
 
-    # def responseMedicationAdded(self, request):
-    #     medication = Medication.fromCommand(request)
+    # def responseMedicationAdded(self, command):
+    #     medication = Medication.fromCommand(command)
     #     response = (
     #         f"Vale, me apunto que tienes que tomar {medication.name}"
     #         + f"\nDía: {medication.day}"
@@ -46,7 +54,7 @@ class RegisterMedicine:
     def responseMedicationAdded(self, request):
         response = openai.Completion.create(
             engine=GPT3_ENGINE,
-            prompt="Command: recordar-medicamento medicamento='antihistamínico' hora='10:00'\nAI: Vale, me he apuntado que te tomas antihistamínico a las 10:00\nCommand: recordar-medicamento medicamento='ibuprofeno' hora='16:00'\nAI: De acuerdo, a las 16:00 te tomas el ibuprofeno\nCommand: "
+            prompt="Command: registrar-medicamento medicamento='antihistamínico' hora='10:00'\nAI: Vale, me he apuntado que te tomas antihistamínico a las 10:00\nCommand: registrar-medicamento medicamento='ibuprofeno' hora='16:00'\nAI: De acuerdo, a las 16:00 te tomas el ibuprofeno\nCommand: "
             + request
             + "\nAI:",
             temperature=0.9,
