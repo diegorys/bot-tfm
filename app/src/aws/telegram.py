@@ -3,7 +3,6 @@ try:
 except ImportError:
     pass
 
-from ast import Try
 import os
 import json
 import openai
@@ -50,15 +49,16 @@ def execute(event):
         chat_id = update.message.chat.id
         text = update.message.text
         user = User(update.effective_chat.id, update.effective_chat.first_name)
-
+        print(f"Text: {text}")
+        print(f"Service available? {SERVICE_STATUS}")
         if text == "/start":
+            print('/START')
             nlu = GPT3NLU()
             nlu.handle(IntroduceOnself("/start"))
             response = nlu.executeCommand(user, "/start")
+            print(f"Response {response}")
         elif not isServiceAvailable():
             response = generateUnavailableService(user)
-        elif not hasCredits(user):
-            response = generateNoCreditsText(user)
         else:
             response = getResponse(user, text)
         dialog = Dialog(
@@ -89,17 +89,12 @@ def getResponse(user, text):
     return response
 
 def isServiceAvailable():
+    print(f"Vamos {int(SERVICE_STATUS)}")
     return int(SERVICE_STATUS) == 1
 
 def generateUnavailableService(user):
+    print('servicio no disponible')
     text = f"¡Gracias por colaborar en el experimento! Voy a registrar lo que me has escrito y te avisaré cuando esté activo para que podamos hablar."
     response = Response(user, text)
-    return response
-
-def hasCredits(user):
-    return True
-
-def generateNoCreditsText(user):
-    text = f"Por limitaciones técnicas, no podemos hablar más por hoy. Mañana seguimos. Muchas gracias!"
-    response = Response(user, text)
+    print(response)
     return response
