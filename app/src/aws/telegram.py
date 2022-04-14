@@ -3,23 +3,20 @@ try:
 except ImportError:
     pass
 
-import os
 import json
-import openai
+
 import telegram
-from actions.default import Default
-from actions.introduce_oneself import IntroduceOnself
-from actions.register_medicine import RegisterMedicine
-from actions.register_status import RegisterStatus
-from actions.say_hello import SayHello
-from domain.dialog import Dialog
-from domain.response import Response
+from domain.bot import BOT
 from domain.user import User
 from infrastructure.gpt3.gpt3_nlu import GPT3NLU
 from infrastructure.dynamodb.dynamodb_dialog_repository import DynamoDBDialogRepository
 from infrastructure.configuration import Config
 
 config = Config()
+nlu = GPT3NLU()
+repository = DynamoDBDialogRepository()
+bot = BOT(nlu, config, repository)
+
 pendingIdempotency = []
 
 OK_RESPONSE = {
@@ -40,7 +37,7 @@ def handle(event, context):
 
 
 def execute(event):
-    print(f"HANDLE TELEGRAM. SERVICE STATUS: {config.SERVICE_STATUS}")
+    print(f"HANDLE TELEGRAM. SERVICE STATUS: {available}")
     if not config.TELEGRAM_TOKEN:
         raise NotImplementedError
 
@@ -59,49 +56,20 @@ def execute(event):
         chat_id = update.message.chat.id
         text = update.message.text
         user = User(update.effective_chat.id, update.effective_chat.first_name)
-        print(f"Text: {text}")
-        print(f"Service available? {config.SERVICE_STATUS}")
-        if text == "/start":
-            print("/START")
-            nlu = GPT3NLU()
-            nlu.handle(IntroduceOnself("/start"))
-            response = nlu.executeCommand(user, "/start")
-            print(f"Response {response}")
-        elif not config.SERVICE_AVAILABLE:
-            response = generateUnavailableService(user)
-        else:
-            response = getResponse(user, text)
-        dialog = Dialog(
-            update.message.message_id,
-            user.id,
-            user.name,
-            text,
-            response.domain,
-            response.intent,
-            response.command,
-            response.text,
-            str(update.message.date),
-        )
-        repository = DynamoDBDialogRepository()
-        repository.save(dialog)
+        available = config.SERVICE_AVAILABLE
+        id = update.message.message_id
+        date = str(update.message.date)
+        response = botExecute(text, user, available, id, date)
         bot.sendMessage(chat_id=chat_id, text=response.text)
         print("Message sent")
 
 
-def getResponse(user, text):
-    nlu = GPT3NLU()
-    nlu.handle(Default("DESCONOCIDA"))
-    nlu.handle(SayHello("SALUDAR"))
-    nlu.handle(RegisterMedicine("REGISTRAR_MEDICACION"))
-    nlu.handle(RegisterStatus("REGISTRAR_ESTADO"))
-    response = nlu.getResponse(user, text)
-    print(text, response)
-    return response
-
-
-def generateUnavailableService(user):
-    print("servicio no disponible")
-    text = f"¡Gracias por colaborar en el experimento! Voy a registrar lo que me has escrito y te avisaré cuando esté activo para que podamos hablar."
-    response = Response(user, text)
-    print(response)
+def botExecute(text, user, available, id, date):
+    print(f"Text: {text}")
+    print(f"Service available? {available}")
+    if text == "/start":
+        print("/START")
+        response = bot.handleStart(user)
+    else:
+        response = bot.execute(text, user, id, date)
     return response

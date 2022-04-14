@@ -21,6 +21,7 @@ class RegisterStatus:
             top_p=1,
             frequency_penalty=0.2,
             presence_penalty=0,
+            stop=["Ej:", "Command:"],
         )
 
         command = openAIResponse["choices"][0]["text"].strip()

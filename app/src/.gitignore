@@ -20,3 +20,6 @@ var/
 .serverless
 .requirements.zip
 node_modules
+
+# Google DialogFlow
+key.json

@@ -5,6 +5,14 @@ services:
     environment:
       - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
       - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ANECDOTES_TABLE=${ANECDOTES_TABLE}
+      - DATES_TABLE=${DATES_TABLE}
+      - DIALOGS_TABLE=${DIALOGS_TABLE}
+      - GPT3_ENGINE=${GPT3_ENGINE}
+      - MEDICINES_TABLE=${MEDICINES_TABLE}
+      - SERVICE_STATUS=${SERVICE_STATUS}
+      - STATUS_TABLE=${STATUS_TABLE}
+      - USERS_TABLE=${USERS_TABLE}
     volumes:
       - ./app/:/app
     working_dir: /app
