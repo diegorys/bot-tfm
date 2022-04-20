@@ -1,3 +1,4 @@
+import time
 from actions.default import Default
 from actions.introduce_oneself import IntroduceOnself
 from actions.register_medicine import RegisterMedicine
@@ -45,9 +46,10 @@ class BOT:
         return response
 
     def log(self, text, user, id, date, response):
+        now = str(time.time())
         if self.repository:
             dialog = Dialog(
-                id,
+                now,
                 user.id,
                 user.name,
                 text,

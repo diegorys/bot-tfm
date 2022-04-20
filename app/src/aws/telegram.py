@@ -3,8 +3,8 @@ try:
 except ImportError:
     pass
 
+import os
 import json
-
 import telegram
 from domain.bot import BOT
 from domain.user import User
@@ -18,6 +18,8 @@ repository = DynamoDBDialogRepository()
 bot = BOT(nlu, config, repository)
 available = config.SERVICE_AVAILABLE
 
+if "TELEGRAM_UPDATE_ID" not in os.environ.keys():
+    os.environ["TELEGRAM_UPDATE_ID"] = ""
 pendingIdempotency = []
 
 OK_RESPONSE = {
@@ -46,18 +48,23 @@ def execute(event):
     method = event.get("requestContext")["http"]["method"]
     if method == "POST" and event.get("body"):
         update = telegram.Update.de_json(json.loads(event.get("body")), bot)
-        idempotency = str(update.message.message_id) + "_" + str(update.effective_chat.id)
+        idempotency = str(update.update_id) + "_" + str(update.effective_chat.id)
         print(f"Check idempotency with {idempotency}")
         print(pendingIdempotency)
+        oldIdempotency = os.environ["TELEGRAM_UPDATE_ID"]
+        print(f"Last message: {oldIdempotency}")
+        if os.environ["TELEGRAM_UPDATE_ID"] == idempotency:
+            raise Exception(f"Update ID duplicated: {idempotency}")
+        os.environ["TELEGRAM_UPDATE_ID"] = idempotency
         if idempotency in pendingIdempotency:
-            raise Exception(f"Duplicated: {idempotency}")
+            raise Exception(f"Idempotency duplicated: {idempotency}")
         pendingIdempotency.append(idempotency)
-        print(f"Message {update.message.message_id} received at {update.message.date}")
+        print(f"Message {update.update_id} received at {update.message.date}")
         print(event.get("body"))
         chat_id = update.message.chat.id
         text = update.message.text
         user = User(update.effective_chat.id, update.effective_chat.first_name)
-        id = update.message.message_id
+        id = update.update_id
         date = str(update.message.date)
         response = botExecute(text, user, available, id, date)
         bot.sendMessage(chat_id=chat_id, text=response.text)

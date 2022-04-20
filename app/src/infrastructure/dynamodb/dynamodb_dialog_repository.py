@@ -2,7 +2,7 @@ import os
 import uuid
 import time
 import boto3
-from domain.dialog import Dialog
+from boto3.dynamodb.conditions import Attr
 from domain.dialog_repository import DialogRepository
 
 TABLE_NAME = os.environ["DIALOGS_TABLE"]
@@ -15,9 +15,12 @@ class DynamoDBDialogRepository(DialogRepository):
         self.dynamodb = boto3.resource("dynamodb")
 
     def save(self, dialog):
+        exists = self.exists(dialog)
+        if exists:
+            raise Exception(f"Error at insert duplicated message")
         table = self.dynamodb.Table(TABLE_NAME)
         timestamp = str(time.time())
-        print('PUT ITEM')
+        print("PUT ITEM")
         response = table.put_item(
             Item={
                 "id": str(dialog.id),
@@ -46,3 +49,13 @@ class DynamoDBDialogRepository(DialogRepository):
 
     def truncate(self):
         pass
+
+    def exists(self, dialog):
+        print(f"BUSCO {dialog.date} - {dialog.text}")
+        table = self.dynamodb.Table(TABLE_NAME)
+        response = table.scan(
+            FilterExpression=Attr("date").eq(dialog.date) & Attr("text").eq(dialog.text)
+        )
+
+        print(len(response['Items']))
+        return len(response['Items']) > 0
