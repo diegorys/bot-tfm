@@ -18,8 +18,9 @@ class BOT:
         self.nlu.handle(RegisterMedicine("REGISTRAR_MEDICACION"))
         self.nlu.handle(RegisterStatus("REGISTRAR_ESTADO"))
 
-    def handleStart(self, user):
+    def handleStart(self, text, user, id, date):
         response = self.nlu.executeCommand(user, "/start")
+        self.log(text, user, id, date, response)
         return response
 
     def execute(self, text, user, id, date):

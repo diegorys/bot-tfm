@@ -16,6 +16,7 @@ config = Config()
 nlu = GPT3NLU()
 repository = DynamoDBDialogRepository()
 bot = BOT(nlu, config, repository)
+available = config.SERVICE_AVAILABLE
 
 pendingIdempotency = []
 
@@ -56,7 +57,6 @@ def execute(event):
         chat_id = update.message.chat.id
         text = update.message.text
         user = User(update.effective_chat.id, update.effective_chat.first_name)
-        available = config.SERVICE_AVAILABLE
         id = update.message.message_id
         date = str(update.message.date)
         response = botExecute(text, user, available, id, date)
@@ -69,7 +69,7 @@ def botExecute(text, user, available, id, date):
     print(f"Service available? {available}")
     if text == "/start":
         print("/START")
-        response = bot.handleStart(user)
+        response = bot.handleStart(text, user, id, date)
     else:
         response = bot.execute(text, user, id, date)
     return response
