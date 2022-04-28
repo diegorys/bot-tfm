@@ -1,0 +1,1 @@
+sls deploy function --stage $1 --region eu-west-1 -f $2

@@ -11,6 +11,7 @@ provider:
     MEDICINES_TABLE: "${self:service}-${opt:stage, self:provider.stage}-medicines"
     DATES_TABLE: "${self:service}-${opt:stage, self:provider.stage}-dates"
     ANECDOTES_TABLE: "${self:service}-${opt:stage, self:provider.stage}-anecdotes"
+    DATASET_TABLE: "${self:service}-${opt:stage, self:provider.stage}-dataset"
     GPT3_ENGINE: "text-davinci-002"
     OPENAI_API_KEY: ${self:custom.env.OPENAI_API_KEY.${opt:stage, self:provider.stage}}
     TELEGRAM_TOKEN: ${self:custom.env.TELEGRAM_TOKEN.${opt:stage, self:provider.stage}}
@@ -95,17 +96,31 @@ provider:
             - dynamodb:GetShardIterator
             - dynamodb:ListStreams
           Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.ANECDOTES_TABLE}"
+        - Effect: Allow
+          Action:
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+            - dynamodb:DescribeStream
+            - dynamodb:GetRecords
+            - dynamodb:GetShardIterator
+            - dynamodb:ListStreams
+          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.DATASET_TABLE}"
 plugins:
   - serverless-python-requirements
 package:
-  exclude:
-    - "**/*"
-  include:
+  individually: true
+  patterns:
+    - "!**/*"
     - "*.py"
     - "actions/*.py"
     - "aws/*.py"
     - "domain/*.py"
     - "infrastructure/**/*.py"
+    - "dataset/**/*.py"
     - boto3
     - openai
     - python-telegram-bot
@@ -117,9 +132,14 @@ functions:
       - httpApi:
           path: /telegram
           method: post
+  dataset-generate:
+    handler: dataset/generate.handle
+  dataset-tag:
+    handler: dataset/tag.handle
 custom:
   pythonRequirements:
     zip: true
+    slim: true
   env:
     OPENAI_API_KEY: 
       test: "***REMOVED***" # Diego de pago
@@ -204,6 +224,19 @@ resources:
       Type: "AWS::DynamoDB::Table"
       Properties:
         TableName: ${self:provider.environment.ANECDOTES_TABLE}
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+    DatasetTable:
+      Type: "AWS::DynamoDB::Table"
+      Properties:
+        TableName: ${self:provider.environment.DATASET_TABLE}
         AttributeDefinitions:
           - AttributeName: id
             AttributeType: S

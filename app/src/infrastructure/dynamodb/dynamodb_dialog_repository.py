@@ -39,7 +39,11 @@ class DynamoDBDialogRepository(DialogRepository):
         return response
 
     def list(self):
-        pass
+        table = self.dynamodb.Table(TABLE_NAME)
+        response = table.scan()
+
+        print(len(response["Items"]))
+        return response["Items"]
 
     def listDomain(self, domain):
         pass
@@ -57,5 +61,5 @@ class DynamoDBDialogRepository(DialogRepository):
             FilterExpression=Attr("date").eq(dialog.date) & Attr("text").eq(dialog.text)
         )
 
-        print(len(response['Items']))
-        return len(response['Items']) > 0
+        print(len(response["Items"]))
+        return len(response["Items"]) > 0
