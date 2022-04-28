@@ -1,3 +1,4 @@
+from random import randrange
 import time
 from actions.default import Default
 from actions.introduce_oneself import IntroduceOnself
@@ -41,7 +42,18 @@ class BOT:
 
     def generateUnavailableService(self, user):
         print("servicio no disponible")
-        text = f"¡Gracias por colaborar en el experimento! Voy a registrar lo que me has escrito y te avisaré cuando esté activo para que podamos hablar."
+        phrases = [
+            "¡Tomo nota!",
+            "Me lo apunto",
+            "Queda anotado",
+            "Anotado",
+            "¿Qué más quieres contarme?",
+            "Cuéntame más cosas",
+            "Me interesa todo lo que me digas"
+        ]
+        index = randrange(0, len(phrases))
+        # text = f"¡Gracias por colaborar en el experimento! Voy a registrar lo que me has escrito y te avisaré cuando esté activo para que podamos hablar."
+        text = phrases[index]
         response = Response(user, text)
         return response
 
