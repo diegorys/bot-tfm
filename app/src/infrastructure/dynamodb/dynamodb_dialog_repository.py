@@ -7,7 +7,7 @@ from domain.dialog_repository import DialogRepository
 
 TABLE_NAME = os.environ["DIALOGS_TABLE"]
 
-print(f"TABLE NAME!!!: {TABLE_NAME}")
+print(f"DIALOGS TABLE NAME!!!: {TABLE_NAME}")
 
 
 class DynamoDBDialogRepository(DialogRepository):
@@ -42,7 +42,7 @@ class DynamoDBDialogRepository(DialogRepository):
         table = self.dynamodb.Table(TABLE_NAME)
         response = table.scan()
 
-        print(len(response["Items"]))
+        print(len(response["Items"]), TABLE_NAME)
         return response["Items"]
 
     def listDomain(self, domain):

@@ -4,9 +4,9 @@ import time
 import boto3
 from boto3.dynamodb.conditions import Attr
 
-TABLE_NAME = os.environ["DATASET_TABLE"]
+from dataset.entry import Entry
 
-print(f"TABLE NAME!!!: {TABLE_NAME}")
+TABLE_NAME = os.environ["DATASET_TABLE"]
 
 
 class DynamoDBDatasetRepository:
@@ -19,7 +19,6 @@ class DynamoDBDatasetRepository:
             raise Exception(f"Error at insert duplicated dataset entry")
         table = self.dynamodb.Table(TABLE_NAME)
         timestamp = str(time.time())
-        print("PUT ITEM")
         entry.id = str(uuid.uuid4())
         response = table.put_item(
             Item={
@@ -31,14 +30,11 @@ class DynamoDBDatasetRepository:
                 "updatedAt": timestamp,
             }
         )
-        print(response)
-        return response
+        return entry
 
     def update(self, entry):
         table = self.dynamodb.Table(TABLE_NAME)
         timestamp = str(time.time())
-        print("PUT ITEM")
-        entry.id = str(uuid.uuid4())
         response = table.put_item(
             Item={
                 "id": entry.id,
@@ -49,14 +45,13 @@ class DynamoDBDatasetRepository:
                 "updatedAt": timestamp,
             }
         )
-        print(response)
         return response
 
     def list(self):
         table = self.dynamodb.Table(TABLE_NAME)
         response = table.scan()
 
-        print(len(response["Items"]))
+        print(response["Items"])
         return response["Items"]
 
     def listDomain(self, domain):
@@ -69,11 +64,15 @@ class DynamoDBDatasetRepository:
         pass
 
     def exists(self, entry):
-        print(f"BUSCO {entry.text}")
         table = self.dynamodb.Table(TABLE_NAME)
-        response = table.scan(
-            FilterExpression=Attr("text").eq(entry.text)
-        )
-
-        print(len(response["Items"]))
+        response = table.scan(FilterExpression=Attr("text").eq(entry.text))
         return len(response["Items"]) > 0
+
+    def getByText(self, text):
+        table = self.dynamodb.Table(TABLE_NAME)
+        response = table.scan(FilterExpression=Attr("text").eq(text))
+        if len(response["Items"]) > 0:
+            item = response["Items"][0]
+            entry = Entry(item["id"], item["text"], item["intent"], item["entities"])
+            return entry
+        return None
