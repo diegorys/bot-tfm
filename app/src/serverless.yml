@@ -136,6 +136,11 @@ functions:
     handler: dataset/generate.handle
   dataset-update:
     handler: dataset/update.handle
+  cron:
+    handler: aws/cron.handle
+    events:
+      - schedule: rate(1 minute)
+
 custom:
   pythonRequirements:
     zip: true
