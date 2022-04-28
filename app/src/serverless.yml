@@ -134,8 +134,8 @@ functions:
           method: post
   dataset-generate:
     handler: dataset/generate.handle
-  dataset-tag:
-    handler: dataset/tag.handle
+  dataset-update:
+    handler: dataset/update.handle
 custom:
   pythonRequirements:
     zip: true
