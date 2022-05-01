@@ -19,8 +19,18 @@ class TelegramClient(Client):
         updater.idle()
         pass
 
-    def handle(self, text: str) -> None:
-        pass
+    def handle(self, update: Update, context: CallbackContext) -> None:
+        print(f"New message from {update.effective_user.first_name}, ${update.effective_chat.id}")
+        text = update["message"]["text"]
+        user = User(
+            update.effective_chat.first_name,
+            {"telegram_id": update.effective_chat.id, "username": update.effective_chat.first_name},
+        )
+        id = update.message.message_id
+        date = str(update.message.date)
+        response = text
+        print(text, response.text)
+        context.bot.send_message(chat_id=update.effective_chat.id, text=response.text)
 
     def emit(self, text: str) -> None:
         pass
