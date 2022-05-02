@@ -71,7 +71,8 @@ class DummyLanguageModel(LanguageModel):
         )
 
     def generateNotificationResponse(self, frame: Frame):
-        notification = frame.entities["notification"]
+        print(frame.user.username)
+        notification = frame.entities["notification"].replace("<username>", frame.user.username)
         return notification
 
     def generateRandomResponse(self, phrases):

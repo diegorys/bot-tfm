@@ -17,8 +17,4 @@ class SendNotificationUseCase:
         for user in users:
             frame = Frame("NOTIFICATION", user, "", notification)
             response = self.responseGenerator.execute(frame)
-            telegramId = frame.user.metadata["telegram_id"]
-            print(f"Telegram ID: {telegramId}")
-            print(f"Response: {response}")
-            print("-----")
             self.client.emit(frame.user, response)

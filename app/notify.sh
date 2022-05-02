@@ -1,0 +1,1 @@
+python cli_notifications_send.py prod "Hola <username>, ¿qué tal?, hace mucho que no hablamos."
