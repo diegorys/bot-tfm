@@ -6,9 +6,9 @@ from conversational_bot.domain.language_model import LanguageModel
 class DummyLanguageModel(LanguageModel):
     def identifyIntent(self, text: str) -> str:
         intent: str = "DESCONOCIDO"
-        if "Hola" in text:
+        if "hola" in text.lower():
             intent = "SALUDAR"
-        if "Adiós" in text:
+        if "adiós" in text.lower():
             intent = "DESPEDIRSE"
         return intent, {}
 
@@ -17,7 +17,7 @@ class DummyLanguageModel(LanguageModel):
         if "SALUDAR" == frame.intent:
             response = self.generateSaludarResponse(frame)
         elif "DESPEDIRSE" == frame.intent:
-            response = self.generateSaludarResponse(frame)
+            response = self.generateDespedidaResponse(frame)
         elif "DESCONOCIDO" == frame.intent:
             response = self.generateNotUnderstandResponse(frame)
         else:
@@ -27,7 +27,7 @@ class DummyLanguageModel(LanguageModel):
 
     def generateSaludarResponse(self, frame):
         return self.generateRandomResponse(
-            ["Hola", "¡Hola!", f"Hola {frame.user.metadata['name']}" "Hola, ¿qué tal?"]
+            ["Hola", "¡Hola!", f"Hola {frame.user.metadata['name']}", "Hola, ¿qué tal?"]
         )
 
     def generateDespedidaResponse(self, frame):
