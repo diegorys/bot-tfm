@@ -9,9 +9,10 @@ class TelegramClient(Client):
 
     def emit(self, user: User, text: str) -> None:
         telegramId = user.metadata["telegram_id"]
-        if "1009284987" == telegramId:
+        allowedUsers = ["1009284987"]
+        if telegramId in allowedUsers:
             print(f"User: {user.username}")
             print(f"Telegram ID: {telegramId}")
             print(f"Text: {text}")
             print("-----")
-            # self.telegramBot.send_message(chat_id=telegramId, text=text)
+            self.telegramBot.send_message(chat_id=telegramId, text=text)
