@@ -1,4 +1,4 @@
-from domain.medication.medication import Medication
+from medical.domain.medication import Medication
 
 
 def test_fromCommand1():

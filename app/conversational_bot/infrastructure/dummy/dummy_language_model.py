@@ -24,6 +24,8 @@ class DummyLanguageModel(LanguageModel):
             response = self.generateRegisterMedicationResponse(frame)
         elif "DESCONOCIDO" == frame.intent:
             response = self.generateUnderstandResponse(frame)
+        elif "NOTIFICAR" == frame.intent:
+            response = self.generateNotificationResponse(frame)
         else:
             response = self.generateUnderstandResponse(frame)
         print(f"Response {response}")
@@ -41,7 +43,11 @@ class DummyLanguageModel(LanguageModel):
 
     def generateRegisterMedicationResponse(self, frame):
         return self.generateRandomResponse(
-            ["Registro la medicina", "Tomo nota de que te tienes que tomar la medicina", f"Me apunto el medicamento, {frame.user.metadata['name']}"]
+            [
+                "Registro la medicina",
+                "Tomo nota de que te tienes que tomar la medicina",
+                f"Me apunto el medicamento, {frame.user.metadata['name']}",
+            ]
         )
 
     def generateUnderstandResponse(self, frame):
@@ -63,6 +69,10 @@ class DummyLanguageModel(LanguageModel):
         return self.generateRandomResponse(
             ["No te entiendo", "No sé qué dices", f"No estoy programado para {frame.intent}"]
         )
+
+    def generateNotificationResponse(self, frame: Frame):
+        notification = frame.entities["notification"]
+        return notification
 
     def generateRandomResponse(self, phrases):
         index = randrange(0, len(phrases))

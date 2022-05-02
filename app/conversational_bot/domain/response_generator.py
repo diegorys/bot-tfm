@@ -7,7 +7,7 @@ class ResponseGenerator:
     def __init__(self, languageModel: LanguageModel):
         self.languageModel: LanguageModel = languageModel
 
-    def execute(self, frame: Frame) -> None:
+    def execute(self, frame: Frame) -> str:
         text: str = self.languageModel.generateText(frame)
         print(f"Language model generated {text}")
         return text
