@@ -1,5 +1,5 @@
 boto3==1.21.35
-openai==0.16.0
+# openai==0.16.0
 python-telegram-bot==13.11
 pytest==7.1.1
 # google-cloud-dialogflow==2.13.0

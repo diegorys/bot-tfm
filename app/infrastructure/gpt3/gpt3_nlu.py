@@ -1,10 +1,10 @@
 import os
 import numpy as np
-import openai
+# import openai
 from domain.nlu import NLU
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
-GPT3_ENGINE = os.environ["GPT3_ENGINE"]
+# openai.api_key = os.getenv("OPENAI_API_KEY")
+# GPT3_ENGINE = os.environ["GPT3_ENGINE"]
 
 
 class GPT3NLU(NLU):
@@ -16,15 +16,16 @@ class GPT3NLU(NLU):
         )
         print('IDENTIFICAR INTENCIÓN!!!')
         print(prompt)
-        response = openai.Completion.create(
-            engine=GPT3_ENGINE,
-            prompt=prompt,
-            temperature=0,
-            max_tokens=10,
-            top_p=1,
-            frequency_penalty=0,
-            presence_penalty=0,
-            stop=["Ej:", "Intent:"],
-        )
+        # response = openai.Completion.create(
+        #     engine=GPT3_ENGINE,
+        #     prompt=prompt,
+        #     temperature=0,
+        #     max_tokens=10,
+        #     top_p=1,
+        #     frequency_penalty=0,
+        #     presence_penalty=0,
+        #     stop=["Ej:", "Intent:"],
+        # )
 
-        return response["choices"][0]["text"].strip()
+        # return response["choices"][0]["text"].strip()
+        return ""

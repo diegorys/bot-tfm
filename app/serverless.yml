@@ -121,8 +121,10 @@ package:
     - "domain/*.py"
     - "infrastructure/**/*.py"
     - "dataset/**/*.py"
+    - conversational_bot/**/*.py
+    - sso/**/*.py
     - boto3
-    - openai
+    # - openai
     - python-telegram-bot
 
 functions:

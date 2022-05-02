@@ -18,5 +18,5 @@ def test_execute():
     print("------------")
     print(client.dummyText)
     print("------------")
-    possibleResponses = ["Hola", "¡Hola!", f"Hola {name}" "Hola, ¿qué tal?"]
+    possibleResponses = ["Hola", "¡Hola!", f"Hola {name}", "Hola, ¿qué tal?"]
     assert client.dummyText in possibleResponses
