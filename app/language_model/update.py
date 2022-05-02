@@ -1,5 +1,5 @@
 from infrastructure.dynamodb.dynamodb_dataset_repository import DynamoDBDatasetRepository
-from dataset.entry import Entry
+from language_model.entry import Entry
 
 repositoryDataset = DynamoDBDatasetRepository()
 

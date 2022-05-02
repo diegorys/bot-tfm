@@ -1,10 +1,10 @@
 from random import randrange
 import time
-from actions.default import Default
-from actions.introduce_oneself import IntroduceOnself
-from actions.register_medicine import RegisterMedicine
-from actions.register_status import RegisterStatus
-from actions.say_hello import SayHello
+# from actions.default import Default
+# from actions.introduce_oneself import IntroduceOnself
+# from actions.register_medicine import RegisterMedicine
+# from actions.register_status import RegisterStatus
+# from actions.say_hello import SayHello
 from domain.dialog import Dialog
 from domain.response import Response
 

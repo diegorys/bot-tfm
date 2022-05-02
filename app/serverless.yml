@@ -129,17 +129,17 @@ package:
 
 functions:
   telegram:
-    handler: aws/telegram.handle
+    handler: conversational_bot/infrastructure/telegram/telegram_webhook.handle
     events:
       - httpApi:
           path: /telegram
           method: post
   dataset-generate:
-    handler: dataset/generate.handle
+    handler: language_model/generate.handle
   dataset-update:
-    handler: dataset/update.handle
+    handler: language_model/update.handle
   cron:
-    handler: aws/cron.handle
+    handler: cron/cron.handle
     events:
       - schedule: rate(1 minute)
 
