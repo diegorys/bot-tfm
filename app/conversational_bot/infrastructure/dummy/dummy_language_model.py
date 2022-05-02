@@ -8,6 +8,8 @@ class DummyLanguageModel(LanguageModel):
         intent: str = "DESCONOCIDO"
         if "hola" in text.lower():
             intent = "SALUDAR"
+        if "medicina" in text.lower() or "medicamento" in text.lower():
+            intent = "REGISTRAR_MEDICAMENTO"
         if "adiós" in text.lower():
             intent = "DESPEDIRSE"
         return intent, {}
@@ -18,10 +20,12 @@ class DummyLanguageModel(LanguageModel):
             response = self.generateSaludarResponse(frame)
         elif "DESPEDIRSE" == frame.intent:
             response = self.generateDespedidaResponse(frame)
+        elif "REGISTRAR_MEDICAMENTO" == frame.intent:
+            response = self.generateRegisterMedicationResponse(frame)
         elif "DESCONOCIDO" == frame.intent:
-            response = self.generateNotUnderstandResponse(frame)
+            response = self.generateUnderstandResponse(frame)
         else:
-            response = self.generateNotUnderstandResponse(frame)
+            response = self.generateUnderstandResponse(frame)
         print(f"Response {response}")
         return response
 
@@ -35,6 +39,11 @@ class DummyLanguageModel(LanguageModel):
             ["Hasta luego", "¡Nos vemos!", f"Hablamos luego, {frame.user.metadata['name']}"]
         )
 
+    def generateRegisterMedicationResponse(self, frame):
+        return self.generateRandomResponse(
+            ["Registro la medicina", "Tomo nota de que te tienes que tomar la medicina", f"Me apunto el medicamento, {frame.user.metadata['name']}"]
+        )
+
     def generateUnderstandResponse(self, frame):
         return self.generateRandomResponse(
             [
@@ -45,8 +54,8 @@ class DummyLanguageModel(LanguageModel):
                 "¿Qué más quieres contarme?",
                 "Cuéntame más cosas",
                 "Me interesa todo lo que me digas",
-                f'No estoy programado para "{frame.intent}", pero lo apunto',
-                f'Todavía tengo que aprender a "{frame.intent}", pero tomo nota',
+                # f'No estoy programado para "{frame.intent}", pero lo apunto',
+                # f'Todavía tengo que aprender a "{frame.intent}", pero tomo nota',
             ]
         )
 
