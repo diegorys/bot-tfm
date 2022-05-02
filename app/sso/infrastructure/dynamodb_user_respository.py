@@ -1,8 +1,5 @@
 import os
-import uuid
-import time
 import boto3
-from boto3.dynamodb.conditions import Attr
 
 from sso.domain.user import User
 from sso.domain.user_repository import UserRepository
@@ -23,15 +20,12 @@ class DynamoDBUsersRepository(UserRepository):
         response = table.scan()
         items = response["Items"]
         for item in items:
-            users.append(
-                User(
-                    item["name"],
-                    {
-                        "telegram_id": item["telegram_id"],
-                        "username": item["name"],
-                        "caregiver": item["caregiver"],
-                        "dependents": item["dependents"],
-                    },
-                )
+            user = User(
+                item["name"], {"telegram_id": item["telegram_id"], "username": item["name"]}
             )
+            if "caregiver" in item.keys():
+                user.metadata["caregiver"] = item["caregiver"]
+            if "dependents" in item.keys():
+                user.metadata["dependents"] = item["dependents"]
+            users.append(user)
         return users
