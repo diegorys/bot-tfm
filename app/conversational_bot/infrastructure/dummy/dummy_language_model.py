@@ -24,7 +24,7 @@ class DummyLanguageModel(LanguageModel):
             response = self.generateRegisterMedicationResponse(frame)
         elif "DESCONOCIDO" == frame.intent:
             response = self.generateUnderstandResponse(frame)
-        elif "NOTIFICAR" == frame.intent:
+        elif "NOTIFICATION" == frame.intent:
             response = self.generateNotificationResponse(frame)
         else:
             response = self.generateUnderstandResponse(frame)

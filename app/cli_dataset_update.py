@@ -7,8 +7,8 @@ if 1 < len(sys.argv):
     os.environ["DIALOGS_TABLE"] = f"tfm-{environment}-dialogs"
     os.environ["DATASET_TABLE"] = f"tfm-{environment}-dataset"
 
-from dataset.generate import handle as generate
-from dataset.update import handle as update
+from language_model.generate import handle as generate
+from language_model.update import handle as update
 
 with open('data.json') as json_file:
     data = json.load(json_file)

@@ -4,7 +4,7 @@ import time
 import boto3
 from boto3.dynamodb.conditions import Attr
 
-from dataset.entry import Entry
+from language_model.entry import Entry
 
 TABLE_NAME = os.environ["DATASET_TABLE"]
 
