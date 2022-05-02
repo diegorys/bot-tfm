@@ -1,7 +1,12 @@
-import os
-from conversational_bot.infrastructure.telegram.telegram_client import TelegramClient
+def startConversationalBOT():
+    import os
+    from conversational_bot.infrastructure.telegram.telegram_client import TelegramClient
 
-TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
+    print(f"STARTING CONVERSATIONAL BOT...")
+    TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
+    telegramClient: TelegramClient = TelegramClient(TELEGRAM_TOKEN)
+    print("WAITING FOR USER MESSAGE...")
+    telegramClient.pool()
+    
 
-telegramClient: TelegramClient = TelegramClient(TELEGRAM_TOKEN)
-telegramClient.pool()
+startConversationalBOT()

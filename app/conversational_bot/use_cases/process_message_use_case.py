@@ -12,4 +12,5 @@ class ProcessMessageUseCase:
     def execute(self, user: User, text: str, date) -> None:
         print(f"Text: {text}")
         frame: Frame = self.nlu.execute(user, text)
-        self.responseGenerator.execute(frame)
+        response = self.responseGenerator.execute(frame)
+        return response
