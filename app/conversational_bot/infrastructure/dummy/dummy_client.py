@@ -5,5 +5,5 @@ class DummyClient(Client):
     def __init__(self):
         self.dummyText = ""
 
-    def emit(self, text):
+    def emit(self, user, text):
         self.dummyText = text

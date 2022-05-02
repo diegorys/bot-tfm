@@ -3,7 +3,10 @@ from conversational_bot.domain.nlu import NLU
 from conversational_bot.domain.response_generator import ResponseGenerator
 from sso.domain.user import User
 
-
+'''
+A partir de un texto, genera una respuesta. No necesita cliente, ya que es un
+cliente quien le invoca.
+'''
 class ProcessMessageUseCase:
     def __init__(self, nlu: NLU, responseGenerator: ResponseGenerator):
         self.nlu: NLU = nlu
