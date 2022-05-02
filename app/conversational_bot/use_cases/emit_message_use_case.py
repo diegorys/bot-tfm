@@ -11,5 +11,5 @@ class EmitMessageUseCase:
 
     def execute(self, user: User, frame: Frame) -> None:
         response = self.responseGenerator.execute(frame)
-        self.client.emit(response)
+        self.client.emit(user, response)
 
