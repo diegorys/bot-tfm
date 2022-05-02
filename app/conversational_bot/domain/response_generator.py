@@ -9,5 +9,4 @@ class ResponseGenerator:
 
     def execute(self, frame: Frame) -> str:
         text: str = self.languageModel.generateText(frame)
-        print(f"Language model generated {text}")
         return text

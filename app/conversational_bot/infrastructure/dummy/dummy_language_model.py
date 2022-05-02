@@ -28,7 +28,6 @@ class DummyLanguageModel(LanguageModel):
             response = self.generateNotificationResponse(frame)
         else:
             response = self.generateUnderstandResponse(frame)
-        print(f"Response {response}")
         return response
 
     def generateSaludarResponse(self, frame):
@@ -71,7 +70,6 @@ class DummyLanguageModel(LanguageModel):
         )
 
     def generateNotificationResponse(self, frame: Frame):
-        print(frame.user.username)
         notification = frame.entities["notification"].replace("<username>", frame.user.username)
         return notification
 

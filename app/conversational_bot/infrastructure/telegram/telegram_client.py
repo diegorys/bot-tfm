@@ -14,4 +14,4 @@ class TelegramClient(Client):
             print(f"Telegram ID: {telegramId}")
             print(f"Text: {text}")
             print("-----")
-            self.telegramBot.send_message(chat_id=telegramId, text=text)
+            # self.telegramBot.send_message(chat_id=telegramId, text=text)
