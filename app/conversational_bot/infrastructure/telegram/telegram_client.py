@@ -10,7 +10,9 @@ class TelegramClient(Client):
     def emit(self, user: User, text: str) -> None:
         telegramId = user.metadata["telegram_id"]
         allowedUsers = ["1009284987"]
-        if telegramId in allowedUsers:
+        if telegramId == "":
+            print(f"El usuario {user.username} no tiene Telegram.")
+        elif telegramId in allowedUsers:
             print(f"User: {user.username}")
             print(f"Telegram ID: {telegramId}")
             print(f"Text: {text}")
