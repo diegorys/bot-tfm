@@ -1,5 +1,6 @@
 from random import randrange
 import time
+from sso.domain.user import User
 # from actions.default import Default
 # from actions.introduce_oneself import IntroduceOnself
 # from actions.register_medicine import RegisterMedicine
@@ -46,16 +47,6 @@ class BOT:
         self.log(text, user, id, date, response)
         return response
 
-    def execute(self, text, user, id, date):
-        print(f"Text: {text}")
-        print(f"Service available? {self.config.SERVICE_AVAILABLE}")
-        if self.config.SERVICE_AVAILABLE:
-            response = self.getResponse(user, text)
-        else:
-            response = self.generateUnavailableService(user)
-        self.log(text, user, id, date, response)
-        return response
-
     def generateUnavailableService(self, user):
         print("servicio no disponible")
         phrases = [
@@ -73,13 +64,13 @@ class BOT:
         response = Response(user, text)
         return response
 
-    def log(self, text, user, id, date, response):
+    def log(self, text, user: User, id, date, response):
         now = str(time.time())
         if self.repository:
             dialog = Dialog(
                 now,
-                user["metadata"]["telegram_id"],
-                user.name,
+                user.metadata["telegram_id"],
+                user.username,
                 text,
                 response.domain,
                 response.intent,
@@ -91,8 +82,8 @@ class BOT:
         else:
             print(
                 id,
-                user.id,
-                user.name,
+                user.metadata["telegram_id"],
+                user.username,
                 text,
                 response.domain,
                 response.intent,

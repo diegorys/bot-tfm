@@ -7,6 +7,7 @@ import os
 import json
 import telegram
 from domain.bot import BOT
+from domain.response import Response
 from sso.domain.user import User
 # from infrastructure.gpt3.gpt3_nlu import GPT3NLU
 from infrastructure.dynamodb.dynamodb_dialog_repository import DynamoDBDialogRepository
@@ -79,7 +80,7 @@ def execute(event):
         id = update.update_id
         date = str(update.message.date)
         response = botExecute(text, user, available, id, date)
-        bot.sendMessage(chat_id=chat_id, text=response)
+        bot.sendMessage(chat_id=chat_id, text=response.text)
         print("Message sent")
 
 
@@ -90,6 +91,7 @@ def botExecute(text: str, user: User, available, id, date):
         print("/START")
         response = bot.handleStart(text, user, id, date)
     else:
-        response = processMessageUseCase.execute(user, text, date)
-        # bot.log(text, user, id, date, response)
+        txt = processMessageUseCase.execute(user, text, date)
+        response: Response = Response(user, txt)
+        bot.log(text, user, id, date, response)
     return response

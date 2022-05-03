@@ -1,5 +1,8 @@
+from sso.domain.user import User
+
+
 class Response:
-    def __init__(self, user, text):
+    def __init__(self, user: User, text):
         self.user = user
         self.text = text
         self.domain = ""
