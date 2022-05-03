@@ -8,6 +8,7 @@ TELEGRAM_TOKEN = {
 }
 if 1 < len(sys.argv):
     environment = sys.argv[1]
+    print(f"Environment: {environment}")
     os.environ["USERS_TABLE"] = f"tfm-{environment}-users"
     os.environ["TELEGRAM_TOKEN"] = TELEGRAM_TOKEN[environment]
 
