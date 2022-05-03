@@ -6,7 +6,7 @@ from sso.domain.user import User
 # from actions.register_medicine import RegisterMedicine
 # from actions.register_status import RegisterStatus
 # from actions.say_hello import SayHello
-from domain.dialog import Dialog
+from dialogs.domain.dialog import Dialog
 from conversational_bot.domain.response import Response
 
 

@@ -3,7 +3,7 @@ import uuid
 import time
 import boto3
 from boto3.dynamodb.conditions import Attr
-from domain.dialog_repository import DialogRepository
+from dialogs.domain.dialog_repository import DialogRepository
 
 TABLE_NAME = os.environ["DIALOGS_TABLE"]
 
