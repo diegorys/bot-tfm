@@ -10,6 +10,7 @@ import telegram
 from dialogs.domain.dialog import Dialog
 from conversational_bot.domain.response import Response
 from sso.domain.user import User
+
 # from infrastructure.gpt3.gpt3_nlu import GPT3NLU
 from infrastructure.dynamodb.dynamodb_dialog_repository import DynamoDBDialogRepository
 from infrastructure.configuration import Config
@@ -88,7 +89,7 @@ def botExecute(text: str, user: User, available, id, date):
     print(f"Service available? {available}")
     if text == "/start":
         print("/START")
-        response = handleStart(text, user, id, date)
+        response = handleStart(user)
         log(text, user, id, date, response)
     else:
         response = processMessageUseCase.execute(user, text, date)
@@ -96,7 +97,7 @@ def botExecute(text: str, user: User, available, id, date):
     return response
 
 
-def handleStart(self, text, user, id, date):
+def handleStart(user):
     message = (
         f"Hola {user.name}, soy tu cuidador"
         + ", encantado de conocerte. Si eres una persona mayor, cuéntame cómo te sientes.\n"
@@ -117,13 +118,13 @@ def handleStart(self, text, user, id, date):
         user,
         message,
     )
-    response.domain = self.domain
-    response.intent = self.intent
+    response.intent = "/start"
     return response
 
-def log(self, text, user: User, id, date, response):
+
+def log(text: str, user: User, id, date, response):
     now = str(time.time())
-    if self.repository:
+    if repository:
         dialog = Dialog(
             now,
             user.metadata["telegram_id"],
@@ -135,7 +136,7 @@ def log(self, text, user: User, id, date, response):
             response.text,
             date,
         )
-        self.repository.save(dialog)
+        repository.save(dialog)
     else:
         print(
             id,

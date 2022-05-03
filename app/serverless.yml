@@ -116,14 +116,12 @@ package:
   patterns:
     - "!**/*"
     - "!*.py"
-    - "actions/*.py"
-    - "aws/*.py"
-    - "domain/*.py"
-    - "infrastructure/**/*.py"
+    - "conversational_bot/**/*.py"
     - "dataset/**/*.py"
-    - conversational_bot/**/*.py
-    - notifications/**/*.py
-    - sso/**/*.py
+    - "dialogs/**/*.py"
+    - "infrastructure/**/*.py"
+    - "notifications/**/*.py"
+    - "sso/**/*.py"
     - boto3
     # - openai
     - python-telegram-bot
