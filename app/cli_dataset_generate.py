@@ -7,7 +7,7 @@ if 1 < len(sys.argv):
     os.environ["DIALOGS_TABLE"] = f"tfm-{environment}-dialogs"
     os.environ["DATASET_TABLE"] = f"tfm-{environment}-dataset"
 
-from language_model.generate import handle as generate
+from dataset.generate import handle as generate
 
 
 print("-------------")

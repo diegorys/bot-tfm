@@ -3,10 +3,11 @@ try:
 except ImportError:
     pass
 
+import time
 import os
 import json
 import telegram
-from domain.bot import BOT
+from dialogs.domain.dialog import Dialog
 from conversational_bot.domain.response import Response
 from sso.domain.user import User
 # from infrastructure.gpt3.gpt3_nlu import GPT3NLU
@@ -18,9 +19,7 @@ from conversational_bot.infrastructure.dummy.dummy_language_model import DummyLa
 from conversational_bot.use_cases.process_message_use_case import ProcessMessageUseCase
 
 config = Config()
-gpt3NLU = None #GPT3NLU()
 repository = DynamoDBDialogRepository()
-bot = BOT(gpt3NLU, config, repository)
 available = config.SERVICE_AVAILABLE
 
 languageModel = DummyLanguageModel()
@@ -89,8 +88,63 @@ def botExecute(text: str, user: User, available, id, date):
     print(f"Service available? {available}")
     if text == "/start":
         print("/START")
-        response = bot.handleStart(text, user, id, date)
+        response = handleStart(text, user, id, date)
+        log(text, user, id, date, response)
     else:
         response = processMessageUseCase.execute(user, text, date)
-        bot.log(text, user, id, date, response.text)
+        log(text, user, id, date, response)
     return response
+
+
+def handleStart(self, text, user, id, date):
+    message = (
+        f"Hola {user.name}, soy tu cuidador"
+        + ", encantado de conocerte. Si eres una persona mayor, cuéntame cómo te sientes.\n"
+        + "También me puedes contar qué medicinas tomas. No necesito que sean reales.\n"
+        + "Y, si quieres, me puedes decir cuáles son tus fechas importantes y por qué.\n"
+        + "Tampoco necesito que sea verdad lo que me digas.\n\n"
+        + "Si eres una persona joven, puedes preguntarme por la persona mayor a la que cuidas.\n\n"
+        + "Todo lo que me escribas será almacenado en una base de datos para una revisión"
+        + " manual para mi TFM, así que no pongas nada que no quieras que lea.\n"
+        + "Por ahora el servicio de respuestas está desactivado y me limitaré a guardar"
+        + " nuestras conversaciones.\n\n"
+        + "Por favor, no sigas los consejos que te dé sin consultar antes a un experto, puesto"
+        + " que sólo soy un BOT desarrollado para un TFM."
+        + "\n\nPara más información, escribe a mi autor Diego a diegorys@gmail.com."
+        + "\n\n¡Muchas gracias por colaborar!"
+    )
+    response = Response(
+        user,
+        message,
+    )
+    response.domain = self.domain
+    response.intent = self.intent
+    return response
+
+def log(self, text, user: User, id, date, response):
+    now = str(time.time())
+    if self.repository:
+        dialog = Dialog(
+            now,
+            user.metadata["telegram_id"],
+            user.username,
+            text,
+            response.domain,
+            response.intent,
+            response.command,
+            response.text,
+            date,
+        )
+        self.repository.save(dialog)
+    else:
+        print(
+            id,
+            user.metadata["telegram_id"],
+            user.username,
+            text,
+            response.domain,
+            response.intent,
+            response.command,
+            response.text,
+            date,
+        )
