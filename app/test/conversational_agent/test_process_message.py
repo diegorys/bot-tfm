@@ -15,7 +15,7 @@ def test_execute():
     responseGenerator: ResponseGenerator = ResponseGenerator(languageModel)
     processMessageUseCase: ProcessMessageUseCase = ProcessMessageUseCase(nlu, responseGenerator)
     response = processMessageUseCase.execute(user, "Hola robot", "")
-    client.emit(user, response)
+    client.emit(user, response.text)
     print("------------")
     print(client.dummyText)
     print("------------")

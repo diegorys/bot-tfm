@@ -32,8 +32,8 @@ class TelegramBot:
         )
         print(f"> {telegramId} ({username}): {text}")
         response = self.processMessageUseCase.execute(user, text, date)
-        print(f"< BOT: {response}")
-        context.bot.send_message(chat_id=update.effective_chat.id, text=response)
+        print(f"< BOT: {response.text}")
+        context.bot.send_message(chat_id=update.effective_chat.id, text=response.text)
 
     def handleStartCommand(self, update: Update, context: CallbackContext):
         print("User connected")

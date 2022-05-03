@@ -91,7 +91,6 @@ def botExecute(text: str, user: User, available, id, date):
         print("/START")
         response = bot.handleStart(text, user, id, date)
     else:
-        txt = processMessageUseCase.execute(user, text, date)
-        response: Response = Response(user, txt)
-        bot.log(text, user, id, date, response)
+        response = processMessageUseCase.execute(user, text, date)
+        bot.log(text, user, id, date, response.text)
     return response

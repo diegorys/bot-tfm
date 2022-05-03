@@ -17,4 +17,4 @@ class SendNotificationUseCase:
         for user in users:
             frame = Frame("NOTIFICATION", user, "", notification)
             response = self.responseGenerator.execute(frame)
-            self.client.emit(frame.user, response)
+            self.client.emit(frame.user, response.text)
