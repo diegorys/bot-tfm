@@ -1,4 +1,4 @@
-from domain.response import Response
+from conversational_bot.domain.response import Response
 
 
 class IntroduceOnself:

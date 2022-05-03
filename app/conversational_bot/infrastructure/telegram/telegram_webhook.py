@@ -7,7 +7,7 @@ import os
 import json
 import telegram
 from domain.bot import BOT
-from domain.response import Response
+from conversational_bot.domain.response import Response
 from sso.domain.user import User
 # from infrastructure.gpt3.gpt3_nlu import GPT3NLU
 from infrastructure.dynamodb.dynamodb_dialog_repository import DynamoDBDialogRepository
