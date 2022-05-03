@@ -1,7 +1,6 @@
 import os
 # import openai
 from conversational_bot.domain.response import Response
-# from domain.medication.medication import Medication
 # from use_cases.register_medicine_use_case import RegisterMedicineUseCase
 
 GPT3_ENGINE = os.environ["GPT3_ENGINE"]
