@@ -3,17 +3,17 @@ import uuid
 import time
 import boto3
 from boto3.dynamodb.conditions import Attr
-
-from dataset.entry import Entry
+from dataset.domain.dataset_repository import DatasetRepository
+from dataset.domain.entry import Entry
 
 TABLE_NAME = os.environ["DATASET_TABLE"]
 
 
-class DynamoDBDatasetRepository:
+class DynamoDBDatasetRepository(DatasetRepository):
     def __init__(self):
         self.dynamodb = boto3.resource("dynamodb")
 
-    def create(self, entry):
+    def create(self, entry: Entry):
         exists = self.exists(entry)
         if exists:
             raise Exception(f"Error at insert duplicated dataset entry")
@@ -32,7 +32,7 @@ class DynamoDBDatasetRepository:
         )
         return entry
 
-    def update(self, entry):
+    def update(self, entry: Entry):
         table = self.dynamodb.Table(TABLE_NAME)
         timestamp = str(time.time())
         response = table.put_item(
@@ -53,12 +53,6 @@ class DynamoDBDatasetRepository:
 
         print(response["Items"])
         return response["Items"]
-
-    def listDomain(self, domain):
-        pass
-
-    def listIntent(self, intent):
-        pass
 
     def truncate(self):
         pass
