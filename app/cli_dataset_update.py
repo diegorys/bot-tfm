@@ -11,7 +11,7 @@ from dataset.services.update_service import UpdateService
 repositoryDataset = DynamoDBDatasetRepository()
 updateService = UpdateService(repositoryDataset)
 
-with open("/data/dataset/data.json") as json_file:
+with open("/data/dataset/trunk/data.json") as json_file:
     data = json.load(json_file)
     print(data)
 print("-----------")

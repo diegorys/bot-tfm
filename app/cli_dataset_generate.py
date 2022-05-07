@@ -25,7 +25,7 @@ print("GENERATE DATASET")
 output = generateService.execute()
 print(f"Generated {len(output)} entries.")
 
-with open("/data/dataset/data.json", "w", encoding="utf-8") as f:
+with open("/data/dataset/trunk/data.json", "w", encoding="utf-8") as f:
     json.dump(output, f, ensure_ascii=False, indent=4)
 
-print("Saved at /data/dataset/data.json")
+print("Saved at /data/dataset/trunk/data.json")
