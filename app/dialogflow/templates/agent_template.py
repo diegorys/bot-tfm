@@ -1,0 +1,25 @@
+class AgentTemplate:
+    def generate(self, name: str):
+        return {
+            "description": "",
+            "language": "es",
+            "shortDescription": "",
+            "examples": "",
+            "linkToDocs": "",
+            "displayName": name,
+            "disableInteractionLogs": False,
+            "disableStackdriverLogs": True,
+            "defaultTimezone": "Europe/Madrid",
+            "isPrivate": True,
+            "mlMinConfidence": 0.3,
+            "supportedLanguages": [],
+            "enableOnePlatformApi": True,
+            "onePlatformApiVersion": "v2",
+            "secondaryKey": "51531c8d9a204b39b93fa09f4a8d21e3",
+            "analyzeQueryTextSentiment": False,
+            "enabledKnowledgeBaseNames": [],
+            "knowledgeServiceConfidenceAdjustment": 0.0,
+            "dialogBuilderMode": False,
+            "baseActionPackagesUrl": "",
+            "enableSpellCorrection": False,
+        }

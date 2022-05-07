@@ -1,9 +1,18 @@
 import os
 import json
-import uuid
+from dialogflow.templates.intent_template import IntentTemplate
+from dialogflow.templates.user_says_template import UserSaysTemplate
+from dialogflow.templates.entity_template import EntityTemplate
+from dialogflow.templates.agent_template import AgentTemplate
 
 
 class GenerateService:
+    def __init__(self):
+        self.agentTemplate = AgentTemplate()
+        self.entityTemplate = EntityTemplate()
+        self.userSaysTemplate = UserSaysTemplate()
+        self.intentTemplate = IntentTemplate()
+
     def execute(self, data, path: str):
         print("Generate")
         if not os.path.exists(path):
@@ -33,7 +42,7 @@ class GenerateService:
         if not os.path.exists(dir):
             os.mkdir(dir)
         for entityName in entities.keys():
-            output = self.generateEntityTemplate(entityName)
+            output = self.entityTemplate.generate(entityName)
             os.makedirs(os.path.dirname(f"{dir}/{entityName}.json"), exist_ok=True)
             with open(f"{dir}/{entityName}.json", "w", encoding="utf-8") as f:
                 json.dump(output, f, ensure_ascii=False, indent=4)
@@ -42,17 +51,6 @@ class GenerateService:
             with open(f"{dir}/{entityName}_entries_es.json", "w", encoding="utf-8") as f:
                 json.dump(output, f, ensure_ascii=False, indent=4)
             output = self.generateValueTemplate(entities[entityName])
-
-    def generateEntityTemplate(self, entityName):
-        return {
-            "id": str(uuid.uuid4()),
-            "name": entityName,
-            "isOverridable": True,
-            "isEnum": False,
-            "isRegexp": False,
-            "automatedExpansion": False,
-            "allowFuzzyExtraction": False,
-        }
 
     def generateValueTemplate(self, values):
         output = []
@@ -78,57 +76,23 @@ class GenerateService:
         if not os.path.exists(dir):
             os.mkdir(dir)
         for intent in intents.keys():
-            output = {"id": str(uuid.uuid4()), "name": intent}
+            output = self.intentTemplate.generate(intent)
             with open(f"{path}/intents/{intent}.json", "w", encoding="utf-8") as f:
                 json.dump(output, f, ensure_ascii=False, indent=4)
             output = self.generateTextsTemplate(intents[intent])
             with open(f"{path}/intents/{intent}_usersays_es.json", "w", encoding="utf-8") as f:
                 json.dump(output, f, ensure_ascii=False, indent=4)
 
-    def generateTextsTemplate(self, texts):
+    def generateTextsTemplate(self, items):
         output = []
-        for text in texts:
-            output.append(
-                {
-                    "data": [
-                        {
-                            "text": text["text"],
-                            "userDefined": False,
-                        }
-                    ],
-                    "isTemplate": False,
-                    "count": 0,
-                    "lang": "es",
-                    "updated": 0,
-                }
-            )
+        for item in items:
+            text = self.userSaysTemplate.generate(item["text"], item["entities"])
+            output.append(text)
         return output
 
     def generateAgent(self, path: str):
         print("Generate agent")
-        output = {
-            "description": "",
-            "language": "es",
-            "shortDescription": "",
-            "examples": "",
-            "linkToDocs": "",
-            "displayName": "CuidadorMayores",
-            "disableInteractionLogs": False,
-            "disableStackdriverLogs": True,
-            "defaultTimezone": "Europe/Madrid",
-            "isPrivate": True,
-            "mlMinConfidence": 0.3,
-            "supportedLanguages": [],
-            "enableOnePlatformApi": True,
-            "onePlatformApiVersion": "v2",
-            "secondaryKey": "51531c8d9a204b39b93fa09f4a8d21e3",
-            "analyzeQueryTextSentiment": False,
-            "enabledKnowledgeBaseNames": [],
-            "knowledgeServiceConfidenceAdjustment": 0.0,
-            "dialogBuilderMode": False,
-            "baseActionPackagesUrl": "",
-            "enableSpellCorrection": False,
-        }
+        output = self.agentTemplate.generate("CuidadorMayores")
         print(f"{path}/agent.json")
         os.makedirs(os.path.dirname(f"{path}/agent.json"), exist_ok=True)
         with open(f"{path}/agent.json", "w", encoding="utf-8") as f:
