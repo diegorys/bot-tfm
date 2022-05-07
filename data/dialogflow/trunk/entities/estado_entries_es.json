@@ -1,14 +1,14 @@
 [
     {
-        "value": "soledad",
+        "value": "sola",
         "synonyms": []
     },
     {
-        "value": "culpabilidad",
+        "value": "ocupado",
         "synonyms": []
     },
     {
-        "value": "felicidad",
+        "value": "muy bien",
         "synonyms": []
     },
     {
@@ -16,11 +16,7 @@
         "synonyms": []
     },
     {
-        "value": "sueño",
-        "synonyms": []
-    },
-    {
-        "value": "disgusto",
+        "value": "disgustada",
         "synonyms": []
     },
     {
@@ -28,15 +24,23 @@
         "synonyms": []
     },
     {
-        "value": "voluntad",
+        "value": "felicidad",
         "synonyms": []
     },
     {
-        "value": "cansancio",
+        "value": "cansada",
         "synonyms": []
     },
     {
-        "value": "molestia",
+        "value": "muy contenta",
+        "synonyms": []
+    },
+    {
+        "value": "Bien",
+        "synonyms": []
+    },
+    {
+        "value": "molests",
         "synonyms": []
     }
 ]

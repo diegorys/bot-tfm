@@ -8,16 +8,15 @@ class GenerateService:
         print("Generate")
         if not os.path.exists(path):
             os.mkdir(path)
-        self.generateEntities(data, path)
-        self.generateIntents(data, path)
+        entities = self.generateEntities(data)
+        self.writeEntities(entities, path)
+        intents = self.generateIntents(data)
+        self.writeIntents(intents, path)
         self.generateAgent(path)
         self.generatePackage(path)
 
-    def generateEntities(self, data, path: str):
+    def generateEntities(self, data):
         print("Generate entities")
-        dir = f"{path}/entities"
-        if not os.path.exists(dir):
-            os.mkdir(dir)
         finalEntities = {}
         for item in data:
             entities = item["entities"]
@@ -27,17 +26,20 @@ class GenerateService:
                     finalEntities[entityName] = []
                 if entities[entityName] not in finalEntities[entityName]:
                     finalEntities[entityName].append(entities[entityName])
-        self.writeEntities(finalEntities, dir)
+        return finalEntities
 
     def writeEntities(self, entities, path):
+        dir = f"{path}/entities"
+        if not os.path.exists(dir):
+            os.mkdir(dir)
         for entityName in entities.keys():
             output = self.generateEntityTemplate(entityName)
-            os.makedirs(os.path.dirname(f"{path}/{entityName}.json"), exist_ok=True)
-            with open(f"{path}/{entityName}.json", "w", encoding="utf-8") as f:
+            os.makedirs(os.path.dirname(f"{dir}/{entityName}.json"), exist_ok=True)
+            with open(f"{dir}/{entityName}.json", "w", encoding="utf-8") as f:
                 json.dump(output, f, ensure_ascii=False, indent=4)
             output = self.generateValueTemplate(entities[entityName])
-            os.makedirs(os.path.dirname(f"{path}/{entityName}_entries_es.json"), exist_ok=True)
-            with open(f"{path}/{entityName}_entries_es.json", "w", encoding="utf-8") as f:
+            os.makedirs(os.path.dirname(f"{dir}/{entityName}_entries_es.json"), exist_ok=True)
+            with open(f"{dir}/{entityName}_entries_es.json", "w", encoding="utf-8") as f:
                 json.dump(output, f, ensure_ascii=False, indent=4)
             output = self.generateValueTemplate(entities[entityName])
 
@@ -58,25 +60,28 @@ class GenerateService:
             output.append({"value": value, "synonyms": []})
         return output
 
-    def generateIntents(self, data, path: str):
+    def generateIntents(self, data):
         print("Generate intents")
-        dir = f"{path}/intents"
-        print(dir)
-        if not os.path.exists(dir):
-            os.mkdir(dir)
         finalIntents = {}
         for item in data:
             intent = item["intent"]
             if "" != intent:
                 if intent not in finalIntents.keys():
                     finalIntents[intent] = []
-                finalIntents[intent].append(item["text"])
+                finalIntents[intent].append({"text": item["text"], "entities": item["entities"]})
                 # print(intent)
-        for intent in finalIntents.keys():
+        return finalIntents
+
+    def writeIntents(self, intents, path: str):
+        dir = f"{path}/intents"
+        print(dir)
+        if not os.path.exists(dir):
+            os.mkdir(dir)
+        for intent in intents.keys():
             output = {"id": str(uuid.uuid4()), "name": intent}
             with open(f"{path}/intents/{intent}.json", "w", encoding="utf-8") as f:
                 json.dump(output, f, ensure_ascii=False, indent=4)
-            output = self.generateTextsTemplate(finalIntents[intent])
+            output = self.generateTextsTemplate(intents[intent])
             with open(f"{path}/intents/{intent}_usersays_es.json", "w", encoding="utf-8") as f:
                 json.dump(output, f, ensure_ascii=False, indent=4)
 
@@ -87,7 +92,7 @@ class GenerateService:
                 {
                     "data": [
                         {
-                            "text": text,
+                            "text": text["text"],
                             "userDefined": False,
                         }
                     ],

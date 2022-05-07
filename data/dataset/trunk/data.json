@@ -10,7 +10,7 @@
         "text": "Hola estoy muy sola necesito de tus consejos y que me hagas compañía😢😢😢",
         "intent": "REGISTRAR_ESTADO_EMOCIONAL",
         "entities": {
-            "estado": "soledad"
+            "estado": "sola"
         }
     },
     {
@@ -24,7 +24,7 @@
         "text": "Hola, he estado un poco ocupado, lo siento, intentaré estar más en adelante en lo posible",
         "intent": "REGISTRAR_ESTADO_EMOCIONAL",
         "entities": {
-            "estado": "culpabilidad"
+            "estado": "ocupado"
         }
     },
     {
@@ -60,7 +60,7 @@
         "text": "Bien, muy bien, viendo una serie.",
         "intent": "REGISTRAR_ESTADO_EMOCIONAL",
         "entities": {
-            "estado": "felicidad"
+            "estado": "muy bien"
         }
     },
     {
@@ -88,7 +88,7 @@
         "text": "Estoy muy bien",
         "intent": "REGISTRAR_ESTADO_EMOCIONAL",
         "entities": {
-            "estado": "felicidad"
+            "estado": "muy bien"
         }
     },
     {
@@ -100,26 +100,20 @@
     {
         "id": "92687c9a-6892-4a37-a1ec-508807f4787a",
         "text": "Creo q me iré pronto a dormir",
-        "intent": "REGISTRAR_ESTADO_EMOCIONAL",
-        "entities": {
-            "estado": "sueño"
-        }
+        "intent": "POR_DEFECTO",
+        "entities": {}
     },
     {
         "id": "fcb506c3-e48c-44d0-bf6f-739a72579f35",
         "text": "Hola hoy he recibido una buena noticia mi hija empieza a trabajar el día nueve",
-        "intent": "REGISTRAR_ESTADO_EMOCIONAL",
-        "entities": {
-            "estado": "felicidad"
-        }
+        "intent": "REGISTRAR_ANECDOTA",
+        "entities": {}
     },
     {
         "id": "68276c3b-81f6-494a-bd01-46b9066a30cb",
         "text": "Anoche no dormí bien",
-        "intent": "REGISTRAR_ESTADO_EMOCIONAL",
-        "entities": {
-            "estado": "sueño"
-        }
+        "intent": "REGISTRAR_SITUACION_ADVERSA",
+        "entities": {}
     },
     {
         "id": "6a60f341-3507-4c23-9b06-a8806bc6a7bc",
@@ -156,7 +150,7 @@
         "text": "Estoy disgustada mi amiga tiene un problema y no s como ayudarla",
         "intent": "REGISTRAR_ESTADO_EMOCIONAL",
         "entities": {
-            "estado": "disgusto"
+            "estado": "disgustada"
         }
     },
     {
@@ -170,7 +164,7 @@
     {
         "id": "6bc9549a-ca0f-465c-9ef4-a21aa3adfdf0",
         "text": "Mañana celebramos el Día de la madre comemos en el centro comercial pero no estamos todos como me gustaría otro año será",
-        "intent": "REGISTRAR_ESTADO_EMOCIONAL",
+        "intent": "REGISTRAR_ANECDOTA",
         "entities": {
             "estado": "tristeza"
         }
@@ -248,7 +242,7 @@
         "text": "Está todo bien 👍🏻",
         "intent": "REGISTRAR_ESTADO_EMOCIONAL",
         "entities": {
-            "estado": "felicidad"
+            "estado": "bien"
         }
     },
     {
@@ -266,7 +260,7 @@
     {
         "id": "680ecd9b-067e-45fa-a0d7-c621641fd952",
         "text": "Me acaban de llamar por teléfono me han dado muy buenas noticias acaban de solucionarme un problema que hacía meses tenía",
-        "intent": "REGISTRAR_ESTADO_EMOCIONAL",
+        "intent": "REGISTRAR_ANECDOTA",
         "entities": {
             "estado": "felicidad"
         }
@@ -333,10 +327,8 @@
     {
         "id": "bc26df4f-4c1d-420e-b150-b86b86a010fb",
         "text": "La dieta me está costando mucho seguirla pero tengo voluntad",
-        "intent": "REGISTRAR_ESTADO_EMOCIONAL",
-        "entities": {
-            "estado": "voluntad"
-        }
+        "intent": "POR_DEFECTO",
+        "entities": {}
     },
     {
         "id": "a615eb11-797a-49ed-abbb-ef3cc7e629ab",
@@ -457,7 +449,7 @@
         "text": "Hola muy bien en Torrevieja cerca del mar",
         "intent": "REGISTRAR_ESTADO_EMOCIONAL",
         "entities": {
-            "estado": "felicidad"
+            "estado": "muy bien"
         }
     },
     {
@@ -465,7 +457,7 @@
         "text": "Y estoy cansada",
         "intent": "REGISTRAR_ESTADO_EMOCIONAL",
         "entities": {
-            "estado": "cansancio"
+            "estado": "cansada"
         }
     },
     {
@@ -517,7 +509,7 @@
         "text": "Me siento muy contenta de tener un amigo",
         "intent": "REGISTRAR_ESTADO_EMOCIONAL",
         "entities": {
-            "estado": "felicidad"
+            "estado": "muy contenta"
         }
     },
     {
@@ -561,7 +553,8 @@
         "text": "Bien... aquí pasando el tiempo",
         "intent": "REGISTRAR_ESTADO_EMOCIONAL",
         "entities": {
-            "estado": "bien"
+            "estado": "Bien",
+            "actividad": "pasando el tiempo"
         }
     },
     {
@@ -575,7 +568,7 @@
         "text": "Hola es que me han dado puntos y estoy muy molests",
         "intent": "REGISTRAR_ESTADO_EMOCIONAL",
         "entities": {
-            "estado": "molestia"
+            "estado": "molests"
         }
     },
     {
@@ -613,7 +606,7 @@
         "text": "Que estoy cansada",
         "intent": "REGISTRAR_ESTADO_EMOCIONAL",
         "entities": {
-            "estado": "cansancio"
+            "estado": "cansada"
         }
     },
     {

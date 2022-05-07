@@ -14,6 +14,18 @@
     {
         "data": [
             {
+                "text": "Creo q me iré pronto a dormir",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
                 "text": "y te sirva todo esto para algo.",
                 "userDefined": false
             }
@@ -51,6 +63,18 @@
         "data": [
             {
                 "text": "Se despierta pronto cada día",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "La dieta me está costando mucho seguirla pero tengo voluntad",
                 "userDefined": false
             }
         ],
