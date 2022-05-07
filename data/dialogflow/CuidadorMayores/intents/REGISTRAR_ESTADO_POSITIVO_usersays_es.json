@@ -1,0 +1,146 @@
+[
+  {
+    "id": "448fd1f2-563d-49e2-96f5-6c6090457a09",
+    "data": [
+      {
+        "text": "Qué bien estoy",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "d1b72c48-829d-48a6-b82b-eee1f88f1b2d",
+    "data": [
+      {
+        "text": "Estoy ",
+        "userDefined": false
+      },
+      {
+        "text": "feliz",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "0a30fc8b-e6df-44f8-b8df-f530dc5158a4",
+    "data": [
+      {
+        "text": "Qué alegría",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "9f4eabe2-fa02-48a1-b53c-759a0867477a",
+    "data": [
+      {
+        "text": "Me acaban de llamar por teléfono me han dado muy buenas noticias acaban de solucionarme ",
+        "userDefined": false
+      },
+      {
+        "text": "un",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": false
+      },
+      {
+        "text": " problema que hacía meses tenía",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "cfc55280-3af5-4202-b234-9cf79be01542",
+    "data": [
+      {
+        "text": "Hola ",
+        "userDefined": false
+      },
+      {
+        "text": "hoy",
+        "meta": "@sys.date-time",
+        "alias": "date-time",
+        "userDefined": false
+      },
+      {
+        "text": " he recibido ",
+        "userDefined": false
+      },
+      {
+        "text": "una",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": false
+      },
+      {
+        "text": " buena noticia ",
+        "userDefined": false
+      },
+      {
+        "text": "mi",
+        "meta": "@sys.unit-length-name",
+        "alias": "unit-length-name",
+        "userDefined": false
+      },
+      {
+        "text": " hija empieza a trabajar el ",
+        "userDefined": false
+      },
+      {
+        "text": "día nueve",
+        "meta": "@sys.date-time",
+        "alias": "date-time1",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "72d06b4b-5733-4d07-b178-3d9e674f1934",
+    "data": [
+      {
+        "text": "Hola muy bien en ",
+        "userDefined": false
+      },
+      {
+        "text": "Torrevieja",
+        "meta": "@sys.location",
+        "alias": "location",
+        "userDefined": false
+      },
+      {
+        "text": " cerca del ",
+        "userDefined": false
+      },
+      {
+        "text": "mar",
+        "meta": "@sys.date-time",
+        "alias": "date-time",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "es",
+    "updated": 0
+  }
+]

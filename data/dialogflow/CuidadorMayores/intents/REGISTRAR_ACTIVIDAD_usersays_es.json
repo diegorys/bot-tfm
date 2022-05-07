@@ -1,0 +1,47 @@
+[
+  {
+    "id": "827c4e27-560e-4071-87f7-e4be654b1b60",
+    "data": [
+      {
+        "text": "Estoy viendo ",
+        "userDefined": false
+      },
+      {
+        "text": "una",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": false
+      },
+      {
+        "text": " serie de Netflix\\\"",
+        "userDefined": false
+      },
+      {
+        "text": "señora acero",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": "\\\"",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "Aquí ando, trabajando. ¿Qué tal tú?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  }
+]

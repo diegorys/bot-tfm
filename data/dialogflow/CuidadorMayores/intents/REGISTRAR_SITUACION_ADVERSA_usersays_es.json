@@ -1,0 +1,61 @@
+[
+  {
+    "id": "d6ded027-09c5-423a-8417-f2d7c91891c5",
+    "data": [
+      {
+        "text": "No le dan la cita para cardiografía",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "cb55ec43-c5e8-45c6-b6a1-927ccb4b45fc",
+    "data": [
+      {
+        "text": "O tengo que acudir a urgencias",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "6f12104e-9e89-4cd3-8122-9f6d73f8bdce",
+    "data": [
+      {
+        "text": "No le ",
+        "userDefined": false
+      },
+      {
+        "text": "dan",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "la",
+        "meta": "@sys.geo-city",
+        "alias": "geo-city",
+        "userDefined": false
+      },
+      {
+        "text": " cita para cardiografía",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  }
+]

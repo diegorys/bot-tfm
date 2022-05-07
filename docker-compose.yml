@@ -19,6 +19,7 @@ services:
       - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
     volumes:
       - ./app/:/app
+      - ./data/:/data
     working_dir: /app
     container_name: app
     command: tail -F anything

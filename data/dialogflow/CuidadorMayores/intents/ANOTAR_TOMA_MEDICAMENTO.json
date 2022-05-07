@@ -1,0 +1,50 @@
+{
+  "id": "49e5f555-f12a-4ada-a3e8-cfc48e8260d2",
+  "name": "ANOTAR_TOMA_MEDICAMENTO",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "80a8c2a1-a480-49ec-97f4-a91b28a2d160",
+          "name": "medicamento",
+          "required": false,
+          "dataType": "@medicamento",
+          "value": "$medicamento",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "es",
+          "speech": [
+            "Me anoto el medicamento que te has tomado."
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

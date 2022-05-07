@@ -13,14 +13,22 @@ class GenerateService:
         entries = []
         for dialog in dialogs:
             text = dialog["text"]
-            print(f"Processing {text}")
-            entry = self.repositoryDataset.getByText(text)
-            if not entry:
-                print("Creating...")
-                entry = Entry(0, text, "", {})
-                entry = self.repositoryDataset.create(entry)
-            else:
-                print("Updating...")
-                self.repositoryDataset.update(entry)
-            entries.append({"id": entry.id, "text": entry.text, "intent": entry.intent})
+            if "/start" != text:
+                print(f"Processing {text}")
+                entry = self.repositoryDataset.getByText(text)
+                if not entry:
+                    print("Creating...")
+                    entry = Entry(0, text, "", {})
+                    entry = self.repositoryDataset.create(entry)
+                # else:
+                #     print("Updating...")
+                #     self.repositoryDataset.update(entry)
+                entries.append(
+                    {
+                        "id": entry.id,
+                        "text": entry.text,
+                        "intent": entry.intent,
+                        "entities": entry.entities,
+                    }
+                )
         return entries

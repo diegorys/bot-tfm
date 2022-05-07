@@ -1,0 +1,68 @@
+[
+  {
+    "id": "9303ef67-744a-43e6-bd62-11c7397a7c8d",
+    "data": [
+      {
+        "text": "Estoy cenando una hamburguesa con pan integral es bueno para el azúcar y colesterol??",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "f184b766-d2c5-45bc-9913-0ed6b9230669",
+    "data": [
+      {
+        "text": "Estoy cenando ",
+        "userDefined": false
+      },
+      {
+        "text": "una hamburguesa",
+        "meta": "@sys.location",
+        "alias": "location",
+        "userDefined": false
+      },
+      {
+        "text": " con pan integral ",
+        "userDefined": false
+      },
+      {
+        "text": "es",
+        "meta": "@sys.language",
+        "alias": "language",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "bueno",
+        "meta": "@sys.last-name",
+        "alias": "last-name",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "para",
+        "meta": "@sys.geo-state",
+        "alias": "geo-state",
+        "userDefined": false
+      },
+      {
+        "text": " el azúcar y colesterol??",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  }
+]

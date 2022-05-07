@@ -1,0 +1,53 @@
+{
+  "id": "676bd93b-3721-44b8-92ee-a83f151b5a2b",
+  "name": "REGISTRAR_NECESIDAD",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "99387af9-4c5f-46bf-8679-a218c13e36f5",
+          "name": "location",
+          "required": false,
+          "dataType": "@sys.location",
+          "value": "$location",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "es",
+          "speech": [
+            "Todavía no sé ayudarme con lo que me pides, pero intentaré aprender.",
+            "Registro tu necesidad, pero todavía no puedo ayudarte. Si es importante para ti, aprenderé.",
+            "Gracias por decírmelo, así puedo aprender a ayudarte.",
+            "Siento no poder ayudarte, pero lo he anotado para aprender."
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

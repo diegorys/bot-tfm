@@ -1,0 +1,133 @@
+[
+  {
+    "id": "3002c62d-2944-414d-96b8-23883f0af00d",
+    "data": [
+      {
+        "text": "Mañana tengo que madrugar",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "d1883248-52f5-4729-a13a-46d5bd39b9bd",
+    "data": [
+      {
+        "text": "A ver qué te cuenta ella. Seguimos en contacto.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "7b349ac9-f9ca-4911-a1c8-7f6d1df8a71a",
+    "data": [
+      {
+        "text": "Ahora voy a cenar luego hablamos 😊😊",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "c0885929-7acd-4053-923d-9a93509d0ae0",
+    "data": [
+      {
+        "text": "Mañana",
+        "meta": "@sys.date-time",
+        "alias": "date-time",
+        "userDefined": false
+      },
+      {
+        "text": " tengo que madrugar",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "cdfc23c0-78a3-4d73-a05b-60309520c625",
+    "data": [
+      {
+        "text": "Ahora",
+        "meta": "@sys.date-time",
+        "alias": "date-time",
+        "userDefined": false
+      },
+      {
+        "text": " voy a cenar luego hablamos 😊😊",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "Adios",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "Buen día",
+        "meta": "@sys.geo-city",
+        "alias": "geo-city",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "Creo que ",
+        "userDefined": false
+      },
+      {
+        "text": "es",
+        "meta": "@sys.location",
+        "alias": "location",
+        "userDefined": false
+      },
+      {
+        "text": " todo para ",
+        "userDefined": false
+      },
+      {
+        "text": "hoy",
+        "meta": "@sys.date-time",
+        "alias": "date-time",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  }
+]

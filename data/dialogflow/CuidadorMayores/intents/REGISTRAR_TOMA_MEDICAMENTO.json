@@ -1,0 +1,94 @@
+{
+  "id": "0b570ab4-ca48-4fac-96e1-56bc7b63fbea",
+  "name": "REGISTRAR_TOMA_MEDICAMENTO",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "f9da2b0e-6db5-413a-85da-c75cfa3e0808",
+          "name": "date-time",
+          "required": false,
+          "dataType": "@sys.date-time",
+          "value": "$date-time",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "5e15ce43-f165-4f93-8bd7-029a38964fea",
+          "name": "unit-length-name",
+          "required": false,
+          "dataType": "@sys.unit-length-name",
+          "value": "$unit-length-name",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "758e2b0d-2b5a-4eed-bca6-7a37e467a9a6",
+          "name": "url",
+          "required": false,
+          "dataType": "@sys.url",
+          "value": "$url",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "5146c9f3-ad0d-4d5c-9491-2384529def49",
+          "name": "number",
+          "required": false,
+          "dataType": "@sys.number",
+          "value": "$number",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "es",
+          "speech": [
+            "Tomo nota. Te aviso para que no se te olvide tomar el medicamento",
+            "Vale, cuando te toque tomarte la medicina yo te aviso",
+            "De acuerdo, he anotado cuándo te toca la medicina para recordártelo"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

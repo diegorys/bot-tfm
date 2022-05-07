@@ -1,0 +1,48 @@
+[
+  {
+    "id": "09c3eda9-7e3d-4a03-885d-36b322722084",
+    "data": [
+      {
+        "text": "Tengo que instalar telegram a mi madre, que es mayor.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "c332f344-e203-4e7a-a613-84f1b25c43f3",
+    "data": [
+      {
+        "text": "Tengo que instalar telegram a ",
+        "userDefined": false
+      },
+      {
+        "text": "mi",
+        "meta": "@sys.unit-length-name",
+        "alias": "unit-length-name",
+        "userDefined": false
+      },
+      {
+        "text": " madre, que ",
+        "userDefined": false
+      },
+      {
+        "text": "es",
+        "meta": "@sys.location",
+        "alias": "location",
+        "userDefined": false
+      },
+      {
+        "text": " mayor.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  }
+]
