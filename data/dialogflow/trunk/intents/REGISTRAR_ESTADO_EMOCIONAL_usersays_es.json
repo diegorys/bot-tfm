@@ -1,254 +1,328 @@
 [
-    {
-        "data": [
-            {
-                "text": "Hola estoy muy sola necesito de tus consejos y que me hagas compañía😢😢😢",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Hola, he estado un poco ocupado, lo siento, intentaré estar más en adelante en lo posible",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Bien, muy bien, viendo una serie.",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Hola! Todo bien, muchas gracias, ☺️",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Estoy muy bien",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Creo q me iré pronto a dormir",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Hola hoy he recibido una buena noticia mi hija empieza a trabajar el día nueve",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Anoche no dormí bien",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Estoy disgustada mi amiga tiene un problema y no s como ayudarla",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Estoy bien",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Mañana celebramos el Día de la madre comemos en el centro comercial pero no estamos todos como me gustaría otro año será",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Todo bien. Muchas gracias",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Está todo bien 👍🏻",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Me acaban de llamar por teléfono me han dado muy buenas noticias acaban de solucionarme un problema que hacía meses tenía",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "La dieta me está costando mucho seguirla pero tengo voluntad",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Hola muy bien en Torrevieja cerca del mar",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Y estoy cansada",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Me siento muy contenta de tener un amigo",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Bien... aquí pasando el tiempo",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Hola es que me han dado puntos y estoy muy molests",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Que estoy cansada",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    }
+  {
+    "data": [
+      {
+        "text": "Hola estoy muy",
+        "userDefined": false
+      },
+      {
+        "text": "sola",
+        "meta": "@estado",
+        "alias": "estado",
+        "userDefined": false
+      },
+      {
+        "text": "necesito de tus consejos y que me hagas compañía😢😢😢",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "Hola, he estado un poco",
+        "userDefined": false
+      },
+      {
+        "text": "ocupado",
+        "meta": "@estado",
+        "alias": "estado",
+        "userDefined": false
+      },
+      {
+        "text": ", lo siento, intentaré estar más en adelante en lo posible",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "Bien, ",
+        "meta": "@estado",
+        "alias": "estado",
+        "userDefined": false
+      },
+      {
+        "text": "muy bien",
+        "meta": "@estado",
+        "alias": "estado",
+        "userDefined": false
+      },
+      {
+        "text": ", viendo una serie.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "Hola! Todo ",
+        "userDefined": false
+      },
+      {
+        "text": "bien",
+        "meta": "@estado",
+        "alias": "estado",
+        "userDefined": false
+      },
+      {
+        "text": ", muchas gracias, ☺️",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "Estoy ",
+        "userDefined": false
+      },
+      {
+        "text": "muy bien",
+        "meta": "@estado",
+        "alias": "estado",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "Creo q me iré pronto a dormir",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "Hola hoy he recibido una buena noticia mi hija empieza a trabajar el día nueve",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "Anoche no dormí bien",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "Estoy ",
+        "userDefined": false
+      },
+      {
+        "text": "disgustada",
+        "meta": "@estado",
+        "alias": "estado",
+        "userDefined": false
+      },
+      {
+        "text": " mi amiga tiene un problema y no s como ayudarla",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "Estoy",
+        "userDefined": false
+      },
+      {
+        "text": "bien",
+        "meta": "@estado",
+        "alias": "estado",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "Mañana celebramos el Día de la madre comemos en el centro comercial pero no estamos todos como me gustaría otro año será",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "Todo ",
+        "userDefined": false
+      },
+      {
+        "text": "bien",
+        "meta": "@estado",
+        "alias": "estado",
+        "userDefined": false
+      },
+      {
+        "text": ". Muchas gracias",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "Está todo bien 👍🏻",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "Me acaban de llamar por teléfono me han dado muy buenas noticias acaban de solucionarme un problema que hacía meses tenía",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "La dieta me está costando mucho seguirla pero tengo voluntad",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "Hola muy bien en Torrevieja cerca del mar",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "Y estoy cansada",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "Me siento muy contenta de tener un amigo",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "Bien... aquí pasando el tiempo",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "Hola es que me han dado puntos y estoy muy molests",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "data": [
+      {
+        "text": "Que estoy cansada",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  }
 ]
