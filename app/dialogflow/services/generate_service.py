@@ -1,10 +1,13 @@
 import os
 import json
+import uuid
 
 
 class GenerateService:
     def execute(self, data, path: str):
         print("Generate")
+        if not os.path.exists(path):
+            os.mkdir(path)
         self.generateEntities(data, path)
         self.generateIntents(data, path)
         self.generateAgent(path)
@@ -40,7 +43,7 @@ class GenerateService:
 
     def generateEntityTemplate(self, entityName):
         return {
-            "id": "xxx",
+            "id": str(uuid.uuid4()),
             "name": entityName,
             "isOverridable": True,
             "isEnum": False,
@@ -61,15 +64,40 @@ class GenerateService:
         print(dir)
         if not os.path.exists(dir):
             os.mkdir(dir)
+        finalIntents = {}
         for item in data:
             intent = item["intent"]
             if "" != intent:
+                if intent not in finalIntents.keys():
+                    finalIntents[intent] = []
+                finalIntents[intent].append(item["text"])
                 # print(intent)
-                output = {"id": "", "name": intent}
-                with open(f"{path}/intents/{intent}.json", "w", encoding="utf-8") as f:
-                    json.dump(output, f, ensure_ascii=False, indent=4)
-                with open(f"{path}/intents/{intent}_usersays_es.json", "w", encoding="utf-8") as f:
-                    json.dump(output, f, ensure_ascii=False, indent=4)
+        for intent in finalIntents.keys():
+            output = {"id": str(uuid.uuid4()), "name": intent}
+            with open(f"{path}/intents/{intent}.json", "w", encoding="utf-8") as f:
+                json.dump(output, f, ensure_ascii=False, indent=4)
+            output = self.generateTextsTemplate(finalIntents[intent])
+            with open(f"{path}/intents/{intent}_usersays_es.json", "w", encoding="utf-8") as f:
+                json.dump(output, f, ensure_ascii=False, indent=4)
+
+    def generateTextsTemplate(self, texts):
+        output = []
+        for text in texts:
+            output.append(
+                {
+                    "data": [
+                        {
+                            "text": text,
+                            "userDefined": False,
+                        }
+                    ],
+                    "isTemplate": False,
+                    "count": 0,
+                    "lang": "es",
+                    "updated": 0,
+                }
+            )
+        return output
 
     def generateAgent(self, path: str):
         print("Generate agent")
