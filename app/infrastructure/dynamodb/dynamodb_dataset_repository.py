@@ -63,8 +63,9 @@ class DynamoDBDatasetRepository(DatasetRepository):
         return len(response["Items"]) > 0
 
     def getByText(self, text):
+        secureText = text.replace("'","\'")
         table = self.dynamodb.Table(TABLE_NAME)
-        response = table.scan(FilterExpression=Attr("text").eq(text))
+        response = table.scan(FilterExpression=Attr("text").eq(secureText))
         if len(response["Items"]) > 0:
             item = response["Items"][0]
             entry = Entry(item["id"], item["text"], item["intent"], item["entities"])
