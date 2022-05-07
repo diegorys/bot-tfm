@@ -1,0 +1,9 @@
+{
+    "id": "xxx",
+    "name": "actividad",
+    "isOverridable": true,
+    "isEnum": false,
+    "isRegexp": false,
+    "automatedExpansion": false,
+    "allowFuzzyExtraction": false
+}

@@ -1,0 +1,9 @@
+{
+    "id": "xxx",
+    "name": "medicamento",
+    "isOverridable": true,
+    "isEnum": false,
+    "isRegexp": false,
+    "automatedExpansion": false,
+    "allowFuzzyExtraction": false
+}

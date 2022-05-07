@@ -1,0 +1,9 @@
+{
+    "id": "xxx",
+    "name": "periodicidad",
+    "isOverridable": true,
+    "isEnum": false,
+    "isRegexp": false,
+    "automatedExpansion": false,
+    "allowFuzzyExtraction": false
+}
