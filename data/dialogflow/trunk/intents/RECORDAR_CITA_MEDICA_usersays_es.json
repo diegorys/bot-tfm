@@ -2,7 +2,17 @@
     {
         "data": [
             {
-                "text": "Hola de nuevo me gustaría que me avises el día que tengo que ir a la farmacia para las medicinas ya te lo dije y ahora noe acuerdo",
+                "text": "Hola de nuevo me gustaría que me avises el día que tengo que ir a la ",
+                "userDefined": false
+            },
+            {
+                "text": "farmacia",
+                "meta": "@lugar",
+                "alias": "lugar",
+                "userDefined": false
+            },
+            {
+                "text": " para las medicinas ya te lo dije y ahora noe acuerdo",
                 "userDefined": false
             }
         ],

@@ -2,7 +2,19 @@
     {
         "data": [
             {
-                "text": "Todos los meses el día ocho me toca la vitamina d",
+                "text": "vitamina d",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": false
+            },
+            {
+                "text": " me toca la ",
+                "userDefined": false
+            },
+            {
+                "text": "Todos los meses el día ocho",
+                "meta": "@cuando",
+                "alias": "cuando",
                 "userDefined": false
             }
         ],
@@ -14,7 +26,27 @@
     {
         "data": [
             {
-                "text": "Tomo redoxon por la mañana y soltar advanced plus por la noche",
+                "text": "Tomo ",
+                "userDefined": false
+            },
+            {
+                "text": "redoxon",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": false
+            },
+            {
+                "text": " ",
+                "userDefined": false
+            },
+            {
+                "text": "por la mañana",
+                "meta": "@cuando",
+                "alias": "cuando",
+                "userDefined": false
+            },
+            {
+                "text": " y soltar advanced plus por la noche",
                 "userDefined": false
             }
         ],
@@ -26,7 +58,23 @@
     {
         "data": [
             {
-                "text": "Recuérdame tomar ibuprofeno mañana",
+                "text": "Recuérdame tomar ",
+                "userDefined": false
+            },
+            {
+                "text": "ibuprofeno",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": false
+            },
+            {
+                "text": " ",
+                "userDefined": false
+            },
+            {
+                "text": "mañana",
+                "meta": "@cuando",
+                "alias": "cuando",
                 "userDefined": false
             }
         ],
@@ -38,7 +86,23 @@
     {
         "data": [
             {
-                "text": "Me han dicho que me de rosa mosqueta después de una ducha",
+                "text": "Me han dicho que me de ",
+                "userDefined": false
+            },
+            {
+                "text": "rosa mosqueta",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": false
+            },
+            {
+                "text": " ",
+                "userDefined": false
+            },
+            {
+                "text": "después de una ducha",
+                "meta": "@cuando",
+                "alias": "cuando",
                 "userDefined": false
             }
         ],
@@ -50,7 +114,27 @@
     {
         "data": [
             {
-                "text": "Mi madre toma Adiro 300 a diario. Es un medicamento.",
+                "text": "Mi madre toma ",
+                "userDefined": false
+            },
+            {
+                "text": "Adiro 300",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": false
+            },
+            {
+                "text": " ",
+                "userDefined": false
+            },
+            {
+                "text": "a diario",
+                "meta": "@cuando",
+                "alias": "cuando",
+                "userDefined": false
+            },
+            {
+                "text": ". Es un medicamento.",
                 "userDefined": false
             }
         ],

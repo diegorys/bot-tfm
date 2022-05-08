@@ -4,28 +4,28 @@ import uuid
 class UserSaysTemplate:
     def generate(self, text: str, entities):
         keys = entities.keys()
-        outputs = {}
         escapedText = text
         pieces = []
         for key in keys:
-            outputs[key] = {
-                "meta": f"@{key}",
-                "alias": key,
-            }
             escapedText = escapedText.replace(entities[key], "#")
-            pieces.append({"entity": key, "value": entities[key]})
-        print(outputs)
-        print(pieces)
-        print(escapedText)
+            pieces.append(
+                {"text": entities[key], "meta": f"@{key}", "alias": key, "userDefined": False}
+            )
         tokens = escapedText.split("#")
-        print(tokens)
-        return {
-            "data": [
-                {
-                    "text": text,
+        data = []
+        i = 0
+        for token in tokens:
+            if "" != token:
+                dataItem = {
+                    "text": token,
                     "userDefined": False,
                 }
-            ],
+                data.append(dataItem)
+            if i < len(pieces):
+                data.append(pieces[i])
+                i += 1
+        return {
+            "data": data,
             "isTemplate": False,
             "count": 0,
             "lang": "es",

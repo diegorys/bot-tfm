@@ -2,7 +2,27 @@
     {
         "data": [
             {
-                "text": "Tengo que tomar pastillas hoy?",
+                "text": "Tengo que tomar ",
+                "userDefined": false
+            },
+            {
+                "text": "pastillas",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": false
+            },
+            {
+                "text": " ",
+                "userDefined": false
+            },
+            {
+                "text": "hoy",
+                "meta": "@cuando",
+                "alias": "cuando",
+                "userDefined": false
+            },
+            {
+                "text": "?",
                 "userDefined": false
             }
         ],

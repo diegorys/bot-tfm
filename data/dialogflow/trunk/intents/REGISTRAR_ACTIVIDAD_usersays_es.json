@@ -2,7 +2,33 @@
     {
         "data": [
             {
-                "text": "Estoy viendo una serie de Netflix\"señora acero\"",
+                "text": "Estoy viendo una serie de ",
+                "userDefined": false
+            },
+            {
+                "text": "señora acero",
+                "meta": "@serie",
+                "alias": "serie",
+                "userDefined": false
+            },
+            {
+                "text": "\"",
+                "userDefined": false
+            },
+            {
+                "text": "ver serie",
+                "meta": "@actividad",
+                "alias": "actividad",
+                "userDefined": false
+            },
+            {
+                "text": "\"",
+                "userDefined": false
+            },
+            {
+                "text": "Netflix",
+                "meta": "@lugar",
+                "alias": "lugar",
                 "userDefined": false
             }
         ],
@@ -14,7 +40,17 @@
     {
         "data": [
             {
-                "text": "Aquí ando, trabajando. ¿Qué tal tú?",
+                "text": "Aquí ando, ",
+                "userDefined": false
+            },
+            {
+                "text": "trabajando",
+                "meta": "@actividad",
+                "alias": "actividad",
+                "userDefined": false
+            },
+            {
+                "text": ". ¿Qué tal tú?",
                 "userDefined": false
             }
         ],

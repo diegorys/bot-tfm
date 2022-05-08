@@ -2,7 +2,19 @@
     {
         "data": [
             {
-                "text": "Mañana tengo médico a las 9h",
+                "text": "Mañana",
+                "meta": "@fecha",
+                "alias": "fecha",
+                "userDefined": false
+            },
+            {
+                "text": " tengo médico a las ",
+                "userDefined": false
+            },
+            {
+                "text": "9h",
+                "meta": "@hora",
+                "alias": "hora",
                 "userDefined": false
             }
         ],
