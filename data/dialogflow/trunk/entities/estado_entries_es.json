@@ -1,7 +1,45 @@
 [
     {
-        "value": "sola",
-        "synonyms": []
+        "value": "tristeza",
+        "synonyms": [
+            "triste",
+            "tristeza",
+            "disgustado",
+            "disgustada",
+            "mal"
+        ]
+    },
+    {
+        "value": "alegría",
+        "synonyms": [
+            "alegría",
+            "alegre",
+            "contento",
+            "feliz",
+            "felicidad",
+            "bien"
+        ]
+    },
+    {
+        "value": "soledad",
+        "synonyms": [
+            "solo",
+            "sola",
+            "soledad",
+            "solitaria",
+            "solitario"
+        ]
+    },
+    {
+        "value": "cansancio",
+        "synonyms": [
+            "cansancio",
+            "agotamiento",
+            "cansado",
+            "cansada",
+            "agotado",
+            "agotada"
+        ]
     },
     {
         "value": "ocupado",
@@ -12,31 +50,11 @@
         "synonyms": []
     },
     {
-        "value": "bien",
-        "synonyms": []
-    },
-    {
-        "value": "disgustada",
-        "synonyms": []
-    },
-    {
-        "value": "tristeza",
-        "synonyms": []
-    },
-    {
-        "value": "felicidad",
-        "synonyms": []
-    },
-    {
-        "value": "cansada",
-        "synonyms": []
-    },
-    {
         "value": "muy contenta",
         "synonyms": []
     },
     {
-        "value": "Bien",
+        "value": "bien",
         "synonyms": []
     },
     {

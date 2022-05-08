@@ -1,10 +1,10 @@
 [
     {
-        "value": "vitamina d",
+        "value": "ibuprofeno",
         "synonyms": []
     },
     {
-        "value": "redoxon",
+        "value": "rinialer",
         "synonyms": []
     },
     {
@@ -12,7 +12,27 @@
         "synonyms": []
     },
     {
-        "value": "ibuprofeno",
+        "value": "paracetamol",
+        "synonyms": []
+    },
+    {
+        "value": "soniase supra d",
+        "synonyms": []
+    },
+    {
+        "value": "atorvastatina",
+        "synonyms": []
+    },
+    {
+        "value": "lovastatina",
+        "synonyms": []
+    },
+    {
+        "value": "vitamina d",
+        "synonyms": []
+    },
+    {
+        "value": "redoxon",
         "synonyms": []
     },
     {
@@ -24,7 +44,7 @@
         "synonyms": []
     },
     {
-        "value": "Adiro 300",
+        "value": "adiro 300",
         "synonyms": []
     }
 ]

@@ -4,6 +4,7 @@ from dialogflow.templates.intent_template import IntentTemplate
 from dialogflow.templates.user_says_template import UserSaysTemplate
 from dialogflow.templates.entity_template import EntityTemplate
 from dialogflow.templates.agent_template import AgentTemplate
+from expert_system.domain import slots
 
 
 class GenerateService:
@@ -46,16 +47,23 @@ class GenerateService:
             os.makedirs(os.path.dirname(f"{dir}/{entityName}.json"), exist_ok=True)
             with open(f"{dir}/{entityName}.json", "w", encoding="utf-8") as f:
                 json.dump(output, f, ensure_ascii=False, indent=4)
-            output = self.generateValueTemplate(entities[entityName])
+            output = self.generateValueTemplate(entityName, entities[entityName])
             os.makedirs(os.path.dirname(f"{dir}/{entityName}_entries_es.json"), exist_ok=True)
             with open(f"{dir}/{entityName}_entries_es.json", "w", encoding="utf-8") as f:
                 json.dump(output, f, ensure_ascii=False, indent=4)
-            output = self.generateValueTemplate(entities[entityName])
+            output = self.generateValueTemplate(entityName, entities[entityName])
 
-    def generateValueTemplate(self, values):
+    def generateValueTemplate(self, entityName: str, values):
         output = []
+        cKnowledge = ""
+        if entityName in slots.keys():
+            knowledge = slots[entityName]
+            cKnowledge = json.dumps(knowledge)
+            for key in knowledge.keys():
+                output.append({"value": key, "synonyms": knowledge[key]})
         for value in values:
-            output.append({"value": value, "synonyms": []})
+            if value not in cKnowledge:
+                output.append({"value": value.lower(), "synonyms": []})
         return output
 
     def generateIntents(self, data):
