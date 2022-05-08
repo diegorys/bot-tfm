@@ -1,14 +1,18 @@
+import pytest
 from nlp.nltk.nltk_tokenizer_task import NLTKTokenizerTask
 
 tokenizerTask = NLTKTokenizerTask()
 
 
+@pytest.mark.skip(reason="Por ahora no se testea NLTK")
 def test_tokenizer1():
     executeTest("Hola", ["Hola"])
 
 
-# def test_tokenizer2():
-#     executeTest("Hola. Tengo frío", ["Hola", "Tengo frío"])
+@pytest.mark.skip(reason="Por ahora no se testea NLTK")
+def test_tokenizer2():
+    executeTest("Hola. Tengo frío", ["Hola", "Tengo frío"])
+
 
 # def test_tokenizer3():
 #     executeTest(
