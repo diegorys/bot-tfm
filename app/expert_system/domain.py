@@ -22,4 +22,6 @@ intents = {
         {"name": "medicamento", "required": True},
         {"name": "cuando", "required": True},
     ],
+    "REGISTRAR_SALUDO": [],
+    "REGISTRAR_DESPEDIDA": [],
 }

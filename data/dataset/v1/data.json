@@ -16,8 +16,11 @@
     {
         "id": "f9c2123d-3b03-4609-b32e-e1e9a68c6044",
         "text": "Este mismo mes de junio a las 8'30 con el enfermero",
-        "intent": "",
-        "entities": {}
+        "intent": "REGISTRAR_CITA_MEDICA",
+        "entities": {
+            "cuando": "junio a las 8'30",
+            "cita": "enfermero"
+        }
     },
     {
         "id": "85ae8da0-c714-4b1b-9583-a80bb0ec5628",
@@ -107,7 +110,7 @@
     {
         "id": "fcb506c3-e48c-44d0-bf6f-739a72579f35",
         "text": "Hola hoy he recibido una buena noticia mi hija empieza a trabajar el día nueve",
-        "intent": "POR_DEFECTO",
+        "intent": "REGISTRAR_ANECDOTA",
         "entities": {}
     },
     {
@@ -129,8 +132,8 @@
         "text": "Tomo redoxon por la mañana y soltar advanced plus por la noche",
         "intent": "REGISTRAR_TOMA_MEDICAMENTO",
         "entities": {
-            "cuando": "por la mañana",
-            "medicamento": "redoxon"
+            "medicamento": "redoxon",
+            "cuando": "por la mañana"
         }
     },
     {
@@ -259,7 +262,9 @@
         "id": "680ecd9b-067e-45fa-a0d7-c621641fd952",
         "text": "Me acaban de llamar por teléfono me han dado muy buenas noticias acaban de solucionarme un problema que hacía meses tenía",
         "intent": "REGISTRAR_ANECDOTA",
-        "entities": {}
+        "entities": {
+            "estado": "felicidad"
+        }
     },
     {
         "id": "ca1b83f3-3f72-437c-b120-45d374e523c6",
@@ -272,8 +277,8 @@
         "text": "Mañana tengo médico a las 9h",
         "intent": "REGISTRAR_CITA_MEDICA",
         "entities": {
-            "fecha": "mañana",
-            "hora": "9:00"
+            "cuando": "Mañana",
+            "cita": "médico"
         }
     },
     {
@@ -305,7 +310,7 @@
     {
         "id": "2c53afda-2167-447a-a3f9-bf13a0114c79",
         "text": "Hola te voy a contar los días de mis citas para que me lo vayas diciendo",
-        "intent": "POR_DEFECTO",
+        "intent": "",
         "entities": {}
     },
     {
@@ -377,7 +382,7 @@
     {
         "id": "de7150aa-0475-4f25-b489-a6eadbdec4d7",
         "text": "Las cicatrices van mejorando despacito pero creo que no se van a notar",
-        "intent": "",
+        "intent": "REGISTRAR_SINTOMA",
         "entities": {}
     },
     {
@@ -395,14 +400,17 @@
     {
         "id": "543b2a6d-01b8-464d-9492-7a479a4d274d",
         "text": "Acabo de caerme por el pasillo y veo que me está saliendo un moratón queme aconsejas que haga??",
-        "intent": "",
+        "intent": "REGISTRAR_SITUACION_AVERSA",
         "entities": {}
     },
     {
         "id": "19fd5963-79f7-479e-9194-63cf6ce6781a",
         "text": "El día 13 a las 11'15 de junio con el endocrino",
-        "intent": "",
-        "entities": {}
+        "intent": "REGISTRAR_CITA_MEDICA",
+        "entities": {
+            "cuando": "El día 13 a las 11'15 de junio",
+            "cita": "endocrino"
+        }
     },
     {
         "id": "140c323d-1508-4ce4-9e31-a76312df130a",
@@ -424,8 +432,8 @@
         "text": "Tengo que tomar pastillas hoy?",
         "intent": "RECORDAR_MEDICACION",
         "entities": {
-            "cuando": "hoy",
-            "medicamento": "pastillas"
+            "medicamento": "pastillas",
+            "cuando": "hoy"
         }
     },
     {
@@ -474,7 +482,7 @@
     {
         "id": "c8dd98ae-1956-4889-989a-596baddccd9d",
         "text": "Ayer lo pasé muy mal por la pastilla del azúcar pero me han dicho que es nirmal",
-        "intent": "",
+        "intent": "REGISTRAR_SINTOMA",
         "entities": {}
     },
     {
@@ -486,8 +494,11 @@
     {
         "id": "ad64e1f5-a2e5-423a-8559-5520fa686f5c",
         "text": "El sábado Megan a quitar una verruga",
-        "intent": "POR_DEFECTO",
-        "entities": {}
+        "intent": "REGISTRAR_CITA_MEDICA",
+        "entities": {
+            "cuando": "sábado",
+            "cita": "verruga"
+        }
     },
     {
         "id": "a9c2b8b9-d3ba-445f-87bb-26e56c15995e",
@@ -500,8 +511,8 @@
         "text": "Me han dicho que me de rosa mosqueta después de una ducha",
         "intent": "REGISTRAR_TOMA_MEDICAMENTO",
         "entities": {
-            "cuando": "después de una ducha",
-            "medicamento": "Rosa mosqueta"
+            "medicamento": "Rosa mosqueta",
+            "cuando": "después de una ducha"
         }
     },
     {
@@ -683,8 +694,8 @@
         "text": "Mi madre toma Adiro 300 a diario. Es un medicamento.",
         "intent": "REGISTRAR_TOMA_MEDICAMENTO",
         "entities": {
-            "cuando": "a diario",
-            "medicamento": "Adiro 300"
+            "medicamento": "Adiro 300",
+            "cuando": "a diario"
         }
     },
     {
@@ -728,7 +739,10 @@
     {
         "id": "c5f33a97-dcd5-4141-b974-c031ccc5b2f1",
         "text": "El día 17 a las 13'30 tengo la ecografía del cuello",
-        "intent": "",
-        "entities": {}
+        "intent": "REGISTRAR_CITA_MEDICA",
+        "entities": {
+            "cuando": "El día 17 a las 13'30",
+            "cita": "ecografía del cuello"
+        }
     }
 ]

@@ -90,11 +90,11 @@
     {
         "data": [
             {
-                "text": "Estoy ",
+                "text": "Estoy muy ",
                 "userDefined": false
             },
             {
-                "text": "muy bien",
+                "text": "bien",
                 "meta": "@estado",
                 "alias": "estado",
                 "userDefined": false
@@ -254,13 +254,13 @@
     {
         "data": [
             {
-                "text": "Bien",
-                "meta": "@estado",
-                "alias": "estado",
+                "text": "Bien... aquí pasando el tiempo",
                 "userDefined": false
             },
             {
-                "text": "... aquí pasando el tiempo",
+                "text": "bien",
+                "meta": "@estado",
+                "alias": "estado",
                 "userDefined": false
             }
         ],

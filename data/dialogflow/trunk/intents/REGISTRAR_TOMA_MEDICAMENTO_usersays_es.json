@@ -2,9 +2,9 @@
     {
         "data": [
             {
-                "text": "vitamina d",
-                "meta": "@medicamento",
-                "alias": "medicamento",
+                "text": "Todos los meses el día ocho",
+                "meta": "@cuando",
+                "alias": "cuando",
                 "userDefined": false
             },
             {
@@ -12,9 +12,9 @@
                 "userDefined": false
             },
             {
-                "text": "Todos los meses el día ocho",
-                "meta": "@cuando",
-                "alias": "cuando",
+                "text": "vitamina d",
+                "meta": "@medicamento",
+                "alias": "medicamento",
                 "userDefined": false
             }
         ],
@@ -30,9 +30,9 @@
                 "userDefined": false
             },
             {
-                "text": "redoxon",
-                "meta": "@medicamento",
-                "alias": "medicamento",
+                "text": "por la mañana",
+                "meta": "@cuando",
+                "alias": "cuando",
                 "userDefined": false
             },
             {
@@ -40,9 +40,9 @@
                 "userDefined": false
             },
             {
-                "text": "por la mañana",
-                "meta": "@cuando",
-                "alias": "cuando",
+                "text": "redoxon",
+                "meta": "@medicamento",
+                "alias": "medicamento",
                 "userDefined": false
             },
             {
@@ -73,8 +73,8 @@
             },
             {
                 "text": "mañana",
-                "meta": "@cuando",
-                "alias": "cuando",
+                "meta": "@fecha",
+                "alias": "fecha",
                 "userDefined": false
             }
         ],
@@ -86,23 +86,19 @@
     {
         "data": [
             {
-                "text": "Me han dicho que me de ",
-                "userDefined": false
-            },
-            {
-                "text": "rosa mosqueta",
-                "meta": "@medicamento",
-                "alias": "medicamento",
-                "userDefined": false
-            },
-            {
-                "text": " ",
+                "text": "Me han dicho que me de rosa mosqueta ",
                 "userDefined": false
             },
             {
                 "text": "después de una ducha",
                 "meta": "@cuando",
                 "alias": "cuando",
+                "userDefined": false
+            },
+            {
+                "text": "Rosa mosqueta",
+                "meta": "@medicamento",
+                "alias": "medicamento",
                 "userDefined": false
             }
         ],
@@ -118,9 +114,9 @@
                 "userDefined": false
             },
             {
-                "text": "Adiro 300",
-                "meta": "@medicamento",
-                "alias": "medicamento",
+                "text": "a diario",
+                "meta": "@cuando",
+                "alias": "cuando",
                 "userDefined": false
             },
             {
@@ -128,9 +124,9 @@
                 "userDefined": false
             },
             {
-                "text": "a diario",
-                "meta": "@cuando",
-                "alias": "cuando",
+                "text": "Adiro 300",
+                "meta": "@medicamento",
+                "alias": "medicamento",
                 "userDefined": false
             },
             {

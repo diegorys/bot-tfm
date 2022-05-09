@@ -49,3 +49,36 @@ def test_generate_estado():
     )
     print(received)
     assert received == expected
+
+
+def test_generate_medicamento():
+    expected = {
+        "data": [
+            {
+                "text": "Todos los meses el día ocho",
+                "meta": "@cuando",
+                "alias": "cuando",
+                "userDefined": False,
+            },
+            {
+                "text": " me toca la ",
+                "userDefined": False,
+            },
+            {
+                "text": "vitamina d",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": False,
+            },
+        ],
+        "isTemplate": False,
+        "count": 0,
+        "lang": "es",
+        "updated": 0,
+    }
+    received = userSaysTemplate.generate(
+        "Todos los meses el día ocho me toca la vitamina d",
+        {"cuando": "Todos los meses el día ocho", "medicamento": "vitamina d"},
+    )
+    print(received)
+    assert received == expected

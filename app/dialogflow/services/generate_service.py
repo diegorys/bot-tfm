@@ -5,6 +5,7 @@ from dialogflow.templates.user_says_template import UserSaysTemplate
 from dialogflow.templates.entity_template import EntityTemplate
 from dialogflow.templates.agent_template import AgentTemplate
 from expert_system.domain import slots
+from expert_system.domain import intents
 
 
 class GenerateService:
@@ -71,7 +72,7 @@ class GenerateService:
         finalIntents = {}
         for item in data:
             intent = item["intent"]
-            if "" != intent:
+            if "" != intent and intent in intents:
                 if intent not in finalIntents.keys():
                     finalIntents[intent] = []
                 finalIntents[intent].append({"text": item["text"], "entities": item["entities"]})
