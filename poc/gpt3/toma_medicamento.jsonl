@@ -1,0 +1,2 @@
+{"prompt":"Ej: Recuérdame tomar el ibuprofeno el lunes a las 8\n","completion":"Command: registrar-medicamento medicamento='ibuprofeno' hora='8:00' frecuencia='semanal' dia='lunes'"}
+{"prompt":"Ej: Me toca tomar calcio a las 6 y media\n","completion":"Command: registrar-medicamento medicamento='calcio' hora='18:30'"}
