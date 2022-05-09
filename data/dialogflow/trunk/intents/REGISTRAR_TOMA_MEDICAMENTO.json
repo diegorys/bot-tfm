@@ -1,4 +1,73 @@
 {
-    "id": "5bc137f9-b7c0-4cfe-9664-499310ea46c1",
-    "name": "REGISTRAR_TOMA_MEDICAMENTO"
+    "id": "c7490e29-cb8d-4f4e-a7ad-906e6a971c3e",
+    "name": "REGISTRAR_TOMA_MEDICAMENTO",
+    "contexts": [],
+    "responses": [
+        {
+            "resetContexts": false,
+            "action": "",
+            "affectedContexts": [],
+            "parameters": [
+                {
+                    "id": "37ffd186-5803-44b9-ad7c-994e13f362bf",
+                    "name": "medicamento",
+                    "required": true,
+                    "dataType": "@medicamento",
+                    "value": "$medicamento",
+                    "defaultValue": "",
+                    "isList": true,
+                    "prompts": [
+                        {
+                            "lang": "es",
+                            "value": "Indica medicamento"
+                        }
+                    ],
+                    "promptMessages": [],
+                    "noMatchPromptMessages": [],
+                    "noInputPromptMessages": [],
+                    "outputDialogContexts": []
+                },
+                {
+                    "id": "37ffd186-5803-44b9-ad7c-994e13f362bf",
+                    "name": "cuando",
+                    "required": true,
+                    "dataType": "@cuando",
+                    "value": "$cuando",
+                    "defaultValue": "",
+                    "isList": true,
+                    "prompts": [
+                        {
+                            "lang": "es",
+                            "value": "Indica cuando"
+                        }
+                    ],
+                    "promptMessages": [],
+                    "noMatchPromptMessages": [],
+                    "noInputPromptMessages": [],
+                    "outputDialogContexts": []
+                }
+            ],
+            "messages": [
+                {
+                    "type": "0",
+                    "title": "",
+                    "textToSpeech": "",
+                    "lang": "es",
+                    "speech": [
+                        "Recibido medicamento: $medicamento cuando: $cuando"
+                    ],
+                    "condition": ""
+                }
+            ],
+            "speech": []
+        }
+    ],
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "events": [],
+    "conditionalResponses": [],
+    "condition": "",
+    "conditionalFollowupEvents": []
 }

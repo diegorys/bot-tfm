@@ -1,4 +1,34 @@
 {
-    "id": "960dc857-a2eb-4231-b952-60cd9425e993",
-    "name": "REGISTRAR_ALABANZA"
+    "id": "7b9cc46a-734d-4e65-85b4-3a64c30f512d",
+    "name": "REGISTRAR_ALABANZA",
+    "contexts": [],
+    "responses": [
+        {
+            "resetContexts": false,
+            "action": "",
+            "affectedContexts": [],
+            "parameters": [],
+            "messages": [
+                {
+                    "type": "0",
+                    "title": "",
+                    "textToSpeech": "",
+                    "lang": "es",
+                    "speech": [
+                        "Recibido registrar_alabanza"
+                    ],
+                    "condition": ""
+                }
+            ],
+            "speech": []
+        }
+    ],
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "events": [],
+    "conditionalResponses": [],
+    "condition": "",
+    "conditionalFollowupEvents": []
 }

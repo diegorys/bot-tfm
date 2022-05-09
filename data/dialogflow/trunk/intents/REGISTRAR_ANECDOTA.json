@@ -1,4 +1,34 @@
 {
-    "id": "ca6cc47d-bd36-4e85-b941-833b4627ae24",
-    "name": "REGISTRAR_ANECDOTA"
+    "id": "b217492c-6ac7-44f4-8c63-9d01f83b7a67",
+    "name": "REGISTRAR_ANECDOTA",
+    "contexts": [],
+    "responses": [
+        {
+            "resetContexts": false,
+            "action": "",
+            "affectedContexts": [],
+            "parameters": [],
+            "messages": [
+                {
+                    "type": "0",
+                    "title": "",
+                    "textToSpeech": "",
+                    "lang": "es",
+                    "speech": [
+                        "Recibido registrar_anecdota"
+                    ],
+                    "condition": ""
+                }
+            ],
+            "speech": []
+        }
+    ],
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "events": [],
+    "conditionalResponses": [],
+    "condition": "",
+    "conditionalFollowupEvents": []
 }

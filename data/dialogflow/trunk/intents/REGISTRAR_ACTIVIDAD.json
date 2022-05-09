@@ -1,4 +1,34 @@
 {
-    "id": "9fc14090-6eec-4d6d-be32-1d7478f09994",
-    "name": "REGISTRAR_ACTIVIDAD"
+    "id": "27102df0-a8ad-4cd7-8b18-766d576c1331",
+    "name": "REGISTRAR_ACTIVIDAD",
+    "contexts": [],
+    "responses": [
+        {
+            "resetContexts": false,
+            "action": "",
+            "affectedContexts": [],
+            "parameters": [],
+            "messages": [
+                {
+                    "type": "0",
+                    "title": "",
+                    "textToSpeech": "",
+                    "lang": "es",
+                    "speech": [
+                        "Recibido registrar_actividad"
+                    ],
+                    "condition": ""
+                }
+            ],
+            "speech": []
+        }
+    ],
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "events": [],
+    "conditionalResponses": [],
+    "condition": "",
+    "conditionalFollowupEvents": []
 }

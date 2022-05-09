@@ -1,4 +1,34 @@
 {
-    "id": "80f98949-519e-4a27-bcdb-b31d86dae626",
-    "name": "ANOTAR_TOMA_MEDICAMENTO"
+    "id": "1c5f0637-07fb-4533-8c05-d063277e6607",
+    "name": "ANOTAR_TOMA_MEDICAMENTO",
+    "contexts": [],
+    "responses": [
+        {
+            "resetContexts": false,
+            "action": "",
+            "affectedContexts": [],
+            "parameters": [],
+            "messages": [
+                {
+                    "type": "0",
+                    "title": "",
+                    "textToSpeech": "",
+                    "lang": "es",
+                    "speech": [
+                        "Recibido anotar_toma_medicamento"
+                    ],
+                    "condition": ""
+                }
+            ],
+            "speech": []
+        }
+    ],
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "events": [],
+    "conditionalResponses": [],
+    "condition": "",
+    "conditionalFollowupEvents": []
 }

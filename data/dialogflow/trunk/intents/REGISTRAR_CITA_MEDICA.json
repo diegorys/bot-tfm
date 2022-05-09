@@ -1,4 +1,34 @@
 {
-    "id": "ea45af15-f553-4b28-a683-5210ea269665",
-    "name": "REGISTRAR_CITA_MEDICA"
+    "id": "5753ba8e-a42e-4460-b177-efed9a3ec73a",
+    "name": "REGISTRAR_CITA_MEDICA",
+    "contexts": [],
+    "responses": [
+        {
+            "resetContexts": false,
+            "action": "",
+            "affectedContexts": [],
+            "parameters": [],
+            "messages": [
+                {
+                    "type": "0",
+                    "title": "",
+                    "textToSpeech": "",
+                    "lang": "es",
+                    "speech": [
+                        "Recibido registrar_cita_medica"
+                    ],
+                    "condition": ""
+                }
+            ],
+            "speech": []
+        }
+    ],
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "events": [],
+    "conditionalResponses": [],
+    "condition": "",
+    "conditionalFollowupEvents": []
 }

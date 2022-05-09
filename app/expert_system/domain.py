@@ -16,4 +16,10 @@ slots = {
     },
 }
 
-intents = {"REGISTRAR_ESTADO": [{"slot": "estado", "required": True}]}
+intents = {
+    "REGISTRAR_ESTADO_EMOCIONAL": [{"name": "estado", "required": True}],
+    "REGISTRAR_TOMA_MEDICAMENTO": [
+        {"name": "medicamento", "required": True},
+        {"name": "cuando", "required": True},
+    ],
+}

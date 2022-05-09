@@ -1,4 +1,34 @@
 {
-    "id": "cacd1a4e-a593-4232-99ba-e2f9edabce96",
-    "name": "REGISTRAR_SITUACION_ADVERSA"
+    "id": "e863243a-84cb-4db6-9486-4154af6adb5c",
+    "name": "REGISTRAR_SITUACION_ADVERSA",
+    "contexts": [],
+    "responses": [
+        {
+            "resetContexts": false,
+            "action": "",
+            "affectedContexts": [],
+            "parameters": [],
+            "messages": [
+                {
+                    "type": "0",
+                    "title": "",
+                    "textToSpeech": "",
+                    "lang": "es",
+                    "speech": [
+                        "Recibido registrar_situacion_adversa"
+                    ],
+                    "condition": ""
+                }
+            ],
+            "speech": []
+        }
+    ],
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "events": [],
+    "conditionalResponses": [],
+    "condition": "",
+    "conditionalFollowupEvents": []
 }

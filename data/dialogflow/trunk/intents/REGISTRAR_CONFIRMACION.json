@@ -1,4 +1,34 @@
 {
-    "id": "335d9073-18cb-4151-9160-51b2eb97e682",
-    "name": "REGISTRAR_CONFIRMACION"
+    "id": "1f4ecc41-d27b-41d3-a6e5-aaed2c39f293",
+    "name": "REGISTRAR_CONFIRMACION",
+    "contexts": [],
+    "responses": [
+        {
+            "resetContexts": false,
+            "action": "",
+            "affectedContexts": [],
+            "parameters": [],
+            "messages": [
+                {
+                    "type": "0",
+                    "title": "",
+                    "textToSpeech": "",
+                    "lang": "es",
+                    "speech": [
+                        "Recibido registrar_confirmacion"
+                    ],
+                    "condition": ""
+                }
+            ],
+            "speech": []
+        }
+    ],
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "events": [],
+    "conditionalResponses": [],
+    "condition": "",
+    "conditionalFollowupEvents": []
 }

@@ -1,4 +1,34 @@
 {
-    "id": "c36c87fc-4083-428f-a893-a44830d92f1d",
-    "name": "CONSULTAR_ESTADO_PERSONA_MAYOR"
+    "id": "8d305b99-e823-4966-8deb-98a423f9156f",
+    "name": "CONSULTAR_ESTADO_PERSONA_MAYOR",
+    "contexts": [],
+    "responses": [
+        {
+            "resetContexts": false,
+            "action": "",
+            "affectedContexts": [],
+            "parameters": [],
+            "messages": [
+                {
+                    "type": "0",
+                    "title": "",
+                    "textToSpeech": "",
+                    "lang": "es",
+                    "speech": [
+                        "Recibido consultar_estado_persona_mayor"
+                    ],
+                    "condition": ""
+                }
+            ],
+            "speech": []
+        }
+    ],
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "events": [],
+    "conditionalResponses": [],
+    "condition": "",
+    "conditionalFollowupEvents": []
 }

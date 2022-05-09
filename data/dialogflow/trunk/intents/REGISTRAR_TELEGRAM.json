@@ -1,4 +1,34 @@
 {
-    "id": "65a876ec-499c-4095-9f7e-010be57f407b",
-    "name": "REGISTRAR_TELEGRAM"
+    "id": "7ed932c2-cd7e-46fe-8290-39cb30e39238",
+    "name": "REGISTRAR_TELEGRAM",
+    "contexts": [],
+    "responses": [
+        {
+            "resetContexts": false,
+            "action": "",
+            "affectedContexts": [],
+            "parameters": [],
+            "messages": [
+                {
+                    "type": "0",
+                    "title": "",
+                    "textToSpeech": "",
+                    "lang": "es",
+                    "speech": [
+                        "Recibido registrar_telegram"
+                    ],
+                    "condition": ""
+                }
+            ],
+            "speech": []
+        }
+    ],
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "events": [],
+    "conditionalResponses": [],
+    "condition": "",
+    "conditionalFollowupEvents": []
 }

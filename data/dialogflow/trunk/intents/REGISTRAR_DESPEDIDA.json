@@ -1,4 +1,34 @@
 {
-    "id": "62a96868-361e-4345-8aa7-2ab796edaced",
-    "name": "REGISTRAR_DESPEDIDA"
+    "id": "0c152df0-18ad-4afb-b87e-c0017c63ea62",
+    "name": "REGISTRAR_DESPEDIDA",
+    "contexts": [],
+    "responses": [
+        {
+            "resetContexts": false,
+            "action": "",
+            "affectedContexts": [],
+            "parameters": [],
+            "messages": [
+                {
+                    "type": "0",
+                    "title": "",
+                    "textToSpeech": "",
+                    "lang": "es",
+                    "speech": [
+                        "Recibido registrar_despedida"
+                    ],
+                    "condition": ""
+                }
+            ],
+            "speech": []
+        }
+    ],
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "events": [],
+    "conditionalResponses": [],
+    "condition": "",
+    "conditionalFollowupEvents": []
 }

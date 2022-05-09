@@ -1,4 +1,34 @@
 {
-    "id": "4f94c811-61e9-4290-b053-7c64e560821a",
-    "name": "RECORDAR_MEDICACION"
+    "id": "fc475ff5-ee2b-44b7-a0de-fb9b1aa39a9f",
+    "name": "RECORDAR_MEDICACION",
+    "contexts": [],
+    "responses": [
+        {
+            "resetContexts": false,
+            "action": "",
+            "affectedContexts": [],
+            "parameters": [],
+            "messages": [
+                {
+                    "type": "0",
+                    "title": "",
+                    "textToSpeech": "",
+                    "lang": "es",
+                    "speech": [
+                        "Recibido recordar_medicacion"
+                    ],
+                    "condition": ""
+                }
+            ],
+            "speech": []
+        }
+    ],
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "events": [],
+    "conditionalResponses": [],
+    "condition": "",
+    "conditionalFollowupEvents": []
 }

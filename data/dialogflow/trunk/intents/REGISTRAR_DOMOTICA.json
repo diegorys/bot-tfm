@@ -1,4 +1,34 @@
 {
-    "id": "d81d63e8-782e-4e81-be8c-4fb7bf5b9cc0",
-    "name": "REGISTRAR_DOMOTICA"
+    "id": "7c4aa4cd-fb6d-491e-8a63-267034d2ba10",
+    "name": "REGISTRAR_DOMOTICA",
+    "contexts": [],
+    "responses": [
+        {
+            "resetContexts": false,
+            "action": "",
+            "affectedContexts": [],
+            "parameters": [],
+            "messages": [
+                {
+                    "type": "0",
+                    "title": "",
+                    "textToSpeech": "",
+                    "lang": "es",
+                    "speech": [
+                        "Recibido registrar_domotica"
+                    ],
+                    "condition": ""
+                }
+            ],
+            "speech": []
+        }
+    ],
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "events": [],
+    "conditionalResponses": [],
+    "condition": "",
+    "conditionalFollowupEvents": []
 }
