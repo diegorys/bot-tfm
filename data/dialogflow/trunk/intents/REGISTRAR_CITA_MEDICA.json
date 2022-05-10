@@ -1,6 +1,6 @@
 {
-    "id": "23b7751d-433e-4c5e-91f1-4b432f6a2065",
-    "name": "REGISTRAR_SALUDO",
+    "id": "277e7ac2-829f-471f-8929-7188ebd3c729",
+    "name": "REGISTRAR_CITA_MEDICA",
     "contexts": [],
     "responses": [
         {
@@ -15,7 +15,7 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido registrar_saludo"
+                        "Recibido registrar_cita_medica"
                     ],
                     "condition": ""
                 }

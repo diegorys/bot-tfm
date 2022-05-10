@@ -1,6 +1,22 @@
 [
     {
-        "value": "todos los meses el día ocho",
+        "value": "junio a las 8'30",
+        "synonyms": []
+    },
+    {
+        "value": "9h",
+        "synonyms": []
+    },
+    {
+        "value": "el día ocho",
+        "synonyms": []
+    },
+    {
+        "value": "todos los días",
+        "synonyms": []
+    },
+    {
+        "value": "viernes",
         "synonyms": []
     },
     {
@@ -8,11 +24,51 @@
         "synonyms": []
     },
     {
+        "value": "cuando me levanto",
+        "synonyms": []
+    },
+    {
+        "value": "mañana",
+        "synonyms": []
+    },
+    {
+        "value": "a las 5",
+        "synonyms": []
+    },
+    {
+        "value": "a las 10",
+        "synonyms": []
+    },
+    {
+        "value": "10",
+        "synonyms": []
+    },
+    {
+        "value": "el día 13 a las 11'15 de junio",
+        "synonyms": []
+    },
+    {
+        "value": "8 de la mañan",
+        "synonyms": []
+    },
+    {
+        "value": "mañana",
+        "synonyms": []
+    },
+    {
         "value": "hoy",
         "synonyms": []
     },
     {
+        "value": "a las 22:00",
+        "synonyms": []
+    },
+    {
         "value": "día seis",
+        "synonyms": []
+    },
+    {
+        "value": "lunes a las 4 de la tarde",
         "synonyms": []
     },
     {
@@ -21,6 +77,10 @@
     },
     {
         "value": "a diario",
+        "synonyms": []
+    },
+    {
+        "value": "el día 17 a las 13'30",
         "synonyms": []
     }
 ]

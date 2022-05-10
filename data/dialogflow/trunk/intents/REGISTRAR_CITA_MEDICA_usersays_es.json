@@ -1,0 +1,106 @@
+[
+    {
+        "data": [
+            {
+                "text": "Este mismo mes de ",
+                "userDefined": false
+            },
+            {
+                "text": "junio a las 8'30",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " con el ",
+                "userDefined": false
+            },
+            {
+                "text": "enfermero",
+                "meta": "@cita",
+                "alias": "cita",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Mañana",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " tengo ",
+                "userDefined": false
+            },
+            {
+                "text": "médico",
+                "meta": "@cita",
+                "alias": "cita",
+                "userDefined": false
+            },
+            {
+                "text": " a las 9h",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "El día 13 a las 11'15 de junio",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " con el ",
+                "userDefined": false
+            },
+            {
+                "text": "endocrino",
+                "meta": "@cita",
+                "alias": "cita",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "El día 17 a las 13'30",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " tengo la ",
+                "userDefined": false
+            },
+            {
+                "text": "ecografía del cuello",
+                "meta": "@cita",
+                "alias": "cita",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    }
+]

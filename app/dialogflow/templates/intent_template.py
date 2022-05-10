@@ -11,6 +11,12 @@ class IntentTemplate:
             slots = intents[intent]
             for slot in slots:
                 name = slot["name"]
+                dataType = slot["name"]
+                value = slot["name"]
+                if "cuando" == slot["name"]:
+                    name = "date-time"
+                    dataType = "sys.date-time"
+                    value = "date-time"
                 if "" == responsePhrase:
                     responsePhrase = "Recibido"
                 responsePhrase += f" {name}: ${name}"
@@ -19,8 +25,8 @@ class IntentTemplate:
                         "id": "37ffd186-5803-44b9-ad7c-994e13f362bf",
                         "name": f"{name}",
                         "required": True,
-                        "dataType": f"@{name}",
-                        "value": f"${name}",
+                        "dataType": f"@{dataType}",
+                        "value": f"${value}",
                         "defaultValue": "",
                         "isList": slot["required"],
                         "prompts": [{"lang": "es", "value": f"Indica {name}"}],
@@ -37,23 +43,25 @@ class IntentTemplate:
             "id": str(uuid.uuid4()),
             "name": intent,
             "contexts": [],
-            "responses": [{
-                "resetContexts": False,
-                "action": "",
-                "affectedContexts": [],
-                "parameters": parameters,
-                "messages": [
-                    {
-                        "type": "0",
-                        "title": "",
-                        "textToSpeech": "",
-                        "lang": "es",
-                        "speech": speech,
-                        "condition": "",
-                    }
-                ],
-                "speech": [],
-            }],
+            "responses": [
+                {
+                    "resetContexts": False,
+                    "action": "",
+                    "affectedContexts": [],
+                    "parameters": parameters,
+                    "messages": [
+                        {
+                            "type": "0",
+                            "title": "",
+                            "textToSpeech": "",
+                            "lang": "es",
+                            "speech": speech,
+                            "condition": "",
+                        }
+                    ],
+                    "speech": [],
+                }
+            ],
             "priority": 500000,
             "webhookUsed": False,
             "webhookForSlotFilling": False,

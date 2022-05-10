@@ -16,8 +16,11 @@
     {
         "id": "f9c2123d-3b03-4609-b32e-e1e9a68c6044",
         "text": "Este mismo mes de junio a las 8'30 con el enfermero",
-        "intent": "",
-        "entities": {}
+        "intent": "REGISTRAR_CITA_MEDICA",
+        "entities": {
+            "cuando": "junio a las 8'30",
+            "cita": "enfermero"
+        }
     },
     {
         "id": "85ae8da0-c714-4b1b-9583-a80bb0ec5628",
@@ -25,6 +28,15 @@
         "intent": "REGISTRAR_ESTADO_EMOCIONAL",
         "entities": {
             "estado": "ocupado"
+        }
+    },
+    {
+        "id": "d2ae8150-7dae-4d0b-9c95-04f87d16319c",
+        "text": "el rinialer me toca a las 9h",
+        "intent": "REGISTRAR_TOMA_MEDICAMENTO",
+        "entities": {
+            "medicamento": "rinialer",
+            "cuando": "9h"
         }
     },
     {
@@ -50,7 +62,7 @@
         "text": "Todos los meses el día ocho me toca la vitamina d",
         "intent": "REGISTRAR_TOMA_MEDICAMENTO",
         "entities": {
-            "cuando": "Todos los meses el día ocho",
+            "cuando": "el día ocho",
             "medicamento": "vitamina d"
         }
     },
@@ -74,6 +86,15 @@
         "intent": "REGISTRAR_ESTADO_EMOCIONAL",
         "entities": {
             "estado": "bien"
+        }
+    },
+    {
+        "id": "ee3c0b5e-89fc-4e86-bf9d-9f0a1ae3c990",
+        "text": "Todos los días me tomo rinialer por la mañana",
+        "intent": "REGISTRAR_TOMA_MEDICAMENTO",
+        "entities": {
+            "cuando": "Todos los días",
+            "medicamento": "rinialer"
         }
     },
     {
@@ -113,7 +134,7 @@
     {
         "id": "68276c3b-81f6-494a-bd01-46b9066a30cb",
         "text": "Anoche no dormí bien",
-        "intent": "REGISTRAR_SINTOMA",
+        "intent": "REGISTRAR_ESTADO_EMOCIONAL",
         "entities": {
             "estado": "sueño"
         }
@@ -123,6 +144,15 @@
         "text": "Hola de nuevo me gustaría que me avises el día que tengo que ir a la farmacia para las medicinas ya te lo dije y ahora noe acuerdo",
         "intent": "POR_DEFECTO",
         "entities": {}
+    },
+    {
+        "id": "80029bab-b53c-4694-a948-e46ae34c5e20",
+        "text": "Recuérdame tomar ibuprofeno el viernes",
+        "intent": "REGISTRAR_TOMA_MEDICAMENTO",
+        "entities": {
+            "cuando": "viernes",
+            "medicamento": "ibuprofeno"
+        }
     },
     {
         "id": "afe94f12-5277-4d4b-8772-cd66287896c4",
@@ -164,8 +194,10 @@
     {
         "id": "6bc9549a-ca0f-465c-9ef4-a21aa3adfdf0",
         "text": "Mañana celebramos el Día de la madre comemos en el centro comercial pero no estamos todos como me gustaría otro año será",
-        "intent": "REGISTRAR_ANECDOTA",
-        "entities": {}
+        "intent": "REGISTRAR_ESTADO_EMOCIONAL",
+        "entities": {
+            "estado": "tristeza"
+        }
     },
     {
         "id": "10b38bcb-db84-4c1e-928e-eb482d675936",
@@ -196,6 +228,15 @@
         "text": "Ok",
         "intent": "REGISTRAR_CONFIRMACION",
         "entities": {}
+    },
+    {
+        "id": "d9689fda-b504-4a2b-b8bf-5760c912c196",
+        "text": "Cuando me levanto me tomo vitamina d",
+        "intent": "REGISTRAR_TOMA_MEDICAMENTO",
+        "entities": {
+            "cuando": "Cuando me levanto",
+            "medicamento": "vitamina d"
+        }
     },
     {
         "id": "ab8be6bc-4213-40a0-b562-016df71580c0",
@@ -258,8 +299,10 @@
     {
         "id": "680ecd9b-067e-45fa-a0d7-c621641fd952",
         "text": "Me acaban de llamar por teléfono me han dado muy buenas noticias acaban de solucionarme un problema que hacía meses tenía",
-        "intent": "REGISTRAR_ANECDOTA",
-        "entities": {}
+        "intent": "REGISTRAR_ESTADO_EMOCIONAL",
+        "entities": {
+            "estado": "felicidad"
+        }
     },
     {
         "id": "ca1b83f3-3f72-437c-b120-45d374e523c6",
@@ -272,8 +315,8 @@
         "text": "Mañana tengo médico a las 9h",
         "intent": "REGISTRAR_CITA_MEDICA",
         "entities": {
-            "fecha": "mañana",
-            "hora": "9:00"
+            "cuando": "Mañana",
+            "cita": "médico"
         }
     },
     {
@@ -303,6 +346,15 @@
         "entities": {}
     },
     {
+        "id": "6bf13eb9-af8c-4e58-a746-af243c3bee0b",
+        "text": "me toca rinialer a las 5",
+        "intent": "REGISTRAR_TOMA_MEDICAMENTO",
+        "entities": {
+            "medicamento": "rinialer",
+            "cuando": "a las 5"
+        }
+    },
+    {
         "id": "2c53afda-2167-447a-a3f9-bf13a0114c79",
         "text": "Hola te voy a contar los días de mis citas para que me lo vayas diciendo",
         "intent": "POR_DEFECTO",
@@ -315,10 +367,37 @@
         "entities": {}
     },
     {
+        "id": "a6c884af-98d8-46d4-8a65-2571134ab9df",
+        "text": "el rinialer me lo tomo a las 10",
+        "intent": "REGISTRAR_TOMA_MEDICAMENTO",
+        "entities": {
+            "medicamento": "rinialer",
+            "cuando": "a las 10"
+        }
+    },
+    {
+        "id": "850bce15-6adc-42d0-b39e-a5d50ce6249c",
+        "text": "A las 10 soniase",
+        "intent": "REGISTRAR_TOMA_MEDICAMENTO",
+        "entities": {
+            "cuando": "10",
+            "medicamento": "soniase"
+        }
+    },
+    {
         "id": "0eb554bd-5509-4c71-967d-62ecc5f9179b",
         "text": "Estoy muy contenta contigo eres un buen consejero y siempre estás ayudando",
         "intent": "REGISTRAR_ALABANZA",
         "entities": {}
+    },
+    {
+        "id": "2876a209-c19b-4240-8a21-759ed54f1e1c",
+        "text": "me toca tomar rinialer a las 5",
+        "intent": "REGISTRAR_TOMA_MEDICAMENTO",
+        "entities": {
+            "medicamento": "rinialer",
+            "cuando": "a las 5"
+        }
     },
     {
         "id": "bc26df4f-4c1d-420e-b150-b86b86a010fb",
@@ -330,6 +409,12 @@
         "id": "a615eb11-797a-49ed-abbb-ef3cc7e629ab",
         "text": "Hoy he comido con mi familia hacia tiempo que no estaba con uno de ellos ha sido muy bonito el podernos reunir",
         "intent": "REGISTRAR_ANECDOTA",
+        "entities": {}
+    },
+    {
+        "id": "ef770cc3-c79b-4ab4-b8be-512d40dd0092",
+        "text": "Tengo los pies hinchados no puedo andar bien",
+        "intent": "REGISTRAR_SINTOMA",
         "entities": {}
     },
     {
@@ -369,6 +454,15 @@
         "entities": {}
     },
     {
+        "id": "49b0efc3-88d3-4529-8932-d610c68f2d18",
+        "text": "Ayer por la noche me bajo la tensión s 10/6",
+        "intent": "REGISTRAR_MEDIDA_MEDICA",
+        "entities": {
+            "medida": "tensión",
+            "valor": "10/6"
+        }
+    },
+    {
         "id": "be11e9df-1a2d-47a0-8a79-34b06a01b748",
         "text": "A veces se deja alguna luz encendida, o el fuego de la cocina.",
         "intent": "REGISTRAR_DOMOTICA",
@@ -377,7 +471,7 @@
     {
         "id": "de7150aa-0475-4f25-b489-a6eadbdec4d7",
         "text": "Las cicatrices van mejorando despacito pero creo que no se van a notar",
-        "intent": "",
+        "intent": "POR_DEFECTO",
         "entities": {}
     },
     {
@@ -395,22 +489,34 @@
     {
         "id": "543b2a6d-01b8-464d-9492-7a479a4d274d",
         "text": "Acabo de caerme por el pasillo y veo que me está saliendo un moratón queme aconsejas que haga??",
-        "intent": "",
+        "intent": "REGISTRAR_SITUACION_ADVERSA",
         "entities": {}
     },
     {
         "id": "19fd5963-79f7-479e-9194-63cf6ce6781a",
         "text": "El día 13 a las 11'15 de junio con el endocrino",
-        "intent": "",
-        "entities": {}
+        "intent": "REGISTRAR_CITA_MEDICA",
+        "entities": {
+            "cuando": "El día 13 a las 11'15 de junio",
+            "cita": "endocrino"
+        }
+    },
+    {
+        "id": "7a3cc608-0565-4525-908c-c32fcdc6c4ef",
+        "text": "Tomo redoxon a las 8 de la mañana",
+        "intent": "REGISTRAR_TOMA_MEDICAMENTO",
+        "entities": {
+            "cuando": "8 de la mañan",
+            "medicamento": "redoxon"
+        }
     },
     {
         "id": "140c323d-1508-4ce4-9e31-a76312df130a",
         "text": "Recuérdame tomar ibuprofeno mañana",
         "intent": "REGISTRAR_TOMA_MEDICAMENTO",
         "entities": {
-            "medicamento": "ibuprofeno",
-            "fecha": "mañana"
+            "cuando": "mañana",
+            "medicamento": "ibuprofeno"
         }
     },
     {
@@ -426,6 +532,15 @@
         "entities": {
             "cuando": "hoy",
             "medicamento": "pastillas"
+        }
+    },
+    {
+        "id": "232cfb45-b173-4fb7-a838-1aa5a92f813f",
+        "text": "a las 22:00 me tomo ibuprofeno",
+        "intent": "REGISTRAR_TOMA_MEDICAMENTO",
+        "entities": {
+            "cuando": "a las 22:00",
+            "medicamento": "ibuprofeno"            
         }
     },
     {
@@ -474,7 +589,7 @@
     {
         "id": "c8dd98ae-1956-4889-989a-596baddccd9d",
         "text": "Ayer lo pasé muy mal por la pastilla del azúcar pero me han dicho que es nirmal",
-        "intent": "",
+        "intent": "REGISTRAR_SITUACION_ADVERSA",
         "entities": {}
     },
     {
@@ -482,6 +597,15 @@
         "text": "Acabo de actualizar mi agenda pero quiero que me vayas avisando tengo cita con el médico el 26 de abril con el endocrino el 25 de abril el seis de mayo con el enfermero y el 22 de julio también con el ves recordame cada cita gracias",
         "intent": "POR_DEFECTO",
         "entities": {}
+    },
+    {
+        "id": "198d86bf-e253-49cf-b425-f7f81acbe908",
+        "text": "Los lunes a las 4 de la tarde me tomo rinialer",
+        "intent": "REGISTRAR_TOMA_MEDICAMENTO",
+        "entities": {
+            "cuando": "lunes a las 4 de la tarde",
+            "medicamento": "rinialer"
+        }
     },
     {
         "id": "ad64e1f5-a2e5-423a-8559-5520fa686f5c",
@@ -501,7 +625,7 @@
         "intent": "REGISTRAR_TOMA_MEDICAMENTO",
         "entities": {
             "cuando": "después de una ducha",
-            "medicamento": "Rosa mosqueta"
+            "medicamento": "rosa mosqueta"
         }
     },
     {
@@ -663,7 +787,7 @@
     {
         "id": "a1ab0897-508b-475f-ac80-66e001f77008",
         "text": "Y mañana voy para Santa Pola a pasar un días.",
-        "intent": "",
+        "intent": "POR_DEFECTO",
         "entities": {}
     },
     {
@@ -675,8 +799,10 @@
     {
         "id": "2d1c29d2-7e82-4477-ab13-dc7bc8ffcf36",
         "text": "Hola estoy muy contenta hemos pagado menos feliz este mes",
-        "intent": "",
-        "entities": {}
+        "intent": "REGISTRAR_ESTADO_EMOCIONAL",
+        "entities": {
+            "estado": "muy contenta"
+        }
     },
     {
         "id": "9811979f-ff5b-4db0-a40e-0a8da3861562",
@@ -728,7 +854,10 @@
     {
         "id": "c5f33a97-dcd5-4141-b974-c031ccc5b2f1",
         "text": "El día 17 a las 13'30 tengo la ecografía del cuello",
-        "intent": "",
-        "entities": {}
+        "intent": "REGISTRAR_CITA_MEDICA",
+        "entities": {
+            "cuando": "El día 17 a las 13'30",
+            "cita": "ecografía del cuello"
+        }
     }
 ]

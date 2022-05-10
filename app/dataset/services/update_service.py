@@ -11,6 +11,7 @@ class UpdateService:
         unknownIntents = []
         notClassified = 0
         for line in lines:
+            print(line["text"])
             intent = line["intent"]
             if intent in intents:
                 entry = Entry(line["id"], line["text"], line["intent"], line["entities"])

@@ -16,11 +16,8 @@
     {
         "id": "f9c2123d-3b03-4609-b32e-e1e9a68c6044",
         "text": "Este mismo mes de junio a las 8'30 con el enfermero",
-        "intent": "REGISTRAR_CITA_MEDICA",
-        "entities": {
-            "cuando": "junio a las 8'30",
-            "cita": "enfermero"
-        }
+        "intent": "",
+        "entities": {}
     },
     {
         "id": "85ae8da0-c714-4b1b-9583-a80bb0ec5628",
@@ -110,13 +107,13 @@
     {
         "id": "fcb506c3-e48c-44d0-bf6f-739a72579f35",
         "text": "Hola hoy he recibido una buena noticia mi hija empieza a trabajar el día nueve",
-        "intent": "REGISTRAR_ANECDOTA",
+        "intent": "POR_DEFECTO",
         "entities": {}
     },
     {
         "id": "68276c3b-81f6-494a-bd01-46b9066a30cb",
         "text": "Anoche no dormí bien",
-        "intent": "REGISTRAR_SINTOMA",
+        "intent": "REGISTRAR_ESTADO_EMOCIONAL",
         "entities": {
             "estado": "sueño"
         }
@@ -132,8 +129,8 @@
         "text": "Tomo redoxon por la mañana y soltar advanced plus por la noche",
         "intent": "REGISTRAR_TOMA_MEDICAMENTO",
         "entities": {
-            "medicamento": "redoxon",
-            "cuando": "por la mañana"
+            "cuando": "por la mañana",
+            "medicamento": "redoxon"
         }
     },
     {
@@ -167,8 +164,10 @@
     {
         "id": "6bc9549a-ca0f-465c-9ef4-a21aa3adfdf0",
         "text": "Mañana celebramos el Día de la madre comemos en el centro comercial pero no estamos todos como me gustaría otro año será",
-        "intent": "REGISTRAR_ANECDOTA",
-        "entities": {}
+        "intent": "REGISTRAR_ESTADO_EMOCIONAL",
+        "entities": {
+            "estado": "tristeza"
+        }
     },
     {
         "id": "10b38bcb-db84-4c1e-928e-eb482d675936",
@@ -261,7 +260,7 @@
     {
         "id": "680ecd9b-067e-45fa-a0d7-c621641fd952",
         "text": "Me acaban de llamar por teléfono me han dado muy buenas noticias acaban de solucionarme un problema que hacía meses tenía",
-        "intent": "REGISTRAR_ANECDOTA",
+        "intent": "REGISTRAR_ESTADO_EMOCIONAL",
         "entities": {
             "estado": "felicidad"
         }
@@ -277,7 +276,7 @@
         "text": "Mañana tengo médico a las 9h",
         "intent": "REGISTRAR_CITA_MEDICA",
         "entities": {
-            "cuando": "Mañana",
+            "cuando": "mañana",
             "cita": "médico"
         }
     },
@@ -310,7 +309,7 @@
     {
         "id": "2c53afda-2167-447a-a3f9-bf13a0114c79",
         "text": "Hola te voy a contar los días de mis citas para que me lo vayas diciendo",
-        "intent": "",
+        "intent": "POR_DEFECTO",
         "entities": {}
     },
     {
@@ -335,6 +334,12 @@
         "id": "a615eb11-797a-49ed-abbb-ef3cc7e629ab",
         "text": "Hoy he comido con mi familia hacia tiempo que no estaba con uno de ellos ha sido muy bonito el podernos reunir",
         "intent": "REGISTRAR_ANECDOTA",
+        "entities": {}
+    },
+    {
+        "id": "ef770cc3-c79b-4ab4-b8be-512d40dd0092",
+        "text": "Tengo los pies hinchados no puedo andar bien",
+        "intent": "REGISTRAR_SINTOMA",
         "entities": {}
     },
     {
@@ -374,6 +379,15 @@
         "entities": {}
     },
     {
+        "id": "49b0efc3-88d3-4529-8932-d610c68f2d18",
+        "text": "Ayer por la noche me bajo la tensión s 10/6",
+        "intent": "REGISTRAR_MEDIDA_MEDICA",
+        "entities": {
+            "medida": "tensión",
+            "valor": "10/6"
+        }
+    },
+    {
         "id": "be11e9df-1a2d-47a0-8a79-34b06a01b748",
         "text": "A veces se deja alguna luz encendida, o el fuego de la cocina.",
         "intent": "REGISTRAR_DOMOTICA",
@@ -382,7 +396,7 @@
     {
         "id": "de7150aa-0475-4f25-b489-a6eadbdec4d7",
         "text": "Las cicatrices van mejorando despacito pero creo que no se van a notar",
-        "intent": "REGISTRAR_SINTOMA",
+        "intent": "POR_DEFECTO",
         "entities": {}
     },
     {
@@ -400,7 +414,7 @@
     {
         "id": "543b2a6d-01b8-464d-9492-7a479a4d274d",
         "text": "Acabo de caerme por el pasillo y veo que me está saliendo un moratón queme aconsejas que haga??",
-        "intent": "REGISTRAR_SITUACION_AVERSA",
+        "intent": "REGISTRAR_SITUACION_ADVERSA",
         "entities": {}
     },
     {
@@ -417,8 +431,8 @@
         "text": "Recuérdame tomar ibuprofeno mañana",
         "intent": "REGISTRAR_TOMA_MEDICAMENTO",
         "entities": {
-            "medicamento": "ibuprofeno",
-            "fecha": "mañana"
+            "cuando": "mañana",
+            "medicamento": "ibuprofeno"
         }
     },
     {
@@ -432,8 +446,8 @@
         "text": "Tengo que tomar pastillas hoy?",
         "intent": "RECORDAR_MEDICACION",
         "entities": {
-            "medicamento": "pastillas",
-            "cuando": "hoy"
+            "cuando": "hoy",
+            "medicamento": "pastillas"
         }
     },
     {
@@ -482,7 +496,7 @@
     {
         "id": "c8dd98ae-1956-4889-989a-596baddccd9d",
         "text": "Ayer lo pasé muy mal por la pastilla del azúcar pero me han dicho que es nirmal",
-        "intent": "REGISTRAR_SINTOMA",
+        "intent": "REGISTRAR_SITUACION_ADVERSA",
         "entities": {}
     },
     {
@@ -494,11 +508,8 @@
     {
         "id": "ad64e1f5-a2e5-423a-8559-5520fa686f5c",
         "text": "El sábado Megan a quitar una verruga",
-        "intent": "REGISTRAR_CITA_MEDICA",
-        "entities": {
-            "cuando": "sábado",
-            "cita": "verruga"
-        }
+        "intent": "POR_DEFECTO",
+        "entities": {}
     },
     {
         "id": "a9c2b8b9-d3ba-445f-87bb-26e56c15995e",
@@ -511,8 +522,8 @@
         "text": "Me han dicho que me de rosa mosqueta después de una ducha",
         "intent": "REGISTRAR_TOMA_MEDICAMENTO",
         "entities": {
-            "medicamento": "Rosa mosqueta",
-            "cuando": "después de una ducha"
+            "cuando": "después de una ducha",
+            "medicamento": "rosa mosqueta"
         }
     },
     {
@@ -674,7 +685,7 @@
     {
         "id": "a1ab0897-508b-475f-ac80-66e001f77008",
         "text": "Y mañana voy para Santa Pola a pasar un días.",
-        "intent": "",
+        "intent": "POR_DEFECTO",
         "entities": {}
     },
     {
@@ -686,16 +697,18 @@
     {
         "id": "2d1c29d2-7e82-4477-ab13-dc7bc8ffcf36",
         "text": "Hola estoy muy contenta hemos pagado menos feliz este mes",
-        "intent": "",
-        "entities": {}
+        "intent": "REGISTRAR_ESTADO_EMOCIONAL",
+        "entities": {
+            "estado": "muy contenta"
+        }
     },
     {
         "id": "9811979f-ff5b-4db0-a40e-0a8da3861562",
         "text": "Mi madre toma Adiro 300 a diario. Es un medicamento.",
         "intent": "REGISTRAR_TOMA_MEDICAMENTO",
         "entities": {
-            "medicamento": "Adiro 300",
-            "cuando": "a diario"
+            "cuando": "a diario",
+            "medicamento": "Adiro 300"
         }
     },
     {

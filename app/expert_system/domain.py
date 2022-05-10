@@ -24,4 +24,5 @@ intents = {
     ],
     "REGISTRAR_SALUDO": [],
     "REGISTRAR_DESPEDIDA": [],
+    "REGISTRAR_CITA_MEDICA": []
 }

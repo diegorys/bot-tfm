@@ -1,5 +1,5 @@
 {
-    "id": "ecf2aa76-0b2a-409e-808f-ac5f29cf3406",
+    "id": "46492e46-5d6d-4298-a879-be3891a2c12f",
     "name": "REGISTRAR_TOMA_MEDICAMENTO",
     "contexts": [],
     "responses": [
@@ -29,16 +29,16 @@
                 },
                 {
                     "id": "37ffd186-5803-44b9-ad7c-994e13f362bf",
-                    "name": "cuando",
+                    "name": "date-time",
                     "required": true,
-                    "dataType": "@cuando",
-                    "value": "$cuando",
+                    "dataType": "@sys.date-time",
+                    "value": "$date-time",
                     "defaultValue": "",
                     "isList": true,
                     "prompts": [
                         {
                             "lang": "es",
-                            "value": "Indica cuando"
+                            "value": "Indica date-time"
                         }
                     ],
                     "promptMessages": [],
@@ -54,7 +54,7 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido medicamento: $medicamento cuando: $cuando"
+                        "Recibido medicamento: $medicamento date-time: $date-time"
                     ],
                     "condition": ""
                 }

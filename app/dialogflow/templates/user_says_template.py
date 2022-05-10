@@ -1,6 +1,3 @@
-import uuid
-
-
 class UserSaysTemplate:
     def generate(self, text: str, entities):
         keys = entities.keys()
@@ -8,9 +5,14 @@ class UserSaysTemplate:
         pieces = []
         for key in keys:
             escapedText = escapedText.replace(entities[key], "#")
-            pieces.append(
-                {"text": entities[key], "meta": f"@{key}", "alias": key, "userDefined": False}
-            )
+            slot = key
+            if "cuando" == slot:
+                slot = "sys.date-time"
+                pieces.append({"text": entities[key], "meta": f"@{slot}", "alias": "date-time", "userDefined": False})
+            else:
+                pieces.append(
+                    {"text": entities[key], "meta": f"@{slot}", "alias": slot, "userDefined": False}
+                )
         tokens = escapedText.split("#")
         data = []
         i = 0

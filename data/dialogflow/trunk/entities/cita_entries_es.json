@@ -1,6 +1,22 @@
 [
     {
+        "value": "enfermero",
+        "synonyms": []
+    },
+    {
+        "value": "médico",
+        "synonyms": []
+    },
+    {
+        "value": "endocrino",
+        "synonyms": []
+    },
+    {
         "value": "los puntos",
+        "synonyms": []
+    },
+    {
+        "value": "ecografía del cuello",
         "synonyms": []
     }
 ]

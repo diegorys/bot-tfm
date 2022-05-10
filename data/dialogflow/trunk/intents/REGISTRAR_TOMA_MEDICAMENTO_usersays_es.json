@@ -2,9 +2,41 @@
     {
         "data": [
             {
-                "text": "Todos los meses el día ocho",
-                "meta": "@cuando",
-                "alias": "cuando",
+                "text": "el ",
+                "userDefined": false
+            },
+            {
+                "text": "rinialer",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": false
+            },
+            {
+                "text": " me toca a las ",
+                "userDefined": false
+            },
+            {
+                "text": "9h",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Todos los meses ",
+                "userDefined": false
+            },
+            {
+                "text": "el día ocho",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
                 "userDefined": false
             },
             {
@@ -26,13 +58,69 @@
     {
         "data": [
             {
+                "text": "Todos los días",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " me tomo ",
+                "userDefined": false
+            },
+            {
+                "text": "rinialer",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": false
+            },
+            {
+                "text": " por la mañana",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Recuérdame tomar ",
+                "userDefined": false
+            },
+            {
+                "text": "viernes",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " el ",
+                "userDefined": false
+            },
+            {
+                "text": "ibuprofeno",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
                 "text": "Tomo ",
                 "userDefined": false
             },
             {
                 "text": "por la mañana",
-                "meta": "@cuando",
-                "alias": "cuando",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
                 "userDefined": false
             },
             {
@@ -58,23 +146,19 @@
     {
         "data": [
             {
-                "text": "Recuérdame tomar ",
+                "text": "Cuando me levanto",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
                 "userDefined": false
             },
             {
-                "text": "ibuprofeno",
+                "text": " me tomo ",
+                "userDefined": false
+            },
+            {
+                "text": "vitamina d",
                 "meta": "@medicamento",
                 "alias": "medicamento",
-                "userDefined": false
-            },
-            {
-                "text": " ",
-                "userDefined": false
-            },
-            {
-                "text": "mañana",
-                "meta": "@fecha",
-                "alias": "fecha",
                 "userDefined": false
             }
         ],
@@ -86,17 +170,245 @@
     {
         "data": [
             {
-                "text": "Me han dicho que me de rosa mosqueta ",
+                "text": "me toca ",
+                "userDefined": false
+            },
+            {
+                "text": "rinialer",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": false
+            },
+            {
+                "text": " ",
+                "userDefined": false
+            },
+            {
+                "text": "a las 5",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "el ",
+                "userDefined": false
+            },
+            {
+                "text": "rinialer",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": false
+            },
+            {
+                "text": " me lo tomo ",
+                "userDefined": false
+            },
+            {
+                "text": "a las 10",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "A las ",
+                "userDefined": false
+            },
+            {
+                "text": "10",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " ",
+                "userDefined": false
+            },
+            {
+                "text": "soniase",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "me toca tomar ",
+                "userDefined": false
+            },
+            {
+                "text": "rinialer",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": false
+            },
+            {
+                "text": " ",
+                "userDefined": false
+            },
+            {
+                "text": "a las 5",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Tomo ",
+                "userDefined": false
+            },
+            {
+                "text": "8 de la mañan",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " a las ",
+                "userDefined": false
+            },
+            {
+                "text": "redoxon",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": false
+            },
+            {
+                "text": "a",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Recuérdame tomar ",
+                "userDefined": false
+            },
+            {
+                "text": "mañana",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " ",
+                "userDefined": false
+            },
+            {
+                "text": "ibuprofeno",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "a las 22:00",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " me tomo ",
+                "userDefined": false
+            },
+            {
+                "text": "ibuprofeno",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Los ",
+                "userDefined": false
+            },
+            {
+                "text": "lunes a las 4 de la tarde",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " me tomo ",
+                "userDefined": false
+            },
+            {
+                "text": "rinialer",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Me han dicho que me de ",
                 "userDefined": false
             },
             {
                 "text": "después de una ducha",
-                "meta": "@cuando",
-                "alias": "cuando",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
                 "userDefined": false
             },
             {
-                "text": "Rosa mosqueta",
+                "text": " ",
+                "userDefined": false
+            },
+            {
+                "text": "rosa mosqueta",
                 "meta": "@medicamento",
                 "alias": "medicamento",
                 "userDefined": false
@@ -115,8 +427,8 @@
             },
             {
                 "text": "a diario",
-                "meta": "@cuando",
-                "alias": "cuando",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
                 "userDefined": false
             },
             {
