@@ -17,5 +17,5 @@ class DatasetRepository:
     def exists(self, entry):
         pass
 
-    def getByText(self, text):
+    def getByText(self, text) -> Entry:
         pass
