@@ -121,6 +121,7 @@ package:
     - "conversational_bot/**/*.py"
     - "dataset/**/*.py"
     - "dialogflow/**/*.py"
+    - "dialogflow/**/*.json"
     - "dialogs/**/*.py"
     - "infrastructure/**/*.py"
     - "notifications/**/*.py"

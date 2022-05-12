@@ -1,3 +1,4 @@
+import os
 from google.cloud import dialogflow
 from conversational_bot.domain.frame import Frame
 from conversational_bot.domain.language_model import LanguageModel
@@ -5,6 +6,11 @@ from conversational_bot.domain.language_model import LanguageModel
 PROJECT_ID = "***REMOVED***"
 SESSION = "123456789"
 LANGUAGE_CODE = "es"
+
+GOOGLE_AUTHENTICATION_FILE_NAME = "key.json"
+current_directory = os.path.dirname(os.path.realpath(__file__))
+path = os.path.join(current_directory, GOOGLE_AUTHENTICATION_FILE_NAME)
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = path
 
 
 class DialogflowLanguageModel(LanguageModel):
