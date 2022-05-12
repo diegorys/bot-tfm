@@ -9,6 +9,7 @@ services:
       - DATES_TABLE=${DATES_TABLE}
       - DIALOGS_TABLE=${DIALOGS_TABLE}
       - DATASET_TABLE=${DATASET_TABLE}
+      - GOOGLE_APPLICATION_CREDENTIALS=${GOOGLE_APPLICATION_CREDENTIALS}
       - GPT3_ENGINE=${GPT3_ENGINE}
       - MEDICINES_TABLE=${MEDICINES_TABLE}
       - SERVICE_STATUS=${SERVICE_STATUS}
@@ -19,7 +20,8 @@ services:
       - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
     volumes:
       - ./app/:/app
-      - ./data/:/data
+      - ./poc/:/poc
+      - ./credentials/:/credentials
     working_dir: /app
     container_name: app
     command: tail -F anything

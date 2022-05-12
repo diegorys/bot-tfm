@@ -15,6 +15,8 @@ provider:
     GPT3_ENGINE: "text-davinci-002"
     OPENAI_API_KEY: ${self:custom.env.OPENAI_API_KEY.${opt:stage, self:provider.stage}}
     TELEGRAM_TOKEN: ${self:custom.env.TELEGRAM_TOKEN.${opt:stage, self:provider.stage}}
+    GOOGLE_APPLICATION_CREDENTIALS: "credentials/google/key.json"
+
   iam:
     role:
       statements:
