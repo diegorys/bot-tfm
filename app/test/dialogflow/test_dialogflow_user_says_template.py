@@ -56,8 +56,8 @@ def test_generate_medicamento():
         "data": [
             {
                 "text": "Todos los meses el día ocho",
-                "meta": "@cuando",
-                "alias": "cuando",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
                 "userDefined": False,
             },
             {
