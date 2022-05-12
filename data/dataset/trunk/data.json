@@ -2,7 +2,7 @@
     {
         "id": "537d356c-4b62-47b5-a71b-14bd3fe05715",
         "text": "Espero que no se enamore de ti como en Her, aunque entonces se llamaría Him la película.",
-        "intent": "POR_DEFECTO",
+        "intent": "NO_IDENTIFICADO",
         "entities": {}
     },
     {
@@ -120,7 +120,7 @@
     {
         "id": "92687c9a-6892-4a37-a1ec-508807f4787a",
         "text": "Creo q me iré pronto a dormir",
-        "intent": "POR_DEFECTO",
+        "intent": "NO_IDENTIFICADO",
         "entities": {
             "estado": "sueño"
         }
@@ -128,7 +128,7 @@
     {
         "id": "fcb506c3-e48c-44d0-bf6f-739a72579f35",
         "text": "Hola hoy he recibido una buena noticia mi hija empieza a trabajar el día nueve",
-        "intent": "POR_DEFECTO",
+        "intent": "NO_IDENTIFICADO",
         "entities": {}
     },
     {
@@ -142,7 +142,7 @@
     {
         "id": "6a60f341-3507-4c23-9b06-a8806bc6a7bc",
         "text": "Hola de nuevo me gustaría que me avises el día que tengo que ir a la farmacia para las medicinas ya te lo dije y ahora noe acuerdo",
-        "intent": "POR_DEFECTO",
+        "intent": "NO_IDENTIFICADO",
         "entities": {}
     },
     {
@@ -220,7 +220,7 @@
     {
         "id": "f499aa77-cad4-4657-aa74-90dfac0a3584",
         "text": "y te sirva todo esto para algo.",
-        "intent": "POR_DEFECTO",
+        "intent": "NO_IDENTIFICADO",
         "entities": {}
     },
     {
@@ -261,13 +261,13 @@
     {
         "id": "52597d61-0f22-4505-830f-3ae58301bce8",
         "text": "Es muy larga tiene muchos capítulos",
-        "intent": "POR_DEFECTO",
+        "intent": "NO_IDENTIFICADO",
         "entities": {}
     },
     {
         "id": "0021b7f5-a249-4f39-9a3f-331dbe857760",
         "text": "Para que interactúe contigo, dentro de lo posible.",
-        "intent": "POR_DEFECTO",
+        "intent": "NO_IDENTIFICADO",
         "entities": {}
     },
     {
@@ -330,7 +330,7 @@
     {
         "id": "b2014c42-bba6-4f2a-99e8-58af9a9046fa",
         "text": "Se despierta pronto cada día",
-        "intent": "POR_DEFECTO",
+        "intent": "NO_IDENTIFICADO",
         "entities": {}
     },
     {
@@ -357,7 +357,7 @@
     {
         "id": "2c53afda-2167-447a-a3f9-bf13a0114c79",
         "text": "Hola te voy a contar los días de mis citas para que me lo vayas diciendo",
-        "intent": "POR_DEFECTO",
+        "intent": "NO_IDENTIFICADO",
         "entities": {}
     },
     {
@@ -402,7 +402,7 @@
     {
         "id": "bc26df4f-4c1d-420e-b150-b86b86a010fb",
         "text": "La dieta me está costando mucho seguirla pero tengo voluntad",
-        "intent": "POR_DEFECTO",
+        "intent": "NO_IDENTIFICADO",
         "entities": {}
     },
     {
@@ -471,13 +471,13 @@
     {
         "id": "de7150aa-0475-4f25-b489-a6eadbdec4d7",
         "text": "Las cicatrices van mejorando despacito pero creo que no se van a notar",
-        "intent": "POR_DEFECTO",
+        "intent": "NO_IDENTIFICADO",
         "entities": {}
     },
     {
         "id": "4d45536c-b157-4b85-a775-e5320d8b486b",
         "text": "Como va el bot?",
-        "intent": "POR_DEFECTO",
+        "intent": "NO_IDENTIFICADO",
         "entities": {}
     },
     {
@@ -522,7 +522,7 @@
     {
         "id": "9cb3484a-d55d-4dfc-8140-f55d84ebba23",
         "text": "También mañana me quitan la verruga a ver cómo me va",
-        "intent": "POR_DEFECTO",
+        "intent": "NO_IDENTIFICADO",
         "entities": {}
     },
     {
@@ -555,13 +555,13 @@
     {
         "id": "e80d03e0-691b-4cb5-bff0-275c80476bfd",
         "text": "Yo me encuentro bien, tomo al despertar tiroxina para el tiroides, luego con el desayuno Valsartan luego Natecal, pastillas de calcio y en las comidas Alopurinol.",
-        "intent": "POR_DEFECTO",
+        "intent": "NO_IDENTIFICADO",
         "entities": {}
     },
     {
         "id": "c22f263a-6841-4030-8ef1-379d4be1f4a7",
         "text": "Tengo varias citad",
-        "intent": "POR_DEFECTO",
+        "intent": "NO_IDENTIFICADO",
         "entities": {}
     },
     {
@@ -595,7 +595,7 @@
     {
         "id": "958cb3af-1939-4ce2-b3b2-cd8f49593c4d",
         "text": "Acabo de actualizar mi agenda pero quiero que me vayas avisando tengo cita con el médico el 26 de abril con el endocrino el 25 de abril el seis de mayo con el enfermero y el 22 de julio también con el ves recordame cada cita gracias",
-        "intent": "POR_DEFECTO",
+        "intent": "NO_IDENTIFICADO",
         "entities": {}
     },
     {
@@ -610,7 +610,7 @@
     {
         "id": "ad64e1f5-a2e5-423a-8559-5520fa686f5c",
         "text": "El sábado Megan a quitar una verruga",
-        "intent": "POR_DEFECTO",
+        "intent": "NO_IDENTIFICADO",
         "entities": {}
     },
     {
@@ -769,7 +769,7 @@
     {
         "id": "a49a059a-1b21-4769-9aca-4a47a4ec29e3",
         "text": "Que me recomiendas para el dolor que tengo",
-        "intent": "POR_DEFECTO",
+        "intent": "NO_IDENTIFICADO",
         "entities": {}
     },
     {
@@ -787,7 +787,7 @@
     {
         "id": "a1ab0897-508b-475f-ac80-66e001f77008",
         "text": "Y mañana voy para Santa Pola a pasar un días.",
-        "intent": "POR_DEFECTO",
+        "intent": "NO_IDENTIFICADO",
         "entities": {}
     },
     {
@@ -824,7 +824,7 @@
     {
         "id": "5d22a34a-c112-4317-ba93-78963bfb012d",
         "text": "Mañana voy a ir a andar y a comprar unas cosas que están de oferta",
-        "intent": "POR_DEFECTO",
+        "intent": "NO_IDENTIFICADO",
         "entities": {}
     },
     {
