@@ -188,24 +188,6 @@
     {
         "data": [
             {
-                "text": "Mañana celebramos el Día de la madre comemos en el centro comercial pero no estamos todos como me gustaría otro año será",
-                "userDefined": false
-            },
-            {
-                "text": "tristeza",
-                "meta": "@estado",
-                "alias": "estado",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
                 "text": "Hoy he acabado el día ",
                 "userDefined": false
             },
@@ -319,24 +301,6 @@
             },
             {
                 "text": " nos hemos quedado sin poder ver los concursos y series de Movistar por ser tan miedosos😭😭😭",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Me acaban de llamar por teléfono me han dado muy buenas noticias acaban de solucionarme un problema que hacía meses tenía",
-                "userDefined": false
-            },
-            {
-                "text": "felicidad",
-                "meta": "@estado",
-                "alias": "estado",
                 "userDefined": false
             }
         ],
@@ -508,13 +472,13 @@
     {
         "data": [
             {
-                "text": "Bien... aquí pasando el tiempo",
+                "text": "Bien",
+                "meta": "@estado",
+                "alias": "estado",
                 "userDefined": false
             },
             {
-                "text": "bien",
-                "meta": "@estado",
-                "alias": "estado",
+                "text": "... aquí pasando el tiempo",
                 "userDefined": false
             }
         ],

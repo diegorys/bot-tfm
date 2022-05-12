@@ -153,10 +153,8 @@
     {
         "id": "68276c3b-81f6-494a-bd01-46b9066a30cb",
         "text": "Anoche no dormí bien",
-        "intent": "REGISTRAR_ESTADO_EMOCIONAL",
-        "entities": {
-            "estado": "sueño"
-        }
+        "intent": "NO_IDENTIFICADO",
+        "entities": {}
     },
     {
         "id": "6a60f341-3507-4c23-9b06-a8806bc6a7bc",
@@ -248,10 +246,8 @@
     {
         "id": "6bc9549a-ca0f-465c-9ef4-a21aa3adfdf0",
         "text": "Mañana celebramos el Día de la madre comemos en el centro comercial pero no estamos todos como me gustaría otro año será",
-        "intent": "REGISTRAR_ESTADO_EMOCIONAL",
-        "entities": {
-            "estado": "tristeza"
-        }
+        "intent": "NO_IDENTIFICADO",
+        "entities": {}
     },
     {
         "id": "3d8bde67-581f-483f-b15b-36c933c98f7a",
@@ -385,10 +381,8 @@
     {
         "id": "680ecd9b-067e-45fa-a0d7-c621641fd952",
         "text": "Me acaban de llamar por teléfono me han dado muy buenas noticias acaban de solucionarme un problema que hacía meses tenía",
-        "intent": "REGISTRAR_ESTADO_EMOCIONAL",
-        "entities": {
-            "estado": "felicidad"
-        }
+        "intent": "NO_IDENTIFICADO",
+        "entities": {}
     },
     {
         "id": "322f84e2-fd85-41db-9266-0da6f831e508",
@@ -1000,7 +994,7 @@
         "text": "Bien... aquí pasando el tiempo",
         "intent": "REGISTRAR_ESTADO_EMOCIONAL",
         "entities": {
-            "estado": "bien"
+            "estado": "Bien"
         }
     },
     {
@@ -1190,7 +1184,7 @@
         "intent": "REGISTRAR_TOMA_MEDICAMENTO",
         "entities": {
             "medicamento": "suplemento de hierro",
-            "cuando": "desayuno"            
+            "cuando": "desayuno"
         }
     },
     {
