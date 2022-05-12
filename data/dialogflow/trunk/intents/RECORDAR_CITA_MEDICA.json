@@ -1,6 +1,6 @@
 {
-    "id": "d58a1e8f-978f-4dd9-a7d8-b3fa1215598e",
-    "name": "REGISTRAR_SALUDO",
+    "id": "736a4638-d416-401e-9037-2afe937e6c12",
+    "name": "RECORDAR_CITA_MEDICA",
     "auto": true,
     "contexts": [],
     "responses": [
@@ -16,7 +16,7 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido registrar_saludo"
+                        "Recibido recordar_cita_medica"
                     ],
                     "condition": ""
                 }

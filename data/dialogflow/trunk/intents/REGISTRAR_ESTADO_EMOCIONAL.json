@@ -1,6 +1,7 @@
 {
-    "id": "04e1d9e3-16c7-434b-ba54-429f2935f4a9",
+    "id": "80dee510-40a6-4b15-8281-b6d47734dc7a",
     "name": "REGISTRAR_ESTADO_EMOCIONAL",
+    "auto": true,
     "contexts": [],
     "responses": [
         {
@@ -11,6 +12,7 @@
                 {
                     "id": "37ffd186-5803-44b9-ad7c-994e13f362bf",
                     "name": "estado",
+                    "auto": true,
                     "required": true,
                     "dataType": "@estado",
                     "value": "$estado",

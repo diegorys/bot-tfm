@@ -1,0 +1,30 @@
+[
+    {
+        "data": [
+            {
+                "text": "Recuerdame que el ",
+                "userDefined": false
+            },
+            {
+                "text": "día seis",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " me quitan ",
+                "userDefined": false
+            },
+            {
+                "text": "los puntos",
+                "meta": "@cita",
+                "alias": "cita",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    }
+]

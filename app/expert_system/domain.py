@@ -24,5 +24,8 @@ intents = {
     ],
     "REGISTRAR_SALUDO": [],
     "REGISTRAR_DESPEDIDA": [],
-    "REGISTRAR_CITA_MEDICA": []
+    "REGISTRAR_CITA_MEDICA": [
+        {"name": "cita", "required": True},
+        {"name": "cuando", "required": True},
+    ],
 }

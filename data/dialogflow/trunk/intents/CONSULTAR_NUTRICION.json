@@ -1,6 +1,6 @@
 {
-    "id": "d58a1e8f-978f-4dd9-a7d8-b3fa1215598e",
-    "name": "REGISTRAR_SALUDO",
+    "id": "2eab6555-21f2-4760-8aa4-b9aa2baf5c53",
+    "name": "CONSULTAR_NUTRICION",
     "auto": true,
     "contexts": [],
     "responses": [
@@ -16,7 +16,7 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido registrar_saludo"
+                        "Recibido consultar_nutricion"
                     ],
                     "condition": ""
                 }

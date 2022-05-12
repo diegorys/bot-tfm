@@ -1,6 +1,6 @@
 {
-    "id": "d58a1e8f-978f-4dd9-a7d8-b3fa1215598e",
-    "name": "REGISTRAR_SALUDO",
+    "id": "3986ddc7-6d01-41c1-bcee-66bd2330ef12",
+    "name": "REGISTRAR_SINTOMA",
     "auto": true,
     "contexts": [],
     "responses": [
@@ -16,7 +16,7 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido registrar_saludo"
+                        "Recibido registrar_sintoma"
                     ],
                     "condition": ""
                 }

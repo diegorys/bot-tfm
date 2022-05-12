@@ -72,7 +72,7 @@ class GenerateService:
         finalIntents = {}
         for item in data:
             intent = item["intent"]
-            if "" != intent and intent in intents:
+            if "" != intent:
                 if intent not in finalIntents.keys():
                     finalIntents[intent] = []
                 finalIntents[intent].append({"text": item["text"], "entities": item["entities"]})

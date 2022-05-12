@@ -24,6 +24,7 @@ class IntentTemplate:
                     {
                         "id": "37ffd186-5803-44b9-ad7c-994e13f362bf",
                         "name": f"{name}",
+                        "auto": True,
                         "required": True,
                         "dataType": f"@{dataType}",
                         "value": f"${value}",
@@ -42,6 +43,7 @@ class IntentTemplate:
         return {
             "id": str(uuid.uuid4()),
             "name": intent,
+            "auto": True,
             "contexts": [],
             "responses": [
                 {

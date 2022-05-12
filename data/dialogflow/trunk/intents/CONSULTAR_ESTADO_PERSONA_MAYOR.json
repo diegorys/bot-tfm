@@ -1,6 +1,6 @@
 {
-    "id": "d58a1e8f-978f-4dd9-a7d8-b3fa1215598e",
-    "name": "REGISTRAR_SALUDO",
+    "id": "04b1a9ed-bf2d-4607-a75c-55360eefaca9",
+    "name": "CONSULTAR_ESTADO_PERSONA_MAYOR",
     "auto": true,
     "contexts": [],
     "responses": [
@@ -16,7 +16,7 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido registrar_saludo"
+                        "Recibido consultar_estado_persona_mayor"
                     ],
                     "condition": ""
                 }

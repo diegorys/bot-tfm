@@ -108,24 +108,6 @@
     {
         "data": [
             {
-                "text": "Anoche no dormí bien",
-                "userDefined": false
-            },
-            {
-                "text": "sueño",
-                "meta": "@estado",
-                "alias": "estado",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
                 "text": "Estoy ",
                 "userDefined": false
             },

@@ -1,6 +1,6 @@
 {
-    "id": "d58a1e8f-978f-4dd9-a7d8-b3fa1215598e",
-    "name": "REGISTRAR_SALUDO",
+    "id": "85ee4270-b983-419b-b183-28868ca774ba",
+    "name": "REGISTRAR_MEDIDA_MEDICA",
     "auto": true,
     "contexts": [],
     "responses": [
@@ -16,7 +16,7 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido registrar_saludo"
+                        "Recibido registrar_medida_medica"
                     ],
                     "condition": ""
                 }
