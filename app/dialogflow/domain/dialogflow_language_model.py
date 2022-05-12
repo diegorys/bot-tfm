@@ -2,13 +2,28 @@ from google.cloud import dialogflow
 from conversational_bot.domain.frame import Frame
 from conversational_bot.domain.language_model import LanguageModel
 
+PROJECT_ID = "***REMOVED***"
+SESSION = "123456789"
+LANGUAGE_CODE = "es"
+
 
 class DialogflowLanguageModel(LanguageModel):
     def __init__(self):
-        pass
+        self.lastResponse = ""
 
     def identifyIntent(self, text: str):
-        pass
+        session_client = dialogflow.SessionsClient()
+        session = session_client.session_path(PROJECT_ID, 123456789)
+        text_input = dialogflow.TextInput(text=text, language_code=LANGUAGE_CODE)
+        query_input = dialogflow.QueryInput(text=text_input)
+        response = session_client.detect_intent(
+            request={"session": session, "query_input": query_input}
+        )
+        intent = response.query_result.intent.display_name
+        # parameters = response.query_result.parameters.fields
+        entities = {}
+        self.lastResponse = response.query_result.fulfillment_messages[0].text.text[0]
+        return intent, entities
 
     def generateText(self, frame: Frame) -> str:
-        pass
+        return self.lastResponse

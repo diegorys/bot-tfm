@@ -15,7 +15,7 @@ provider:
     GPT3_ENGINE: "text-davinci-002"
     OPENAI_API_KEY: ${self:custom.env.OPENAI_API_KEY.${opt:stage, self:provider.stage}}
     TELEGRAM_TOKEN: ${self:custom.env.TELEGRAM_TOKEN.${opt:stage, self:provider.stage}}
-    GOOGLE_APPLICATION_CREDENTIALS: "credentials/google/key.json"
+    GOOGLE_APPLICATION_CREDENTIALS: "/credentials/google/key.json"
 
   iam:
     role:
@@ -120,11 +120,13 @@ package:
     - "!*.py"
     - "conversational_bot/**/*.py"
     - "dataset/**/*.py"
+    - "dialogflow/**/*.py"
     - "dialogs/**/*.py"
     - "infrastructure/**/*.py"
     - "notifications/**/*.py"
     - "sso/**/*.py"
     - boto3
+    - google-cloud-dialogflow
     # - openai
     - python-telegram-bot
 
