@@ -1,0 +1,26 @@
+[
+    {
+        "data": [
+            {
+                "text": "hoy me duele la cabeza🌚",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Tengo los pies hinchados no puedo andar bien",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    }
+]

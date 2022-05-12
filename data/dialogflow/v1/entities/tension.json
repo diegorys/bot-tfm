@@ -1,0 +1,9 @@
+{
+    "id": "cc3e60a8-ad89-471c-9e61-be777b9418a0",
+    "name": "tension",
+    "isOverridable": true,
+    "isEnum": false,
+    "isRegexp": false,
+    "automatedExpansion": false,
+    "allowFuzzyExtraction": false
+}

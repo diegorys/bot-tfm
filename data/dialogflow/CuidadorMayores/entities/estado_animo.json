@@ -1,9 +1,0 @@
-{
-  "id": "505e0b1f-c098-493f-92e0-dbc00a57a6e2",
-  "name": "estado_animo",
-  "isOverridable": true,
-  "isEnum": false,
-  "isRegexp": false,
-  "automatedExpansion": false,
-  "allowFuzzyExtraction": false
-}

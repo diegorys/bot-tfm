@@ -1,4 +1,35 @@
 {
-    "id": "7ebdac58-3f34-4e9f-ab2c-0913efb1497d",
-    "name": "REGISTRAR_NECESIDAD"
+    "id": "981a6c2b-bd34-4002-b9d3-1cdf20f233e2",
+    "name": "REGISTRAR_NECESIDAD",
+    "auto": true,
+    "contexts": [],
+    "responses": [
+        {
+            "resetContexts": false,
+            "action": "",
+            "affectedContexts": [],
+            "parameters": [],
+            "messages": [
+                {
+                    "type": "0",
+                    "title": "",
+                    "textToSpeech": "",
+                    "lang": "es",
+                    "speech": [
+                        "Recibido registrar_necesidad"
+                    ],
+                    "condition": ""
+                }
+            ],
+            "speech": []
+        }
+    ],
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "events": [],
+    "conditionalResponses": [],
+    "condition": "",
+    "conditionalFollowupEvents": []
 }

@@ -1,4 +1,76 @@
 {
-    "id": "c6e85ee7-2f9a-46fd-b9ea-a03d7e9469da",
-    "name": "REGISTRAR_CITA_MEDICA"
+    "id": "02a49a4b-7f2b-4904-8fd4-4ab9174eb232",
+    "name": "REGISTRAR_CITA_MEDICA",
+    "auto": true,
+    "contexts": [],
+    "responses": [
+        {
+            "resetContexts": false,
+            "action": "",
+            "affectedContexts": [],
+            "parameters": [
+                {
+                    "id": "37ffd186-5803-44b9-ad7c-994e13f362bf",
+                    "name": "cita",
+                    "auto": true,
+                    "required": true,
+                    "dataType": "@cita",
+                    "value": "$cita",
+                    "defaultValue": "",
+                    "isList": true,
+                    "prompts": [
+                        {
+                            "lang": "es",
+                            "value": "Indica cita"
+                        }
+                    ],
+                    "promptMessages": [],
+                    "noMatchPromptMessages": [],
+                    "noInputPromptMessages": [],
+                    "outputDialogContexts": []
+                },
+                {
+                    "id": "37ffd186-5803-44b9-ad7c-994e13f362bf",
+                    "name": "date-time",
+                    "auto": true,
+                    "required": true,
+                    "dataType": "@sys.date-time",
+                    "value": "$date-time",
+                    "defaultValue": "",
+                    "isList": true,
+                    "prompts": [
+                        {
+                            "lang": "es",
+                            "value": "Indica date-time"
+                        }
+                    ],
+                    "promptMessages": [],
+                    "noMatchPromptMessages": [],
+                    "noInputPromptMessages": [],
+                    "outputDialogContexts": []
+                }
+            ],
+            "messages": [
+                {
+                    "type": "0",
+                    "title": "",
+                    "textToSpeech": "",
+                    "lang": "es",
+                    "speech": [
+                        "Recibido cita: $cita date-time: $date-time"
+                    ],
+                    "condition": ""
+                }
+            ],
+            "speech": []
+        }
+    ],
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "events": [],
+    "conditionalResponses": [],
+    "condition": "",
+    "conditionalFollowupEvents": []
 }

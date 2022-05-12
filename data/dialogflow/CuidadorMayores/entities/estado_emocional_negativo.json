@@ -1,9 +1,0 @@
-{
-  "id": "15851c90-170b-4b22-9d68-e3711daae1c5",
-  "name": "estado_emocional_negativo",
-  "isOverridable": true,
-  "isEnum": false,
-  "isRegexp": false,
-  "automatedExpansion": false,
-  "allowFuzzyExtraction": false
-}

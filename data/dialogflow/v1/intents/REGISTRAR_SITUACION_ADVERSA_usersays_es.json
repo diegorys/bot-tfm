@@ -14,6 +14,30 @@
     {
         "data": [
             {
+                "text": "Acabo de caerme por el pasillo y veo que me está saliendo un moratón queme aconsejas que haga??",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Ayer lo pasé muy mal por la pastilla del azúcar pero me han dicho que es nirmal",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
                 "text": "Tengo un punto infectado como me lo curo",
                 "userDefined": false
             }

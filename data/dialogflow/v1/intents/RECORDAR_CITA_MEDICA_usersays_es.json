@@ -2,19 +2,23 @@
     {
         "data": [
             {
-                "text": "Hola de nuevo me gustaría que me avises el día que tengo que ir a la farmacia para las medicinas ya te lo dije y ahora noe acuerdo",
+                "text": "Recuerdame que el ",
                 "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
+            },
             {
-                "text": "Recuerdame que el día seis me quitan los puntos",
+                "text": "día seis",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " me quitan ",
+                "userDefined": false
+            },
+            {
+                "text": "los puntos",
+                "meta": "@cita",
+                "alias": "cita",
                 "userDefined": false
             }
         ],

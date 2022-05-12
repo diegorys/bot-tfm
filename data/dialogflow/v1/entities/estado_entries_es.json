@@ -1,14 +1,72 @@
 [
     {
+        "value": "tristeza",
+        "synonyms": [
+            "triste",
+            "tristeza",
+            "disgustado",
+            "disgustada",
+            "mal"
+        ]
+    },
+    {
+        "value": "alegría",
+        "synonyms": [
+            "alegría",
+            "alegre",
+            "contento",
+            "feliz",
+            "felicidad",
+            "bien"
+        ]
+    },
+    {
         "value": "soledad",
+        "synonyms": [
+            "solo",
+            "sola",
+            "soledad",
+            "solitaria",
+            "solitario"
+        ]
+    },
+    {
+        "value": "cansancio",
+        "synonyms": [
+            "cansancio",
+            "agotamiento",
+            "cansado",
+            "cansada",
+            "agotado",
+            "agotada"
+        ]
+    },
+    {
+        "value": "ocupado",
         "synonyms": []
     },
     {
-        "value": "culpabilidad",
+        "value": "muy bien",
         "synonyms": []
     },
     {
-        "value": "felicidad",
+        "value": "muy cansado",
+        "synonyms": []
+    },
+    {
+        "value": "tranquilo",
+        "synonyms": []
+    },
+    {
+        "value": "muy triste",
+        "synonyms": []
+    },
+    {
+        "value": "divertido",
+        "synonyms": []
+    },
+    {
+        "value": "muy contenta",
         "synonyms": []
     },
     {
@@ -16,27 +74,7 @@
         "synonyms": []
     },
     {
-        "value": "sueño",
-        "synonyms": []
-    },
-    {
-        "value": "disgusto",
-        "synonyms": []
-    },
-    {
-        "value": "tristeza",
-        "synonyms": []
-    },
-    {
-        "value": "voluntad",
-        "synonyms": []
-    },
-    {
-        "value": "cansancio",
-        "synonyms": []
-    },
-    {
-        "value": "molestia",
+        "value": "molests",
         "synonyms": []
     }
 ]

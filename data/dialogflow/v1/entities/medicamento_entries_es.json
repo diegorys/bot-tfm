@@ -1,10 +1,10 @@
 [
     {
-        "value": "Vitamina D",
+        "value": "ibuprofeno",
         "synonyms": []
     },
     {
-        "value": "Redoxón",
+        "value": "rinialer",
         "synonyms": []
     },
     {
@@ -12,7 +12,31 @@
         "synonyms": []
     },
     {
-        "value": "ibuprofeno",
+        "value": "paracetamol",
+        "synonyms": []
+    },
+    {
+        "value": "soniase supra d",
+        "synonyms": []
+    },
+    {
+        "value": "atorvastatina",
+        "synonyms": []
+    },
+    {
+        "value": "lovastatina",
+        "synonyms": []
+    },
+    {
+        "value": "vitamina d",
+        "synonyms": []
+    },
+    {
+        "value": "redoxon",
+        "synonyms": []
+    },
+    {
+        "value": "valdispert",
         "synonyms": []
     },
     {
@@ -20,11 +44,19 @@
         "synonyms": []
     },
     {
-        "value": "Rosa mosqueta",
+        "value": "rosa mosqueta",
         "synonyms": []
     },
     {
-        "value": "Adiro 300",
+        "value": "pastilla de la alergia",
+        "synonyms": []
+    },
+    {
+        "value": "suplemento de hierro",
+        "synonyms": []
+    },
+    {
+        "value": "adiro 300",
         "synonyms": []
     }
 ]

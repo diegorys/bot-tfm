@@ -1,4 +1,56 @@
 {
-    "id": "e2ea426a-ff4b-488c-b22d-4e0e568660ee",
-    "name": "REGISTRAR_ESTADO_EMOCIONAL"
+    "id": "80dee510-40a6-4b15-8281-b6d47734dc7a",
+    "name": "REGISTRAR_ESTADO_EMOCIONAL",
+    "auto": true,
+    "contexts": [],
+    "responses": [
+        {
+            "resetContexts": false,
+            "action": "",
+            "affectedContexts": [],
+            "parameters": [
+                {
+                    "id": "37ffd186-5803-44b9-ad7c-994e13f362bf",
+                    "name": "estado",
+                    "auto": true,
+                    "required": true,
+                    "dataType": "@estado",
+                    "value": "$estado",
+                    "defaultValue": "",
+                    "isList": true,
+                    "prompts": [
+                        {
+                            "lang": "es",
+                            "value": "Indica estado"
+                        }
+                    ],
+                    "promptMessages": [],
+                    "noMatchPromptMessages": [],
+                    "noInputPromptMessages": [],
+                    "outputDialogContexts": []
+                }
+            ],
+            "messages": [
+                {
+                    "type": "0",
+                    "title": "",
+                    "textToSpeech": "",
+                    "lang": "es",
+                    "speech": [
+                        "Recibido estado: $estado"
+                    ],
+                    "condition": ""
+                }
+            ],
+            "speech": []
+        }
+    ],
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "events": [],
+    "conditionalResponses": [],
+    "condition": "",
+    "conditionalFollowupEvents": []
 }

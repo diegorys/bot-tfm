@@ -2,7 +2,13 @@
     {
         "data": [
             {
-                "text": "Ya me he tomado metformina",
+                "text": "Ya me he tomado ",
+                "userDefined": false
+            },
+            {
+                "text": "metformina",
+                "meta": "@medicamento",
+                "alias": "medicamento",
                 "userDefined": false
             }
         ],

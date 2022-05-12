@@ -1,4 +1,35 @@
 {
-    "id": "2a237702-5912-481c-822a-a3f978684527",
-    "name": "ACTUALIZAR_TOMA_MEDICAMENTO"
+    "id": "8633567f-edef-46e2-85c9-492eb89d6988",
+    "name": "ACTUALIZAR_TOMA_MEDICAMENTO",
+    "auto": true,
+    "contexts": [],
+    "responses": [
+        {
+            "resetContexts": false,
+            "action": "",
+            "affectedContexts": [],
+            "parameters": [],
+            "messages": [
+                {
+                    "type": "0",
+                    "title": "",
+                    "textToSpeech": "",
+                    "lang": "es",
+                    "speech": [
+                        "Recibido actualizar_toma_medicamento"
+                    ],
+                    "condition": ""
+                }
+            ],
+            "speech": []
+        }
+    ],
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "events": [],
+    "conditionalResponses": [],
+    "condition": "",
+    "conditionalFollowupEvents": []
 }

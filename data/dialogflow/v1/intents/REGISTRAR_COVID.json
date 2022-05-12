@@ -1,4 +1,35 @@
 {
-    "id": "8d8190af-afc9-4f50-9a4f-4d2bdb4c2f0b",
-    "name": "REGISTRAR_COVID"
+    "id": "27688e10-bf8b-4e09-9de0-725fe32358fc",
+    "name": "REGISTRAR_COVID",
+    "auto": true,
+    "contexts": [],
+    "responses": [
+        {
+            "resetContexts": false,
+            "action": "",
+            "affectedContexts": [],
+            "parameters": [],
+            "messages": [
+                {
+                    "type": "0",
+                    "title": "",
+                    "textToSpeech": "",
+                    "lang": "es",
+                    "speech": [
+                        "Recibido registrar_covid"
+                    ],
+                    "condition": ""
+                }
+            ],
+            "speech": []
+        }
+    ],
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "events": [],
+    "conditionalResponses": [],
+    "condition": "",
+    "conditionalFollowupEvents": []
 }

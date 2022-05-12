@@ -1,4 +1,35 @@
 {
-    "id": "03ea3ca8-ef84-4b3b-8d93-6cd623f06fe4",
-    "name": "REGISTRAR_RECHAZO"
+    "id": "a2da7049-8abc-458d-be32-06a4f04b936c",
+    "name": "REGISTRAR_RECHAZO",
+    "auto": true,
+    "contexts": [],
+    "responses": [
+        {
+            "resetContexts": false,
+            "action": "",
+            "affectedContexts": [],
+            "parameters": [],
+            "messages": [
+                {
+                    "type": "0",
+                    "title": "",
+                    "textToSpeech": "",
+                    "lang": "es",
+                    "speech": [
+                        "Recibido registrar_rechazo"
+                    ],
+                    "condition": ""
+                }
+            ],
+            "speech": []
+        }
+    ],
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "events": [],
+    "conditionalResponses": [],
+    "condition": "",
+    "conditionalFollowupEvents": []
 }

@@ -1,0 +1,9 @@
+{
+    "id": "153ab22d-a8b6-4ead-b552-2866c91ce03b",
+    "name": "medida",
+    "isOverridable": true,
+    "isEnum": false,
+    "isRegexp": false,
+    "automatedExpansion": false,
+    "allowFuzzyExtraction": false
+}

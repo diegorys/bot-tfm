@@ -2,7 +2,17 @@
     {
         "data": [
             {
-                "text": "Hola estoy muy sola necesito de tus consejos y que me hagas compañía😢😢😢",
+                "text": "Hola estoy muy ",
+                "userDefined": false
+            },
+            {
+                "text": "sola",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": " necesito de tus consejos y que me hagas compañía😢😢😢",
                 "userDefined": false
             }
         ],
@@ -14,7 +24,17 @@
     {
         "data": [
             {
-                "text": "Hola, he estado un poco ocupado, lo siento, intentaré estar más en adelante en lo posible",
+                "text": "Hola, he estado un poco ",
+                "userDefined": false
+            },
+            {
+                "text": "ocupado",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": ", lo siento, intentaré estar más en adelante en lo posible",
                 "userDefined": false
             }
         ],
@@ -26,7 +46,17 @@
     {
         "data": [
             {
-                "text": "Bien, muy bien, viendo una serie.",
+                "text": "Bien, ",
+                "userDefined": false
+            },
+            {
+                "text": "muy bien",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": ", viendo una serie.",
                 "userDefined": false
             }
         ],
@@ -38,7 +68,17 @@
     {
         "data": [
             {
-                "text": "Hola! Todo bien, muchas gracias, ☺️",
+                "text": "Hola! Todo ",
+                "userDefined": false
+            },
+            {
+                "text": "bien",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": ", muchas gracias, ☺️",
                 "userDefined": false
             }
         ],
@@ -50,7 +90,13 @@
     {
         "data": [
             {
-                "text": "Estoy muy bien",
+                "text": "Estoy muy ",
+                "userDefined": false
+            },
+            {
+                "text": "bien",
+                "meta": "@estado",
+                "alias": "estado",
                 "userDefined": false
             }
         ],
@@ -62,7 +108,17 @@
     {
         "data": [
             {
-                "text": "Creo q me iré pronto a dormir",
+                "text": "Estoy ",
+                "userDefined": false
+            },
+            {
+                "text": "feliz",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": " nos hemos atrevido a reiniciar y ja salido todo bien",
                 "userDefined": false
             }
         ],
@@ -74,7 +130,17 @@
     {
         "data": [
             {
-                "text": "Hola hoy he recibido una buena noticia mi hija empieza a trabajar el día nueve",
+                "text": "Estoy ",
+                "userDefined": false
+            },
+            {
+                "text": "disgustada",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": " mi amiga tiene un problema y no s como ayudarla",
                 "userDefined": false
             }
         ],
@@ -86,7 +152,13 @@
     {
         "data": [
             {
-                "text": "Anoche no dormí bien",
+                "text": "Estoy ",
+                "userDefined": false
+            },
+            {
+                "text": "bien",
+                "meta": "@estado",
+                "alias": "estado",
                 "userDefined": false
             }
         ],
@@ -98,7 +170,17 @@
     {
         "data": [
             {
-                "text": "Estoy disgustada mi amiga tiene un problema y no s como ayudarla",
+                "text": "Hoy he acabado el día ",
+                "userDefined": false
+            },
+            {
+                "text": "muy cansado",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": ", me voy a ir a dormir pronto",
                 "userDefined": false
             }
         ],
@@ -110,7 +192,13 @@
     {
         "data": [
             {
-                "text": "Estoy bien",
+                "text": "Me encuentro muy ",
+                "userDefined": false
+            },
+            {
+                "text": "tranquilo",
+                "meta": "@estado",
+                "alias": "estado",
                 "userDefined": false
             }
         ],
@@ -122,7 +210,17 @@
     {
         "data": [
             {
-                "text": "Mañana celebramos el Día de la madre comemos en el centro comercial pero no estamos todos como me gustaría otro año será",
+                "text": "Todo ",
+                "userDefined": false
+            },
+            {
+                "text": "bien",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": ". Muchas gracias",
                 "userDefined": false
             }
         ],
@@ -134,7 +232,17 @@
     {
         "data": [
             {
-                "text": "Todo bien. Muchas gracias",
+                "text": "Está todo ",
+                "userDefined": false
+            },
+            {
+                "text": "bien",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": " 👍🏻",
                 "userDefined": false
             }
         ],
@@ -146,7 +254,13 @@
     {
         "data": [
             {
-                "text": "Está todo bien 👍🏻",
+                "text": "Mañana tengo visita y eso hace que este ",
+                "userDefined": false
+            },
+            {
+                "text": "feliz",
+                "meta": "@estado",
+                "alias": "estado",
                 "userDefined": false
             }
         ],
@@ -158,7 +272,17 @@
     {
         "data": [
             {
-                "text": "Me acaban de llamar por teléfono me han dado muy buenas noticias acaban de solucionarme un problema que hacía meses tenía",
+                "text": "Hola hoy estoy ",
+                "userDefined": false
+            },
+            {
+                "text": "muy triste",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": " nos hemos quedado sin poder ver los concursos y series de Movistar por ser tan miedosos😭😭😭",
                 "userDefined": false
             }
         ],
@@ -170,7 +294,17 @@
     {
         "data": [
             {
-                "text": "La dieta me está costando mucho seguirla pero tengo voluntad",
+                "text": "Que ",
+                "userDefined": false
+            },
+            {
+                "text": "bien",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": " me siento",
                 "userDefined": false
             }
         ],
@@ -182,7 +316,13 @@
     {
         "data": [
             {
-                "text": "Hola muy bien en Torrevieja cerca del mar",
+                "text": "Que día más ",
+                "userDefined": false
+            },
+            {
+                "text": "divertido",
+                "meta": "@estado",
+                "alias": "estado",
                 "userDefined": false
             }
         ],
@@ -194,7 +334,13 @@
     {
         "data": [
             {
-                "text": "Y estoy cansada",
+                "text": "Hoy me han dejado solo en casa y me he sentido ",
+                "userDefined": false
+            },
+            {
+                "text": "triste",
+                "meta": "@estado",
+                "alias": "estado",
                 "userDefined": false
             }
         ],
@@ -206,7 +352,17 @@
     {
         "data": [
             {
-                "text": "Me siento muy contenta de tener un amigo",
+                "text": "Estoy muy ",
+                "userDefined": false
+            },
+            {
+                "text": "feliz",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": " hoy",
                 "userDefined": false
             }
         ],
@@ -218,7 +374,13 @@
     {
         "data": [
             {
-                "text": "Bien... aquí pasando el tiempo",
+                "text": "Hoy estoy ",
+                "userDefined": false
+            },
+            {
+                "text": "contento",
+                "meta": "@estado",
+                "alias": "estado",
                 "userDefined": false
             }
         ],
@@ -230,7 +392,17 @@
     {
         "data": [
             {
-                "text": "Hola es que me han dado puntos y estoy muy molests",
+                "text": "Hola ",
+                "userDefined": false
+            },
+            {
+                "text": "muy bien",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": " en Torrevieja cerca del mar",
                 "userDefined": false
             }
         ],
@@ -242,7 +414,111 @@
     {
         "data": [
             {
-                "text": "Que estoy cansada",
+                "text": "Y estoy ",
+                "userDefined": false
+            },
+            {
+                "text": "cansada",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Me siento ",
+                "userDefined": false
+            },
+            {
+                "text": "muy contenta",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": " de tener un amigo",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Bien",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": "... aquí pasando el tiempo",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Hola es que me han dado puntos y estoy muy ",
+                "userDefined": false
+            },
+            {
+                "text": "molests",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Que estoy ",
+                "userDefined": false
+            },
+            {
+                "text": "cansada",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Hola estoy ",
+                "userDefined": false
+            },
+            {
+                "text": "muy contenta",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": " hemos pagado menos feliz este mes",
                 "userDefined": false
             }
         ],
