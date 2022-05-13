@@ -13,6 +13,15 @@ slots = {
         "soniase supra d": [],
         "atorvastatina": [],
         "lovastatina": [],
+        "algidol": [],
+    },
+    "cita": {
+        "dentista": ["dentista", "odontólogo", "odontóloga", "odontología"],
+        "dermatólogo": ["dermatólogo, dermatóloga", "dermatología"],
+        "alergólogo": [],
+        "cardiólogo": [],
+        "médico de cabecera": [],
+        "enfermero": [],
     },
 }
 
