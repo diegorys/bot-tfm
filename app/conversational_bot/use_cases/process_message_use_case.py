@@ -15,6 +15,10 @@ class ProcessMessageUseCase:
 
     def execute(self, user: User, text: str, date) -> Response:
         print(f"Text: {text}")
+        # try:
         frame: Frame = self.nlu.execute(user, text)
         response = self.responseGenerator.execute(frame)
+        # except:
+        #     partialFrame = self.dialog.execute(frame)
+        #     response = self.responseGenerator.execute(partialFrame)
         return response

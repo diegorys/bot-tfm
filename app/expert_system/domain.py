@@ -26,15 +26,19 @@ slots = {
 }
 
 intents = {
+    # BÁSICO
+    "REGISTRAR_SALUDO": [],
+    "REGISTRAR_DESPEDIDA": [],
+    # ESTADO DE ÁNIMO
     "REGISTRAR_ESTADO_EMOCIONAL": [{"name": "estado", "required": True}],
+    # MÉDICO
     "REGISTRAR_TOMA_MEDICAMENTO": [
         {"name": "medicamento", "required": True},
         {"name": "cuando", "required": True},
     ],
-    "REGISTRAR_SALUDO": [],
-    "REGISTRAR_DESPEDIDA": [],
     "REGISTRAR_CITA_MEDICA": [
         {"name": "cita", "required": True},
         {"name": "cuando", "required": True},
     ],
+    # OTROS
 }
