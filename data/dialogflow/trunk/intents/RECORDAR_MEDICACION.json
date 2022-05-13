@@ -1,5 +1,5 @@
 {
-    "id": "3dfa31a6-238d-451e-9157-caa2f21827f8",
+    "id": "a5e35487-6d76-4d12-ad18-d377880bafcc",
     "name": "RECORDAR_MEDICACION",
     "auto": true,
     "contexts": [],
@@ -16,7 +16,7 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido recordar_medicacion"
+                        "Entiendo que quieres recordar medicacion, pero aún no estoy preparado para eso."
                     ],
                     "condition": ""
                 }

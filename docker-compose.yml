@@ -9,17 +9,16 @@ services:
       - DATES_TABLE=${DATES_TABLE}
       - DIALOGS_TABLE=${DIALOGS_TABLE}
       - DATASET_TABLE=${DATASET_TABLE}
-      - GOOGLE_APPLICATION_CREDENTIALS=${GOOGLE_APPLICATION_CREDENTIALS}
       - GPT3_ENGINE=${GPT3_ENGINE}
       - MEDICINES_TABLE=${MEDICINES_TABLE}
       - SERVICE_STATUS=${SERVICE_STATUS}
       - STATUS_TABLE=${STATUS_TABLE}
-      - USERS_TABLE=${USERS_TABLE}
       - AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION}
       - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
       - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
     volumes:
       - ./app/:/app
+      - ./data/:/data
       - ./poc/:/poc
       - ./credentials/:/credentials
     working_dir: /app

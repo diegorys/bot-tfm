@@ -1,5 +1,33 @@
 [
     {
+        "value": "dentista",
+        "synonyms": [
+            "dentista",
+            "odontólogo",
+            "odontóloga",
+            "odontología"
+        ]
+    },
+    {
+        "value": "dermatólogo",
+        "synonyms": [
+            "dermatólogo, dermatóloga",
+            "dermatología"
+        ]
+    },
+    {
+        "value": "alergólogo",
+        "synonyms": []
+    },
+    {
+        "value": "cardiólogo",
+        "synonyms": []
+    },
+    {
+        "value": "médico de cabecera",
+        "synonyms": []
+    },
+    {
         "value": "enfermero",
         "synonyms": []
     },
@@ -13,10 +41,6 @@
     },
     {
         "value": "médico",
-        "synonyms": []
-    },
-    {
-        "value": "dentista",
         "synonyms": []
     },
     {

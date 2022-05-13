@@ -1,5 +1,5 @@
 {
-    "id": "adfcbb67-984c-4589-98f0-a56785250b25",
+    "id": "2d1b6579-e41f-47ae-ac01-406154306f96",
     "name": "REGISTRAR_TELEGRAM",
     "auto": true,
     "contexts": [],
@@ -16,7 +16,7 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido registrar_telegram"
+                        "Entiendo que quieres registrar telegram, pero aún no estoy preparado para eso."
                     ],
                     "condition": ""
                 }

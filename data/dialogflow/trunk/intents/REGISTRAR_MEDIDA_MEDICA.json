@@ -1,5 +1,5 @@
 {
-    "id": "85ee4270-b983-419b-b183-28868ca774ba",
+    "id": "53261e65-fac3-43cc-8212-93cae5eef864",
     "name": "REGISTRAR_MEDIDA_MEDICA",
     "auto": true,
     "contexts": [],
@@ -16,7 +16,7 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido registrar_medida_medica"
+                        "Entiendo que quieres registrar medida medica, pero aún no estoy preparado para eso."
                     ],
                     "condition": ""
                 }

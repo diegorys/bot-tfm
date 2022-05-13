@@ -1,5 +1,5 @@
 {
-    "id": "bfaf85be-da3f-427a-b6cb-bd21f514a13a",
+    "id": "6b3af3b1-6539-479c-a737-105e857b90ab",
     "name": "REGISTRAR_TOMA_MEDICAMENTO",
     "auto": true,
     "contexts": [],
@@ -57,7 +57,11 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido medicamento: $medicamento date-time: $date-time"
+                        "Tienes que tomar $medicamento $date-time",
+                        "Anoto medicamento $medicamento $date-time",
+                        "Te recordaré que tomes $medicamento $date-time",
+                        "$date-time tomar $medicamento. Anotado queda.",
+                        "$date-time tomar $medicamento. Anotado queda."
                     ],
                     "condition": ""
                 }

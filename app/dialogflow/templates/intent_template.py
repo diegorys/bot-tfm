@@ -1,5 +1,7 @@
 import uuid
+from conversational_bot.domain.frame import Frame
 from expert_system.domain import intents
+from expert_system.domain import responses
 
 
 class IntentTemplate:
@@ -9,6 +11,7 @@ class IntentTemplate:
         responsePhrase = ""
         if intent in intents.keys():
             slots = intents[intent]
+            frame = Frame(intent, None, "", {})
             for slot in slots:
                 name = slot["name"]
                 dataType = slot["name"]
@@ -17,9 +20,12 @@ class IntentTemplate:
                     name = "date-time"
                     dataType = "sys.date-time"
                     value = "date-time"
-                if "" == responsePhrase:
-                    responsePhrase = "Recibido"
-                responsePhrase += f" {name}: ${name}"
+                if intent in responses.keys():
+                    frame.addEntity(slot["name"], f"${value}")
+                else:
+                    if "" == responsePhrase:
+                        responsePhrase = "Recibido"
+                    responsePhrase += f" {name}: ${value}"
                 parameters.append(
                     {
                         "id": "37ffd186-5803-44b9-ad7c-994e13f362bf",
@@ -37,8 +43,16 @@ class IntentTemplate:
                         "outputDialogContexts": [],
                     }
                 )
+        if intent in responses.keys():
+            for response in responses[intent]:
+                if "" != response:
+                    responsePhrase = frame.generate(response)
+                    speech.append(responsePhrase)
         if "" == responsePhrase:
-            responsePhrase = f"Recibido {intent.lower()}"
+            humanizedIntent = intent.lower().replace("_", " ")
+            responsePhrase = (
+                f"Entiendo que quieres {humanizedIntent}, pero aún no estoy preparado para eso."
+            )
         speech.append(responsePhrase)
         return {
             "id": str(uuid.uuid4()),

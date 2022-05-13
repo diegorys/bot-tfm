@@ -1,5 +1,5 @@
 {
-    "id": "c2372947-73c7-4579-8190-cce7048cfe26",
+    "id": "4e0bd612-01fe-48d5-9c96-5f93b0dff07d",
     "name": "REGISTRAR_DOMOTICA",
     "auto": true,
     "contexts": [],
@@ -16,7 +16,7 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido registrar_domotica"
+                        "Entiendo que quieres registrar domotica, pero aún no estoy preparado para eso."
                     ],
                     "condition": ""
                 }

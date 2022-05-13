@@ -1,5 +1,5 @@
 {
-    "id": "981a6c2b-bd34-4002-b9d3-1cdf20f233e2",
+    "id": "1e5da9cb-7437-413d-afe1-4e1008651c3d",
     "name": "REGISTRAR_NECESIDAD",
     "auto": true,
     "contexts": [],
@@ -16,7 +16,7 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido registrar_necesidad"
+                        "Entiendo que quieres registrar necesidad, pero aún no estoy preparado para eso."
                     ],
                     "condition": ""
                 }

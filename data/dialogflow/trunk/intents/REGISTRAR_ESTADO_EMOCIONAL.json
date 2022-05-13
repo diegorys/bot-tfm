@@ -1,5 +1,5 @@
 {
-    "id": "80dee510-40a6-4b15-8281-b6d47734dc7a",
+    "id": "110f0ccc-5f12-4572-9bc4-4317ad3629ee",
     "name": "REGISTRAR_ESTADO_EMOCIONAL",
     "auto": true,
     "contexts": [],
@@ -37,7 +37,10 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido estado: $estado"
+                        "Registro tu estado de ánimo: $estado",
+                        "Estado de ánimo anotado: $estado",
+                        "Entiendo tu estado de $estado",
+                        "Entiendo tu estado de $estado"
                     ],
                     "condition": ""
                 }

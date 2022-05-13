@@ -1,5 +1,5 @@
 {
-    "id": "bf953438-bb0f-4ebb-aba6-3cacea27f34d",
+    "id": "3fd423d1-a1d8-4e77-90a8-789e49c2649c",
     "name": "REGISTRAR_ANECDOTA",
     "auto": true,
     "contexts": [],
@@ -16,7 +16,7 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido registrar_anecdota"
+                        "Entiendo que quieres registrar anecdota, pero aún no estoy preparado para eso."
                     ],
                     "condition": ""
                 }

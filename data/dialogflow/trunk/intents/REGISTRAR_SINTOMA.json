@@ -1,5 +1,5 @@
 {
-    "id": "3986ddc7-6d01-41c1-bcee-66bd2330ef12",
+    "id": "9f8cdfbf-aed5-4947-8671-63121b5eb4c9",
     "name": "REGISTRAR_SINTOMA",
     "auto": true,
     "contexts": [],
@@ -16,7 +16,7 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido registrar_sintoma"
+                        "Entiendo que quieres registrar sintoma, pero aún no estoy preparado para eso."
                     ],
                     "condition": ""
                 }

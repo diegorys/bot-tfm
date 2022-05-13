@@ -1,5 +1,5 @@
 {
-    "id": "2eab6555-21f2-4760-8aa4-b9aa2baf5c53",
+    "id": "d043483d-5312-49d3-bd95-1965ed49ee1e",
     "name": "CONSULTAR_NUTRICION",
     "auto": true,
     "contexts": [],
@@ -16,7 +16,7 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido consultar_nutricion"
+                        "Entiendo que quieres consultar nutricion, pero aún no estoy preparado para eso."
                     ],
                     "condition": ""
                 }

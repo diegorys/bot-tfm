@@ -1,5 +1,5 @@
 {
-    "id": "a2ff7863-1ddf-4af5-b1ca-4ba41603141c",
+    "id": "7695f4f2-2f30-49b6-9391-666c494c746f",
     "name": "REGISTRAR_CONFIRMACION",
     "auto": true,
     "contexts": [],
@@ -16,7 +16,7 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido registrar_confirmacion"
+                        "Entiendo que quieres registrar confirmacion, pero aún no estoy preparado para eso."
                     ],
                     "condition": ""
                 }

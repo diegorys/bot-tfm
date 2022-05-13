@@ -1,5 +1,5 @@
 {
-    "id": "04b1a9ed-bf2d-4607-a75c-55360eefaca9",
+    "id": "167402e4-6382-40b6-9497-39dde3bc6ffc",
     "name": "CONSULTAR_ESTADO_PERSONA_MAYOR",
     "auto": true,
     "contexts": [],
@@ -16,7 +16,7 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido consultar_estado_persona_mayor"
+                        "Entiendo que quieres consultar estado persona mayor, pero aún no estoy preparado para eso."
                     ],
                     "condition": ""
                 }

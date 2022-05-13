@@ -1,5 +1,5 @@
 {
-    "id": "a851e7fe-45a9-418b-8653-99cca89c7ce9",
+    "id": "7f570479-add0-47bb-9a10-e6351401f3db",
     "name": "CONSULTAR_TIEMPO",
     "auto": true,
     "contexts": [],
@@ -16,7 +16,7 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido consultar_tiempo"
+                        "Entiendo que quieres consultar tiempo, pero aún no estoy preparado para eso."
                     ],
                     "condition": ""
                 }
