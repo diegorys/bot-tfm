@@ -1,7 +1,9 @@
 version: "3"
 services:
   app:
-    build: .
+    build:
+      context: .
+      target: app
     environment:
       - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
       - OPENAI_API_KEY=${OPENAI_API_KEY}
@@ -24,3 +26,13 @@ services:
     working_dir: /app
     container_name: app
     command: tail -F anything
+  model:
+    build:
+      context: .
+      target: model
+    volumes:
+      - ./model:/home/jovyan/app
+      - ./data:/home/jovyan/data
+    ports:
+      - 8830:8888
+    container_name: model
