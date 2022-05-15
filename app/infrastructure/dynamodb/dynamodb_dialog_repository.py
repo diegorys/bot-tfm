@@ -63,3 +63,10 @@ class DynamoDBDialogRepository(DialogRepository):
 
         print(len(response["Items"]))
         return len(response["Items"]) > 0
+
+    def list(self):
+        table = self.dynamodb.Table(TABLE_NAME)
+        response = table.scan()
+
+        print(response["Items"])
+        return response["Items"]

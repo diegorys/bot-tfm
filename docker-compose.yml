@@ -31,6 +31,8 @@ services:
       context: .
       target: model
     volumes:
+      - ./dataset:/home/jovyan/app/dataset
+      - ./infrastructure:/home/jovyan/app/infrastructure
       - ./model:/home/jovyan/app
       - ./data:/home/jovyan/data
     ports:
