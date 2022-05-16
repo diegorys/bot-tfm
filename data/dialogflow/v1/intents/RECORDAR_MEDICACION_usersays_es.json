@@ -2,23 +2,27 @@
     {
         "data": [
             {
-                "text": "Recuerdame que el ",
+                "text": "Tengo que tomar ",
                 "userDefined": false
             },
             {
-                "text": "día seis",
+                "text": "hoy",
                 "meta": "@sys.date-time",
                 "alias": "date-time",
                 "userDefined": false
             },
             {
-                "text": " me quitan ",
+                "text": " ",
                 "userDefined": false
             },
             {
-                "text": "los puntos",
-                "meta": "@cita",
-                "alias": "cita",
+                "text": "pastillas",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": false
+            },
+            {
+                "text": "?",
                 "userDefined": false
             }
         ],

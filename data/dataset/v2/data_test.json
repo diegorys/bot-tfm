@@ -1,29 +1,46 @@
 [
     {
-        "id": "bd2531df-36d8-4332-a485-a75f92365fed",
-        "text": "Adiós",
+        "id": "69f903b9-ae03-4bf7-8279-2fe14a8ecfb8",
+        "text": "Hola hoy Melo he pasado muy bien",
+        "intent": "REGISTRAR_ESTADO_EMOCIONAL",
+        "entities": {
+            "estado": "bien"
+        }
+    },
+    {
+        "id": "d2ae8150-7dae-4d0b-9c95-04f87d16319c",
+        "text": "el rinialer me toca a las 9h",
+        "intent": "REGISTRAR_TOMA_MEDICAMENTO",
+        "entities": {
+            "cuando": "9h",
+            "medicamento": "rinialer"
+        }
+    },
+    {
+        "id": "2afa0a94-d397-4d8d-92ad-f97002319bc6",
+        "text": "Todos los meses el día ocho me toca la vitamina d",
+        "intent": "REGISTRAR_TOMA_MEDICAMENTO",
+        "entities": {
+            "cuando": "el día ocho",
+            "medicamento": "vitamina d"
+        }
+    },
+    {
+        "id": "44472906-53a2-4fbf-9490-ac107bb603cc",
+        "text": "Pues ya no te cuento nada más",
         "intent": "REGISTRAR_DESPEDIDA",
         "entities": {}
     },
     {
-        "id": "e40f9deb-72d5-41d5-9242-40577dc45064",
-        "text": "Me tienes que ayudar a organizar mis citas y mis pastillas ya me voy liando",
-        "intent": "REGISTRAR_NECESIDAD",
+        "id": "fcb506c3-e48c-44d0-bf6f-739a72579f35",
+        "text": "Hola hoy he recibido una buena noticia mi hija empieza a trabajar el día nueve",
+        "intent": "NO_IDENTIFICADO",
         "entities": {}
     },
     {
-        "id": "87d08bc0-0608-40fb-855c-6f8cfa2f9369",
-        "text": "Recuérdame que tengo que ir al otorrino el 10 de septiembre a las 12",
-        "intent": "REGISTRAR_CITA_MEDICA",
-        "entities": {
-            "cuando": "10 de septiembre a las 12",
-            "cita": "otorrino"
-        }
-    },
-    {
-        "id": "e709d89c-f5de-4edf-a0b1-25600a95ebf2",
-        "text": "Vale cuando quieras hablamos",
-        "intent": "REGISTRAR_CONFIRMACION",
+        "id": "68276c3b-81f6-494a-bd01-46b9066a30cb",
+        "text": "Anoche no dormí bien",
+        "intent": "NO_IDENTIFICADO",
         "entities": {}
     },
     {
@@ -31,31 +48,52 @@
         "text": "Recuérdame tomar ibuprofeno el viernes",
         "intent": "REGISTRAR_TOMA_MEDICAMENTO",
         "entities": {
-            "medicamento": "ibuprofeno",
-            "cuando": "viernes"
+            "cuando": "viernes",
+            "medicamento": "ibuprofeno"
         }
     },
     {
-        "id": "afe94f12-5277-4d4b-8772-cd66287896c4",
-        "text": "Tomo redoxon por la mañana y soltar advanced plus por la noche",
+        "id": "cdea69ca-bd19-4450-b7c5-a57989fb675b",
+        "text": "Anota para el jueves dermatólogo",
+        "intent": "REGISTRAR_CITA_MEDICA",
+        "entities": {
+            "cuando": "jueves",
+            "cita": "dermatólogo"
+        }
+    },
+    {
+        "id": "f9a85701-5218-436f-8848-eada5bd3da06",
+        "text": "Me tengo que tomar todos los días sin falta vitamina d",
         "intent": "REGISTRAR_TOMA_MEDICAMENTO",
         "entities": {
-            "medicamento": "redoxon",
-            "cuando": "por la mañana"
-        }
-    },
-    {
-        "id": "0b6351d2-48ee-4260-819a-f8a874511801",
-        "text": "Estoy feliz nos hemos atrevido a reiniciar y ja salido todo bien",
-        "intent": "REGISTRAR_ESTADO_EMOCIONAL",
-        "entities": {
-            "estado": "feliz"
+            "cuando": "todos los días",
+            "medicamento": "vitamina d"
         }
     },
     {
         "id": "9f37474d-39cd-4e3e-9467-73471f68df78",
         "text": "Recuérdame los cumpleaños de mis nietos",
         "intent": "REGISTRAR_NECESIDAD",
+        "entities": {}
+    },
+    {
+        "id": "32ccf6f8-8280-4644-9075-e09098a90073",
+        "text": "Nos vemos",
+        "intent": "REGISTRAR_DESPEDIDA",
+        "entities": {}
+    },
+    {
+        "id": "24ab8858-e0b2-4570-b3e6-517195b68b71",
+        "text": "Estoy bien",
+        "intent": "REGISTRAR_ESTADO_EMOCIONAL",
+        "entities": {
+            "estado": "bien"
+        }
+    },
+    {
+        "id": "6bc9549a-ca0f-465c-9ef4-a21aa3adfdf0",
+        "text": "Mañana celebramos el Día de la madre comemos en el centro comercial pero no estamos todos como me gustaría otro año será",
+        "intent": "NO_IDENTIFICADO",
         "entities": {}
     },
     {
@@ -67,27 +105,9 @@
         }
     },
     {
-        "id": "10b38bcb-db84-4c1e-928e-eb482d675936",
-        "text": "Cómo está la persona mayor a la que cuido?",
-        "intent": "CONSULTAR_ESTADO_PERSONA_MAYOR",
-        "entities": {}
-    },
-    {
         "id": "e5a16de4-73f9-4595-9437-d64ddce2c22f",
         "text": "Creo que es todo para hoy",
         "intent": "REGISTRAR_DESPEDIDA",
-        "entities": {}
-    },
-    {
-        "id": "f499aa77-cad4-4657-aa74-90dfac0a3584",
-        "text": "y te sirva todo esto para algo.",
-        "intent": "NO_IDENTIFICADO",
-        "entities": {}
-    },
-    {
-        "id": "870c2dd8-a2b3-4c06-8b71-1651facbd4e4",
-        "text": "Ok",
-        "intent": "REGISTRAR_CONFIRMACION",
         "entities": {}
     },
     {
@@ -100,18 +120,30 @@
         }
     },
     {
-        "id": "0021b7f5-a249-4f39-9a3f-331dbe857760",
-        "text": "Para que interactúe contigo, dentro de lo posible.",
+        "id": "3944a4e8-ce05-4b6e-a082-e4f318e1b8ef",
+        "text": "Todo bien. Muchas gracias",
+        "intent": "REGISTRAR_ESTADO_EMOCIONAL",
+        "entities": {
+            "estado": "bien"
+        }
+    },
+    {
+        "id": "52597d61-0f22-4505-830f-3ae58301bce8",
+        "text": "Es muy larga tiene muchos capítulos",
         "intent": "NO_IDENTIFICADO",
         "entities": {}
     },
     {
-        "id": "89dc0179-9fb5-446c-a0b8-cd838a021c4f",
-        "text": "Mañana tengo visita y eso hace que este feliz",
-        "intent": "REGISTRAR_ESTADO_EMOCIONAL",
-        "entities": {
-            "estado": "feliz"
-        }
+        "id": "43c2efcb-5d01-4184-9179-6f79cb7d6f02",
+        "text": "Hola",
+        "intent": "REGISTRAR_SALUDO",
+        "entities": {}
+    },
+    {
+        "id": "5476a981-b987-4aa4-bb85-9541c3cdfb60",
+        "text": "Gracias por ayudarme",
+        "intent": "REGISTRAR_ALABANZA",
+        "entities": {}
     },
     {
         "id": "680ecd9b-067e-45fa-a0d7-c621641fd952",
@@ -120,41 +152,55 @@
         "entities": {}
     },
     {
-        "id": "ca1b83f3-3f72-437c-b120-45d374e523c6",
-        "text": "Vale",
-        "intent": "REGISTRAR_CONFIRMACION",
-        "entities": {}
-    },
-    {
-        "id": "b2014c42-bba6-4f2a-99e8-58af9a9046fa",
-        "text": "Se despierta pronto cada día",
-        "intent": "NO_IDENTIFICADO",
-        "entities": {}
-    },
-    {
-        "id": "af1e3fa4-e83a-483b-b1d9-7ca5c179dc70",
-        "text": "No  nada más",
-        "intent": "NO_IDENTIFICADO",
-        "entities": {}
-    },
-    {
-        "id": "2c53afda-2167-447a-a3f9-bf13a0114c79",
-        "text": "Hola te voy a contar los días de mis citas para que me lo vayas diciendo",
-        "intent": "NO_IDENTIFICADO",
-        "entities": {}
-    },
-    {
-        "id": "850bce15-6adc-42d0-b39e-a5d50ce6249c",
-        "text": "A las 10 soniase",
-        "intent": "REGISTRAR_TOMA_MEDICAMENTO",
+        "id": "fbc105bb-0bef-4836-bcc4-0e06c036857c",
+        "text": "Ya me he tomado metformina",
+        "intent": "ANOTAR_TOMA_MEDICAMENTO",
         "entities": {
-            "cuando": "10",
-            "medicamento": "soniase"
+            "medicamento": "metformina"
         }
     },
     {
-        "id": "bc26df4f-4c1d-420e-b150-b86b86a010fb",
-        "text": "La dieta me está costando mucho seguirla pero tengo voluntad",
+        "id": "6bf13eb9-af8c-4e58-a746-af243c3bee0b",
+        "text": "me toca rinialer a las 5",
+        "intent": "REGISTRAR_TOMA_MEDICAMENTO",
+        "entities": {
+            "cuando": "a las 5",
+            "medicamento": "rinialer"
+        }
+    },
+    {
+        "id": "ffe78c74-17a9-4b07-9f72-c47b299014f0",
+        "text": "Hasta luego",
+        "intent": "REGISTRAR_DESPEDIDA",
+        "entities": {}
+    },
+    {
+        "id": "a6c884af-98d8-46d4-8a65-2571134ab9df",
+        "text": "el rinialer me lo tomo a las 10",
+        "intent": "REGISTRAR_TOMA_MEDICAMENTO",
+        "entities": {
+            "cuando": "a las 10",
+            "medicamento": "rinialer"
+        }
+    },
+    {
+        "id": "b408156a-46a4-4e7c-b12d-5fc2a71859b6",
+        "text": "Tengo revisión dental el 13 de agosto",
+        "intent": "REGISTRAR_CITA_MEDICA",
+        "entities": {
+            "cuando": "13 de agosto",
+            "cita": "revisión dental"
+        }
+    },
+    {
+        "id": "0517defe-3ae5-4869-82f9-fda2c5297b2b",
+        "text": "hoy me duele la cabeza🌚",
+        "intent": "REGISTRAR_SINTOMA",
+        "entities": {}
+    },
+    {
+        "id": "d05498eb-5a36-4a29-a47f-c904e700b189",
+        "text": "¿Sabes si mi madre se ha tomado el Adiro?",
         "intent": "NO_IDENTIFICADO",
         "entities": {}
     },
@@ -165,76 +211,58 @@
         "entities": {}
     },
     {
-        "id": "c53e1ead-3c64-4bb8-9786-5ff868d23501",
-        "text": "Buenas noches",
-        "intent": "REGISTRAR_DESPEDIDA",
-        "entities": {}
-    },
-    {
-        "id": "028efa74-3648-464a-ad2d-1895bb7b2cec",
-        "text": "Menos de luz jajajaja",
-        "intent": "REGISTRAR_DOMOTICA",
-        "entities": {
-            "dispositivo": "luz"
-        }
-    },
-    {
-        "id": "49b0efc3-88d3-4529-8932-d610c68f2d18",
-        "text": "Ayer por la noche me bajo la tensión s 10/6",
-        "intent": "REGISTRAR_MEDIDA_MEDICA",
-        "entities": {
-            "medida": "tensión",
-            "valor": "10/6"
-        }
-    },
-    {
-        "id": "6ca4b5c7-6f46-4d0a-84a5-537db17efeb7",
-        "text": "Hoy me han dejado solo en casa y me he sentido triste",
-        "intent": "REGISTRAR_ESTADO_EMOCIONAL",
-        "entities": {
-            "estado": "triste"
-        }
-    },
-    {
-        "id": "c3c70672-5c35-428f-b4b1-bc9ff437a825",
-        "text": "Tengo que tomar pastillas hoy?",
-        "intent": "RECORDAR_MEDICACION",
-        "entities": {
-            "medicamento": "pastillas",
-            "cuando": "hoy"
-        }
-    },
-    {
-        "id": "f9be0de6-abd1-4af7-b00b-d365f3e1b7ce",
-        "text": "Tengo que despedirme de ti una temporada",
-        "intent": "REGISTRAR_DESPEDIDA",
-        "entities": {}
-    },
-    {
-        "id": "aeae1b7d-e0b5-4792-9c0c-260d77ba7edd",
-        "text": "Tengo cita con el dermatólogo el viernes",
+        "id": "57e2b3ff-3de7-40cb-9424-a0c22b4fea4d",
+        "text": "El fisio me ha dado hora para el jueves a las 15",
         "intent": "REGISTRAR_CITA_MEDICA",
         "entities": {
-            "cuando": "viernes",
-            "cita": "dermatólogo"
+            "cuando": "jueves a las 15",
+            "cita": "fisio"
         }
     },
     {
-        "id": "eff4fb48-8ec3-4e3f-9b75-05e9cefbc272",
-        "text": "Me han dicho que me de rosa mosqueta después de una ducha",
+        "id": "63486217-a72c-42e5-90cf-fd883a28c9c9",
+        "text": "Te estas convirtiendo en mi mejor amigo al que puedo contar todo",
+        "intent": "REGISTRAR_ALABANZA",
+        "entities": {}
+    },
+    {
+        "id": "7a6816ad-6b24-41bf-b0e1-760b8b7f557a",
+        "text": "Despierta a mi madre en media hora",
+        "intent": "NO_IDENTIFICADO",
+        "entities": {}
+    },
+    {
+        "id": "198d86bf-e253-49cf-b425-f7f81acbe908",
+        "text": "Los lunes a las 4 de la tarde me tomo rinialer",
         "intent": "REGISTRAR_TOMA_MEDICAMENTO",
         "entities": {
-            "cuando": "después de una ducha",
-            "medicamento": "rosa mosqueta"
+            "cuando": "lunes a las 4 de la tarde",
+            "medicamento": "rinialer"
         }
     },
     {
-        "id": "f1c502f2-4eb7-4284-8e89-3e867e5dc59b",
-        "text": "Recuerda a mi madre que apague los fuegos de la cocina.",
-        "intent": "REGISTRAR_DOMOTICA",
-        "entities": {
-            "dispositivo": "fuegos de la cocina"
-        }
+        "id": "a9c2b8b9-d3ba-445f-87bb-26e56c15995e",
+        "text": "Hola hoy me han quitado los puntos",
+        "intent": "REGISTRAR_SALUDO",
+        "entities": {}
+    },
+    {
+        "id": "6966c254-f471-48a9-bbb4-a8b6f6b24ede",
+        "text": "Otra vez se ya estropeado😾😾😾",
+        "intent": "REGISTRAR_SITUACION_ADVERSA",
+        "entities": {}
+    },
+    {
+        "id": "23c06c10-5af0-47e2-8bb6-6913213824a7",
+        "text": "Buenos días",
+        "intent": "REGISTRAR_SALUDO",
+        "entities": {}
+    },
+    {
+        "id": "275280ad-4975-4837-9808-3b20131ed308",
+        "text": "Mañana tengo que madrugar",
+        "intent": "REGISTRAR_DESPEDIDA",
+        "entities": {}
     },
     {
         "id": "89cd866c-36b0-47a8-ab04-39d967411d67",
@@ -249,18 +277,24 @@
         "entities": {}
     },
     {
-        "id": "5bdc37ba-9592-46a4-b685-3e8938f2ed50",
-        "text": "tengo cita con el médico mañana",
-        "intent": "REGISTRAR_CITA_MEDICA",
+        "id": "23c54d0d-47eb-488e-8d2a-30545e9f2d5c",
+        "text": "Tengo que instalar telegram a mi madre, que es mayor.",
+        "intent": "REGISTRAR_TELEGRAM",
+        "entities": {}
+    },
+    {
+        "id": "81a07cfb-fe88-4193-aab3-a84027dc5158",
+        "text": "el sábado me toca el paracetamol",
+        "intent": "REGISTRAR_TOMA_MEDICAMENTO",
         "entities": {
-            "cuando": "mañana",
-            "cita": "médico"
+            "cuando": "sábado",
+            "medicamento": "paracetamol"
         }
     },
     {
-        "id": "a9b27d0b-e605-4ae7-b37b-01aa17aad7ff",
-        "text": "Saludos desde Jérica🤖",
-        "intent": "REGISTRAR_SALUDO",
+        "id": "a1ab0897-508b-475f-ac80-66e001f77008",
+        "text": "Y mañana voy para Santa Pola a pasar un días.",
+        "intent": "NO_IDENTIFICADO",
         "entities": {}
     },
     {
@@ -269,6 +303,15 @@
         "intent": "REGISTRAR_ESTADO_EMOCIONAL",
         "entities": {
             "estado": "contenta"
+        }
+    },
+    {
+        "id": "d639c035-5862-42f2-a689-982b00a2052e",
+        "text": "Me acaba de llegar una carta con la cita del día diecisiete de este mes para la ecografía del cuello",
+        "intent": "REGISTRAR_CITA_MEDICA",
+        "entities": {
+            "cuando": "diecisiete de este mes",
+            "cita": "ecografía del cuello"
         }
     },
     {

@@ -2,7 +2,43 @@
     {
         "data": [
             {
+                "text": "Vale cuando quieras hablamos",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
                 "text": "👌",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Ok",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Vale",
                 "userDefined": false
             }
         ],

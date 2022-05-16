@@ -5,7 +5,9 @@
     },
     {
         "value": "rinialer",
-        "synonyms": []
+        "synonyms": [
+            "pastilla de la alergia"
+        ]
     },
     {
         "value": "metformina",
@@ -35,19 +37,30 @@
         "synonyms": []
     },
     {
-        "value": "vitamina d",
+        "value": "rosa mosqueta",
         "synonyms": []
     },
     {
-        "value": "pastilla de la alergia",
+        "value": "valdispert",
+        "synonyms": []
+    },
+    {
+        "value": "vitamina d",
+        "synonyms": [
+            "vitaminas",
+            "vitamina"
+        ]
+    },
+    {
+        "value": "redoxon",
+        "synonyms": []
+    },
+    {
+        "value": "pastillas",
         "synonyms": []
     },
     {
         "value": "suplemento de hierro",
-        "synonyms": []
-    },
-    {
-        "value": "redoxon",
         "synonyms": []
     },
     {
@@ -56,10 +69,6 @@
     },
     {
         "value": "ibuprofeno",
-        "synonyms": []
-    },
-    {
-        "value": "valdispert",
         "synonyms": []
     }
 ]

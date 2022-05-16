@@ -16,5 +16,33 @@
         "count": 0,
         "lang": "es",
         "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Ayer por la noche me bajo la ",
+                "userDefined": false
+            },
+            {
+                "text": "tensión",
+                "meta": "@medida",
+                "alias": "medida",
+                "userDefined": false
+            },
+            {
+                "text": " s ",
+                "userDefined": false
+            },
+            {
+                "text": "10/6",
+                "meta": "@valor",
+                "alias": "valor",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
     }
 ]

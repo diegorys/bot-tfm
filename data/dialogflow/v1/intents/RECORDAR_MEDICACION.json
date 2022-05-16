@@ -1,6 +1,6 @@
 {
-    "id": "dd0ce91b-c442-4cea-ac18-00f29f6a1b28",
-    "name": "REGISTRAR_TELEGRAM",
+    "id": "3e6fa1f3-363b-4dfd-beaa-5536450e1036",
+    "name": "RECORDAR_MEDICACION",
     "auto": true,
     "contexts": [],
     "responses": [
@@ -16,7 +16,7 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Entiendo que quieres registrar telegram, pero aún no estoy preparado para eso."
+                        "Entiendo que quieres recordar medicacion, pero aún no estoy preparado para eso."
                     ],
                     "condition": ""
                 }

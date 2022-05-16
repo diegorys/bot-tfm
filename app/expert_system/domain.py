@@ -4,25 +4,32 @@ slots = {
         "alegría": ["alegría", "alegre", "contento", "feliz", "felicidad", "bien"],
         "soledad": ["solo", "sola", "soledad", "solitaria", "solitario"],
         "cansancio": ["cansancio", "agotamiento", "cansado", "cansada", "agotado", "agotada"],
+        "tranquilo": ["tranquilo", "tranquila", "tranquilidad"]
     },
     "medicamento": {
         "ibuprofeno": [],
-        "rinialer": [],
+        "rinialer": ["pastilla de la alergia"],
         "metformina": [],
         "paracetamol": [],
         "soniase supra d": ["soniase supra d", "soniase"],
         "atorvastatina": [],
         "lovastatina": [],
         "algidol": [],
-        "rosa mosqueta": []
+        "rosa mosqueta": [],
+        "valdispert": [],
+        "vitamina d": ["vitaminas", "vitamina"]
     },
     "cita": {
-        "dentista": ["dentista", "odontólogo", "odontóloga", "odontología"],
+        "dentista": ["dentista", "odontólogo", "odontóloga", "odontología", "revisión dental"],
         "dermatólogo": ["dermatólogo, dermatóloga", "dermatología"],
-        "alergólogo": [],
-        "cardiólogo": [],
-        "médico de cabecera": [],
-        "enfermero": [],
+        "alergólogo": ["alergólogo", "alergóloga", "el de la alergia", "la de la alergia", "alergología"],
+        "cardiólogo": ["cardiólogo", "cardióloga", "cardiología"],
+        "médico de cabecera": ["médico de cabecera", "médico"],
+        "enfermero": ["enfermero", "enfermera"],
+        "oculista": [],
+        "otorrino": ["otorrino", "otorrina"],
+        "endocrino": ["endocrino", "endocrina"],
+        "fisioterapeuta": ["fisio", "fisioterapia", "fisioterapeuta"]
     },
 }
 

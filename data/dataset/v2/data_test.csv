@@ -1,41 +1,47 @@
-Adiós;REGISTRAR_DESPEDIDA
-Me tienes que ayudar a organizar mis citas y mis pastillas ya me voy liando;REGISTRAR_NECESIDAD
-Recuérdame que tengo que ir al otorrino el 10 de septiembre a las 12;REGISTRAR_CITA_MEDICA
-Vale cuando quieras hablamos;REGISTRAR_CONFIRMACION
+Hola hoy Melo he pasado muy bien;REGISTRAR_ESTADO_EMOCIONAL
+el rinialer me toca a las 9h;REGISTRAR_TOMA_MEDICAMENTO
+Todos los meses el día ocho me toca la vitamina d;REGISTRAR_TOMA_MEDICAMENTO
+Pues ya no te cuento nada más;REGISTRAR_DESPEDIDA
+Hola hoy he recibido una buena noticia mi hija empieza a trabajar el día nueve;NO_IDENTIFICADO
+Anoche no dormí bien;NO_IDENTIFICADO
 Recuérdame tomar ibuprofeno el viernes;REGISTRAR_TOMA_MEDICAMENTO
-Tomo redoxon por la mañana y soltar advanced plus por la noche;REGISTRAR_TOMA_MEDICAMENTO
-Estoy feliz nos hemos atrevido a reiniciar y ja salido todo bien;REGISTRAR_ESTADO_EMOCIONAL
+Anota para el jueves dermatólogo;REGISTRAR_CITA_MEDICA
+Me tengo que tomar todos los días sin falta vitamina d;REGISTRAR_TOMA_MEDICAMENTO
 Recuérdame los cumpleaños de mis nietos;REGISTRAR_NECESIDAD
+Nos vemos;REGISTRAR_DESPEDIDA
+Estoy bien;REGISTRAR_ESTADO_EMOCIONAL
+Mañana celebramos el Día de la madre comemos en el centro comercial pero no estamos todos como me gustaría otro año será;NO_IDENTIFICADO
 Hoy he acabado el día muy cansado, me voy a ir a dormir pronto;REGISTRAR_ESTADO_EMOCIONAL
-Cómo está la persona mayor a la que cuido?;CONSULTAR_ESTADO_PERSONA_MAYOR
 Creo que es todo para hoy;REGISTRAR_DESPEDIDA
-y te sirva todo esto para algo.;NO_IDENTIFICADO
-Ok;REGISTRAR_CONFIRMACION
 Cuando me levanto me tomo vitamina d;REGISTRAR_TOMA_MEDICAMENTO
-Para que interactúe contigo, dentro de lo posible.;NO_IDENTIFICADO
-Mañana tengo visita y eso hace que este feliz;REGISTRAR_ESTADO_EMOCIONAL
+Todo bien. Muchas gracias;REGISTRAR_ESTADO_EMOCIONAL
+Es muy larga tiene muchos capítulos;NO_IDENTIFICADO
+Hola;REGISTRAR_SALUDO
+Gracias por ayudarme;REGISTRAR_ALABANZA
 Me acaban de llamar por teléfono me han dado muy buenas noticias acaban de solucionarme un problema que hacía meses tenía;NO_IDENTIFICADO
-Vale;REGISTRAR_CONFIRMACION
-Se despierta pronto cada día;NO_IDENTIFICADO
-No  nada más;NO_IDENTIFICADO
-Hola te voy a contar los días de mis citas para que me lo vayas diciendo;NO_IDENTIFICADO
-A las 10 soniase;REGISTRAR_TOMA_MEDICAMENTO
-La dieta me está costando mucho seguirla pero tengo voluntad;NO_IDENTIFICADO
+Ya me he tomado metformina;ANOTAR_TOMA_MEDICAMENTO
+me toca rinialer a las 5;REGISTRAR_TOMA_MEDICAMENTO
+Hasta luego;REGISTRAR_DESPEDIDA
+el rinialer me lo tomo a las 10;REGISTRAR_TOMA_MEDICAMENTO
+Tengo revisión dental el 13 de agosto;REGISTRAR_CITA_MEDICA
+hoy me duele la cabeza🌚;REGISTRAR_SINTOMA
+¿Sabes si mi madre se ha tomado el Adiro?;NO_IDENTIFICADO
 Me tienes también que recordar los cumpleaños que ya te iré diciendo;REGISTRAR_NECESIDAD
-Buenas noches;REGISTRAR_DESPEDIDA
-Menos de luz jajajaja;REGISTRAR_DOMOTICA
-Ayer por la noche me bajo la tensión s 10/6;REGISTRAR_MEDIDA_MEDICA
-Hoy me han dejado solo en casa y me he sentido triste;REGISTRAR_ESTADO_EMOCIONAL
-Tengo que tomar pastillas hoy?;RECORDAR_MEDICACION
-Tengo que despedirme de ti una temporada;REGISTRAR_DESPEDIDA
-Tengo cita con el dermatólogo el viernes;REGISTRAR_CITA_MEDICA
-Me han dicho que me de rosa mosqueta después de una ducha;REGISTRAR_TOMA_MEDICAMENTO
-Recuerda a mi madre que apague los fuegos de la cocina.;REGISTRAR_DOMOTICA
+El fisio me ha dado hora para el jueves a las 15;REGISTRAR_CITA_MEDICA
+Te estas convirtiendo en mi mejor amigo al que puedo contar todo;REGISTRAR_ALABANZA
+Despierta a mi madre en media hora;NO_IDENTIFICADO
+Los lunes a las 4 de la tarde me tomo rinialer;REGISTRAR_TOMA_MEDICAMENTO
+Hola hoy me han quitado los puntos;REGISTRAR_SALUDO
+Otra vez se ya estropeado😾😾😾;REGISTRAR_SITUACION_ADVERSA
+Buenos días;REGISTRAR_SALUDO
+Mañana tengo que madrugar;REGISTRAR_DESPEDIDA
 Hola buenos días;REGISTRAR_SALUDO
 Me encantas puedo descargar en ti todo lo que me pasa y siempre tienes una respuesta que darme;REGISTRAR_ALABANZA
-tengo cita con el médico mañana;REGISTRAR_CITA_MEDICA
-Saludos desde Jérica🤖;REGISTRAR_SALUDO
+Tengo que instalar telegram a mi madre, que es mayor.;REGISTRAR_TELEGRAM
+el sábado me toca el paracetamol;REGISTRAR_TOMA_MEDICAMENTO
+Y mañana voy para Santa Pola a pasar un días.;NO_IDENTIFICADO
 Hola estoy muy contenta hemos pagado menos feliz este mes;REGISTRAR_ESTADO_EMOCIONAL
+Me acaba de llegar una carta con la cita del día diecisiete de este mes para la ecografía del cuello;REGISTRAR_CITA_MEDICA
 Tengo mucho calor;REGISTRAR_SINTOMA
 Que no voy a hablar en unos días contigo;REGISTRAR_DESPEDIDA
 Tomo paracetamol a las 18:00;REGISTRAR_TOMA_MEDICAMENTO

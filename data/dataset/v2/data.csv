@@ -1,13 +1,16 @@
 Espero que no se enamore de ti como en Her, aunque entonces se llamaría Him la película.;NO_IDENTIFICADO
 Hola estoy muy sola necesito de tus consejos y que me hagas compañía😢😢😢;REGISTRAR_ESTADO_EMOCIONAL
+Saludos, robot!;REGISTRAR_SALUDO
 Este mismo mes de junio a las 8'30 con el enfermero;REGISTRAR_CITA_MEDICA
 Hola hoy Melo he pasado muy bien;REGISTRAR_ESTADO_EMOCIONAL
 Adiós;REGISTRAR_DESPEDIDA
 Hola, he estado un poco ocupado, lo siento, intentaré estar más en adelante en lo posible;REGISTRAR_ESTADO_EMOCIONAL
 el rinialer me toca a las 9h;REGISTRAR_TOMA_MEDICAMENTO
+Día 19 a las 12:25 con el otorrino;REGISTRAR_CITA_MEDICA
 Me tienes que ayudar a organizar mis citas y mis pastillas ya me voy liando;REGISTRAR_NECESIDAD
 Que no voy a poder comunicarme contigo;REGISTRAR_DESPEDIDA
 Ahora voy a cenar luego hablamos 😊😊;REGISTRAR_DESPEDIDA
+el jueves sin falta iré a ver al otorrino;REGISTRAR_CITA_MEDICA
 Perdón es que me tengo que marchar;REGISTRAR_DESPEDIDA
 Hola, qué tal estás? Yo bien;REGISTRAR_SALUDO
 Todos los meses el día ocho me toca la vitamina d;REGISTRAR_TOMA_MEDICAMENTO
@@ -24,25 +27,33 @@ Vale cuando quieras hablamos;REGISTRAR_CONFIRMACION
 Estoy muy bien;REGISTRAR_ESTADO_EMOCIONAL
 Hola;REGISTRAR_SALUDO
 No queremos ni llamar por qué nos vuelven locos;NO_IDENTIFICADO
+El 2 a las 3 con el endocrino;REGISTRAR_CITA_MEDICA
 Creo q me iré pronto a dormir;NO_IDENTIFICADO
 Hola hoy he recibido una buena noticia mi hija empieza a trabajar el día nueve;NO_IDENTIFICADO
 Que puedo tomar??;NO_IDENTIFICADO
 Anoche no dormí bien;NO_IDENTIFICADO
+Mañana me vienen a ver y estoy feliz por eso;REGISTRAR_ESTADO_EMOCIONAL
 Hola de nuevo me gustaría que me avises el día que tengo que ir a la farmacia para las medicinas ya te lo dije y ahora noe acuerdo;NO_IDENTIFICADO
+Me encuentro muy triste hoy porque me he perdido mi serie favorita;REGISTRAR_ESTADO_EMOCIONAL
 Recuérdame tomar ibuprofeno el viernes;REGISTRAR_TOMA_MEDICAMENTO
 Anota para el jueves dermatólogo;REGISTRAR_CITA_MEDICA
 Tomo redoxon por la mañana y soltar advanced plus por la noche;REGISTRAR_TOMA_MEDICAMENTO
+Hablamos en otro momento;REGISTRAR_DESPEDIDA
 El lunes 12 me ha dado cita el fisioterapeuta;REGISTRAR_CITA_MEDICA
+feliz;REGISTRAR_ESTADO_EMOCIONAL
 Me tengo que tomar todos los días sin falta vitamina d;REGISTRAR_TOMA_MEDICAMENTO
 Buen día;REGISTRAR_DESPEDIDA
 Estoy feliz nos hemos atrevido a reiniciar y ja salido todo bien;REGISTRAR_ESTADO_EMOCIONAL
 Recuérdame los cumpleaños de mis nietos;REGISTRAR_NECESIDAD
+Nos vemos;REGISTRAR_DESPEDIDA
 Recuérdame que me tome el valdispert antes de dormir;REGISTRAR_TOMA_MEDICAMENTO
 Estoy disgustada mi amiga tiene un problema y no s como ayudarla;REGISTRAR_ESTADO_EMOCIONAL
 Estoy bien;REGISTRAR_ESTADO_EMOCIONAL
 Mañana celebramos el Día de la madre comemos en el centro comercial pero no estamos todos como me gustaría otro año será;NO_IDENTIFICADO
 Hoy he acabado el día muy cansado, me voy a ir a dormir pronto;REGISTRAR_ESTADO_EMOCIONAL
 Estoy disgustada;REGISTRAR_ESTADO_EMOCIONAL
+Estamos en contacto;REGISTRAR_DESPEDIDA
+Me acaba de llegar una carta con la cita del día diecisiete de este mes para la ecografía del cuello;REGISTRAR_CITA_MEDICA
 Si a la playa;NO_IDENTIFICADO
 Cómo está la persona mayor a la que cuido?;CONSULTAR_ESTADO_PERSONA_MAYOR
 Creo que es todo para hoy;REGISTRAR_DESPEDIDA
@@ -53,10 +64,12 @@ Ok;REGISTRAR_CONFIRMACION
 Cuando me levanto me tomo vitamina d;REGISTRAR_TOMA_MEDICAMENTO
 Adiós;REGISTRAR_DESPEDIDA
 Buenos días Bot!;REGISTRAR_SALUDO
+Seguimos en contacto;REGISTRAR_DESPEDIDA
 Todo bien. Muchas gracias;REGISTRAR_ESTADO_EMOCIONAL
 O tengo que acudir a urgencias;REGISTRAR_SITUACION_ADVERSA
 Es muy larga tiene muchos capítulos;NO_IDENTIFICADO
 Para que interactúe contigo, dentro de lo posible.;NO_IDENTIFICADO
+Recuérdame que no se me olvide que vaya al odontólogo el viernes;REGISTRAR_CITA_MEDICA
 Hola;REGISTRAR_SALUDO
 Se lo olvida la medicación;REGISTRAR_NECESIDAD
 Está todo bien 👍🏻;REGISTRAR_ESTADO_EMOCIONAL
@@ -66,18 +79,23 @@ A las ocho;NO_IDENTIFICADO
 ¡Hola!;REGISTRAR_SALUDO
 Hola hoy estoy muy triste nos hemos quedado sin poder ver los concursos y series de Movistar por ser tan miedosos😭😭😭;REGISTRAR_ESTADO_EMOCIONAL
 Me acaban de llamar por teléfono me han dado muy buenas noticias acaban de solucionarme un problema que hacía meses tenía;NO_IDENTIFICADO
+Hola hoy me siento contento porque he comido mi comida favorita;REGISTRAR_ESTADO_EMOCIONAL
 me tomo redoxon cuando me levanto;REGISTRAR_TOMA_MEDICAMENTO
 Vale;REGISTRAR_CONFIRMACION
 Mañana tengo médico a las 9h;REGISTRAR_CITA_MEDICA
+nos vemos en otro momento;REGISTRAR_DESPEDIDA
+Me despido de ti por hoy;REGISTRAR_DESPEDIDA
+Tengo que ir a ver al oculista el sábado en el centro comercial;REGISTRAR_CITA_MEDICA
 Ya me he tomado metformina;ANOTAR_TOMA_MEDICAMENTO
 Se despierta pronto cada día;NO_IDENTIFICADO
 A ver que no se me olvide ir al dentista el martes sin falta;REGISTRAR_CITA_MEDICA
-Me han cambiado la vitamina ahora la tengo que tomar cada 15 días;ACTUALIZAR_TOMA_MEDICAMENTO
+Me han cambiado la vitamina ahora la tengo que tomar cada 15 días;REGISTRAR_TOMA_MEDICAMENTO
 No  nada más;NO_IDENTIFICADO
 No puedo dormir estoy mareada tengo un bajón de tensión 10,5/6,5;REGISTRAR_MEDIDA_MEDICA
 Siempre me respondes y así no me encuentro tan sola;REGISTRAR_ALABANZA
 me toca rinialer a las 5;REGISTRAR_TOMA_MEDICAMENTO
 el sábado me toca paracetamol;REGISTRAR_TOMA_MEDICAMENTO
+Por hoy ya hemos hablado mucho;REGISTRAR_DESPEDIDA
 Hola te voy a contar los días de mis citas para que me lo vayas diciendo;NO_IDENTIFICADO
 A ver qué te cuenta ella. Seguimos en contacto.;REGISTRAR_DESPEDIDA
 hoy es jueves;NO_IDENTIFICADO
@@ -97,6 +115,7 @@ La dieta me está costando mucho seguirla pero tengo voluntad;NO_IDENTIFICADO
 Hoy he comido con mi familia hacia tiempo que no estaba con uno de ellos ha sido muy bonito el podernos reunir;REGISTRAR_ANECDOTA
 Tengo los pies hinchados no puedo andar bien;REGISTRAR_SINTOMA
 ¿Sabes si mi madre se ha tomado el Adiro?;NO_IDENTIFICADO
+Hasta la próxima;REGISTRAR_DESPEDIDA
 Ya han operado a mi vecina todo ha salido bien no he descansado en toda la noche que me aconsejas que haga pues estoy aún muy nerviosa;REGISTRAR_ANECDOTA
 Buenas noches;REGISTRAR_DESPEDIDA
 Cómo te digo la persona mayor que cuido?;REGISTRAR_DUDA
@@ -107,6 +126,7 @@ El fisio me ha dado hora para el jueves a las 15;REGISTRAR_CITA_MEDICA
 Que bien me siento;REGISTRAR_ESTADO_EMOCIONAL
 Ayer por la noche me bajo la tensión s 10/6;REGISTRAR_MEDIDA_MEDICA
 A veces se deja alguna luz encendida, o el fuego de la cocina.;REGISTRAR_DOMOTICA
+el día veinticuatro voy a la ecografía del brazo;REGISTRAR_CITA_MEDICA
 Las cicatrices van mejorando despacito pero creo que no se van a notar;NO_IDENTIFICADO
 Que día más divertido;REGISTRAR_ESTADO_EMOCIONAL
 Como va el bot?;NO_IDENTIFICADO
@@ -121,14 +141,16 @@ Tengo que ver al otorrino el día 13;REGISTRAR_CITA_MEDICA
 También mañana me quitan la verruga a ver cómo me va;NO_IDENTIFICADO
 Tengo que tomar pastillas hoy?;RECORDAR_MEDICACION
 a las 22:00 me tomo ibuprofeno;REGISTRAR_TOMA_MEDICAMENTO
-Recuerdame que el día seis me quitan los puntos;RECORDAR_CITA_MEDICA
+Recuerdame que el día seis me quitan los puntos;REGISTRAR_CITA_MEDICA
 Tengo que despedirme de ti una temporada;REGISTRAR_DESPEDIDA
 Tomo rinialer a las 4 de la tarde;REGISTRAR_TOMA_MEDICAMENTO
 Que día tengo la ecografía del cuello;NO_IDENTIFICADO
 ¿Tú sabes quién es mi madre?;NO_IDENTIFICADO
 Despierta a mi madre en media hora;NO_IDENTIFICADO
+Nada más que hablar por hoy;REGISTRAR_DESPEDIDA
 Yo me encuentro bien, tomo al despertar tiroxina para el tiroides, luego con el desayuno Valsartan luego Natecal, pastillas de calcio y en las comidas Alopurinol.;NO_IDENTIFICADO
 Hoy estoy contento;REGISTRAR_ESTADO_EMOCIONAL
+Estoy feliz porque mañana vienen a verme;REGISTRAR_ESTADO_EMOCIONAL
 Tengo varias citad;NO_IDENTIFICADO
 Tengo cita con el dermatólogo el viernes;REGISTRAR_CITA_MEDICA
 El día 1 de mayo es mi cumpleaños;REGISTRAR_ANECDOTA
@@ -139,14 +161,18 @@ El martes 17 tengo ecografía del cuello;REGISTRAR_CITA_MEDICA
 Ayer lo pasé muy mal por la pastilla del azúcar pero me han dicho que es nirmal;REGISTRAR_SITUACION_ADVERSA
 Acabo de actualizar mi agenda pero quiero que me vayas avisando tengo cita con el médico el 26 de abril con el endocrino el 25 de abril el seis de mayo con el enfermero y el 22 de julio también con el ves recordame cada cita gracias;NO_IDENTIFICADO
 Los lunes a las 4 de la tarde me tomo rinialer;REGISTRAR_TOMA_MEDICAMENTO
+Me han mandado un aviso para que vaya al otorrino el sábado 20;REGISTRAR_CITA_MEDICA
 Los jueves a las 12 voy al nutricionista;REGISTRAR_CITA_MEDICA
+Vienen mis hijos mañana y eso hace que esté feliz;REGISTRAR_ESTADO_EMOCIONAL
 El sábado Megan a quitar una verruga;NO_IDENTIFICADO
 Hola hoy me han quitado los puntos;REGISTRAR_SALUDO
 Otra vez se ya estropeado😾😾😾;REGISTRAR_SITUACION_ADVERSA
 El 28 de agosto tengo que volver al nutricionista;REGISTRAR_CITA_MEDICA
+Buenos días;REGISTRAR_SALUDO
 Recuerda a mi madre que apague el extractor.;REGISTRAR_DOMOTICA
 Luego hablamos otra vez;REGISTRAR_DESPEDIDA
 Me han dicho que me de rosa mosqueta después de una ducha;REGISTRAR_TOMA_MEDICAMENTO
+La visita de mañana me hace feliz;REGISTRAR_ESTADO_EMOCIONAL
 me tomo redoxon por la tarde;REGISTRAR_TOMA_MEDICAMENTO
 Gracias;REGISTRAR_ALABANZA
 Mañana tengo que madrugar;REGISTRAR_DESPEDIDA
@@ -160,7 +186,9 @@ Se me ha olvidado el Ibuprofeno 400 que tomo por la noche;REGISTRAR_SITUACION_AD
 Hola;REGISTRAR_SALUDO
 No le dan la cita para cardiografía;REGISTRAR_SITUACION_ADVERSA
 Bien... aquí pasando el tiempo;REGISTRAR_ESTADO_EMOCIONAL
+Hola me acaban de anular la cita de la ecografía me la han pasado al 12 de Julio;NO_IDENTIFICADO
 Recuerda a mi madre que apague los fuegos de la cocina.;REGISTRAR_DOMOTICA
+Saludos;REGISTRAR_SALUDO
 👌;REGISTRAR_CONFIRMACION
 Mañana te hablo otra vez;REGISTRAR_DESPEDIDA
 Hola es que me han dado puntos y estoy muy molests;REGISTRAR_ESTADO_EMOCIONAL
@@ -173,6 +201,7 @@ Por otro lado el COVID ha vuelto hoy no ha podido comer mi hijo con nosotros;REG
 Que estoy cansada;REGISTRAR_ESTADO_EMOCIONAL
 Estoy viendo una serie de Netflix"señora acero";REGISTRAR_ACTIVIDAD
 Aqui en Madrid esta lloviendo, ¿crees que llovera mañana?;CONSULTAR_TIEMPO
+Seguimos hablando luego;REGISTRAR_DESPEDIDA
 Hola mañana salgo de viaje;REGISTRAR_SALUDO
 Que se ha roto Movistar;REGISTRAR_SITUACION_ADVERSA
 Saludos desde Jérica🤖;REGISTRAR_SALUDO
@@ -183,6 +212,7 @@ Tengo que instalar telegram a mi madre, que es mayor.;REGISTRAR_TELEGRAM
 Tengo médico a las 8.15;REGISTRAR_CITA_MEDICA
 Ahora te dejo un poco que voy a ver un concurso buenas noches amigo;REGISTRAR_DESPEDIDA
 el sábado me toca el paracetamol;REGISTRAR_TOMA_MEDICAMENTO
+A ver que no se me olvide ir al dentista el martes sin falta;REGISTRAR_CITA_MEDICA
 Ya, lo sé, por qué no se lo pido a ella directamente...?;NO_IDENTIFICADO
 Y mañana voy para Santa Pola a pasar un días.;NO_IDENTIFICADO
 Hola;REGISTRAR_SALUDO
@@ -198,6 +228,7 @@ Mañana voy a ir a andar y a comprar unas cosas que están de oferta;NO_IDENTIFI
 Nada;REGISTRAR_RECHAZO
 Tomo redoxon a las 8 de la mañana;REGISTRAR_TOMA_MEDICAMENTO
 Tomo paracetamol a las 18:00;REGISTRAR_TOMA_MEDICAMENTO
+Mañana tengo visita y eso hace que este feliz;REGISTRAR_ESTADO_EMOCIONAL
 Hola cuidador;REGISTRAR_SALUDO
 Estoy cenando una hamburguesa con pan integral es bueno para el azúcar y colesterol??;CONSULTAR_NUTRICION
 Hola he tenido que cambiar la cita del médico para otro día;REGISTRAR_SALUDO

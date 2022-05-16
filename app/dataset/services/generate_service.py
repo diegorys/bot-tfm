@@ -16,22 +16,22 @@ class GenerateService:
         dialogs = self.repositoryDialog.list()
         dataEntries = self.repositoryDataset.list()
         indexedEntries = {}
-        for item in dialogs:
+        for item in dataEntries:
             indexedEntries[item["text"]] = Entry(
                 item["id"], item["text"], item["intent"], item["entities"]
             )
         entries = []
         for dialog in dialogs:
-            time.sleep(0.03)
+            # time.sleep(0.03)
             text = dialog["text"]
             if "/start" != text:
                 print(f"Processing {text}")
-                entry = indexedEntries[text]
-                if not entry:
+                if text not in indexedEntries:
                     print("Creating...")
                     entry = Entry(0, text, "", {})
                     entry = self.repositoryDataset.create(entry)
-                # else:
+                else:
+                    entry = indexedEntries[text]
                 #     print("Updating...")
                 #     self.repositoryDataset.update(entry)
                 entries.append(

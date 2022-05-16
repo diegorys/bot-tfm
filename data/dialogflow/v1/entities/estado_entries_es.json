@@ -42,8 +42,12 @@
         ]
     },
     {
-        "value": "muy triste",
-        "synonyms": []
+        "value": "tranquilo",
+        "synonyms": [
+            "tranquilo",
+            "tranquila",
+            "tranquilidad"
+        ]
     },
     {
         "value": "muy bien",
@@ -54,15 +58,7 @@
         "synonyms": []
     },
     {
-        "value": "muy contenta",
-        "synonyms": []
-    },
-    {
         "value": "molests",
-        "synonyms": []
-    },
-    {
-        "value": "bien",
         "synonyms": []
     },
     {
@@ -70,7 +66,15 @@
         "synonyms": []
     },
     {
-        "value": "tranquilo",
+        "value": "muy triste",
+        "synonyms": []
+    },
+    {
+        "value": "bien",
+        "synonyms": []
+    },
+    {
+        "value": "muy contenta",
         "synonyms": []
     }
 ]

@@ -1,5 +1,85 @@
 [
     {
+        "value": "todos los días",
+        "synonyms": []
+    },
+    {
+        "value": "8 de la mañana",
+        "synonyms": []
+    },
+    {
+        "value": "lunes 12",
+        "synonyms": []
+    },
+    {
+        "value": "veinticuatro",
+        "synonyms": []
+    },
+    {
+        "value": "a las 5",
+        "synonyms": []
+    },
+    {
+        "value": "el día 17 a las 13'30",
+        "synonyms": []
+    },
+    {
+        "value": "martes",
+        "synonyms": []
+    },
+    {
+        "value": "hoy",
+        "synonyms": []
+    },
+    {
+        "value": "10",
+        "synonyms": []
+    },
+    {
+        "value": "jueves",
+        "synonyms": []
+    },
+    {
+        "value": "2 a las 3",
+        "synonyms": []
+    },
+    {
+        "value": "viernes",
+        "synonyms": []
+    },
+    {
+        "value": "10 de septiembre a las 12",
+        "synonyms": []
+    },
+    {
+        "value": "martes 17",
+        "synonyms": []
+    },
+    {
+        "value": "28 de agosto",
+        "synonyms": []
+    },
+    {
+        "value": "junio a las 8'30",
+        "synonyms": []
+    },
+    {
+        "value": "jueves a las 12",
+        "synonyms": []
+    },
+    {
+        "value": "mañana",
+        "synonyms": []
+    },
+    {
+        "value": "antes de dormir",
+        "synonyms": []
+    },
+    {
+        "value": "a las 22:00",
+        "synonyms": []
+    },
+    {
         "value": "8.15",
         "synonyms": []
     },
@@ -8,67 +88,7 @@
         "synonyms": []
     },
     {
-        "value": "todos los días",
-        "synonyms": []
-    },
-    {
-        "value": "9h",
-        "synonyms": []
-    },
-    {
-        "value": "el día ocho",
-        "synonyms": []
-    },
-    {
-        "value": "junio a las 8'30",
-        "synonyms": []
-    },
-    {
-        "value": "mayo",
-        "synonyms": []
-    },
-    {
-        "value": "desayuno",
-        "synonyms": []
-    },
-    {
-        "value": "mañana",
-        "synonyms": []
-    },
-    {
-        "value": "lunes a las 4 de la tarde",
-        "synonyms": []
-    },
-    {
-        "value": "a las 22:00",
-        "synonyms": []
-    },
-    {
-        "value": "jueves a las 12",
-        "synonyms": []
-    },
-    {
-        "value": "el día 17 a las 13'30",
-        "synonyms": []
-    },
-    {
-        "value": "a las 5",
-        "synonyms": []
-    },
-    {
-        "value": "8 de la mañana",
-        "synonyms": []
-    },
-    {
-        "value": "día seis",
-        "synonyms": []
-    },
-    {
-        "value": "día 13",
-        "synonyms": []
-    },
-    {
-        "value": "diecisiete de este mes",
+        "value": "19 a las 12:25",
         "synonyms": []
     },
     {
@@ -76,31 +96,7 @@
         "synonyms": []
     },
     {
-        "value": "a las 10",
-        "synonyms": []
-    },
-    {
-        "value": "a diario",
-        "synonyms": []
-    },
-    {
-        "value": "todos los días",
-        "synonyms": []
-    },
-    {
         "value": "por la tarde",
-        "synonyms": []
-    },
-    {
-        "value": "a las 4 de la tarde",
-        "synonyms": []
-    },
-    {
-        "value": "cuando me levanto",
-        "synonyms": []
-    },
-    {
-        "value": "13 de agosto",
         "synonyms": []
     },
     {
@@ -108,31 +104,51 @@
         "synonyms": []
     },
     {
-        "value": "martes 17",
+        "value": "mayo",
         "synonyms": []
     },
     {
-        "value": "lunes 12",
+        "value": "día seis",
         "synonyms": []
     },
     {
-        "value": "jueves",
+        "value": "desayuno",
         "synonyms": []
     },
     {
-        "value": "jueves a las 15",
+        "value": "cada 15 días",
         "synonyms": []
     },
     {
-        "value": "martes",
+        "value": "cuando me levanto",
         "synonyms": []
     },
     {
-        "value": "28 de agosto",
+        "value": "a diario",
         "synonyms": []
     },
     {
-        "value": "antes de dormir",
+        "value": "día 13",
+        "synonyms": []
+    },
+    {
+        "value": "sábado 20",
+        "synonyms": []
+    },
+    {
+        "value": "diecisiete de este mes",
+        "synonyms": []
+    },
+    {
+        "value": "después de una ducha",
+        "synonyms": []
+    },
+    {
+        "value": "a las 4 de la tarde",
+        "synonyms": []
+    },
+    {
+        "value": "por la mañana",
         "synonyms": []
     }
 ]

@@ -2,7 +2,7 @@
     {
         "data": [
             {
-                "text": "Cómo está mi madre?",
+                "text": "Qué tal está Marisa? La puedo cambiar el nombre por Marilina?",
                 "userDefined": false
             }
         ],
@@ -14,7 +14,19 @@
     {
         "data": [
             {
-                "text": "Qué tal está Marisa? La puedo cambiar el nombre por Marilina?",
+                "text": "Cómo está la persona mayor a la que cuido?",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Cómo está mi madre?",
                 "userDefined": false
             }
         ],

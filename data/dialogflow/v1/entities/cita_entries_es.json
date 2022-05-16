@@ -17,30 +17,64 @@
     },
     {
         "value": "alergólogo",
-        "synonyms": []
+        "synonyms": [
+            "alergólogo",
+            "alergóloga",
+            "el de la alergia",
+            "la de la alergia",
+            "alergología"
+        ]
     },
     {
         "value": "cardiólogo",
-        "synonyms": []
+        "synonyms": [
+            "cardiólogo",
+            "cardióloga",
+            "cardiología"
+        ]
     },
     {
         "value": "médico de cabecera",
-        "synonyms": []
+        "synonyms": [
+            "médico de cabecera",
+            "médico"
+        ]
     },
     {
         "value": "enfermero",
-        "synonyms": []
-    },
-    {
-        "value": "médico",
-        "synonyms": []
+        "synonyms": [
+            "enfermero",
+            "enfermera"
+        ]
     },
     {
         "value": "oculista",
         "synonyms": []
     },
     {
-        "value": "nutricionista",
+        "value": "otorrino",
+        "synonyms": [
+            "otorrino",
+            "otorrina"
+        ]
+    },
+    {
+        "value": "endocrino",
+        "synonyms": [
+            "endocrino",
+            "endocrina"
+        ]
+    },
+    {
+        "value": "fisioterapeuta",
+        "synonyms": [
+            "fisio",
+            "fisioterapia",
+            "fisioterapeuta"
+        ]
+    },
+    {
+        "value": "ecografía del brazo",
         "synonyms": []
     },
     {
@@ -48,23 +82,15 @@
         "synonyms": []
     },
     {
-        "value": "los puntos",
+        "value": "odontólogo",
         "synonyms": []
     },
     {
-        "value": "otorrino",
+        "value": "nutricionista",
         "synonyms": []
     },
     {
-        "value": "endocrino",
-        "synonyms": []
-    },
-    {
-        "value": "revisión dental",
-        "synonyms": []
-    },
-    {
-        "value": "fisioterapeuta",
+        "value": "médico",
         "synonyms": []
     },
     {
@@ -72,7 +98,7 @@
         "synonyms": []
     },
     {
-        "value": "fisio",
+        "value": "los puntos",
         "synonyms": []
     }
 ]

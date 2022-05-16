@@ -1,6 +1,6 @@
 [
     {
-        "value": "extractor",
+        "value": "luces",
         "synonyms": []
     },
     {
@@ -8,7 +8,11 @@
         "synonyms": []
     },
     {
-        "value": "luces",
+        "value": "fuegos de la cocina",
+        "synonyms": []
+    },
+    {
+        "value": "extractor",
         "synonyms": []
     }
 ]

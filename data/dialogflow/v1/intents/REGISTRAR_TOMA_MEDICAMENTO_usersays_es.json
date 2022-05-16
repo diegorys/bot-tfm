@@ -2,207 +2,7 @@
     {
         "data": [
             {
-                "text": "Me tengo que tomar ",
-                "userDefined": false
-            },
-            {
-                "text": "todos los días",
-                "meta": "@sys.date-time",
-                "alias": "date-time",
-                "userDefined": false
-            },
-            {
-                "text": " sin falta ",
-                "userDefined": false
-            },
-            {
-                "text": "vitamina d",
-                "meta": "@medicamento",
-                "alias": "medicamento",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "el ",
-                "userDefined": false
-            },
-            {
-                "text": "rinialer",
-                "meta": "@medicamento",
-                "alias": "medicamento",
-                "userDefined": false
-            },
-            {
-                "text": " me toca a las ",
-                "userDefined": false
-            },
-            {
-                "text": "9h",
-                "meta": "@sys.date-time",
-                "alias": "date-time",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Todos los meses ",
-                "userDefined": false
-            },
-            {
-                "text": "el día ocho",
-                "meta": "@sys.date-time",
-                "alias": "date-time",
-                "userDefined": false
-            },
-            {
-                "text": " me toca la ",
-                "userDefined": false
-            },
-            {
-                "text": "vitamina d",
-                "meta": "@medicamento",
-                "alias": "medicamento",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Me toca la ",
-                "userDefined": false
-            },
-            {
-                "text": "pastilla de la alergia",
-                "meta": "@medicamento",
-                "alias": "medicamento",
-                "userDefined": false
-            },
-            {
-                "text": " en ",
-                "userDefined": false
-            },
-            {
-                "text": "mayo",
-                "meta": "@sys.date-time",
-                "alias": "date-time",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Me tomo el ",
-                "userDefined": false
-            },
-            {
-                "text": "desayuno",
-                "meta": "@sys.date-time",
-                "alias": "date-time",
-                "userDefined": false
-            },
-            {
-                "text": " en el ",
-                "userDefined": false
-            },
-            {
-                "text": "suplemento de hierro",
-                "meta": "@medicamento",
-                "alias": "medicamento",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "el ",
-                "userDefined": false
-            },
-            {
-                "text": "sábado",
-                "meta": "@sys.date-time",
-                "alias": "date-time",
-                "userDefined": false
-            },
-            {
-                "text": " me toca el ",
-                "userDefined": false
-            },
-            {
-                "text": "paracetamol",
-                "meta": "@medicamento",
-                "alias": "medicamento",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Recuérdame tomar ",
-                "userDefined": false
-            },
-            {
-                "text": "ibuprofeno",
-                "meta": "@medicamento",
-                "alias": "medicamento",
-                "userDefined": false
-            },
-            {
-                "text": " ",
-                "userDefined": false
-            },
-            {
-                "text": "mañana",
-                "meta": "@sys.date-time",
-                "alias": "date-time",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Los ",
-                "userDefined": false
-            },
-            {
-                "text": "lunes a las 4 de la tarde",
+                "text": "Todos los días",
                 "meta": "@sys.date-time",
                 "alias": "date-time",
                 "userDefined": false
@@ -216,57 +16,9 @@
                 "meta": "@medicamento",
                 "alias": "medicamento",
                 "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "a las 22:00",
-                "meta": "@sys.date-time",
-                "alias": "date-time",
-                "userDefined": false
             },
             {
-                "text": " me tomo ",
-                "userDefined": false
-            },
-            {
-                "text": "ibuprofeno",
-                "meta": "@medicamento",
-                "alias": "medicamento",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "me toca ",
-                "userDefined": false
-            },
-            {
-                "text": "rinialer",
-                "meta": "@medicamento",
-                "alias": "medicamento",
-                "userDefined": false
-            },
-            {
-                "text": " ",
-                "userDefined": false
-            },
-            {
-                "text": "a las 5",
-                "meta": "@sys.date-time",
-                "alias": "date-time",
+                "text": " por la mañana",
                 "userDefined": false
             }
         ],
@@ -295,94 +47,6 @@
                 "text": "redoxon",
                 "meta": "@medicamento",
                 "alias": "medicamento",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "el ",
-                "userDefined": false
-            },
-            {
-                "text": "rinialer",
-                "meta": "@medicamento",
-                "alias": "medicamento",
-                "userDefined": false
-            },
-            {
-                "text": " me lo tomo ",
-                "userDefined": false
-            },
-            {
-                "text": "a las 10",
-                "meta": "@sys.date-time",
-                "alias": "date-time",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "el ",
-                "userDefined": false
-            },
-            {
-                "text": "sábado",
-                "meta": "@sys.date-time",
-                "alias": "date-time",
-                "userDefined": false
-            },
-            {
-                "text": " me toca ",
-                "userDefined": false
-            },
-            {
-                "text": "paracetamol",
-                "meta": "@medicamento",
-                "alias": "medicamento",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Mi madre toma ",
-                "userDefined": false
-            },
-            {
-                "text": "a diario",
-                "meta": "@sys.date-time",
-                "alias": "date-time",
-                "userDefined": false
-            },
-            {
-                "text": " ",
-                "userDefined": false
-            },
-            {
-                "text": "Adiro 300",
-                "meta": "@medicamento",
-                "alias": "medicamento",
-                "userDefined": false
-            },
-            {
-                "text": ". Es un medicamento.",
                 "userDefined": false
             }
         ],
@@ -436,9 +100,33 @@
                 "meta": "@medicamento",
                 "alias": "medicamento",
                 "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "A las ",
+                "userDefined": false
             },
             {
-                "text": " por la mañana",
+                "text": "10",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " ",
+                "userDefined": false
+            },
+            {
+                "text": "soniase",
+                "meta": "@medicamento",
+                "alias": "medicamento",
                 "userDefined": false
             }
         ],
@@ -450,7 +138,35 @@
     {
         "data": [
             {
-                "text": "Todos los días",
+                "text": "Recuérdame que me tome el ",
+                "userDefined": false
+            },
+            {
+                "text": "antes de dormir",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " ",
+                "userDefined": false
+            },
+            {
+                "text": "valdispert",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "a las 22:00",
                 "meta": "@sys.date-time",
                 "alias": "date-time",
                 "userDefined": false
@@ -460,7 +176,7 @@
                 "userDefined": false
             },
             {
-                "text": "rinialer",
+                "text": "ibuprofeno",
                 "meta": "@medicamento",
                 "alias": "medicamento",
                 "userDefined": false
@@ -502,6 +218,234 @@
     {
         "data": [
             {
+                "text": "Me toca la ",
+                "userDefined": false
+            },
+            {
+                "text": "mayo",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " en ",
+                "userDefined": false
+            },
+            {
+                "text": "pastilla de la alergia",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Me tomo el ",
+                "userDefined": false
+            },
+            {
+                "text": "desayuno",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " en el ",
+                "userDefined": false
+            },
+            {
+                "text": "suplemento de hierro",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Me han cambiado la ",
+                "userDefined": false
+            },
+            {
+                "text": "vitamina",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": false
+            },
+            {
+                "text": " ahora la tengo que tomar ",
+                "userDefined": false
+            },
+            {
+                "text": "cada 15 días",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "me tomo ",
+                "userDefined": false
+            },
+            {
+                "text": "cuando me levanto",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " ",
+                "userDefined": false
+            },
+            {
+                "text": "redoxon",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Mi madre toma ",
+                "userDefined": false
+            },
+            {
+                "text": "a diario",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " ",
+                "userDefined": false
+            },
+            {
+                "text": "Adiro 300",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": false
+            },
+            {
+                "text": ". Es un medicamento.",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Me han dicho que me de ",
+                "userDefined": false
+            },
+            {
+                "text": "después de una ducha",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " ",
+                "userDefined": false
+            },
+            {
+                "text": "rosa mosqueta",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Recuérdame tomar ",
+                "userDefined": false
+            },
+            {
+                "text": "mañana",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " ",
+                "userDefined": false
+            },
+            {
+                "text": "ibuprofeno",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "el ",
+                "userDefined": false
+            },
+            {
+                "text": "sábado",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " me toca ",
+                "userDefined": false
+            },
+            {
+                "text": "paracetamol",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
                 "text": "Tomo ",
                 "userDefined": false
             },
@@ -519,34 +463,6 @@
                 "text": "rinialer",
                 "meta": "@medicamento",
                 "alias": "medicamento",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "me tomo ",
-                "userDefined": false
-            },
-            {
-                "text": "redoxon",
-                "meta": "@medicamento",
-                "alias": "medicamento",
-                "userDefined": false
-            },
-            {
-                "text": " ",
-                "userDefined": false
-            },
-            {
-                "text": "cuando me levanto",
-                "meta": "@sys.date-time",
-                "alias": "date-time",
                 "userDefined": false
             }
         ],
@@ -576,13 +492,13 @@
     {
         "data": [
             {
-                "text": "Recuérdame que me tome el ",
+                "text": "Tomo ",
                 "userDefined": false
             },
             {
-                "text": "valdispert",
-                "meta": "@medicamento",
-                "alias": "medicamento",
+                "text": "por la mañana",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
                 "userDefined": false
             },
             {
@@ -590,9 +506,13 @@
                 "userDefined": false
             },
             {
-                "text": "antes de dormir",
-                "meta": "@sys.date-time",
-                "alias": "date-time",
+                "text": "redoxon",
+                "meta": "@medicamento",
+                "alias": "medicamento",
+                "userDefined": false
+            },
+            {
+                "text": " y soltar advanced plus por la noche",
                 "userDefined": false
             }
         ],

@@ -2,31 +2,7 @@
     {
         "data": [
             {
-                "text": "¡Hola!",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
                 "text": "Hola mañana salgo de viaje",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Hola",
                 "userDefined": false
             }
         ],
@@ -50,6 +26,18 @@
     {
         "data": [
             {
+                "text": "Saludos, robot!",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
                 "text": "Hola, qué tal estás? Yo bien",
                 "userDefined": false
             }
@@ -62,7 +50,7 @@
     {
         "data": [
             {
-                "text": "Hola hoy me han quitado los puntos",
+                "text": "Hola he tenido que cambiar la cita del médico para otro día",
                 "userDefined": false
             }
         ],
@@ -74,7 +62,43 @@
     {
         "data": [
             {
-                "text": "Hola he tenido que cambiar la cita del médico para otro día",
+                "text": "Saludos",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Hola",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "¡Hola!",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Saludos desde Jérica🤖",
                 "userDefined": false
             }
         ],
