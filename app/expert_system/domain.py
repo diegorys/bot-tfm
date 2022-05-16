@@ -14,6 +14,7 @@ slots = {
         "atorvastatina": [],
         "lovastatina": [],
         "algidol": [],
+        "rosa mosqueta": []
     },
     "cita": {
         "dentista": ["dentista", "odontólogo", "odontóloga", "odontología"],

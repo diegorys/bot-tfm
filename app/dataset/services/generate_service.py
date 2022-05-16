@@ -16,7 +16,7 @@ class GenerateService:
         dialogs = self.repositoryDialog.list()
         dataEntries = self.repositoryDataset.list()
         indexedEntries = {}
-        for item in dataEntries:
+        for item in dialogs:
             indexedEntries[item["text"]] = Entry(
                 item["id"], item["text"], item["intent"], item["entities"]
             )
