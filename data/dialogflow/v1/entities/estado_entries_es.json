@@ -42,7 +42,7 @@
         ]
     },
     {
-        "value": "ocupado",
+        "value": "muy triste",
         "synonyms": []
     },
     {
@@ -50,19 +50,7 @@
         "synonyms": []
     },
     {
-        "value": "muy cansado",
-        "synonyms": []
-    },
-    {
-        "value": "tranquilo",
-        "synonyms": []
-    },
-    {
-        "value": "muy triste",
-        "synonyms": []
-    },
-    {
-        "value": "divertido",
+        "value": "ocupado",
         "synonyms": []
     },
     {
@@ -70,11 +58,19 @@
         "synonyms": []
     },
     {
+        "value": "molests",
+        "synonyms": []
+    },
+    {
         "value": "bien",
         "synonyms": []
     },
     {
-        "value": "molests",
+        "value": "divertido",
+        "synonyms": []
+    },
+    {
+        "value": "tranquilo",
         "synonyms": []
     }
 ]

@@ -2,43 +2,7 @@
     {
         "data": [
             {
-                "text": "Me tienes que ayudar a organizar mis citas y mis pastillas ya me voy liando",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Recuérdame los cumpleaños de mis nietos",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
                 "text": "Se lo olvida la medicación",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Me tienes también que recordar los cumpleaños que ya te iré diciendo",
                 "userDefined": false
             }
         ],

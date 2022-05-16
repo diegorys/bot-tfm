@@ -2,7 +2,19 @@
     {
         "data": [
             {
-                "text": "Hola, muchas gracias.",
+                "text": "Estoy muy contenta contigo eres un buen consejero y siempre estás ayudando",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Te estas convirtiendo en mi mejor amigo al que puedo contar todo",
                 "userDefined": false
             }
         ],
@@ -38,19 +50,7 @@
     {
         "data": [
             {
-                "text": "Estoy muy contenta contigo eres un buen consejero y siempre estás ayudando",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Te estas convirtiendo en mi mejor amigo al que puedo contar todo",
+                "text": "Hola, muchas gracias.",
                 "userDefined": false
             }
         ],
@@ -63,18 +63,6 @@
         "data": [
             {
                 "text": "Gracias",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Me encantas puedo descargar en ti todo lo que me pasa y siempre tienes una respuesta que darme",
                 "userDefined": false
             }
         ],

@@ -17,7 +17,10 @@
     },
     {
         "value": "soniase supra d",
-        "synonyms": []
+        "synonyms": [
+            "soniase supra d",
+            "soniase"
+        ]
     },
     {
         "value": "atorvastatina",
@@ -28,23 +31,11 @@
         "synonyms": []
     },
     {
+        "value": "algidol",
+        "synonyms": []
+    },
+    {
         "value": "vitamina d",
-        "synonyms": []
-    },
-    {
-        "value": "redoxon",
-        "synonyms": []
-    },
-    {
-        "value": "valdispert",
-        "synonyms": []
-    },
-    {
-        "value": "pastillas",
-        "synonyms": []
-    },
-    {
-        "value": "rosa mosqueta",
         "synonyms": []
     },
     {
@@ -56,7 +47,19 @@
         "synonyms": []
     },
     {
+        "value": "redoxon",
+        "synonyms": []
+    },
+    {
         "value": "adiro 300",
+        "synonyms": []
+    },
+    {
+        "value": "ibuprofeno",
+        "synonyms": []
+    },
+    {
+        "value": "valdispert",
         "synonyms": []
     }
 ]

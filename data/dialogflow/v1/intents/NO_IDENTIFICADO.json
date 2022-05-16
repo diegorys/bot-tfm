@@ -1,5 +1,5 @@
 {
-    "id": "aa54c907-1ddd-4a76-93c7-a1e351b9f8d1",
+    "id": "706ad22e-0cb5-43ed-ac48-e6b49566d19d",
     "name": "NO_IDENTIFICADO",
     "auto": true,
     "contexts": [],
@@ -16,7 +16,7 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido no_identificado"
+                        "Entiendo que quieres no identificado, pero aún no estoy preparado para eso."
                     ],
                     "condition": ""
                 }

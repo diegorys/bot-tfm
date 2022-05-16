@@ -1,5 +1,5 @@
 {
-    "id": "65045e27-2782-4cc1-8daf-7fb846b9e78a",
+    "id": "ae333739-3d0c-486e-8f4f-f905f098ad67",
     "name": "ANOTAR_TOMA_MEDICAMENTO",
     "auto": true,
     "contexts": [],
@@ -16,7 +16,7 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido anotar_toma_medicamento"
+                        "Entiendo que quieres anotar toma medicamento, pero aún no estoy preparado para eso."
                     ],
                     "condition": ""
                 }

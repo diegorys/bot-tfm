@@ -1,5 +1,5 @@
 {
-    "id": "27688e10-bf8b-4e09-9de0-725fe32358fc",
+    "id": "5f6b21b1-6884-47ff-bbc7-3b86d6b234c5",
     "name": "REGISTRAR_COVID",
     "auto": true,
     "contexts": [],
@@ -16,7 +16,7 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido registrar_covid"
+                        "Entiendo que quieres registrar covid, pero aún no estoy preparado para eso."
                     ],
                     "condition": ""
                 }

@@ -1,5 +1,5 @@
 {
-    "id": "c446df87-411e-4196-98e3-0c379277800f",
+    "id": "8b45e8d8-32b6-472f-ab75-68c027683966",
     "name": "REGISTRAR_DESPEDIDA",
     "auto": true,
     "contexts": [],
@@ -16,7 +16,14 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido registrar_despedida"
+                        "Hablamos en otra ocasión",
+                        "Me alegro de que hayamos hablado",
+                        "No dudes en escribirme si necesitas algo más",
+                        "Hasta luego",
+                        "Hasta la próxima",
+                        "¡Nos vemos!",
+                        "Me ha gustado hablar contigo, ¡hasta luego!",
+                        "Me ha gustado hablar contigo, ¡hasta luego!"
                     ],
                     "condition": ""
                 }

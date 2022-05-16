@@ -1,5 +1,5 @@
 {
-    "id": "2e6a8e87-7cd3-4a04-99d1-253216acd549",
+    "id": "9bd04ee9-8a4a-4006-9cc1-6ffef27b69cb",
     "name": "REGISTRAR_DUDA",
     "auto": true,
     "contexts": [],
@@ -16,7 +16,7 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido registrar_duda"
+                        "Entiendo que quieres registrar duda, pero aún no estoy preparado para eso."
                     ],
                     "condition": ""
                 }

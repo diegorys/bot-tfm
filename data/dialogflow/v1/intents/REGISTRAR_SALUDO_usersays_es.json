@@ -2,7 +2,19 @@
     {
         "data": [
             {
-                "text": "Hola, qué tal estás? Yo bien",
+                "text": "¡Hola!",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Hola mañana salgo de viaje",
                 "userDefined": false
             }
         ],
@@ -38,7 +50,7 @@
     {
         "data": [
             {
-                "text": "¡Hola!",
+                "text": "Hola, qué tal estás? Yo bien",
                 "userDefined": false
             }
         ],
@@ -62,43 +74,7 @@
     {
         "data": [
             {
-                "text": "Hola",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Hola buenos días",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Saludos desde Jérica🤖",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Hola",
+                "text": "Hola he tenido que cambiar la cita del médico para otro día",
                 "userDefined": false
             }
         ],
@@ -111,18 +87,6 @@
         "data": [
             {
                 "text": "Hola cuidador",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Hola he tenido que cambiar la cita del médico para otro día",
                 "userDefined": false
             }
         ],

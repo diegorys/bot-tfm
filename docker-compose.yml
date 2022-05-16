@@ -35,6 +35,7 @@ services:
       - ./infrastructure:/home/jovyan/app/infrastructure
       - ./model:/home/jovyan/app
       - ./data:/home/jovyan/data
+      - ./credentials/:/home/jovyan/credentials
     ports:
       - 8830:8888
     container_name: model

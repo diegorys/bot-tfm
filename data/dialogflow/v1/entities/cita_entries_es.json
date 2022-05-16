@@ -1,14 +1,34 @@
 [
     {
+        "value": "dentista",
+        "synonyms": [
+            "dentista",
+            "odontólogo",
+            "odontóloga",
+            "odontología"
+        ]
+    },
+    {
+        "value": "dermatólogo",
+        "synonyms": [
+            "dermatólogo, dermatóloga",
+            "dermatología"
+        ]
+    },
+    {
+        "value": "alergólogo",
+        "synonyms": []
+    },
+    {
+        "value": "cardiólogo",
+        "synonyms": []
+    },
+    {
+        "value": "médico de cabecera",
+        "synonyms": []
+    },
+    {
         "value": "enfermero",
-        "synonyms": []
-    },
-    {
-        "value": "otorrino",
-        "synonyms": []
-    },
-    {
-        "value": "fisioterapeuta",
         "synonyms": []
     },
     {
@@ -16,27 +36,7 @@
         "synonyms": []
     },
     {
-        "value": "dentista",
-        "synonyms": []
-    },
-    {
-        "value": "revisión dental",
-        "synonyms": []
-    },
-    {
-        "value": "fisio",
-        "synonyms": []
-    },
-    {
-        "value": "endocrino",
-        "synonyms": []
-    },
-    {
-        "value": "los puntos",
-        "synonyms": []
-    },
-    {
-        "value": "dermatólogo",
+        "value": "oculista",
         "synonyms": []
     },
     {
@@ -44,11 +44,35 @@
         "synonyms": []
     },
     {
-        "value": "oculista",
+        "value": "ecografía del cuello",
         "synonyms": []
     },
     {
-        "value": "ecografía del cuello",
+        "value": "los puntos",
+        "synonyms": []
+    },
+    {
+        "value": "otorrino",
+        "synonyms": []
+    },
+    {
+        "value": "endocrino",
+        "synonyms": []
+    },
+    {
+        "value": "revisión dental",
+        "synonyms": []
+    },
+    {
+        "value": "fisioterapeuta",
+        "synonyms": []
+    },
+    {
+        "value": "dermatólogo",
+        "synonyms": []
+    },
+    {
+        "value": "fisio",
         "synonyms": []
     }
 ]

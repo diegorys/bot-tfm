@@ -142,7 +142,7 @@ Los lunes a las 4 de la tarde me tomo rinialer;REGISTRAR_TOMA_MEDICAMENTO
 Los jueves a las 12 voy al nutricionista;REGISTRAR_CITA_MEDICA
 El sábado Megan a quitar una verruga;NO_IDENTIFICADO
 Hola hoy me han quitado los puntos;REGISTRAR_SALUDO
-Otra vez se ya estropeado😾😾😾;NO_IDENTIFICADO
+Otra vez se ya estropeado😾😾😾;REGISTRAR_SITUACION_ADVERSA
 El 28 de agosto tengo que volver al nutricionista;REGISTRAR_CITA_MEDICA
 Recuerda a mi madre que apague el extractor.;REGISTRAR_DOMOTICA
 Luego hablamos otra vez;REGISTRAR_DESPEDIDA

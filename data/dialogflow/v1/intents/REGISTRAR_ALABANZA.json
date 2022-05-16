@@ -1,5 +1,5 @@
 {
-    "id": "21d882ce-8157-4afd-b96a-6211f8118826",
+    "id": "3caa9d44-4440-4581-887d-e5006b446181",
     "name": "REGISTRAR_ALABANZA",
     "auto": true,
     "contexts": [],
@@ -16,7 +16,7 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido registrar_alabanza"
+                        "Entiendo que quieres registrar alabanza, pero aún no estoy preparado para eso."
                     ],
                     "condition": ""
                 }

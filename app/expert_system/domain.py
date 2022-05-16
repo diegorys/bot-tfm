@@ -10,7 +10,7 @@ slots = {
         "rinialer": [],
         "metformina": [],
         "paracetamol": [],
-        "soniase supra d": [],
+        "soniase supra d": ["soniase supra d", "soniase"],
         "atorvastatina": [],
         "lovastatina": [],
         "algidol": [],

@@ -15,16 +15,27 @@ class GenerateService:
         self.userSaysTemplate = UserSaysTemplate()
         self.intentTemplate = IntentTemplate()
 
-    def execute(self, data, path: str):
+    def execute(self, data, datasetVersion: str, modelVersion: str):
         print("Generate")
+        path = f"/data/dialogflow/{modelVersion}"
         if not os.path.exists(path):
             os.mkdir(path)
+        else:
+            print(f"Error: {path} already exists")
+            exit(1)
         entities = self.generateEntities(data)
         self.writeEntities(entities, path)
         intents = self.generateIntents(data)
         self.writeIntents(intents, path)
         self.generateAgent(path)
         self.generatePackage(path)
+        with open(f"{path}/model_info.json", "w", encoding="utf-8") as f:
+            json.dump(
+                {"datasetVersion": datasetVersion, "modelVersion": modelVersion},
+                f,
+                ensure_ascii=False,
+                indent=4,
+            )
 
     def generateEntities(self, data):
         print("Generate entities")

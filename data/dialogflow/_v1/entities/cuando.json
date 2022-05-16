@@ -1,0 +1,9 @@
+{
+    "id": "cb56f04b-75c6-49ae-b4ad-756d35afad14",
+    "name": "cuando",
+    "isOverridable": true,
+    "isEnum": false,
+    "isRegexp": false,
+    "automatedExpansion": false,
+    "allowFuzzyExtraction": false
+}

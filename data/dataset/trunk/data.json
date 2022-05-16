@@ -49,8 +49,8 @@
         "text": "el rinialer me toca a las 9h",
         "intent": "REGISTRAR_TOMA_MEDICAMENTO",
         "entities": {
-            "cuando": "9h",
-            "medicamento": "rinialer"
+            "medicamento": "rinialer",
+            "cuando": "9h"
         }
     },
     {
@@ -219,8 +219,8 @@
         "text": "Recuérdame tomar ibuprofeno el viernes",
         "intent": "REGISTRAR_TOMA_MEDICAMENTO",
         "entities": {
-            "cuando": "viernes",
-            "medicamento": "ibuprofeno"
+            "medicamento": "ibuprofeno",
+            "cuando": "viernes"
         }
     },
     {
@@ -237,8 +237,8 @@
         "text": "Tomo redoxon por la mañana y soltar advanced plus por la noche",
         "intent": "REGISTRAR_TOMA_MEDICAMENTO",
         "entities": {
-            "cuando": "por la mañana",
-            "medicamento": "redoxon"
+            "medicamento": "redoxon",
+            "cuando": "por la mañana"
         }
     },
     {
@@ -284,8 +284,8 @@
         "text": "Recuérdame que me tome el valdispert antes de dormir",
         "intent": "REGISTRAR_TOMA_MEDICAMENTO",
         "entities": {
-            "cuando": "antes de dormir",
-            "medicamento": "valdispert"
+            "medicamento": "valdispert",
+            "cuando": "antes de dormir"
         }
     },
     {
@@ -482,8 +482,8 @@
         "text": "me tomo redoxon cuando me levanto",
         "intent": "REGISTRAR_TOMA_MEDICAMENTO",
         "entities": {
-            "cuando": "cuando me levanto",
-            "medicamento": "redoxon"
+            "medicamento": "redoxon",
+            "cuando": "cuando me levanto"
         }
     },
     {
@@ -555,8 +555,8 @@
         "text": "me toca rinialer a las 5",
         "intent": "REGISTRAR_TOMA_MEDICAMENTO",
         "entities": {
-            "cuando": "a las 5",
-            "medicamento": "rinialer"
+            "medicamento": "rinialer",
+            "cuando": "a las 5"
         }
     },
     {
@@ -603,8 +603,8 @@
         "text": "el rinialer me lo tomo a las 10",
         "intent": "REGISTRAR_TOMA_MEDICAMENTO",
         "entities": {
-            "cuando": "a las 10",
-            "medicamento": "rinialer"
+            "medicamento": "rinialer",
+            "cuando": "a las 10"
         }
     },
     {
@@ -731,7 +731,9 @@
         "id": "028efa74-3648-464a-ad2d-1895bb7b2cec",
         "text": "Menos de luz jajajaja",
         "intent": "REGISTRAR_DOMOTICA",
-        "entities": {}
+        "entities": {
+            "dispositivo": "luz"
+        }
     },
     {
         "id": "57e2b3ff-3de7-40cb-9424-a0c22b4fea4d",
@@ -763,7 +765,9 @@
         "id": "be11e9df-1a2d-47a0-8a79-34b06a01b748",
         "text": "A veces se deja alguna luz encendida, o el fuego de la cocina.",
         "intent": "REGISTRAR_DOMOTICA",
-        "entities": {}
+        "entities": {
+            "dispositivo": "luz"
+        }
     },
     {
         "id": "de7150aa-0475-4f25-b489-a6eadbdec4d7",
@@ -836,8 +840,8 @@
         "text": "Recuérdame tomar ibuprofeno mañana",
         "intent": "REGISTRAR_TOMA_MEDICAMENTO",
         "entities": {
-            "cuando": "mañana",
-            "medicamento": "ibuprofeno"
+            "medicamento": "ibuprofeno",
+            "cuando": "mañana"
         }
     },
     {
@@ -845,8 +849,8 @@
         "text": "Tengo que ver al otorrino el día 13",
         "intent": "REGISTRAR_CITA_MEDICA",
         "entities": {
-            "cuando": "día 13",
-            "cita": "otorrino"
+            "cita": "otorrino",
+            "cuando": "día 13"
         }
     },
     {
@@ -860,8 +864,8 @@
         "text": "Tengo que tomar pastillas hoy?",
         "intent": "RECORDAR_MEDICACION",
         "entities": {
-            "cuando": "hoy",
-            "medicamento": "pastillas"
+            "medicamento": "pastillas",
+            "cuando": "hoy"
         }
     },
     {
@@ -1026,7 +1030,7 @@
     {
         "id": "6966c254-f471-48a9-bbb4-a8b6f6b24ede",
         "text": "Otra vez se ya estropeado😾😾😾",
-        "intent": "NO_IDENTIFICADO",
+        "intent": "REGISTRAR_SITUACION_ADVERSA",
         "entities": {}
     },
     {
@@ -1042,7 +1046,9 @@
         "id": "e77bb42f-b03c-4745-8daf-8748823cbaba",
         "text": "Recuerda a mi madre que apague el extractor.",
         "intent": "REGISTRAR_DOMOTICA",
-        "entities": {}
+        "entities": {
+            "dispositivo": "extractor"
+        }
     },
     {
         "id": "40d17334-73e4-43f1-9bc4-69acb9b82c34",
@@ -1151,7 +1157,9 @@
         "id": "f1c502f2-4eb7-4284-8e89-3e867e5dc59b",
         "text": "Recuerda a mi madre que apague los fuegos de la cocina.",
         "intent": "REGISTRAR_DOMOTICA",
-        "entities": {}
+        "entities": {
+            "dispositivo": "fuegos de la cocina"
+        }
     },
     {
         "id": "500c1133-6767-47bd-8b5d-7bdb71a135ed",
@@ -1265,8 +1273,8 @@
         "text": "Me toca la pastilla de la alergia en mayo",
         "intent": "REGISTRAR_TOMA_MEDICAMENTO",
         "entities": {
-            "cuando": "mayo",
-            "medicamento": "pastilla de la alergia"
+            "medicamento": "pastilla de la alergia",
+            "cuando": "mayo"
         }
     },
     {
@@ -1328,7 +1336,7 @@
         "text": "Hola estoy muy contenta hemos pagado menos feliz este mes",
         "intent": "REGISTRAR_ESTADO_EMOCIONAL",
         "entities": {
-            "estado": "muy contenta"
+            "estado": "contenta"
         }
     },
     {
@@ -1350,7 +1358,9 @@
         "id": "4ee467ee-3afc-439e-9c06-7199a7f30f90",
         "text": "Recuerda a mi madre que apague las luces.",
         "intent": "REGISTRAR_DOMOTICA",
-        "entities": {}
+        "entities": {
+            "dispositivo": "luces"
+        }
     },
     {
         "id": "70c5c710-3ce1-4f31-8677-763fe09d0e2d",

@@ -1,5 +1,5 @@
 {
-    "id": "fc67cfd7-5447-4296-8140-4bda31f53df7",
+    "id": "7948c879-5cdb-4991-a6e4-dc3aba8b5751",
     "name": "REGISTRAR_ACTIVIDAD",
     "auto": true,
     "contexts": [],
@@ -16,7 +16,7 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido registrar_actividad"
+                        "Entiendo que quieres registrar actividad, pero aún no estoy preparado para eso."
                     ],
                     "condition": ""
                 }

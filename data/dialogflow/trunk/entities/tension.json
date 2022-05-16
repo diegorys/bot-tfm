@@ -1,9 +1,0 @@
-{
-    "id": "a98e21cf-8993-4e12-8525-a38c3e84f818",
-    "name": "tension",
-    "isOverridable": true,
-    "isEnum": false,
-    "isRegexp": false,
-    "automatedExpansion": false,
-    "allowFuzzyExtraction": false
-}

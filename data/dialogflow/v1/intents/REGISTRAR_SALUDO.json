@@ -1,5 +1,5 @@
 {
-    "id": "d58a1e8f-978f-4dd9-a7d8-b3fa1215598e",
+    "id": "d3d300a1-be5b-4e05-af75-737136f06b81",
     "name": "REGISTRAR_SALUDO",
     "auto": true,
     "contexts": [],
@@ -16,7 +16,11 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido registrar_saludo"
+                        "Hola, ¿qué tal estás?",
+                        "Hola, ¿quieres registrar algún medicamento?",
+                        "Hola, ¿quieres registrar alguna cita médica?",
+                        "Hola, ¿qué tal te encuentras?",
+                        "Hola, ¿qué tal te encuentras?"
                     ],
                     "condition": ""
                 }

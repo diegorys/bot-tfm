@@ -1,5 +1,5 @@
 {
-    "id": "a2da7049-8abc-458d-be32-06a4f04b936c",
+    "id": "9eec4d5d-8487-4af0-819f-cb8ddc7b7194",
     "name": "REGISTRAR_RECHAZO",
     "auto": true,
     "contexts": [],
@@ -16,7 +16,7 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido registrar_rechazo"
+                        "Entiendo que quieres registrar rechazo, pero aún no estoy preparado para eso."
                     ],
                     "condition": ""
                 }

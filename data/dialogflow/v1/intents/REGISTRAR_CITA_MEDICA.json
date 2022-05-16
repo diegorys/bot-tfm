@@ -1,5 +1,5 @@
 {
-    "id": "02a49a4b-7f2b-4904-8fd4-4ab9174eb232",
+    "id": "3c324a36-6112-4adf-9b69-c8d648d93eba",
     "name": "REGISTRAR_CITA_MEDICA",
     "auto": true,
     "contexts": [],
@@ -57,7 +57,11 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido cita: $cita date-time: $date-time"
+                        "Tienes una cita médica: $cita $date-time",
+                        "Anoto cita médica: $cita $date-time",
+                        "Te recordaré la cita médica: $cita $date-time",
+                        "$date-time cita médica $cita. Anotado queda.",
+                        "$date-time cita médica $cita. Anotado queda."
                     ],
                     "condition": ""
                 }

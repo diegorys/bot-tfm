@@ -2,7 +2,17 @@
     {
         "data": [
             {
-                "text": "Menos de luz jajajaja",
+                "text": "Recuerda a mi madre que apague el ",
+                "userDefined": false
+            },
+            {
+                "text": "extractor",
+                "meta": "@dispositivo",
+                "alias": "dispositivo",
+                "userDefined": false
+            },
+            {
+                "text": ".",
                 "userDefined": false
             }
         ],
@@ -14,7 +24,17 @@
     {
         "data": [
             {
-                "text": "A veces se deja alguna luz encendida, o el fuego de la cocina.",
+                "text": "A veces se deja alguna ",
+                "userDefined": false
+            },
+            {
+                "text": "luz",
+                "meta": "@dispositivo",
+                "alias": "dispositivo",
+                "userDefined": false
+            },
+            {
+                "text": " encendida, o el fuego de la cocina.",
                 "userDefined": false
             }
         ],
@@ -26,31 +46,17 @@
     {
         "data": [
             {
-                "text": "Recuerda a mi madre que apague el extractor.",
+                "text": "Recuerda a mi madre que apague las ",
                 "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
+            },
             {
-                "text": "Recuerda a mi madre que apague los fuegos de la cocina.",
+                "text": "luces",
+                "meta": "@dispositivo",
+                "alias": "dispositivo",
                 "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
+            },
             {
-                "text": "Recuerda a mi madre que apague las luces.",
+                "text": ".",
                 "userDefined": false
             }
         ],

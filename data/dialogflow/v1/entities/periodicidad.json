@@ -1,9 +1,0 @@
-{
-    "id": "77a08d7c-a514-44af-8aa5-f1f399dfcfb1",
-    "name": "periodicidad",
-    "isOverridable": true,
-    "isEnum": false,
-    "isRegexp": false,
-    "automatedExpansion": false,
-    "allowFuzzyExtraction": false
-}

@@ -19,7 +19,7 @@ class DialogflowLanguageModel(LanguageModel):
 
     def identifyIntent(self, text: str):
         session_client = dialogflow.SessionsClient()
-        session = session_client.session_path(PROJECT_ID, 123456789)
+        session = session_client.session_path(PROJECT_ID, SESSION)
         text_input = dialogflow.TextInput(text=text, language_code=LANGUAGE_CODE)
         query_input = dialogflow.QueryInput(text=text_input)
         response = session_client.detect_intent(

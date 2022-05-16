@@ -2,6 +2,66 @@
     {
         "data": [
             {
+                "text": "Tengo ",
+                "userDefined": false
+            },
+            {
+                "text": "8.15",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " a las ",
+                "userDefined": false
+            },
+            {
+                "text": "médico",
+                "meta": "@cita",
+                "alias": "cita",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Tengo que ir a ver al ",
+                "userDefined": false
+            },
+            {
+                "text": "sábado",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " el ",
+                "userDefined": false
+            },
+            {
+                "text": "oculista",
+                "meta": "@cita",
+                "alias": "cita",
+                "userDefined": false
+            },
+            {
+                "text": " en el centro comercial",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
                 "text": "Este mismo mes de ",
                 "userDefined": false
             },
@@ -30,49 +90,21 @@
     {
         "data": [
             {
-                "text": "Recuérdame que tengo que ir al ",
+                "text": "Los ",
                 "userDefined": false
             },
             {
-                "text": "otorrino",
-                "meta": "@cita",
-                "alias": "cita",
-                "userDefined": false
-            },
-            {
-                "text": " el ",
-                "userDefined": false
-            },
-            {
-                "text": "10 de septiembre a las 12",
-                "meta": "@sys.date-time",
-                "alias": "date-time",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "El ",
-                "userDefined": false
-            },
-            {
-                "text": "lunes 12",
+                "text": "jueves a las 12",
                 "meta": "@sys.date-time",
                 "alias": "date-time",
                 "userDefined": false
             },
             {
-                "text": " me ha dado cita el ",
+                "text": " voy al ",
                 "userDefined": false
             },
             {
-                "text": "fisioterapeuta",
+                "text": "nutricionista",
                 "meta": "@cita",
                 "alias": "cita",
                 "userDefined": false
@@ -86,133 +118,17 @@
     {
         "data": [
             {
-                "text": "Mañana",
+                "text": "El día 17 a las 13'30",
                 "meta": "@sys.date-time",
                 "alias": "date-time",
                 "userDefined": false
             },
             {
-                "text": " tengo ",
+                "text": " tengo la ",
                 "userDefined": false
             },
             {
-                "text": "médico",
-                "meta": "@cita",
-                "alias": "cita",
-                "userDefined": false
-            },
-            {
-                "text": " a las 9h",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "A ver que no se me olvide ir al ",
-                "userDefined": false
-            },
-            {
-                "text": "dentista",
-                "meta": "@cita",
-                "alias": "cita",
-                "userDefined": false
-            },
-            {
-                "text": " el ",
-                "userDefined": false
-            },
-            {
-                "text": "martes",
-                "meta": "@sys.date-time",
-                "alias": "date-time",
-                "userDefined": false
-            },
-            {
-                "text": " sin falta",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Tengo ",
-                "userDefined": false
-            },
-            {
-                "text": "revisión dental",
-                "meta": "@cita",
-                "alias": "cita",
-                "userDefined": false
-            },
-            {
-                "text": " el ",
-                "userDefined": false
-            },
-            {
-                "text": "13 de agosto",
-                "meta": "@sys.date-time",
-                "alias": "date-time",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "El ",
-                "userDefined": false
-            },
-            {
-                "text": "fisio",
-                "meta": "@cita",
-                "alias": "cita",
-                "userDefined": false
-            },
-            {
-                "text": " me ha dado hora para el ",
-                "userDefined": false
-            },
-            {
-                "text": "jueves a las 15",
-                "meta": "@sys.date-time",
-                "alias": "date-time",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "El día 13 a las 11'15 de junio",
-                "meta": "@sys.date-time",
-                "alias": "date-time",
-                "userDefined": false
-            },
-            {
-                "text": " con el ",
-                "userDefined": false
-            },
-            {
-                "text": "endocrino",
+                "text": "ecografía del cuello",
                 "meta": "@cita",
                 "alias": "cita",
                 "userDefined": false
@@ -254,178 +170,6 @@
     {
         "data": [
             {
-                "text": "Tengo cita con el ",
-                "userDefined": false
-            },
-            {
-                "text": "dermatólogo",
-                "meta": "@cita",
-                "alias": "cita",
-                "userDefined": false
-            },
-            {
-                "text": " el ",
-                "userDefined": false
-            },
-            {
-                "text": "viernes",
-                "meta": "@sys.date-time",
-                "alias": "date-time",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Los ",
-                "userDefined": false
-            },
-            {
-                "text": "jueves a las 12",
-                "meta": "@sys.date-time",
-                "alias": "date-time",
-                "userDefined": false
-            },
-            {
-                "text": " voy al ",
-                "userDefined": false
-            },
-            {
-                "text": "nutricionista",
-                "meta": "@cita",
-                "alias": "cita",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "El ",
-                "userDefined": false
-            },
-            {
-                "text": "28 de agosto",
-                "meta": "@sys.date-time",
-                "alias": "date-time",
-                "userDefined": false
-            },
-            {
-                "text": " tengo que volver al ",
-                "userDefined": false
-            },
-            {
-                "text": "nutricionista",
-                "meta": "@cita",
-                "alias": "cita",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Tengo que ir a ver al ",
-                "userDefined": false
-            },
-            {
-                "text": "oculista",
-                "meta": "@cita",
-                "alias": "cita",
-                "userDefined": false
-            },
-            {
-                "text": " el ",
-                "userDefined": false
-            },
-            {
-                "text": "sábado",
-                "meta": "@sys.date-time",
-                "alias": "date-time",
-                "userDefined": false
-            },
-            {
-                "text": " en el centro comercial",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "tengo cita con el ",
-                "userDefined": false
-            },
-            {
-                "text": "médico",
-                "meta": "@cita",
-                "alias": "cita",
-                "userDefined": false
-            },
-            {
-                "text": " ",
-                "userDefined": false
-            },
-            {
-                "text": "mañana",
-                "meta": "@sys.date-time",
-                "alias": "date-time",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
-                "text": "Tengo ",
-                "userDefined": false
-            },
-            {
-                "text": "médico",
-                "meta": "@cita",
-                "alias": "cita",
-                "userDefined": false
-            },
-            {
-                "text": " a las ",
-                "userDefined": false
-            },
-            {
-                "text": "8.15",
-                "meta": "@sys.date-time",
-                "alias": "date-time",
-                "userDefined": false
-            }
-        ],
-        "isTemplate": false,
-        "count": 0,
-        "lang": "es",
-        "updated": 0
-    },
-    {
-        "data": [
-            {
                 "text": "Me acaba de llegar una carta con la cita del día ",
                 "userDefined": false
             },
@@ -454,17 +198,245 @@
     {
         "data": [
             {
-                "text": "El día 17 a las 13'30",
+                "text": "El día 13 a las 11'15 de junio",
                 "meta": "@sys.date-time",
                 "alias": "date-time",
                 "userDefined": false
             },
             {
-                "text": " tengo la ",
+                "text": " con el ",
+                "userDefined": false
+            },
+            {
+                "text": "endocrino",
+                "meta": "@cita",
+                "alias": "cita",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Tengo ",
+                "userDefined": false
+            },
+            {
+                "text": "13 de agosto",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " el ",
+                "userDefined": false
+            },
+            {
+                "text": "revisión dental",
+                "meta": "@cita",
+                "alias": "cita",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Mañana",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " tengo ",
+                "userDefined": false
+            },
+            {
+                "text": "médico",
+                "meta": "@cita",
+                "alias": "cita",
+                "userDefined": false
+            },
+            {
+                "text": " a las 9h",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "El ",
+                "userDefined": false
+            },
+            {
+                "text": "martes 17",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " tengo ",
                 "userDefined": false
             },
             {
                 "text": "ecografía del cuello",
+                "meta": "@cita",
+                "alias": "cita",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "El ",
+                "userDefined": false
+            },
+            {
+                "text": "lunes 12",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " me ha dado cita el ",
+                "userDefined": false
+            },
+            {
+                "text": "fisioterapeuta",
+                "meta": "@cita",
+                "alias": "cita",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Anota para el ",
+                "userDefined": false
+            },
+            {
+                "text": "jueves",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " ",
+                "userDefined": false
+            },
+            {
+                "text": "dermatólogo",
+                "meta": "@cita",
+                "alias": "cita",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "El ",
+                "userDefined": false
+            },
+            {
+                "text": "jueves a las 15",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " me ha dado hora para el ",
+                "userDefined": false
+            },
+            {
+                "text": "fisio",
+                "meta": "@cita",
+                "alias": "cita",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "A ver que no se me olvide ir al ",
+                "userDefined": false
+            },
+            {
+                "text": "martes",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " el ",
+                "userDefined": false
+            },
+            {
+                "text": "dentista",
+                "meta": "@cita",
+                "alias": "cita",
+                "userDefined": false
+            },
+            {
+                "text": " sin falta",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "El ",
+                "userDefined": false
+            },
+            {
+                "text": "28 de agosto",
+                "meta": "@sys.date-time",
+                "alias": "date-time",
+                "userDefined": false
+            },
+            {
+                "text": " tengo que volver al ",
+                "userDefined": false
+            },
+            {
+                "text": "nutricionista",
                 "meta": "@cita",
                 "alias": "cita",
                 "userDefined": false

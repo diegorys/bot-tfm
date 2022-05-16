@@ -1,0 +1,35 @@
+el rinialer me toca a las 9h;REGISTRAR_TOMA_MEDICAMENTO
+Hola, qué tal estás? Yo bien;REGISTRAR_SALUDO
+Estoy muy bien;REGISTRAR_ESTADO_EMOCIONAL
+Hola de nuevo me gustaría que me avises el día que tengo que ir a la farmacia para las medicinas ya te lo dije y ahora noe acuerdo;NO_IDENTIFICADO
+Estoy disgustada mi amiga tiene un problema y no s como ayudarla;REGISTRAR_ESTADO_EMOCIONAL
+Mañana celebramos el Día de la madre comemos en el centro comercial pero no estamos todos como me gustaría otro año será;NO_IDENTIFICADO
+Este año al final puedo irme de vacaciones con los jubilados espero que no se estrope por el COVID;REGISTRAR_COVID
+Me encuentro muy tranquilo;REGISTRAR_ESTADO_EMOCIONAL
+Todo bien. Muchas gracias;REGISTRAR_ESTADO_EMOCIONAL
+Para que interactúe contigo, dentro de lo posible.;NO_IDENTIFICADO
+Se lo olvida la medicación;REGISTRAR_NECESIDAD
+¡Hola!;REGISTRAR_SALUDO
+Se despierta pronto cada día;NO_IDENTIFICADO
+Siempre me respondes y así no me encuentro tan sola;REGISTRAR_ALABANZA
+A ver qué te cuenta ella. Seguimos en contacto.;REGISTRAR_DESPEDIDA
+el rinialer me lo tomo a las 10;REGISTRAR_TOMA_MEDICAMENTO
+hoy me duele la cabeza🌚;REGISTRAR_SINTOMA
+me toca tomar rinialer a las 5;REGISTRAR_TOMA_MEDICAMENTO
+¿Sabes si mi madre se ha tomado el Adiro?;NO_IDENTIFICADO
+Que bien me siento;REGISTRAR_ESTADO_EMOCIONAL
+Acabo de caerme por el pasillo y veo que me está saliendo un moratón queme aconsejas que haga??;REGISTRAR_SITUACION_ADVERSA
+También mañana me quitan la verruga a ver cómo me va;NO_IDENTIFICADO
+Tengo que tomar pastillas hoy?;RECORDAR_MEDICACION
+a las 22:00 me tomo ibuprofeno;REGISTRAR_TOMA_MEDICAMENTO
+¿Tú sabes quién es mi madre?;NO_IDENTIFICADO
+Y estoy cansada;REGISTRAR_ESTADO_EMOCIONAL
+El sábado Megan a quitar una verruga;NO_IDENTIFICADO
+El 28 de agosto tengo que volver al nutricionista;REGISTRAR_CITA_MEDICA
+Que estoy cansada;REGISTRAR_ESTADO_EMOCIONAL
+Y mañana voy para Santa Pola a pasar un días.;NO_IDENTIFICADO
+Hola estoy muy contenta hemos pagado menos feliz este mes;REGISTRAR_ESTADO_EMOCIONAL
+Mi madre toma Adiro 300 a diario. Es un medicamento.;REGISTRAR_TOMA_MEDICAMENTO
+Aquí ando, trabajando. ¿Qué tal tú?;REGISTRAR_ACTIVIDAD
+Mañana voy a ir a andar y a comprar unas cosas que están de oferta;NO_IDENTIFICADO
+Tomo redoxon a las 8 de la mañana;REGISTRAR_TOMA_MEDICAMENTO

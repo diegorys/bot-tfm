@@ -1,5 +1,5 @@
 {
-    "id": "4eb19c52-68c8-41a7-b710-f193784d4200",
+    "id": "f5c87581-489f-4888-b06b-74984946af37",
     "name": "REGISTRAR_SITUACION_ADVERSA",
     "auto": true,
     "contexts": [],
@@ -16,7 +16,7 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido registrar_situacion_adversa"
+                        "Entiendo que quieres registrar situacion adversa, pero aún no estoy preparado para eso."
                     ],
                     "condition": ""
                 }

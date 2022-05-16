@@ -1,5 +1,5 @@
 {
-    "id": "8633567f-edef-46e2-85c9-492eb89d6988",
+    "id": "ef4b1ea1-f2fb-4040-862a-9a66f8d43432",
     "name": "ACTUALIZAR_TOMA_MEDICAMENTO",
     "auto": true,
     "contexts": [],
@@ -16,7 +16,7 @@
                     "textToSpeech": "",
                     "lang": "es",
                     "speech": [
-                        "Recibido actualizar_toma_medicamento"
+                        "Entiendo que quieres actualizar toma medicamento, pero aún no estoy preparado para eso."
                     ],
                     "condition": ""
                 }

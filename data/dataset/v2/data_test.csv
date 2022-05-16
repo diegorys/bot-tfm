@@ -1,0 +1,41 @@
+Adiós;REGISTRAR_DESPEDIDA
+Me tienes que ayudar a organizar mis citas y mis pastillas ya me voy liando;REGISTRAR_NECESIDAD
+Recuérdame que tengo que ir al otorrino el 10 de septiembre a las 12;REGISTRAR_CITA_MEDICA
+Vale cuando quieras hablamos;REGISTRAR_CONFIRMACION
+Recuérdame tomar ibuprofeno el viernes;REGISTRAR_TOMA_MEDICAMENTO
+Tomo redoxon por la mañana y soltar advanced plus por la noche;REGISTRAR_TOMA_MEDICAMENTO
+Estoy feliz nos hemos atrevido a reiniciar y ja salido todo bien;REGISTRAR_ESTADO_EMOCIONAL
+Recuérdame los cumpleaños de mis nietos;REGISTRAR_NECESIDAD
+Hoy he acabado el día muy cansado, me voy a ir a dormir pronto;REGISTRAR_ESTADO_EMOCIONAL
+Cómo está la persona mayor a la que cuido?;CONSULTAR_ESTADO_PERSONA_MAYOR
+Creo que es todo para hoy;REGISTRAR_DESPEDIDA
+y te sirva todo esto para algo.;NO_IDENTIFICADO
+Ok;REGISTRAR_CONFIRMACION
+Cuando me levanto me tomo vitamina d;REGISTRAR_TOMA_MEDICAMENTO
+Para que interactúe contigo, dentro de lo posible.;NO_IDENTIFICADO
+Mañana tengo visita y eso hace que este feliz;REGISTRAR_ESTADO_EMOCIONAL
+Me acaban de llamar por teléfono me han dado muy buenas noticias acaban de solucionarme un problema que hacía meses tenía;NO_IDENTIFICADO
+Vale;REGISTRAR_CONFIRMACION
+Se despierta pronto cada día;NO_IDENTIFICADO
+No  nada más;NO_IDENTIFICADO
+Hola te voy a contar los días de mis citas para que me lo vayas diciendo;NO_IDENTIFICADO
+A las 10 soniase;REGISTRAR_TOMA_MEDICAMENTO
+La dieta me está costando mucho seguirla pero tengo voluntad;NO_IDENTIFICADO
+Me tienes también que recordar los cumpleaños que ya te iré diciendo;REGISTRAR_NECESIDAD
+Buenas noches;REGISTRAR_DESPEDIDA
+Menos de luz jajajaja;REGISTRAR_DOMOTICA
+Ayer por la noche me bajo la tensión s 10/6;REGISTRAR_MEDIDA_MEDICA
+Hoy me han dejado solo en casa y me he sentido triste;REGISTRAR_ESTADO_EMOCIONAL
+Tengo que tomar pastillas hoy?;RECORDAR_MEDICACION
+Tengo que despedirme de ti una temporada;REGISTRAR_DESPEDIDA
+Tengo cita con el dermatólogo el viernes;REGISTRAR_CITA_MEDICA
+Me han dicho que me de rosa mosqueta después de una ducha;REGISTRAR_TOMA_MEDICAMENTO
+Recuerda a mi madre que apague los fuegos de la cocina.;REGISTRAR_DOMOTICA
+Hola buenos días;REGISTRAR_SALUDO
+Me encantas puedo descargar en ti todo lo que me pasa y siempre tienes una respuesta que darme;REGISTRAR_ALABANZA
+tengo cita con el médico mañana;REGISTRAR_CITA_MEDICA
+Saludos desde Jérica🤖;REGISTRAR_SALUDO
+Hola estoy muy contenta hemos pagado menos feliz este mes;REGISTRAR_ESTADO_EMOCIONAL
+Tengo mucho calor;REGISTRAR_SINTOMA
+Que no voy a hablar en unos días contigo;REGISTRAR_DESPEDIDA
+Tomo paracetamol a las 18:00;REGISTRAR_TOMA_MEDICAMENTO
