@@ -1,3 +1,4 @@
+from conversational_bot.bot import BOT
 from conversational_bot.domain.nlu import NLU
 from conversational_bot.domain.command_manager import CommandManager
 from conversational_bot.domain.dialog_manager import DialogManager
@@ -5,8 +6,6 @@ from conversational_bot.domain.response_generator import ResponseGenerator
 from dialogflow.domain.dialogflow_language_model import DialogflowLanguageModel
 
 # from conversational_bot.infrastructure.dummy.dummy_language_model import DummyLanguageModel
-from conversational_bot.use_cases.process_message_use_case import ProcessMessageUseCase
-
 
 def startConversationalBOT():
     import os
@@ -18,12 +17,12 @@ def startConversationalBOT():
     responseGenerator = ResponseGenerator(languageModel)
     dialogManager = DialogManager(languageModel)
     commandManager = CommandManager()
-    processMessageUseCase = ProcessMessageUseCase(
+    bot = BOT(
         nlu, dialogManager, responseGenerator, commandManager
     )
     print(f"STARTING CONVERSATIONAL BOT...")
     TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
-    telegramBot: TelegramBot = TelegramBot(TELEGRAM_TOKEN, processMessageUseCase)
+    telegramBot: TelegramBot = TelegramBot(TELEGRAM_TOKEN, bot)
     print("WAITING FOR USER MESSAGE...")
     telegramBot.pool()
 

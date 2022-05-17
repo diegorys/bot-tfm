@@ -29,7 +29,7 @@ class DialogflowLanguageModel(LanguageModel):
         parameters = response.query_result.parameters.items()
         entities = {}
         for key, value in parameters:
-            entities[key] = value.ToString()
+            entities[key] = value
         self.lastResponse = response.query_result.fulfillment_messages[0].text.text[0]
         return intent, entities
 
