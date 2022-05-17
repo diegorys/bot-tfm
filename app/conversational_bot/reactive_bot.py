@@ -12,7 +12,7 @@ A partir de un texto, genera una respuesta y procesa el comando.
 """
 
 
-class BOT:
+class ReactiveBOT:
     def __init__(
         self,
         nlu: NLU,
