@@ -14,6 +14,15 @@ class DummyLanguageModel(LanguageModel):
             intent = "DESPEDIRSE"
         return intent, {}
 
+    def generateRequireParametersText(self, frame: Frame) -> str:
+        response = ""
+        for entity in frame.entities.keys():
+            value = frame.entities[entity]
+            if not value:
+                response = f"required {entity}"
+                break
+        return response
+
     def generateText(self, frame: Frame) -> str:
         response = ""
         if "SALUDAR" == frame.intent:
