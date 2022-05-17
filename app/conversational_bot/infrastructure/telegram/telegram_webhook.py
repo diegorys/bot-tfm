@@ -21,7 +21,7 @@ from conversational_bot.domain.response_generator import ResponseGenerator
 from dialogflow.domain.dialogflow_language_model import DialogflowLanguageModel
 
 # from conversational_bot.infrastructure.dummy.dummy_language_model import DummyLanguageModel
-from conversational_bot.bot import BOT
+from conversational_bot.reactive_bot import ReactiveBOT
 
 config = Config()
 repository = DynamoDBDialogRepository()
@@ -34,7 +34,7 @@ nlu = NLU(languageModel)
 responseGenerator = ResponseGenerator(languageModel)
 dialogManager = DialogManager(languageModel)
 commandManager = CommandManager()
-bot = BOT(nlu, dialogManager, responseGenerator, commandManager)
+bot = ReactiveBOT(nlu, dialogManager, responseGenerator, commandManager)
 
 if "TELEGRAM_UPDATE_ID" not in os.environ.keys():
     os.environ["TELEGRAM_UPDATE_ID"] = ""

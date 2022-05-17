@@ -1,12 +1,12 @@
 import telegram
 from telegram import Update
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
-from conversational_bot.bot import BOT
+from conversational_bot.reactive_bot import ReactiveBOT
 from sso.domain.user import User
 
 
 class TelegramBot:
-    def __init__(self, token: str, bot: BOT):
+    def __init__(self, token: str, bot: ReactiveBOT):
         self.token: str = token
         self.telegramBot = telegram.Bot(token)
         self.bot = bot

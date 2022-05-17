@@ -12,28 +12,12 @@ A partir de un texto, genera una respuesta y procesa el comando.
 """
 
 
-class BOT:
+class ProactiveBOT:
     def __init__(
         self,
-        nlu: NLU,
-        dialogManager: DialogManager,
         responseGenerator: ResponseGenerator,
-        commandManager: CommandManager,
     ):
-        self.nlu: NLU = nlu
-        self.dialogManager = dialogManager
         self.responseGenerator: ResponseGenerator = responseGenerator
-        self.commandManager = commandManager
-
-    def process(self, user: User, text: str, date) -> Response:
-        print(f"Text: {text}")
-        frame: Frame = self.nlu.execute(user, text)
-        if frame.isComplete():
-            response = self.responseGenerator.execute(frame)
-            self.commandManager.execute(frame)
-        else:
-            response = self.dialogManager.execute(frame)
-        return response
 
     def generate(self, frame: Frame) -> Response:
         response = self.responseGenerator.execute(frame)

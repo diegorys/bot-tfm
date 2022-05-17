@@ -1,4 +1,4 @@
-from conversational_bot.bot import BOT
+from conversational_bot.reactive_bot import ReactiveBOT
 from conversational_bot.domain.nlu import NLU
 from conversational_bot.domain.command_manager import CommandManager
 from conversational_bot.domain.dialog_manager import DialogManager
@@ -17,7 +17,7 @@ def startConversationalBOT():
     responseGenerator = ResponseGenerator(languageModel)
     dialogManager = DialogManager(languageModel)
     commandManager = CommandManager()
-    bot = BOT(
+    bot = ReactiveBOT(
         nlu, dialogManager, responseGenerator, commandManager
     )
     print(f"STARTING CONVERSATIONAL BOT...")
