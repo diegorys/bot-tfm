@@ -25,7 +25,7 @@ class BOT:
         self.responseGenerator: ResponseGenerator = responseGenerator
         self.commandManager = commandManager
 
-    def execute(self, user: User, text: str, date) -> Response:
+    def process(self, user: User, text: str, date) -> Response:
         print(f"Text: {text}")
         frame: Frame = self.nlu.execute(user, text)
         if frame.isComplete():
@@ -33,4 +33,8 @@ class BOT:
             self.commandManager.execute(frame)
         else:
             response = self.dialogManager.execute(frame)
+        return response
+
+    def generate(self, frame: Frame) -> Response:
+        response = self.responseGenerator.execute(frame)
         return response
