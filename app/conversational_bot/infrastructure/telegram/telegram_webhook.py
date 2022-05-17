@@ -19,8 +19,9 @@ from conversational_bot.domain.dialog_manager import DialogManager
 from conversational_bot.domain.nlu import NLU
 from conversational_bot.domain.response_generator import ResponseGenerator
 from dialogflow.domain.dialogflow_language_model import DialogflowLanguageModel
+
 # from conversational_bot.infrastructure.dummy.dummy_language_model import DummyLanguageModel
-from conversational_bot.use_cases.process_message_use_case import ProcessMessageUseCase
+from conversational_bot.bot import BOT
 
 config = Config()
 repository = DynamoDBDialogRepository()
@@ -33,9 +34,7 @@ nlu = NLU(languageModel)
 responseGenerator = ResponseGenerator(languageModel)
 dialogManager = DialogManager(languageModel)
 commandManager = CommandManager()
-processMessageUseCase = ProcessMessageUseCase(
-    nlu, dialogManager, responseGenerator, commandManager
-)
+bot = BOT(nlu, dialogManager, responseGenerator, commandManager)
 
 if "TELEGRAM_UPDATE_ID" not in os.environ.keys():
     os.environ["TELEGRAM_UPDATE_ID"] = ""
@@ -101,7 +100,7 @@ def botExecute(text: str, user: User, available, id, date):
         response = handleStart(user)
         log(text, user, id, date, response)
     else:
-        response = processMessageUseCase.execute(user, text, date)
+        response = bot.execute(user, text, date)
         log(text, user, id, date, response)
     return response
 

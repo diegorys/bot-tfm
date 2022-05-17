@@ -1,7 +1,7 @@
 from conversational_bot.domain.command_manager import CommandManager
 from conversational_bot.domain.dialog_manager import DialogManager
 from conversational_bot.domain.nlu import NLU
-from conversational_bot.use_cases.process_message_use_case import ProcessMessageUseCase
+from conversational_bot.bot import BOT
 from conversational_bot.infrastructure.dummy.dummy_language_model import DummyLanguageModel
 from conversational_bot.infrastructure.dummy.dummy_client import DummyClient
 from conversational_bot.domain.response_generator import ResponseGenerator
@@ -17,10 +17,10 @@ def test_execute():
     responseGenerator: ResponseGenerator = ResponseGenerator(languageModel)
     dialogManager = DialogManager(languageModel)
     commandManager = CommandManager()
-    processMessageUseCase = ProcessMessageUseCase(
+    bot = BOT(
         nlu, dialogManager, responseGenerator, commandManager
     )
-    response = processMessageUseCase.execute(user, "Hola robot", "")
+    response = bot.execute(user, "Hola robot", "")
     client.emit(user, response.text)
     print("------------")
     print(client.dummyText)

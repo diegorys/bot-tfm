@@ -1,15 +1,15 @@
 import telegram
 from telegram import Update
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
-from conversational_bot.use_cases.process_message_use_case import ProcessMessageUseCase
+from conversational_bot.bot import BOT
 from sso.domain.user import User
 
 
 class TelegramBot:
-    def __init__(self, token: str, processMessageUseCase: ProcessMessageUseCase):
+    def __init__(self, token: str, bot: BOT):
         self.token: str = token
         self.telegramBot = telegram.Bot(token)
-        self.processMessageUseCase = processMessageUseCase
+        self.bot = bot
 
     def pool(self):
         updater = Updater(token=self.token, use_context=True)
@@ -31,7 +31,7 @@ class TelegramBot:
             {"telegram_id": update.effective_chat.id, "name": update.effective_chat.first_name},
         )
         print(f"> {telegramId} ({username}): {text}")
-        response = self.processMessageUseCase.execute(user, text, date)
+        response = self.bot.execute(user, text, date)
         print(f"< BOT: {response.text}")
         context.bot.send_message(chat_id=update.effective_chat.id, text=response.text)
 

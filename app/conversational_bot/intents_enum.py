@@ -1,9 +1,0 @@
-from enum import Enum
-
-
-class INTENTS(Enum):
-    SALUDAR = "SALUDAR"
-    DESPEDIRSE = 2
-    REGISTRAR_MEDICAMENTO = 3
-    DESCONOCIDO = 4
-    NOTIFICATION = 5
