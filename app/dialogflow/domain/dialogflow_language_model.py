@@ -26,10 +26,15 @@ class DialogflowLanguageModel(LanguageModel):
             request={"session": session, "query_input": query_input}
         )
         intent = response.query_result.intent.display_name
-        # parameters = response.query_result.parameters.fields
+        parameters = response.query_result.parameters.items()
         entities = {}
+        for key, value in parameters:
+            entities[key] = value.ToString()
         self.lastResponse = response.query_result.fulfillment_messages[0].text.text[0]
         return intent, entities
+
+    def generateRequireParametersText(self, frame: Frame) -> str:
+        return self.lastResponse
 
     def generateText(self, frame: Frame) -> str:
         return self.lastResponse

@@ -8,12 +8,14 @@ import os
 import json
 import telegram
 from dialogs.domain.dialog import Dialog
-from conversational_bot.domain.response import Response
 from sso.domain.user import User
 
 # from infrastructure.gpt3.gpt3_nlu import GPT3NLU
 from infrastructure.dynamodb.dynamodb_dialog_repository import DynamoDBDialogRepository
 from infrastructure.configuration import Config
+from conversational_bot.domain.response import Response
+from conversational_bot.domain.command_manager import CommandManager
+from conversational_bot.domain.dialog_manager import DialogManager
 from conversational_bot.domain.nlu import NLU
 from conversational_bot.domain.response_generator import ResponseGenerator
 from dialogflow.domain.dialogflow_language_model import DialogflowLanguageModel
@@ -29,7 +31,11 @@ languageModel = DialogflowLanguageModel()
 
 nlu = NLU(languageModel)
 responseGenerator = ResponseGenerator(languageModel)
-processMessageUseCase = ProcessMessageUseCase(nlu, responseGenerator)
+dialogManager = DialogManager(languageModel)
+commandManager = CommandManager()
+processMessageUseCase = ProcessMessageUseCase(
+    nlu, dialogManager, responseGenerator, commandManager
+)
 
 if "TELEGRAM_UPDATE_ID" not in os.environ.keys():
     os.environ["TELEGRAM_UPDATE_ID"] = ""

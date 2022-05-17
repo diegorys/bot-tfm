@@ -17,3 +17,10 @@ class Frame:
             value = self.entities[entity]
             text = text.replace(f"[{entity}]", value)
         return text
+
+    def isComplete(self) -> bool:
+        for entity in self.entities.keys():
+            value = self.entities[entity]
+            if not value:
+                return False
+        return True

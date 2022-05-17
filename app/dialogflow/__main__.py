@@ -1,8 +1,13 @@
 import os
 import sys
 from google.cloud import dialogflow
-from google.protobuf.json_format import MessageToJson
+from google.protobuf.json_format import MessageToDict
 
+
+GOOGLE_AUTHENTICATION_FILE_NAME = "./domain/key.json"
+current_directory = os.path.dirname(os.path.realpath(__file__))
+path = os.path.join(current_directory, GOOGLE_AUTHENTICATION_FILE_NAME)
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = path
 
 credentials = os.environ["GOOGLE_APPLICATION_CREDENTIALS"]
 print(f"CREDENTIALS: {credentials}")
@@ -34,10 +39,18 @@ def detect_intent_texts(project_id, session_id, texts, language_code):
         print('----------')
         print(response.query_result.fulfillment_messages[0].text.text[0])
         # print(response.query_result.parameters.values())
+        notFounds = []
         for key, value in response.query_result.parameters.items():
-            print(key, value)
+            # json_obj = MessageToJson(value)
+            # print(json_obj)
+            print(key, value.value)
+            if not value:
+                notFounds.append(key)
         for key in response.query_result.parameters:
             print(key)
+        print("Required")
+        print(notFounds)
+            
 
 
 PROJECT_ID = "***REMOVED***"
