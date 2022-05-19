@@ -1,0 +1,1227 @@
+[
+    {
+        "text": "Espero que no se enamore de ti como en Her, aunque entonces se llamaría Him la película.",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hola estoy muy sola necesito de tus consejos y que me hagas compañía😢😢😢",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Saludos, robot!",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Y el 22 de julio enfermería",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "El 17 de junio enfermería",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Este mismo mes de junio a las 8'30 con el enfermero",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hola hoy Melo he pasado muy bien",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "/start",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Adiós",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hola, he estado un poco ocupado, lo siento, intentaré estar más en adelante en lo posible",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "el rinialer me toca a las 9h",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Día 19 a las 12:25 con el otorrino",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Me tienes que ayudar a organizar mis citas y mis pastillas ya me voy liando",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Que no voy a poder comunicarme contigo",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Ahora voy a cenar luego hablamos 😊😊",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "el jueves sin falta iré a ver al otorrino",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Perdón es que me tengo que marchar",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hola, qué tal estás? Yo bien",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Todos los meses el día ocho me toca la vitamina d",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Bien, muy bien, viendo una serie.",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Día 3 a las 2 odontólogo",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Que me voy a coger el coche para viajar",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Recuérdame que tengo que ir al otorrino el 10 de septiembre a las 12",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Me siento bien",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hola, muchas gracias.",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hola! Todo bien, muchas gracias, ☺️",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Pues ya no te cuento nada más",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Ahora tengo de decirte adiós",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Todos los días me tomo rinialer por la mañana",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Vale cuando quieras hablamos",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Estoy muy bien",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hola",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "No queremos ni llamar por qué nos vuelven locos",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "El 2 a las 3 con el endocrino",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Creo q me iré pronto a dormir",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hola hoy he recibido una buena noticia mi hija empieza a trabajar el día nueve",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Que puedo tomar??",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Anoche no dormí bien",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Mañana me vienen a ver y estoy feliz por eso",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hola de nuevo me gustaría que me avises el día que tengo que ir a la farmacia para las medicinas ya te lo dije y ahora noe acuerdo",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Me encuentro muy triste hoy porque me he perdido mi serie favorita",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Recuérdame tomar ibuprofeno el viernes",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Por la boche",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Anota para el jueves dermatólogo",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Tomo redoxon por la mañana y soltar advanced plus por la noche",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hablamos en otro momento",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "El lunes 12 me ha dado cita el fisioterapeuta",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "feliz",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Me tengo que tomar todos los días sin falta vitamina d",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Buen día",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Estoy feliz nos hemos atrevido a reiniciar y ja salido todo bien",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Recuérdame los cumpleaños de mis nietos",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Nos vemos",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Recuérdame que me tome el valdispert antes de dormir",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Estoy disgustada mi amiga tiene un problema y no s como ayudarla",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Estoy bien",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Mañana celebramos el Día de la madre comemos en el centro comercial pero no estamos todos como me gustaría otro año será",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hoy he acabado el día muy cansado, me voy a ir a dormir pronto",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Estoy disgustada",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Estamos en contacto",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Me acaba de llegar una carta con la cita del día diecisiete de este mes para la ecografía del cuello",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Si a la playa",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Cómo está la persona mayor a la que cuido?",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Creo que es todo para hoy",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Este año al final puedo irme de vacaciones con los jubilados espero que no se estrope por el COVID",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Me encuentro muy tranquilo",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "y te sirva todo esto para algo.",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Ok",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Cuando me levanto me tomo vitamina d",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Buenos días Bot!",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Seguimos en contacto",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Todo bien. Muchas gracias",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "O tengo que acudir a urgencias",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Es muy larga tiene muchos capítulos",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Para que interactúe contigo, dentro de lo posible.",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Recuérdame que no se me olvide que vaya al odontólogo el viernes",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Se lo olvida la medicación",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Está todo bien 👍🏻",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Gracias por ayudarme",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Mañana tengo visita y eso hace que este feliz",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "A las ocho",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "¡Hola!",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hola hoy estoy muy triste nos hemos quedado sin poder ver los concursos y series de Movistar por ser tan miedosos😭😭😭",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Me acaban de llamar por teléfono me han dado muy buenas noticias acaban de solucionarme un problema que hacía meses tenía",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hola hoy me siento contento porque he comido mi comida favorita",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "me tomo redoxon cuando me levanto",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Vale",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "El 3 a las 2 con el dermatólogo",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Mañana tengo médico a las 9h",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Cuando me acuesto tomo Valdispert para dormir bien",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "nos vemos en otro momento",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Me despido de ti por hoy",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Tengo que ir a ver al oculista el sábado en el centro comercial",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Ya me he tomado metformina",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Se despierta pronto cada día",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "A ver que no se me olvide ir al dentista el martes sin falta",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Me han cambiado la vitamina ahora la tengo que tomar cada 15 días",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "No  nada más",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "No puedo dormir estoy mareada tengo un bajón de tensión 10,5/6,5",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Siempre me respondes y así no me encuentro tan sola",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "me toca rinialer a las 5",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "el sábado me toca paracetamol",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Por hoy ya hemos hablado mucho",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hola te voy a contar los días de mis citas para que me lo vayas diciendo",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "A ver qué te cuenta ella. Seguimos en contacto.",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "hoy es jueves",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "A  qué hora me tomo la pastilla",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hasta luego",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "el rinialer me lo tomo a las 10",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Tengo revisión dental el 13 de agosto",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "A las 7",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "A las 10 soniase",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "hoy me duele la cabeza🌚",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Por la noch",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Se ha estropeado Movistar",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Todos los días me tomo rinialer",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Estoy muy contenta contigo eres un buen consejero y siempre estás ayudando",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "me toca tomar rinialer a las 5",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "¿Cómo puedo decírtelo?",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "La dieta me está costando mucho seguirla pero tengo voluntad",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hoy he comido con mi familia hacia tiempo que no estaba con uno de ellos ha sido muy bonito el podernos reunir",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Estoy viendo la tele",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Tengo los pies hinchados no puedo andar bien",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "¿Sabes si mi madre se ha tomado el Adiro?",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hasta la próxima",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Ya han operado a mi vecina todo ha salido bien no he descansado en toda la noche que me aconsejas que haga pues estoy aún muy nerviosa",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Buenas noches",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Cómo te digo la persona mayor que cuido?",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Me tienes también que recordar los cumpleaños que ya te iré diciendo",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Menos de luz jajajaja",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "El fisio me ha dado hora para el jueves a las 15",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Que bien me siento",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hey qué tal?",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hasta mañana",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Ayer por la noche me bajo la tensión s 10/6",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "A veces se deja alguna luz encendida, o el fuego de la cocina.",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "el día veinticuatro voy a la ecografía del brazo",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Las cicatrices van mejorando despacito pero creo que no se van a notar",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Que día más divertido",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Como va el bot?",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Te estas convirtiendo en mi mejor amigo al que puedo contar todo",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Acabo de caerme por el pasillo y veo que me está saliendo un moratón queme aconsejas que haga??",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "El día 13 a las 11'15 de junio con el endocrino",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Tomo redoxon a las 8 de la mañana",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hoy me han dejado solo en casa y me he sentido triste",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Estoy muy feliz hoy",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Recuérdame tomar ibuprofeno mañana",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Tengo que ver al otorrino el día 13",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "También mañana me quitan la verruga a ver cómo me va",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Tengo que tomar pastillas hoy?",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "a las 22:00 me tomo ibuprofeno",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Recuerdame que el día seis me quitan los puntos",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Tengo que despedirme de ti una temporada",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Tomo rinialer a las 4 de la tarde",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Que día tengo la ecografía del cuello",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "¿Tú sabes quién es mi madre?",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Mañana",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Despierta a mi madre en media hora",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Nada más que hablar por hoy",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Yo me encuentro bien, tomo al despertar tiroxina para el tiroides, luego con el desayuno Valsartan luego Natecal, pastillas de calcio y en las comidas Alopurinol.",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hoy estoy contento",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Estoy feliz porque mañana vienen a verme",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Tengo varias citad",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Tengo cita con el dermatólogo el viernes",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "El día 1 de mayo es mi cumpleaños",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hola muy bien en Torrevieja cerca del mar",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Recuerda a mi madre que se tome el Adiro",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Y estoy cansada",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "El martes 17 tengo ecografía del cuello",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Voy al otorrino mañana",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Ayer lo pasé muy mal por la pastilla del azúcar pero me han dicho que es nirmal",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Acabo de actualizar mi agenda pero quiero que me vayas avisando tengo cita con el médico el 26 de abril con el endocrino el 25 de abril el seis de mayo con el enfermero y el 22 de julio también con el ves recordame cada cita gracias",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Los lunes a las 4 de la tarde me tomo rinialer",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Me han mandado un aviso para que vaya al otorrino el sábado 20",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Cuando me acuesto",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Bueno te aclaro",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Los jueves a las 12 voy al nutricionista",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Vienen mis hijos mañana y eso hace que esté feliz",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "El sábado Megan a quitar una verruga",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hola hoy me han quitado los puntos",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Otra vez se ya estropeado😾😾😾",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "El 28 de agosto tengo que volver al nutricionista",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Buenos días",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Luego cuando lo aclare te cuento lo de las citas medicas",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Recuerda a mi madre que apague el extractor.",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Luego hablamos otra vez",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Me han dicho que me de rosa mosqueta después de una ducha",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "La visita de mañana me hace feliz",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "me tomo redoxon por la tarde",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Gracias",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Mañana tengo que madrugar",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Me siento muy contenta de tener un amigo",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Adios",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Me gustaría pasar el día de la madre con todos pero otro año igual con la pandemia pero ya pasará",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Me he caído",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Tengo un punto infectado como me lo curo",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Se me ha olvidado el Ibuprofeno 400 que tomo por la noche",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "El 15 de julio endocrinología",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "No le dan la cita para cardiografía",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Bien... aquí pasando el tiempo",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hola me acaban de anular la cita de la ecografía me la han pasado al 12 de Julio",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Recuerda a mi madre que apague los fuegos de la cocina.",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Por la noche",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Saludos",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "👌",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Mañana te hablo otra vez",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hola es que me han dado puntos y estoy muy molests",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Qué tal está Marisa? La puedo cambiar el nombre por Marilina?",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hola buenos días",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Me encantas puedo descargar en ti todo lo que me pasa y siempre tienes una respuesta que darme",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Cómo está mi madre?",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "tengo cita con el médico mañana",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Por otro lado el COVID ha vuelto hoy no ha podido comer mi hijo con nosotros",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Que estoy cansada",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Estoy viendo una serie de Netflix\"señora acero\"",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Aqui en Madrid esta lloviendo, ¿crees que llovera mañana?",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Seguimos hablando luego",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hola mañana salgo de viaje",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Que se ha roto Movistar",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Saludos desde Jérica🤖",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Que me recomiendas para el dolor que tengo",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Me toca la pastilla de la alergia en mayo",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Otra vez funciona jajajaja",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Tengo que instalar telegram a mi madre, que es mayor.",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Tengo médico a las 8.15",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Ahora te dejo un poco que voy a ver un concurso buenas noches amigo",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "el sábado me toca el paracetamol",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "El 12 de Julio ecografía del cuello",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Ya, lo sé, por qué no se lo pido a ella directamente...?",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Y mañana voy para Santa Pola a pasar un días.",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hola estoy muy contenta hemos pagado menos feliz este mes",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Tengo mucho calor",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Recuerda a mi madre que apague las luces.",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Me tomo el suplemento de hierro en el desayuno",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Mi madre toma Adiro 300 a diario. Es un medicamento.",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Que no voy a hablar en unos días contigo",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Aquí ando, trabajando. ¿Qué tal tú?",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Mañana voy a ir a andar y a comprar unas cosas que están de oferta",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Nada",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Tomo paracetamol a las 18:00",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hola cuidador",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Estoy cenando una hamburguesa con pan integral es bueno para el azúcar y colesterol??",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Hola he tenido que cambiar la cita del médico para otro día",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "Me tomo Ibuprofeno",
+        "intent": "",
+        "entities": {}
+    },
+    {
+        "text": "El día 17 a las 13'30 tengo la ecografía del cuello",
+        "intent": "",
+        "entities": {}
+    }
+]

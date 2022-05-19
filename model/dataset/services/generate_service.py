@@ -1,20 +1,15 @@
-import time
+import os
+import boto3
 from dataset.domain.entry import Entry
 from dataset.domain.dataset_repository import DatasetRepository
-from dialogs.domain.dialog_repository import DialogRepository
 
 
 class GenerateService:
-    def __init__(self, repositoryDialog: DialogRepository, repositoryDataset: DatasetRepository):
-        self.repositoryDialog: DialogRepository = repositoryDialog
-        self.repositoryDataset: DatasetRepository = repositoryDataset
-        # with open("/data/dataset/trunk/data.json") as json_file:
-        #     data = json.load(json_file)
-        #     self.texts = [item["text"] for item in data]
+    def __init__(self):
+        self.dynamodb = boto3.resource("dynamodb")
 
     def execute(self):
-        dialogs = self.repositoryDialog.list()
-        dataEntries = self.repositoryDataset.list()
+        dialogs = self.listDialogs()
         indexedEntries = {}
         for item in dataEntries:
             indexedEntries[item["text"]] = Entry(
@@ -32,8 +27,6 @@ class GenerateService:
                     entry = self.repositoryDataset.create(entry)
                 else:
                     entry = indexedEntries[text]
-                #     print("Updating...")
-                #     self.repositoryDataset.update(entry)
                 entries.append(
                     {
                         "id": entry.id,
@@ -43,3 +36,13 @@ class GenerateService:
                     }
                 )
         return entries
+
+    def listDialogs(self):
+        table = self.dynamodb.Table(os.environ["DIALOGS_TABLE"])
+        response = table.scan()
+        return response["Items"]
+
+    def listDataset(self):
+        table = self.dynamodb.Table(os.environ["DATASET_TABLE"])
+        response = table.scan()
+        return response["Items"]
