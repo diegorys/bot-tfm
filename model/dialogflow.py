@@ -4,26 +4,30 @@ from dialogflow.generate_service import GenerateService
 
 BASE_PATH="/home/jovyan"
 
-if 3 == len(sys.argv):
-    DATASET_VERSION = sys.argv[1]
-    MODEL_VERSION = sys.argv[2]
-    print(f"Dataset version: {DATASET_VERSION}, Model version: {MODEL_VERSION}")
-else:
-    print("ERROR: Required DATASET_VERSION and MODEL_VERSION")
-    print(len(sys.argv))
-    exit(1)
-
-
-generateService = GenerateService(BASE_PATH)
-
-
-with open(f"{BASE_PATH}/data/dataset/{DATASET_VERSION}/data_train.json") as json_file:
-    data = json.load(json_file)
 print("-----------")
 print("DIALOGFLOW GENERATE")
+print("-----------")
+
+
+
+def getVersions():
+    if 3 != len(sys.argv):
+        raise Exception("ERROR: Required DATASET_VERSION and MODEL_VERSION")
+    dataVersion = sys.argv[1]
+    modelVersion = sys.argv[2]
+    return dataVersion, modelVersion
+
+def getData(dataVersion):
+    with open(f"{BASE_PATH}/data/dataset/{dataVersion}/data_train.json") as json_file:
+        data = json.load(json_file)
+    return data
 
 try:
-    generateService.execute(data, DATASET_VERSION, MODEL_VERSION)
+    dataVersion, modelVersion = getVersions()
+    data = getData(dataVersion)
+    print(f"Dataset version: {dataVersion}, Model version: {modelVersion}")
+    generateService = GenerateService(BASE_PATH)
+    generateService.execute(data, dataVersion, modelVersion)
 except Exception as err:
     print(err)
 
