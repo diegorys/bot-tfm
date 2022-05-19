@@ -1,9 +1,0 @@
-{
-    "id": "1500d42d-5faa-422e-9396-ab569b394e59",
-    "name": "fecha",
-    "isOverridable": true,
-    "isEnum": false,
-    "isRegexp": false,
-    "automatedExpansion": false,
-    "allowFuzzyExtraction": false
-}
