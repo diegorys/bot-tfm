@@ -17,7 +17,6 @@ class GenerateService:
         self.path = path
 
     def execute(self, data, datasetVersion: str, modelVersion: str):
-        print("Generate")
         path = f"{self.path}/data/dialogflow/{modelVersion}"
         if not os.path.exists(path):
             os.mkdir(path)
@@ -43,7 +42,6 @@ class GenerateService:
         for item in data:
             entities = item["entities"]
             for entityName in entities.keys():
-                print(f"{entityName}: {entities[entityName]}")
                 if entityName not in finalEntities.keys():
                     finalEntities[entityName] = []
                 if entities[entityName] not in finalEntities[entityName]:
