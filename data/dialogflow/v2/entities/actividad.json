@@ -1,0 +1,9 @@
+{
+    "id": "0a8ae403-77ef-4a9b-8a66-07e6bffdcdff",
+    "name": "actividad",
+    "isOverridable": true,
+    "isEnum": false,
+    "isRegexp": false,
+    "automatedExpansion": false,
+    "allowFuzzyExtraction": false
+}

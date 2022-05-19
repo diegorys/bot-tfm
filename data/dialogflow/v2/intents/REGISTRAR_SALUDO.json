@@ -1,0 +1,39 @@
+{
+    "id": "e50a19f4-c0ef-47bd-9719-4f3e00769c0b",
+    "name": "REGISTRAR_SALUDO",
+    "auto": true,
+    "contexts": [],
+    "responses": [
+        {
+            "resetContexts": false,
+            "action": "",
+            "affectedContexts": [],
+            "parameters": [],
+            "messages": [
+                {
+                    "type": "0",
+                    "title": "",
+                    "textToSpeech": "",
+                    "lang": "es",
+                    "speech": [
+                        "Hola, ¿qué tal estás?",
+                        "Hola, ¿quieres registrar algún medicamento?",
+                        "Hola, ¿quieres registrar alguna cita médica?",
+                        "Hola, ¿qué tal te encuentras?",
+                        "Hola, ¿qué tal te encuentras?"
+                    ],
+                    "condition": ""
+                }
+            ],
+            "speech": []
+        }
+    ],
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "events": [],
+    "conditionalResponses": [],
+    "condition": "",
+    "conditionalFollowupEvents": []
+}

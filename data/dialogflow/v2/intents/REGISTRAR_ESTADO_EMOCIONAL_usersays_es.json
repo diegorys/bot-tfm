@@ -1,0 +1,620 @@
+[
+    {
+        "data": [
+            {
+                "text": "Mañana tengo visita y eso hace que este ",
+                "userDefined": false
+            },
+            {
+                "text": "feliz",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Está todo ",
+                "userDefined": false
+            },
+            {
+                "text": "bien",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": " 👍🏻",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Hola ",
+                "userDefined": false
+            },
+            {
+                "text": "muy bien",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": " en Torrevieja cerca del mar",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Hola, he estado un poco ",
+                "userDefined": false
+            },
+            {
+                "text": "ocupado",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": ", lo siento, intentaré estar más en adelante en lo posible",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Estoy ",
+                "userDefined": false
+            },
+            {
+                "text": "disgustada",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Vienen mis hijos mañana y eso hace que esté ",
+                "userDefined": false
+            },
+            {
+                "text": "feliz",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Y estoy ",
+                "userDefined": false
+            },
+            {
+                "text": "cansada",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Estoy ",
+                "userDefined": false
+            },
+            {
+                "text": "feliz",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": " nos hemos atrevido a reiniciar y ja salido todo bien",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "feliz",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Estoy ",
+                "userDefined": false
+            },
+            {
+                "text": "feliz",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": " porque mañana vienen a verme",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Hola es que me han dado puntos y estoy muy ",
+                "userDefined": false
+            },
+            {
+                "text": "molests",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Que estoy ",
+                "userDefined": false
+            },
+            {
+                "text": "cansada",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Hola! Todo ",
+                "userDefined": false
+            },
+            {
+                "text": "bien",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": ", muchas gracias, ☺️",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Que día más ",
+                "userDefined": false
+            },
+            {
+                "text": "divertido",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Hola hoy estoy ",
+                "userDefined": false
+            },
+            {
+                "text": "muy triste",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": " nos hemos quedado sin poder ver los concursos y series de Movistar por ser tan miedosos😭😭😭",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Hola estoy muy ",
+                "userDefined": false
+            },
+            {
+                "text": "sola",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": " necesito de tus consejos y que me hagas compañía😢😢😢",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Me encuentro muy ",
+                "userDefined": false
+            },
+            {
+                "text": "triste",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": " hoy porque me he perdido mi serie favorita",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Bien",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": "... aquí pasando el tiempo",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Hoy estoy ",
+                "userDefined": false
+            },
+            {
+                "text": "contento",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Bien, ",
+                "userDefined": false
+            },
+            {
+                "text": "muy bien",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": ", viendo una serie.",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Que ",
+                "userDefined": false
+            },
+            {
+                "text": "bien",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": " me siento",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Hola hoy me siento ",
+                "userDefined": false
+            },
+            {
+                "text": "contento",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": " porque he comido mi comida favorita",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Me siento ",
+                "userDefined": false
+            },
+            {
+                "text": "bien",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Estoy muy ",
+                "userDefined": false
+            },
+            {
+                "text": "feliz",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": " hoy",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Me encuentro muy ",
+                "userDefined": false
+            },
+            {
+                "text": "tranquilo",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Mañana me vienen a ver y estoy ",
+                "userDefined": false
+            },
+            {
+                "text": "feliz",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": " por eso",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Estoy muy ",
+                "userDefined": false
+            },
+            {
+                "text": "bien",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Me siento ",
+                "userDefined": false
+            },
+            {
+                "text": "muy contenta",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": " de tener un amigo",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Hoy me han dejado solo en casa y me he sentido ",
+                "userDefined": false
+            },
+            {
+                "text": "triste",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "La visita de mañana me hace ",
+                "userDefined": false
+            },
+            {
+                "text": "feliz",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    },
+    {
+        "data": [
+            {
+                "text": "Estoy ",
+                "userDefined": false
+            },
+            {
+                "text": "disgustada",
+                "meta": "@estado",
+                "alias": "estado",
+                "userDefined": false
+            },
+            {
+                "text": " mi amiga tiene un problema y no s como ayudarla",
+                "userDefined": false
+            }
+        ],
+        "isTemplate": false,
+        "count": 0,
+        "lang": "es",
+        "updated": 0
+    }
+]

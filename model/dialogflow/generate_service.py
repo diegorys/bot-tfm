@@ -16,8 +16,8 @@ class GenerateService:
         self.intentTemplate = IntentTemplate()
         self.path = path
 
-    def execute(self, data, datasetVersion: str, modelVersion: str):
-        path = f"{self.path}/data/dialogflow/{modelVersion}"
+    def execute(self, data, datasetVersion: str):
+        path = f"{self.path}/data/dialogflow/{datasetVersion}"
         if not os.path.exists(path):
             os.mkdir(path)
         else:
@@ -30,7 +30,7 @@ class GenerateService:
         self.generatePackage(path)
         with open(f"{path}/model_info.json", "w", encoding="utf-8") as f:
             json.dump(
-                {"datasetVersion": datasetVersion, "modelVersion": modelVersion},
+                {"datasetVersion": datasetVersion},
                 f,
                 ensure_ascii=False,
                 indent=4,

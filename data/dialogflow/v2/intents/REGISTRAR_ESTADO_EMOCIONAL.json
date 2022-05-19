@@ -1,0 +1,59 @@
+{
+    "id": "4211d4c7-b412-41bf-a746-a044e84cac9a",
+    "name": "REGISTRAR_ESTADO_EMOCIONAL",
+    "auto": true,
+    "contexts": [],
+    "responses": [
+        {
+            "resetContexts": false,
+            "action": "",
+            "affectedContexts": [],
+            "parameters": [
+                {
+                    "id": "37ffd186-5803-44b9-ad7c-994e13f362bf",
+                    "name": "estado",
+                    "auto": true,
+                    "required": true,
+                    "dataType": "@estado",
+                    "value": "$estado",
+                    "defaultValue": "",
+                    "isList": true,
+                    "prompts": [
+                        {
+                            "lang": "es",
+                            "value": "Indica estado"
+                        }
+                    ],
+                    "promptMessages": [],
+                    "noMatchPromptMessages": [],
+                    "noInputPromptMessages": [],
+                    "outputDialogContexts": []
+                }
+            ],
+            "messages": [
+                {
+                    "type": "0",
+                    "title": "",
+                    "textToSpeech": "",
+                    "lang": "es",
+                    "speech": [
+                        "Registro tu estado de ánimo: $estado",
+                        "Estado de ánimo anotado: $estado",
+                        "Entiendo tu estado de $estado",
+                        "Entiendo tu estado de $estado"
+                    ],
+                    "condition": ""
+                }
+            ],
+            "speech": []
+        }
+    ],
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "events": [],
+    "conditionalResponses": [],
+    "condition": "",
+    "conditionalFollowupEvents": []
+}

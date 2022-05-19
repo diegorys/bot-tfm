@@ -11,23 +11,24 @@ print("-----------")
 
 
 def getVersions():
-    if 3 != len(sys.argv):
+    if 2 != len(sys.argv):
         raise Exception("ERROR: Required DATASET_VERSION and MODEL_VERSION")
-    dataVersion = sys.argv[1]
-    modelVersion = sys.argv[2]
-    return dataVersion, modelVersion
+    datasetVersion = sys.argv[1]
+    return datasetVersion
 
-def getData(dataVersion):
-    with open(f"{BASE_PATH}/data/dataset/{dataVersion}/data_train.json") as json_file:
+def getData(datasetVersion):
+    with open(f"{BASE_PATH}/data/dataset/{datasetVersion}/data_train.json") as json_file:
         data = json.load(json_file)
     return data
 
 try:
-    dataVersion, modelVersion = getVersions()
-    data = getData(dataVersion)
-    print(f"Dataset version: {dataVersion}, Model version: {modelVersion}")
+    datasetVersion = getVersions()
+    data = getData(datasetVersion)
+    languageModel = "dialogflow"
+    print(f"Dataset version: {datasetVersion}")
+    print(f"Language model: {languageModel}")
     generateService = GenerateService(BASE_PATH)
-    generateService.execute(data, dataVersion, modelVersion)
+    generateService.execute(data, datasetVersion)
 except Exception as err:
     print(err)
 

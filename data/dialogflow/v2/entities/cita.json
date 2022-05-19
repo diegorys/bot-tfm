@@ -1,0 +1,9 @@
+{
+    "id": "a793bf75-9277-4d63-b922-5c5798f79673",
+    "name": "cita",
+    "isOverridable": true,
+    "isEnum": false,
+    "isRegexp": false,
+    "automatedExpansion": false,
+    "allowFuzzyExtraction": false
+}

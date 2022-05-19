@@ -1,0 +1,80 @@
+{
+    "id": "176131fd-1997-4735-b2f4-10edbdfb4a99",
+    "name": "REGISTRAR_TOMA_MEDICAMENTO",
+    "auto": true,
+    "contexts": [],
+    "responses": [
+        {
+            "resetContexts": false,
+            "action": "",
+            "affectedContexts": [],
+            "parameters": [
+                {
+                    "id": "37ffd186-5803-44b9-ad7c-994e13f362bf",
+                    "name": "medicamento",
+                    "auto": true,
+                    "required": true,
+                    "dataType": "@medicamento",
+                    "value": "$medicamento",
+                    "defaultValue": "",
+                    "isList": true,
+                    "prompts": [
+                        {
+                            "lang": "es",
+                            "value": "Indica medicamento"
+                        }
+                    ],
+                    "promptMessages": [],
+                    "noMatchPromptMessages": [],
+                    "noInputPromptMessages": [],
+                    "outputDialogContexts": []
+                },
+                {
+                    "id": "37ffd186-5803-44b9-ad7c-994e13f362bf",
+                    "name": "date-time",
+                    "auto": true,
+                    "required": true,
+                    "dataType": "@sys.date-time",
+                    "value": "$date-time",
+                    "defaultValue": "",
+                    "isList": true,
+                    "prompts": [
+                        {
+                            "lang": "es",
+                            "value": "Indica date-time"
+                        }
+                    ],
+                    "promptMessages": [],
+                    "noMatchPromptMessages": [],
+                    "noInputPromptMessages": [],
+                    "outputDialogContexts": []
+                }
+            ],
+            "messages": [
+                {
+                    "type": "0",
+                    "title": "",
+                    "textToSpeech": "",
+                    "lang": "es",
+                    "speech": [
+                        "Tienes que tomar $medicamento $date-time",
+                        "Anoto medicamento $medicamento $date-time",
+                        "Te recordaré que tomes $medicamento $date-time",
+                        "$date-time tomar $medicamento. Anotado queda.",
+                        "$date-time tomar $medicamento. Anotado queda."
+                    ],
+                    "condition": ""
+                }
+            ],
+            "speech": []
+        }
+    ],
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "events": [],
+    "conditionalResponses": [],
+    "condition": "",
+    "conditionalFollowupEvents": []
+}

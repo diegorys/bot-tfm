@@ -1,0 +1,105 @@
+[
+    {
+        "value": "dentista",
+        "synonyms": [
+            "dentista",
+            "odontólogo",
+            "odontóloga",
+            "odontología",
+            "revisión dental"
+        ]
+    },
+    {
+        "value": "dermatólogo",
+        "synonyms": [
+            "dermatólogo, dermatóloga",
+            "dermatología"
+        ]
+    },
+    {
+        "value": "alergólogo",
+        "synonyms": [
+            "alergólogo",
+            "alergóloga",
+            "el de la alergia",
+            "la de la alergia",
+            "alergología"
+        ]
+    },
+    {
+        "value": "cardiólogo",
+        "synonyms": [
+            "cardiólogo",
+            "cardióloga",
+            "cardiología"
+        ]
+    },
+    {
+        "value": "médico de cabecera",
+        "synonyms": [
+            "médico de cabecera",
+            "médico"
+        ]
+    },
+    {
+        "value": "enfermero",
+        "synonyms": [
+            "enfermero",
+            "enfermera"
+        ]
+    },
+    {
+        "value": "oculista",
+        "synonyms": []
+    },
+    {
+        "value": "otorrino",
+        "synonyms": [
+            "otorrino",
+            "otorrina"
+        ]
+    },
+    {
+        "value": "endocrino",
+        "synonyms": [
+            "endocrino",
+            "endocrina"
+        ]
+    },
+    {
+        "value": "fisioterapeuta",
+        "synonyms": [
+            "fisio",
+            "fisioterapia",
+            "fisioterapeuta"
+        ]
+    },
+    {
+        "value": "ecografía del brazo",
+        "synonyms": []
+    },
+    {
+        "value": "ecografía del cuello",
+        "synonyms": []
+    },
+    {
+        "value": "odontólogo",
+        "synonyms": []
+    },
+    {
+        "value": "nutricionista",
+        "synonyms": []
+    },
+    {
+        "value": "médico",
+        "synonyms": []
+    },
+    {
+        "value": "dermatólogo",
+        "synonyms": []
+    },
+    {
+        "value": "los puntos",
+        "synonyms": []
+    }
+]

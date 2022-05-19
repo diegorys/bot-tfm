@@ -1,0 +1,9 @@
+{
+    "id": "de5ad796-f1c3-4941-b327-ac4791ac6f25",
+    "name": "lugar",
+    "isOverridable": true,
+    "isEnum": false,
+    "isRegexp": false,
+    "automatedExpansion": false,
+    "allowFuzzyExtraction": false
+}

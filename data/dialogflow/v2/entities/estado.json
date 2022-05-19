@@ -1,0 +1,9 @@
+{
+    "id": "04a81430-d282-4d44-9f1d-e63b36d757ab",
+    "name": "estado",
+    "isOverridable": true,
+    "isEnum": false,
+    "isRegexp": false,
+    "automatedExpansion": false,
+    "allowFuzzyExtraction": false
+}
