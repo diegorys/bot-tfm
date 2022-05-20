@@ -61,9 +61,12 @@ def merge(dialogs, indexedData, data):
                 "intent": "",
                 "entities": {},
             }
-            data.append(item)
             indexedData[item["text"]] = item
-    return data
+    finalData = []
+    for key in indexedData.keys():
+        item = indexedData[key]
+        finalData.append(item)
+    return finalData
 
 
 def saveVersionFrom(versionFrom, versionTo, mergedData):
@@ -87,10 +90,6 @@ def main() -> None:
         print(f"Dataset table: {table}")
         print(f"Version from: {versionFrom}")
         print(f"Version to: {versionTo}")
-        # repositoryDialog = DynamoDBDialogRepository()
-        # repositoryDataset = DynamoDBDatasetRepository()
-        # generateService = GenerateService(repositoryDialog, repositoryDataset)
-        # output = generateService.execute()
         data = getDatasetFrom(versionFrom)
         print(f"Dataset {versionFrom}: {len(data)} entries")
         indexedData = getIndexedData(data)
