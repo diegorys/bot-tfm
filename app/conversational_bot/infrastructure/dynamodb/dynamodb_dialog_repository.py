@@ -1,9 +1,8 @@
 import os
-import uuid
 import time
 import boto3
 from boto3.dynamodb.conditions import Attr
-from dialogs.domain.dialog_repository import DialogRepository
+from conversational_bot.domain.dialog_repository import DialogRepository
 
 TABLE_NAME = os.environ["DIALOGS_TABLE"]
 

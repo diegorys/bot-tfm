@@ -7,25 +7,24 @@ import time
 import os
 import json
 import telegram
-from dialogs.domain.dialog import Dialog
+from conversational_bot.domain.dialog import Dialog
 from sso.domain.user import User
 
 # from infrastructure.gpt3.gpt3_nlu import GPT3NLU
-from infrastructure.dynamodb.dynamodb_dialog_repository import DynamoDBDialogRepository
-from infrastructure.configuration import Config
+from conversational_bot.infrastructure.dynamodb.dynamodb_dialog_repository import DynamoDBDialogRepository
 from conversational_bot.domain.response import Response
 from conversational_bot.domain.dialog_manager import DialogManager
 from conversational_bot.domain.nlu import NLU
 from conversational_bot.domain.response_generator import ResponseGenerator
-from commands.command_manager_factory import CommandManagerFactory
-from dialogflow.dialogflow_language_model import DialogflowLanguageModel
+from conversational_bot.infrastructure.commands.command_manager_factory import CommandManagerFactory
+from conversational_bot.infrastructure.language_models.dialogflow.dialogflow_language_model import DialogflowLanguageModel
 
 # from conversational_bot.infrastructure.dummy.dummy_language_model import DummyLanguageModel
-from conversational_bot.reactive_bot import ReactiveBOT
+from conversational_bot.domain.reactive_bot import ReactiveBOT
 
-config = Config()
 repository = DynamoDBDialogRepository()
-available = config.SERVICE_AVAILABLE
+SERVICE_STATUS = os.environ.get("SERVICE_STATUS") or 0
+available = int(SERVICE_STATUS) == 1
 
 # languageModel = DummyLanguageModel()
 languageModel = DialogflowLanguageModel()
@@ -59,10 +58,10 @@ def handle(event, context):
 
 def execute(event):
     print(f"HANDLE TELEGRAM. SERVICE STATUS: {available}")
-    if not config.TELEGRAM_TOKEN:
+    if not os.environ.get("TELEGRAM_TOKEN"):
         raise NotImplementedError
 
-    bot = telegram.Bot(config.TELEGRAM_TOKEN)
+    bot = telegram.Bot(os.environ.get("TELEGRAM_TOKEN"))
     method = event.get("requestContext")["http"]["method"]
     if method == "POST" and event.get("body"):
         update = telegram.Update.de_json(json.loads(event.get("body")), bot)
