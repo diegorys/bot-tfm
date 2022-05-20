@@ -1,8 +1,8 @@
 from conversational_bot.reactive_bot import ReactiveBOT
 from conversational_bot.domain.nlu import NLU
-from conversational_bot.domain.command_manager import CommandManager
 from conversational_bot.domain.dialog_manager import DialogManager
 from conversational_bot.domain.response_generator import ResponseGenerator
+from commands.command_manager_factory import CommandManagerFactory
 from dialogflow.dialogflow_language_model import DialogflowLanguageModel
 
 # from conversational_bot.infrastructure.dummy.dummy_language_model import DummyLanguageModel
@@ -16,7 +16,7 @@ def startConversationalBOT():
     nlu = NLU(languageModel)
     responseGenerator = ResponseGenerator(languageModel)
     dialogManager = DialogManager(languageModel)
-    commandManager = CommandManager()
+    commandManager = CommandManagerFactory.create()
     bot = ReactiveBOT(
         nlu, dialogManager, responseGenerator, commandManager
     )
