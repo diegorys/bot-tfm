@@ -1,4 +1,3 @@
-from click import command
 from conversational_bot.domain.command_manager import CommandManager
 from conversational_bot.domain.dialog_manager import DialogManager
 from conversational_bot.domain.frame import Frame
