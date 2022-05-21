@@ -2,6 +2,7 @@ import os
 import time
 import boto3
 from boto3.dynamodb.conditions import Attr
+from conversational_bot.domain.user_expression import UserExpression
 from conversational_bot.domain.user_expression_repository import UserExpressionRepository
 
 TABLE_NAME = os.environ["DIALOGS_TABLE"]
@@ -11,8 +12,8 @@ class DynamoDBUserExpressionRepository(UserExpressionRepository):
     def __init__(self):
         self.dynamodb = boto3.resource("dynamodb")
 
-    def save(self, dialog):
-        exists = self._exists(dialog)
+    def save(self, userExpression: UserExpression):
+        exists = self._exists(userExpression)
         if exists:
             raise Exception(f"Error at insert duplicated message")
         table = self.dynamodb.Table(TABLE_NAME)
@@ -20,14 +21,16 @@ class DynamoDBUserExpressionRepository(UserExpressionRepository):
         print("PUT ITEM")
         response = table.put_item(
             Item={
-                "id": str(dialog.id),
-                "date": str(dialog.date),
-                "user": {"id": dialog.userid, "name": dialog.username},
-                "text": dialog.text,
-                "domain": dialog.domain,
-                "intent": dialog.intent,
-                "entities": dialog.entities,
-                "response": dialog.response,
+                "id": str(userExpression.id),
+                "date": str(userExpression.date),
+                "user": {
+                    "name": userExpression.user.username,
+                    "metadata": userExpression.user.metadata,
+                },
+                "text": userExpression.text,
+                "intent": userExpression.intent,
+                "entities": userExpression.entities,
+                "response": userExpression.response,
                 "createdAt": timestamp,
                 "updatedAt": timestamp,
             }

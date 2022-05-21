@@ -1,8 +1,10 @@
+from sso.domain.user import User
+
+
 class UserExpression:
-    def __init__(self, id, userid, username, text, intent, entities, response, date=None):
+    def __init__(self, id, user: User, text, intent, entities, response, date=None):
         self.id = id
-        self.userid = userid
-        self.username = username
+        self.user = User
         self.text = text
         self.intent = intent
         self.entities = entities.replace("'", "@")

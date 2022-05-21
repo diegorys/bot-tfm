@@ -134,8 +134,7 @@ def log(text: str, user: User, id, date, response):
     if repository:
         userExpression = UserExpression(
             now,
-            user.metadata["telegram_id"],
-            user.username,
+            user,
             text,
             response.intent,
             response.command,
@@ -146,8 +145,7 @@ def log(text: str, user: User, id, date, response):
     else:
         print(
             id,
-            user.metadata["telegram_id"],
-            user.username,
+            user,
             text,
             response.intent,
             response.command,
