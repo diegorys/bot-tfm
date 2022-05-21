@@ -7,11 +7,11 @@ import time
 import os
 import json
 import telegram
-from conversational_bot.domain.dialog import Dialog
+from conversational_bot.domain.user_expression import UserExpression
 from sso.domain.user import User
 
 # from infrastructure.gpt3.gpt3_nlu import GPT3NLU
-from conversational_bot.infrastructure.dynamodb.dynamodb_dialog_repository import DynamoDBDialogRepository
+from app.conversational_bot.infrastructure.dynamodb.dynamodb_user_expression_repository import DynamoDBUserExpressionRepository
 from conversational_bot.domain.response import Response
 from conversational_bot.domain.dialog_manager import DialogManager
 from conversational_bot.domain.nlu import NLU
@@ -22,7 +22,7 @@ from conversational_bot.infrastructure.language_models.dialogflow.dialogflow_lan
 # from conversational_bot.infrastructure.dummy.dummy_language_model import DummyLanguageModel
 from conversational_bot.domain.reactive_bot import ReactiveBOT
 
-repository = DynamoDBDialogRepository()
+repository = DynamoDBUserExpressionRepository()
 SERVICE_STATUS = os.environ.get("SERVICE_STATUS") or 0
 available = int(SERVICE_STATUS) == 1
 
@@ -132,25 +132,23 @@ def handleStart(user):
 def log(text: str, user: User, id, date, response):
     now = str(time.time())
     if repository:
-        dialog = Dialog(
+        userExpression = UserExpression(
             now,
             user.metadata["telegram_id"],
             user.username,
             text,
-            response.domain,
             response.intent,
             response.command,
             response.text,
             date,
         )
-        repository.save(dialog)
+        repository.save(userExpression)
     else:
         print(
             id,
             user.metadata["telegram_id"],
             user.username,
             text,
-            response.domain,
             response.intent,
             response.command,
             response.text,

@@ -2,19 +2,17 @@ import os
 import time
 import boto3
 from boto3.dynamodb.conditions import Attr
-from conversational_bot.domain.dialog_repository import DialogRepository
+from conversational_bot.domain.user_expression_repository import UserExpressionRepository
 
 TABLE_NAME = os.environ["DIALOGS_TABLE"]
 
-print(f"DIALOGS TABLE NAME!!!: {TABLE_NAME}")
 
-
-class DynamoDBDialogRepository(DialogRepository):
+class DynamoDBUserExpressionRepository(UserExpressionRepository):
     def __init__(self):
         self.dynamodb = boto3.resource("dynamodb")
 
     def save(self, dialog):
-        exists = self.exists(dialog)
+        exists = self._exists(dialog)
         if exists:
             raise Exception(f"Error at insert duplicated message")
         table = self.dynamodb.Table(TABLE_NAME)
@@ -44,16 +42,7 @@ class DynamoDBDialogRepository(DialogRepository):
         print(len(response["Items"]), TABLE_NAME)
         return response["Items"]
 
-    def listDomain(self, domain):
-        pass
-
-    def listIntent(self, intent):
-        pass
-
-    def truncate(self):
-        pass
-
-    def exists(self, dialog):
+    def _exists(self, dialog):
         print(f"BUSCO {dialog.date} - {dialog.text}")
         table = self.dynamodb.Table(TABLE_NAME)
         response = table.scan(
@@ -62,10 +51,3 @@ class DynamoDBDialogRepository(DialogRepository):
 
         print(len(response["Items"]))
         return len(response["Items"]) > 0
-
-    def list(self):
-        table = self.dynamodb.Table(TABLE_NAME)
-        response = table.scan()
-
-        print(response["Items"])
-        return response["Items"]
