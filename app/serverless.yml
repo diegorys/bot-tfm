@@ -1,0 +1,260 @@
+service: tfm
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: python3.8
+  environment:
+    DIALOGS_TABLE: "${self:service}-${opt:stage, self:provider.stage}-dialogs"
+    USERS_TABLE: "${self:service}-${opt:stage, self:provider.stage}-users"
+    STATUS_TABLE: "${self:service}-${opt:stage, self:provider.stage}-status"
+    MEDICINES_TABLE: "${self:service}-${opt:stage, self:provider.stage}-medicines"
+    DATES_TABLE: "${self:service}-${opt:stage, self:provider.stage}-dates"
+    ANECDOTES_TABLE: "${self:service}-${opt:stage, self:provider.stage}-anecdotes"
+    DATASET_TABLE: "${self:service}-${opt:stage, self:provider.stage}-dataset"
+    GPT3_ENGINE: "text-davinci-002"
+    OPENAI_API_KEY: ${self:custom.env.OPENAI_API_KEY.${opt:stage, self:provider.stage}}
+    TELEGRAM_TOKEN: ${self:custom.env.TELEGRAM_TOKEN.${opt:stage, self:provider.stage}}
+    GOOGLE_APPLICATION_CREDENTIALS: "/credentials/google/key.json"
+
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+            - dynamodb:DescribeStream
+            - dynamodb:GetRecords
+            - dynamodb:GetShardIterator
+            - dynamodb:ListStreams
+          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.DIALOGS_TABLE}"
+        - Effect: Allow
+          Action:
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+            - dynamodb:DescribeStream
+            - dynamodb:GetRecords
+            - dynamodb:GetShardIterator
+            - dynamodb:ListStreams
+          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.USERS_TABLE}"
+        - Effect: Allow
+          Action:
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+            - dynamodb:DescribeStream
+            - dynamodb:GetRecords
+            - dynamodb:GetShardIterator
+            - dynamodb:ListStreams
+          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.STATUS_TABLE}"
+        - Effect: Allow
+          Action:
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+            - dynamodb:DescribeStream
+            - dynamodb:GetRecords
+            - dynamodb:GetShardIterator
+            - dynamodb:ListStreams
+          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.MEDICINES_TABLE}"
+        - Effect: Allow
+          Action:
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+            - dynamodb:DescribeStream
+            - dynamodb:GetRecords
+            - dynamodb:GetShardIterator
+            - dynamodb:ListStreams
+          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.DATES_TABLE}"
+        - Effect: Allow
+          Action:
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+            - dynamodb:DescribeStream
+            - dynamodb:GetRecords
+            - dynamodb:GetShardIterator
+            - dynamodb:ListStreams
+          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.ANECDOTES_TABLE}"
+        - Effect: Allow
+          Action:
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+            - dynamodb:DescribeStream
+            - dynamodb:GetRecords
+            - dynamodb:GetShardIterator
+            - dynamodb:ListStreams
+          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.DATASET_TABLE}"
+plugins:
+  - serverless-python-requirements
+package:
+  individually: true
+  patterns:
+    - "!**/*"
+    - "!*.py"
+    - "conversational_bot/**/*.py"
+    - "dataset/**/*.py"
+    - "dialogflow/**/*.py"
+    - "dialogflow/**/*.json"
+    - "dialogs/**/*.py"
+    - "infrastructure/**/*.py"
+    - "notifications/**/*.py"
+    - "sso/**/*.py"
+    - boto3
+    - google-cloud-dialogflow
+    # - openai
+    - python-telegram-bot
+
+functions:
+  telegram:
+    handler: conversational_bot/infrastructure/telegram/telegram_webhook.handle
+    events:
+      - httpApi:
+          path: /telegram
+          method: post
+  dataset-generate:
+    handler: language_model/generate.handle
+  dataset-update:
+    handler: language_model/update.handle
+  cron:
+    handler: cron/cron.handle
+    events:
+      - schedule: rate(1 minute)
+  notify:
+    handler: notifications/infrastructure/aws_telegram_notifications.handle
+custom:
+  pythonRequirements:
+    zip: true
+    slim: true
+  env:
+    OPENAI_API_KEY: 
+      test: "***REMOVED***" # Diego de pago
+      prod: "***REMOVED***"
+    TELEGRAM_TOKEN:
+      test: "***REMOVED***"
+      prod: "***REMOVED***"
+    TFM_MODE:
+      test: 1
+      prod: 1
+    SERVICE_STATUS:
+      test: 1
+      prod: 1
+resources:
+  Resources:
+    DialogsTable:
+      Type: "AWS::DynamoDB::Table"
+      Properties:
+        TableName: ${self:provider.environment.DIALOGS_TABLE}
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+    UsersTable:
+      Type: "AWS::DynamoDB::Table"
+      Properties:
+        TableName: ${self:provider.environment.USERS_TABLE}
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+    StatusTable:
+      Type: "AWS::DynamoDB::Table"
+      Properties:
+        TableName: ${self:provider.environment.STATUS_TABLE}
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+    MedicinesTable:
+      Type: "AWS::DynamoDB::Table"
+      Properties:
+        TableName: ${self:provider.environment.MEDICINES_TABLE}
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+    DatesTable:
+      Type: "AWS::DynamoDB::Table"
+      Properties:
+        TableName: ${self:provider.environment.DATES_TABLE}
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+    AnecdotesTable:
+      Type: "AWS::DynamoDB::Table"
+      Properties:
+        TableName: ${self:provider.environment.ANECDOTES_TABLE}
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+    DatasetTable:
+      Type: "AWS::DynamoDB::Table"
+      Properties:
+        TableName: ${self:provider.environment.DATASET_TABLE}
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
