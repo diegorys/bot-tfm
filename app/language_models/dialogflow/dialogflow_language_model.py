@@ -29,7 +29,10 @@ class DialogflowLanguageModel(LanguageModel):
         parameters = response.query_result.parameters.items()
         entities = {}
         for key, value in parameters:
-            entities[key] = value
+            if len(value) > 0:
+                entities[key] = value[0]
+        print("ENTITIES")
+        print(entities)
         self.lastResponse = response.query_result.fulfillment_messages[0].text.text[0]
         self.lastResponse = self.lastResponse.replace("date-time", "cuándo")
         return intent, entities

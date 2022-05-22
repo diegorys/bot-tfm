@@ -36,7 +36,7 @@ nlu = NLU(languageModel)
 responseGenerator = ResponseGenerator(languageModel)
 dialogManager = DialogManager(languageModel)
 commandManager = CommandManagerFactory.create()
-reactiveBOT = ReactiveBOT(nlu, dialogManager, responseGenerator, commandManager)
+reactiveBOT = ReactiveBOT(nlu, dialogManager, responseGenerator, commandManager, repository)
 
 if "TELEGRAM_UPDATE_ID" not in os.environ.keys():
     os.environ["TELEGRAM_UPDATE_ID"] = ""
@@ -98,10 +98,8 @@ def botExecute(text: str, user: User, date):
     if text == "/start":
         print("/START")
         response = handleStart(user)
-        log(text, user, date, response)
     else:
         response = reactiveBOT.execute(user, text, date)
-        log(text, user, date, response)
     return response
 
 
@@ -128,28 +126,3 @@ def handleStart(user):
     )
     response.intent = "/start"
     return response
-
-
-def log(text: str, user: User, date, response: Response):
-    now = str(time.time())
-    if repository:
-        userExpression = UserExpression(
-            now,
-            user,
-            text,
-            response.intent,
-            response.entities,
-            response.text,
-            date,
-        )
-        repository.save(userExpression)
-    else:
-        print(
-            now,
-            user,
-            text,
-            response.intent,
-            response.entities,
-            response.text,
-            date,
-        )
