@@ -118,14 +118,15 @@ package:
   patterns:
     - "!**/*"
     - "!*.py"
+    - "applications/**/*.py"
     - "conversational_bot/**/*.py"
-    - "dataset/**/*.py"
-    - "dialogflow/**/*.py"
-    - "dialogflow/**/*.json"
-    - "dialogs/**/*.py"
-    - "infrastructure/**/*.py"
+    - "factories/**/*.py"
+    - "interfaces/**/*.py"
+    - "language_models/**/*.py"
+    - "language_models/**/*.json"
     - "notifications/**/*.py"
     - "sso/**/*.py"
+    - "storage/**/*.py"
     - boto3
     - google-cloud-dialogflow
     # - openai
@@ -133,19 +134,15 @@ package:
 
 functions:
   telegram:
-    handler: conversational_bot/infrastructure/telegram/telegram_webhook.handle
+    handler: interfaces/telegram_webhook.handle
     events:
       - httpApi:
           path: /telegram
           method: post
-  dataset-generate:
-    handler: language_model/generate.handle
-  dataset-update:
-    handler: language_model/update.handle
-  cron:
-    handler: cron/cron.handle
-    events:
-      - schedule: rate(1 minute)
+  # cron:
+  #   handler: cron/cron.handle
+  #   events:
+  #     - schedule: rate(1 minute)
   notify:
     handler: notifications/infrastructure/aws_telegram_notifications.handle
 custom:

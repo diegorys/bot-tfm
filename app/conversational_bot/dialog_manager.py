@@ -7,7 +7,7 @@ class DialogManager:
     def __init__(self, languageModel: LanguageModel):
         self.languageModel: LanguageModel = languageModel
 
-    def execute(self, frame: Frame) -> Frame:
+    def execute(self, frame: Frame) -> Frame:        
         text: str = self.languageModel.generateRequireParametersText(frame)
         response: Response = Response(frame.user, text)
         response.intent = frame.intent

@@ -28,7 +28,6 @@ from conversational_bot.reactive_bot import ReactiveBOT
 
 repository = DynamoDBUserExpressionRepository()
 SERVICE_STATUS = os.environ.get("SERVICE_STATUS") or 0
-available = int(SERVICE_STATUS) == 1
 
 # languageModel = DummyLanguageModel()
 languageModel = DialogflowLanguageModel()
@@ -61,7 +60,7 @@ def handle(event, context):
 
 
 def execute(event):
-    print(f"HANDLE TELEGRAM. SERVICE STATUS: {available}")
+    print(f"HANDLE TELEGRAM")
     if not os.environ.get("TELEGRAM_TOKEN"):
         raise NotImplementedError
 
@@ -88,16 +87,14 @@ def execute(event):
             update.effective_chat.first_name,
             {"telegram_id": update.effective_chat.id, "name": update.effective_chat.first_name},
         )
-        id = update.update_id
         date = str(update.message.date)
-        response = botExecute(text, user, available, id, date)
+        response = botExecute(text, user, date)
         bot.sendMessage(chat_id=chat_id, text=response.text)
         print("Message sent")
 
 
-def botExecute(text: str, user: User, available, id, date):
+def botExecute(text: str, user: User, date):
     print(f"Text: {text}")
-    print(f"Service available? {available}")
     if text == "/start":
         print("/START")
         response = handleStart(user)
@@ -133,7 +130,7 @@ def handleStart(user):
     return response
 
 
-def log(text: str, user: User, date, response):
+def log(text: str, user: User, date, response: Response):
     now = str(time.time())
     if repository:
         userExpression = UserExpression(
@@ -141,7 +138,7 @@ def log(text: str, user: User, date, response):
             user,
             text,
             response.intent,
-            response.command,
+            response.entities,
             response.text,
             date,
         )
@@ -152,7 +149,7 @@ def log(text: str, user: User, date, response):
             user,
             text,
             response.intent,
-            response.command,
+            response.entities,
             response.text,
             date,
         )
