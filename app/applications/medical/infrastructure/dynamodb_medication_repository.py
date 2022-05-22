@@ -2,8 +2,8 @@ import os
 import uuid
 import time
 import boto3
-from medical.domain.medication import Medication
-from medical.domain.medication_repository import MedicationRepository
+from applications.medical.domain.medication import Medication
+from applications.medical.domain.medication_repository import MedicationRepository
 
 TABLE_NAME = os.environ["MEDICATIONS_TABLE"]
 

@@ -1,5 +1,5 @@
 from conversational_bot.command import Command
-from medical.use_cases.register_medication_use_case import RegisterMedicationUseCase
+from applications.medical.use_cases.register_medication_use_case import RegisterMedicationUseCase
 
 
 class AddMedicationCommand(Command):
