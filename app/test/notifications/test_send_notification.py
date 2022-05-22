@@ -1,8 +1,8 @@
-from conversational_bot.infrastructure.dummy.dummy_language_model import DummyLanguageModel
 from notifications.use_cases.send_notification_use_case import SendNotificationUseCase
-from conversational_bot.infrastructure.dummy.dummy_client import DummyClient
 from conversational_bot.response_generator import ResponseGenerator
 from sso.infrastructure.dummy_user_repository import DummyUsersRepository
+from test.mock.dummy_client import DummyClient
+from test.mock.dummy_language_model import DummyLanguageModel
 
 
 def test_send_notification():

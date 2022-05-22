@@ -2,10 +2,10 @@ from conversational_bot.command_manager import CommandManager
 from conversational_bot.dialog_manager import DialogManager
 from conversational_bot.nlu import NLU
 from conversational_bot.reactive_bot import ReactiveBOT
-from conversational_bot.infrastructure.dummy.dummy_language_model import DummyLanguageModel
-from conversational_bot.infrastructure.dummy.dummy_client import DummyClient
 from conversational_bot.response_generator import ResponseGenerator
 from sso.domain.user import User
+from test.mock.dummy_language_model import DummyLanguageModel
+from test.mock.dummy_client import DummyClient
 
 
 def test_execute():

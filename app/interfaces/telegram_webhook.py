@@ -23,7 +23,7 @@ from language_models.dialogflow.dialogflow_language_model import (
     DialogflowLanguageModel,
 )
 
-# from conversational_bot.infrastructure.dummy.dummy_language_model import DummyLanguageModel
+# from language_models.dummy.dummy_language_model import DummyLanguageModel
 from conversational_bot.reactive_bot import ReactiveBOT
 
 repository = DynamoDBUserExpressionRepository()
