@@ -1,3 +1,6 @@
+from sso.domain.user import User
+
+
 class Command:
-    def execute(self, args):
+    def execute(self, user: User, args):
         pass

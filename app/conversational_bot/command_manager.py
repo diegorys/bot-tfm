@@ -15,7 +15,7 @@ class CommandManager:
         print(frame.entities)
         print(self.commands.keys())
         if frame.intent in self.commands.keys():
-            self.commands[frame.intent].execute(frame.entities)
+            self.commands[frame.intent].execute(frame.user, frame.entities)
         else:
             print(f"[Warning][CommandManager][execute] Command {frame.intent} not found")
 
