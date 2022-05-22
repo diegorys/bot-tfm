@@ -9,6 +9,5 @@ class DialogManager:
 
     def execute(self, frame: Frame) -> Frame:        
         text: str = self.languageModel.generateRequireParametersText(frame)
-        response: Response = Response(frame.user, text)
-        response.intent = frame.intent
+        response: Response = Response(frame.user, text, frame.intent, frame.entities)
         return response

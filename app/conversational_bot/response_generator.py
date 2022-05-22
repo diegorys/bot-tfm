@@ -9,6 +9,5 @@ class ResponseGenerator:
 
     def execute(self, frame: Frame) -> Response:
         text: str = self.languageModel.generateText(frame)
-        response: Response = Response(frame.user, text)
-        response.intent = frame.intent
+        response: Response = Response(frame.user, text, frame.intent, frame.entities)
         return response
