@@ -1,7 +1,17 @@
-class RegisterMedicationUseCase:
-    # def __init__(self, repository):
-    #     self.repository = repository
+from events.domain.event import Event
+from events.domain.event_repository import EventRepository
+from applications.medical.domain.medication_repository import MedicationRepository
 
-    def execute(self, medicine, datetime):
-        print(f"SAVE MEDICINE {medicine} AT {datetime}")
-        # self.repository.save(medicine)
+
+class RegisterMedicationUseCase:
+    def __init__(self, repository: MedicationRepository, eventRepository: EventRepository):
+        self.repository = repository
+        self.eventRepository = EventRepository
+
+    def execute(self, medicationUser, datetime):
+        print(f"SAVE MEDICINE {medicationUser.name} AT {datetime}")
+        event: Event = Event(
+            "RECORDAR_MEDICACION", medicationUser.user, medicationUser.medication, datetime
+        )
+        self.repository.save(medicationUser)
+        self.eventRepository.save(event)

@@ -5,7 +5,7 @@ import boto3
 from applications.medical.domain.medication import Medication
 from applications.medical.domain.medication_repository import MedicationRepository
 
-TABLE_NAME = os.environ["MEDICATIONS_TABLE"]
+TABLE_NAME = os.environ["MEDICINES_TABLE"]
 
 print(f"TABLE NAME!!!: {TABLE_NAME}")
 
