@@ -1,16 +1,13 @@
+import os
 from conversational_bot.domain.reactive_bot import ReactiveBOT
 from conversational_bot.domain.nlu import NLU
 from conversational_bot.domain.dialog_manager import DialogManager
 from conversational_bot.domain.response_generator import ResponseGenerator
-from conversational_bot.infrastructure.commands.command_manager_factory import CommandManagerFactory
-from conversational_bot.infrastructure.language_models.dialogflow.dialogflow_language_model import DialogflowLanguageModel
-
-# from conversational_bot.infrastructure.dummy.dummy_language_model import DummyLanguageModel
+from factories.command_manager_factory import CommandManagerFactory
+from language_models.dialogflow.dialogflow_language_model import DialogflowLanguageModel
+from interfaces.telegram_bot import TelegramBot
 
 def startConversationalBOT():
-    import os
-    from conversational_bot.infrastructure.telegram.telegram_bot import TelegramBot
-
     # languageModel = DummyLanguageModel()
     languageModel = DialogflowLanguageModel()
     nlu = NLU(languageModel)

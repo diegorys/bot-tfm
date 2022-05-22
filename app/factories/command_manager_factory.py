@@ -1,5 +1,5 @@
 from conversational_bot.domain.command_manager import CommandManager
-from conversational_bot.infrastructure.commands.add_medication_command import AddMedicationCommand
+from medical.commands.add_medication_command import AddMedicationCommand
 from medical.use_cases.register_medication_use_case import RegisterMedicationUseCase
 
 
