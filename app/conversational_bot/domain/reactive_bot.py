@@ -24,7 +24,7 @@ class ReactiveBOT:
         self.responseGenerator: ResponseGenerator = responseGenerator
         self.commandManager = commandManager
 
-    def process(self, user: User, text: str, date) -> Response:
+    def execute(self, user: User, text: str, date) -> Response:
         print(f"Text: {text}")
         frame: Frame = self.nlu.execute(user, text)
         if frame.isComplete():

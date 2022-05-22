@@ -31,7 +31,7 @@ class TelegramBot:
             {"telegram_id": update.effective_chat.id, "name": update.effective_chat.first_name},
         )
         print(f"> {telegramId} ({username}): {text}")
-        response = self.bot.process(user, text, date)
+        response = self.bot.execute(user, text, date)
         print(f"< BOT: {response.text}")
         context.bot.send_message(chat_id=update.effective_chat.id, text=response.text)
 

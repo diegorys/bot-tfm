@@ -103,7 +103,7 @@ def botExecute(text: str, user: User, available, id, date):
         response = handleStart(user)
         log(text, user, date, response)
     else:
-        response = bot.process(user, text, date)
+        response = bot.execute(user, text, date)
         log(text, user, date, response)
     return response
 

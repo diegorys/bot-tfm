@@ -20,7 +20,7 @@ def test_execute():
     bot = ReactiveBOT(
         nlu, dialogManager, responseGenerator, commandManager
     )
-    response = bot.process(user, "Hola robot", "")
+    response = bot.execute(user, "Hola robot", "")
     client.emit(user, response.text)
     print("------------")
     print(client.dummyText)

@@ -13,7 +13,7 @@ class ProactiveBOT:
         self.responseGenerator: ResponseGenerator = responseGenerator
         self.client = client
 
-    def generate(self, frame: Frame) -> Response:
+    def execute(self, frame: Frame) -> Response:
         response = self.responseGenerator.execute(frame)
         self.client.emit(frame.user, response.text)
 
