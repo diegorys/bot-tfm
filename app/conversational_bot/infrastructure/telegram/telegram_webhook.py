@@ -11,13 +11,17 @@ from conversational_bot.domain.user_expression import UserExpression
 from sso.domain.user import User
 
 # from infrastructure.gpt3.gpt3_nlu import GPT3NLU
-from app.conversational_bot.infrastructure.dynamodb.dynamodb_user_expression_repository import DynamoDBUserExpressionRepository
+from app.conversational_bot.infrastructure.dynamodb.dynamodb_user_expression_repository import (
+    DynamoDBUserExpressionRepository,
+)
 from conversational_bot.domain.response import Response
 from conversational_bot.domain.dialog_manager import DialogManager
 from conversational_bot.domain.nlu import NLU
 from conversational_bot.domain.response_generator import ResponseGenerator
 from conversational_bot.infrastructure.commands.command_manager_factory import CommandManagerFactory
-from conversational_bot.infrastructure.language_models.dialogflow.dialogflow_language_model import DialogflowLanguageModel
+from conversational_bot.infrastructure.language_models.dialogflow.dialogflow_language_model import (
+    DialogflowLanguageModel,
+)
 
 # from conversational_bot.infrastructure.dummy.dummy_language_model import DummyLanguageModel
 from conversational_bot.domain.reactive_bot import ReactiveBOT
@@ -97,10 +101,10 @@ def botExecute(text: str, user: User, available, id, date):
     if text == "/start":
         print("/START")
         response = handleStart(user)
-        log(text, user, id, date, response)
+        log(text, user, date, response)
     else:
         response = bot.process(user, text, date)
-        log(text, user, id, date, response)
+        log(text, user, date, response)
     return response
 
 
@@ -129,7 +133,7 @@ def handleStart(user):
     return response
 
 
-def log(text: str, user: User, id, date, response):
+def log(text: str, user: User, date, response):
     now = str(time.time())
     if repository:
         userExpression = UserExpression(
@@ -144,7 +148,7 @@ def log(text: str, user: User, id, date, response):
         repository.save(userExpression)
     else:
         print(
-            id,
+            now,
             user,
             text,
             response.intent,
