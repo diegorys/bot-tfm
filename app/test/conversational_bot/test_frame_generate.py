@@ -1,5 +1,5 @@
 import pytest
-from conversational_bot.domain.frame import Frame
+from conversational_bot.frame import Frame
 from sso.domain.user import User
 
 

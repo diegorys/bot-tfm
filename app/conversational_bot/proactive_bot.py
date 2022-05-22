@@ -1,7 +1,7 @@
-from conversational_bot.domain.client import Client
-from conversational_bot.domain.frame import Frame
-from conversational_bot.domain.response import Response
-from conversational_bot.domain.response_generator import ResponseGenerator
+from conversational_bot.client import Client
+from conversational_bot.frame import Frame
+from conversational_bot.response import Response
+from conversational_bot.response_generator import ResponseGenerator
 
 """
 A partir de un texto, genera una respuesta y procesa el comando.

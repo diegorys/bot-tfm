@@ -1,5 +1,5 @@
-from conversational_bot.domain.frame import Frame
-from conversational_bot.domain.command import Command
+from conversational_bot.frame import Frame
+from conversational_bot.command import Command
 
 
 class CommandManager:

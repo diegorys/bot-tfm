@@ -1,6 +1,6 @@
 # import openai
-from conversational_bot.domain.frame import Frame
-from conversational_bot.domain.language_model import LanguageModel
+from conversational_bot.frame import Frame
+from conversational_bot.language_model import LanguageModel
 
 # openai.api_key = os.getenv("OPENAI_API_KEY")
 # GPT3_ENGINE = os.environ["GPT3_ENGINE"]

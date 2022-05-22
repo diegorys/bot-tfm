@@ -1,6 +1,6 @@
-from conversational_bot.domain.frame import Frame
-from conversational_bot.domain.language_model import LanguageModel
-from conversational_bot.domain.response import Response
+from conversational_bot.frame import Frame
+from conversational_bot.language_model import LanguageModel
+from conversational_bot.response import Response
 
 
 class ResponseGenerator:

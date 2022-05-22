@@ -1,9 +1,9 @@
-from conversational_bot.domain.command_manager import CommandManager
-from conversational_bot.domain.dialog_manager import DialogManager
-from conversational_bot.domain.frame import Frame
-from conversational_bot.domain.nlu import NLU
-from conversational_bot.domain.response import Response
-from conversational_bot.domain.response_generator import ResponseGenerator
+from conversational_bot.command_manager import CommandManager
+from conversational_bot.dialog_manager import DialogManager
+from conversational_bot.frame import Frame
+from conversational_bot.nlu import NLU
+from conversational_bot.response import Response
+from conversational_bot.response_generator import ResponseGenerator
 from sso.domain.user import User
 
 """

@@ -1,4 +1,4 @@
-from conversational_bot.domain.user_expression import UserExpression
+from conversational_bot.user_expression import UserExpression
 
 
 class UserExpressionRepository:

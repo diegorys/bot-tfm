@@ -2,8 +2,8 @@ import os
 import time
 import boto3
 from boto3.dynamodb.conditions import Attr
-from conversational_bot.domain.user_expression import UserExpression
-from conversational_bot.domain.user_expression_repository import UserExpressionRepository
+from conversational_bot.user_expression import UserExpression
+from conversational_bot.user_expression_repository import UserExpressionRepository
 
 TABLE_NAME = os.environ["DIALOGS_TABLE"]
 

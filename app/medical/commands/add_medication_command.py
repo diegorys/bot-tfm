@@ -1,4 +1,4 @@
-from conversational_bot.domain.command import Command
+from conversational_bot.command import Command
 from medical.use_cases.register_medication_use_case import RegisterMedicationUseCase
 
 

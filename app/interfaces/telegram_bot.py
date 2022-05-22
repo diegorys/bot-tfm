@@ -1,7 +1,7 @@
 import telegram
 from telegram import Update
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
-from conversational_bot.domain.reactive_bot import ReactiveBOT
+from conversational_bot.reactive_bot import ReactiveBOT
 from sso.domain.user import User
 
 

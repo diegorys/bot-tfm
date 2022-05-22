@@ -7,24 +7,24 @@ import time
 import os
 import json
 import telegram
-from conversational_bot.domain.user_expression import UserExpression
+from conversational_bot.user_expression import UserExpression
 from sso.domain.user import User
 
 # from infrastructure.gpt3.gpt3_nlu import GPT3NLU
 from storage.dynamodb_user_expression_repository import (
     DynamoDBUserExpressionRepository,
 )
-from conversational_bot.domain.response import Response
-from conversational_bot.domain.dialog_manager import DialogManager
-from conversational_bot.domain.nlu import NLU
-from conversational_bot.domain.response_generator import ResponseGenerator
+from conversational_bot.response import Response
+from conversational_bot.dialog_manager import DialogManager
+from conversational_bot.nlu import NLU
+from conversational_bot.response_generator import ResponseGenerator
 from factories.command_manager_factory import CommandManagerFactory
 from language_models.dialogflow.dialogflow_language_model import (
     DialogflowLanguageModel,
 )
 
 # from conversational_bot.infrastructure.dummy.dummy_language_model import DummyLanguageModel
-from conversational_bot.domain.reactive_bot import ReactiveBOT
+from conversational_bot.reactive_bot import ReactiveBOT
 
 repository = DynamoDBUserExpressionRepository()
 SERVICE_STATUS = os.environ.get("SERVICE_STATUS") or 0

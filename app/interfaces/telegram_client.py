@@ -1,5 +1,5 @@
 import telegram
-from conversational_bot.domain.client import Client
+from conversational_bot.client import Client
 from sso.domain.user import User
 
 

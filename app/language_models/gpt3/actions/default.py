@@ -1,6 +1,6 @@
 import os
 # import openai
-from conversational_bot.domain.response import Response
+from conversational_bot.response import Response
 
 GPT3_ENGINE = os.environ["GPT3_ENGINE"]
 

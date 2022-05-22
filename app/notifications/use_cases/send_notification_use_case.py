@@ -1,6 +1,6 @@
-from conversational_bot.domain.response_generator import ResponseGenerator
-from conversational_bot.domain.frame import Frame
-from conversational_bot.domain.client import Client
+from conversational_bot.response_generator import ResponseGenerator
+from conversational_bot.frame import Frame
+from conversational_bot.client import Client
 from sso.domain.user_repository import UserRepository
 
 

@@ -1,4 +1,4 @@
-from conversational_bot.domain.frame import Frame
+from conversational_bot.frame import Frame
 
 
 class LanguageModel:
