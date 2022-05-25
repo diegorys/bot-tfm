@@ -7,9 +7,6 @@ from applications.medical.domain.medication_repository import MedicationReposito
 
 TABLE_NAME = os.environ["MEDICINES_TABLE"]
 
-print(f"TABLE NAME!!!: {TABLE_NAME}")
-
-
 class DynamoDBMedicationRepository(MedicationRepository):
     def __init__(self):
         self.dynamodb = boto3.resource("dynamodb")

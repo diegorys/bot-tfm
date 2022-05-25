@@ -21,7 +21,7 @@ class DynamoDBUserExpressionRepository(UserExpressionRepository):
         timestamp = str(time.time())
         print("PUT ITEM")
         print(userExpression.id)
-        print(userExpression.date)
+        print(str(userExpression.date))
         print(userExpression.user.username)
         print(userExpression.user.metadata)
         print(userExpression.text)
@@ -56,11 +56,9 @@ class DynamoDBUserExpressionRepository(UserExpressionRepository):
         return response["Items"]
 
     def _exists(self, userExpression: UserExpression):
-        print(f"BUSCO {userExpression.date} - {userExpression.text}")
         table = self.dynamodb.Table(TABLE_NAME)
         response = table.scan(
-            FilterExpression=Attr("date").eq(userExpression.date) & Attr("text").eq(userExpression.text)
+            FilterExpression=Attr("date").eq(userExpression.date)
+            & Attr("text").eq(userExpression.text)
         )
-
-        print(len(response["Items"]))
         return len(response["Items"]) > 0

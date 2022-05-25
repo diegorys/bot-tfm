@@ -1,7 +1,9 @@
 import os
 from google.cloud import dialogflow
+from google.protobuf.json_format import MessageToDict
 from conversational_bot.frame import Frame
 from conversational_bot.language_model import LanguageModel
+
 
 PROJECT_ID = "***REMOVED***"
 SESSION = "123456789"
@@ -25,15 +27,16 @@ class DialogflowLanguageModel(LanguageModel):
         response = session_client.detect_intent(
             request={"session": session, "query_input": query_input}
         )
-        intent = response.query_result.intent.display_name
-        parameters = response.query_result.parameters.items()
+        response_json = MessageToDict(response._pb) # TODO: hay más parámetros interesantes, como si están todos los campos requeridos o la "confidencia".
+        intent = response_json["queryResult"]["intent"]["displayName"]
+        parameters = response_json["queryResult"]["parameters"]
         entities = {}
-        for key, value in parameters:
-            if len(value) > 0:
-                entities[key] = value[0]
-        print("ENTITIES")
-        print(entities)
-        self.lastResponse = response.query_result.fulfillment_messages[0].text.text[0]
+        for entityName in parameters.keys():
+            if entityName == "date-time":
+                entities["cuando"] = parameters["date-time"][0]["date_time"] # TODO: esto es un parche
+            else:
+                entities[entityName] = parameters[entityName]
+        self.lastResponse = response.query_result.fulfillment_messages[0].text.text[0] # TODO: coger de response_json
         self.lastResponse = self.lastResponse.replace("date-time", "cuándo")
         return intent, entities
 
