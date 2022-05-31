@@ -137,7 +137,7 @@ functions:
   #   events:
   #     - schedule: rate(1 minute)
   notify:
-    handler: notifications/infrastructure/aws_telegram_notifications.handle
+    handler: src/notifications/infrastructure/aws_telegram_notifications.handle
 custom:
   pythonRequirements:
     zip: true
