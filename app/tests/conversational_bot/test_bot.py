@@ -1,11 +1,12 @@
+from tests.mock.dummy_user_expression_repository import DummyUsersExpressionRepository
 from conversational_bot.command_manager import CommandManager
 from conversational_bot.dialog_manager import DialogManager
 from conversational_bot.nlu import NLU
 from conversational_bot.reactive_bot import ReactiveBOT
 from conversational_bot.response_generator import ResponseGenerator
 from sso.domain.user import User
-from test.mock.dummy_language_model import DummyLanguageModel
-from test.mock.dummy_client import DummyClient
+from tests.mock.dummy_language_model import DummyLanguageModel
+from tests.mock.dummy_client import DummyClient
 
 
 def test_execute():
@@ -13,12 +14,13 @@ def test_execute():
     user = User("diegorys", {"name": name})
     client = DummyClient()
     languageModel = DummyLanguageModel()
+    userExpressionRepository = DummyUsersExpressionRepository()
     nlu: NLU = NLU(languageModel)
     responseGenerator: ResponseGenerator = ResponseGenerator(languageModel)
     dialogManager = DialogManager(languageModel)
-    commandManager = CommandManager()
+    commandManager = CommandManager()    
     bot = ReactiveBOT(
-        nlu, dialogManager, responseGenerator, commandManager
+        nlu, dialogManager, responseGenerator, commandManager, userExpressionRepository
     )
     response = bot.execute(user, "Hola robot", "")
     client.emit(user, response.text)
