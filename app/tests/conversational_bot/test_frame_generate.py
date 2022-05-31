@@ -1,6 +1,6 @@
 import pytest
-from conversational_bot.frame import Frame
-from sso.domain.user import User
+from src.conversational_bot.frame import Frame
+from src.sso.domain.user import User
 
 
 def test_execute_ok():

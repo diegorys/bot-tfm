@@ -1,12 +1,12 @@
 import os
-from conversational_bot.reactive_bot import ReactiveBOT
-from conversational_bot.nlu import NLU
-from conversational_bot.dialog_manager import DialogManager
-from conversational_bot.response_generator import ResponseGenerator
-from factories.command_manager_factory import CommandManagerFactory
-from language_models.dialogflow.dialogflow_language_model import DialogflowLanguageModel
-from interfaces.telegram_bot import TelegramBot
-from storage.dynamodb_user_expression_repository import DynamoDBUserExpressionRepository
+from src.conversational_bot.reactive_bot import ReactiveBOT
+from src.conversational_bot.nlu import NLU
+from src.conversational_bot.dialog_manager import DialogManager
+from src.conversational_bot.response_generator import ResponseGenerator
+from src.factories.command_manager_factory import CommandManagerFactory
+from src.language_models.dialogflow.dialogflow_language_model import DialogflowLanguageModel
+from src.interfaces.telegram_bot import TelegramBot
+from src.storage.dynamodb_user_expression_repository import DynamoDBUserExpressionRepository
 
 
 def startConversationalBOT():

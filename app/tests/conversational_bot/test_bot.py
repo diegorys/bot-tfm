@@ -1,10 +1,10 @@
 from tests.mock.dummy_user_expression_repository import DummyUsersExpressionRepository
-from conversational_bot.command_manager import CommandManager
-from conversational_bot.dialog_manager import DialogManager
-from conversational_bot.nlu import NLU
-from conversational_bot.reactive_bot import ReactiveBOT
-from conversational_bot.response_generator import ResponseGenerator
-from sso.domain.user import User
+from src.conversational_bot.command_manager import CommandManager
+from src.conversational_bot.dialog_manager import DialogManager
+from src.conversational_bot.nlu import NLU
+from src.conversational_bot.reactive_bot import ReactiveBOT
+from src.conversational_bot.response_generator import ResponseGenerator
+from src.sso.domain.user import User
 from tests.mock.dummy_language_model import DummyLanguageModel
 from tests.mock.dummy_client import DummyClient
 

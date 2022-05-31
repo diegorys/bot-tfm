@@ -1,5 +1,5 @@
-from sso.domain.user import User
-from conversational_bot.client import Client
+from src.sso.domain.user import User
+from src.conversational_bot.client import Client
 
 
 class DummyClient(Client):

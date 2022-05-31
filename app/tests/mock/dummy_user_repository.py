@@ -1,5 +1,5 @@
-from sso.domain.user import User
-from sso.domain.user_repository import UserRepository
+from src.sso.domain.user import User
+from src.sso.domain.user_repository import UserRepository
 
 
 class DummyUsersRepository(UserRepository):

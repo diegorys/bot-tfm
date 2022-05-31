@@ -118,15 +118,8 @@ package:
   patterns:
     - "!**/*"
     - "!*.py"
-    - "applications/**/*.py"
-    - "conversational_bot/**/*.py"
-    - "factories/**/*.py"
-    - "interfaces/**/*.py"
-    - "language_models/**/*.py"
-    - "language_models/**/*.json"
-    - "notifications/**/*.py"
-    - "sso/**/*.py"
-    - "storage/**/*.py"
+    - "src/**/*.py"
+    - "src/**/*.json"    
     - boto3
     - google-cloud-dialogflow
     # - openai
@@ -134,7 +127,7 @@ package:
 
 functions:
   telegram:
-    handler: interfaces/telegram_webhook.handle
+    handler: src/interfaces/telegram_webhook.handle
     events:
       - httpApi:
           path: /telegram

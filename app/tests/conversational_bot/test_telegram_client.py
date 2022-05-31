@@ -1,6 +1,6 @@
 import os
 import pytest
-from interfaces.telegram_client import TelegramClient
+from src.interfaces.telegram_client import TelegramClient
 
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
 

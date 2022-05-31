@@ -1,6 +1,6 @@
-from sso.domain.user import User
-from conversational_bot.user_expression_repository import UserExpressionRepository
-from conversational_bot.user_expression_repository import UserExpression
+from src.sso.domain.user import User
+from src.conversational_bot.user_expression_repository import UserExpressionRepository
+from src.conversational_bot.user_expression_repository import UserExpression
 
 
 class DummyUsersExpressionRepository(UserExpressionRepository):
