@@ -12,7 +12,10 @@ class CommandManager:
     def execute(self, frame: Frame) -> Frame or None:
         print(f"Manage command '{frame.intent}' with parameters:")
         if frame.intent in self.commands.keys():
-            self.commands[frame.intent].execute(frame.user, frame.entities)
+            try:
+                self.commands[frame.intent].execute(frame.user, frame.entities)
+            except:
+                print(f"[Error][CommandManager][execute] Command {frame.intent} fails")    
         else:
             print(f"[Warning][CommandManager][execute] Command {frame.intent} not found")
             return None

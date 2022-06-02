@@ -5,14 +5,14 @@ import boto3
 from src.applications.medical.domain.medication_user import MedicationUser
 from src.applications.medical.domain.medication_user_repository import MedicationUserRepository
 
-TABLE_NAME = os.environ["MEDICATION_USER_TABLE"]
 
 class DynamoDBMedicationUserRepository(MedicationUserRepository):
     def __init__(self):
+        self.TABLE_NAME = ""#os.environ["MEDICATION_USER_TABLE"]
         self.dynamodb = boto3.resource("dynamodb")
 
     def save(self, medicationuser: MedicationUser):
-        table = self.dynamodb.Table(TABLE_NAME)
+        table = self.dynamodb.Table(self.TABLE_NAME)
         timestamp = str(time.time())
         response = table.put_item(
             Item={

@@ -27,16 +27,24 @@ class DialogflowLanguageModel(LanguageModel):
         response = session_client.detect_intent(
             request={"session": session, "query_input": query_input}
         )
-        response_json = MessageToDict(response._pb) # TODO: hay más parámetros interesantes, como si están todos los campos requeridos o la "confidencia".
+        response_json = MessageToDict(
+            response._pb
+        )  # TODO: hay más parámetros interesantes, como si están todos los campos requeridos o la "confidencia".
         intent = response_json["queryResult"]["intent"]["displayName"]
         parameters = response_json["queryResult"]["parameters"]
         entities = {}
         for entityName in parameters.keys():
+            print(parameters)
             if entityName == "date-time":
-                entities["cuando"] = parameters["date-time"][0]["date_time"] # TODO: esto es un parche
+                if len(parameters["date-time"]) > 0:
+                    entities["cuando"] = parameters["date-time"][0]  # TODO: esto es un parche
+                else:
+                    entities["cuando"] = ""
             else:
                 entities[entityName] = parameters[entityName]
-        self.lastResponse = response.query_result.fulfillment_messages[0].text.text[0] # TODO: coger de response_json
+        self.lastResponse = response.query_result.fulfillment_messages[0].text.text[
+            0
+        ]  # TODO: coger de response_json
         self.lastResponse = self.lastResponse.replace("date-time", "cuándo")
         return intent, entities
 
