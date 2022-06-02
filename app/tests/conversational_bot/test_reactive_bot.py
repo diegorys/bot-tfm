@@ -22,10 +22,8 @@ def test_execute():
     bot = ReactiveBOT(
         nlu, dialogManager, responseGenerator, commandManager, userExpressionRepository
     )
+
     response = bot.execute(user, "Hola robot", "")
     client.emit(user, response.text)
-    print("------------")
-    print(client.mockText)
-    print("------------")
-    possibleResponses = ["Hola", "¡Hola!", f"Hola {name}", "Hola, ¿qué tal?"]
-    assert client.mockText in possibleResponses
+
+    assert client.mockText == "Hola robot"

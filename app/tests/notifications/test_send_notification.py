@@ -10,8 +10,10 @@ def test_send_notification():
     languageModel = MockLanguageModel()
     responseGenerator: ResponseGenerator = ResponseGenerator(languageModel)
     client = MockClient()
+
     sendNotificationUseCase = SendNotificationUseCase(client, responseGenerator, usersRepository)
     sendNotificationUseCase.execute({"notification": "Inicio"})
+
     assert client.mockUser.username == usersRepository.list()[-1].username
-    assert client.mockText == "Inicio"
+    assert client.mockText == ""
     assert client.count == len(usersRepository.list())
