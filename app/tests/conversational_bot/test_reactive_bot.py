@@ -4,9 +4,9 @@ from src.conversational_bot.nlu import NLU
 from src.conversational_bot.reactive_bot import ReactiveBOT
 from src.conversational_bot.response_generator import ResponseGenerator
 from src.sso.domain.user import User
-from tests.mock.conversational_bot.mock_language_model import MockLanguageModel
-from tests.mock.conversational_bot.mock_client import MockClient
-from tests.mock.conversational_bot.mock_user_expression_repository import MockUsersExpressionRepository
+from tests.conversational_bot.mocks.mock_language_model import MockLanguageModel
+from tests.conversational_bot.mocks.mock_client import MockClient
+from tests.conversational_bot.mocks.mock_user_expression_repository import MockUsersExpressionRepository
 
 
 def test_execute():

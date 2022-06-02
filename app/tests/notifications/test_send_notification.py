@@ -1,8 +1,8 @@
 from src.notifications.use_cases.send_notification_use_case import SendNotificationUseCase
 from src.conversational_bot.response_generator import ResponseGenerator
-from tests.mock.sso.mock_user_repository import MockUsersRepository
-from tests.mock.conversational_bot.mock_client import MockClient
-from tests.mock.conversational_bot.mock_language_model import MockLanguageModel
+from tests.sso.mocks.mock_user_repository import MockUsersRepository
+from tests.conversational_bot.mocks.mock_client import MockClient
+from tests.conversational_bot.mocks.mock_language_model import MockLanguageModel
 
 
 def test_send_notification():

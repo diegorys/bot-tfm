@@ -1,7 +1,7 @@
-from tests.mother.medication_mother import MedicationMother
-from tests.mother.user_mother import UserMother
 from src.applications.medical.domain.medication_user import MedicationUser
 from src.applications.medical.domain.date import Date
+from tests.mother.application.medical.medication_mother import MedicationMother
+from tests.sso.mothers.user_mother import UserMother
 
 
 class MedicationUserMother:

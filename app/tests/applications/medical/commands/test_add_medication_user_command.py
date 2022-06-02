@@ -1,6 +1,6 @@
 from src.applications.medical.domain.medication_user import MedicationUser
-from tests.mother.add_medication_user_command_mother import AddMedicationUserCommandMother
-from tests.mother.user_mother import UserMother
+from tests.applications.medical.mothers.add_medication_user_command_mother import AddMedicationUserCommandMother
+from tests.sso.mothers.user_mother import UserMother
 
 
 def test_execute():
