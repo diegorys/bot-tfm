@@ -2,7 +2,7 @@ from src.sso.domain.user import User
 from src.sso.domain.user_repository import UserRepository
 
 
-class DummyUsersRepository(UserRepository):
+class MockUsersRepository(UserRepository):
     def save(self, user: User):
         return user
 

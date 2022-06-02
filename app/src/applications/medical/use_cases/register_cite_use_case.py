@@ -1,10 +1,10 @@
 from src.events.domain.event import Event
 from src.events.domain.event_repository import EventRepository
-from src.applications.medical.domain.medication_repository import MedicationRepository
+from src.applications.medical.domain.medication_user_repository import MedicationUserRepository
 
 
 class RegisterMedicationUseCase:
-    def __init__(self, repository: MedicationRepository, eventRepository: EventRepository):
+    def __init__(self, repository: MedicationUserRepository, eventRepository: EventRepository):
         self.repository = repository
         self.eventRepository = EventRepository
 

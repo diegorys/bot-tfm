@@ -1,5 +1,5 @@
 from src.conversational_bot.command_manager import CommandManager
-from src.applications.medical.commands.add_medication_command import AddMedicationCommand
+from src.applications.medical.commands.add_medication_user_command import AddMedicationUserCommand
 from src.applications.medical.use_cases.register_medication_use_case import RegisterMedicationUseCase
 from src.applications.medical.infrastructure.dynamodb_medication_repository import (
     DynamoDBMedicationRepository,
@@ -17,5 +17,5 @@ class CommandManagerFactory:
         medRepository = DynamoDBMedicationRepository()
         eventsRepository = DynamoDBEventRepository()
         registerMedicationUseCase = RegisterMedicationUseCase(medRepository, eventsRepository)
-        addMedicationCommand = AddMedicationCommand(registerMedicationUseCase)
+        addMedicationCommand = AddMedicationUserCommand(registerMedicationUseCase)
         commandManager.addCommand("REGISTRAR_TOMA_MEDICAMENTO", addMedicationCommand)

@@ -3,7 +3,7 @@ from src.conversational_bot.frame import Frame
 from src.conversational_bot.language_model import LanguageModel
 
 
-class DummyLanguageModel(LanguageModel):
+class MockLanguageModel(LanguageModel):
     def identifyIntent(self, text: str) -> str:
         intent: str = "DESCONOCIDO"
         if "hola" in text.lower():

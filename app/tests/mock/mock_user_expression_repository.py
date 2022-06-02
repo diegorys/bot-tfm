@@ -3,6 +3,6 @@ from src.conversational_bot.user_expression_repository import UserExpressionRepo
 from src.conversational_bot.user_expression_repository import UserExpression
 
 
-class DummyUsersExpressionRepository(UserExpressionRepository):
+class MockUsersExpressionRepository(UserExpressionRepository):
     def save(self, userExpression: UserExpression):
         return userExpression
