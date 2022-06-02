@@ -7,14 +7,13 @@ from src.applications.medical.domain.medication_user_repository import Medicatio
 
 TABLE_NAME = os.environ["MEDICATION_USER_TABLE"]
 
-class DynamoDBMedicationRepository(MedicationUserRepository):
+class DynamoDBMedicationUserRepository(MedicationUserRepository):
     def __init__(self):
         self.dynamodb = boto3.resource("dynamodb")
 
     def save(self, medicationuser: MedicationUser):
         table = self.dynamodb.Table(TABLE_NAME)
         timestamp = str(time.time())
-        print('PUT ITEM')
         response = table.put_item(
             Item={
                 # "id": str(dialog.id),

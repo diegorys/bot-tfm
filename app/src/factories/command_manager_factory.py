@@ -2,7 +2,7 @@ from src.conversational_bot.command_manager import CommandManager
 from src.applications.medical.commands.add_medication_user_command import AddMedicationUserCommand
 from src.applications.medical.use_cases.register_medication_use_case import RegisterMedicationUseCase
 from src.applications.medical.infrastructure.dynamodb_medication_repository import (
-    DynamoDBMedicationRepository,
+    DynamoDBMedicationUserRepository,
 )
 from src.events.infrastructure.dynamodb_event_repository import DynamoDBEventRepository
 
@@ -14,7 +14,7 @@ class CommandManagerFactory:
         return commandManager
 
     def addMedicalCommands(commandManager: CommandManager):
-        medRepository = DynamoDBMedicationRepository()
+        medRepository = DynamoDBMedicationUserRepository()
         eventsRepository = DynamoDBEventRepository()
         registerMedicationUseCase = RegisterMedicationUseCase(medRepository, eventsRepository)
         addMedicationCommand = AddMedicationUserCommand(registerMedicationUseCase)
