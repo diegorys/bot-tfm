@@ -8,7 +8,7 @@ from src.applications.medical.domain.medication_user_repository import Medicatio
 
 class DynamoDBMedicationUserRepository(MedicationUserRepository):
     def __init__(self):
-        self.TABLE_NAME = ""#os.environ["MEDICATION_USER_TABLE"]
+        self.TABLE_NAME = ""  # os.environ["MEDICATION_USER_TABLE"]
         self.dynamodb = boto3.resource("dynamodb")
 
     def save(self, medicationuser: MedicationUser):
@@ -30,4 +30,3 @@ class DynamoDBMedicationUserRepository(MedicationUserRepository):
         )
         print(response)
         return response
-        
