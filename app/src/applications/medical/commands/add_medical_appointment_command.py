@@ -12,8 +12,8 @@ class AddMedicalAppointmentCommand(Command):
 
     def execute(self, user: User, args):
         print(f"AddMedicalAppointmentCommand execute")
-        medication = MedicalSpeciality(args["cita"])
-        dateTime = Date(args["date-time"])
-        medicalAppointment = MedicalAppointment(user, medication, dateTime)
+        speciality = MedicalSpeciality(args["cita"])
+        dateTime = Date(args["cuando"])
+        medicalAppointment = MedicalAppointment(user, speciality, dateTime)
 
         return self.useCase.execute(medicalAppointment)
