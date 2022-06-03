@@ -9,15 +9,16 @@ TABLE_NAME = os.environ["USERS_TABLE"]
 
 class DynamoDBUsersRepository(UserRepository):
     def __init__(self):
+        stage = os.environ["STAGE"]
         self.dynamodb = boto3.resource("dynamodb")
+        self.table = self.dynamodb.Table(f"tfm-{stage}-user")
 
     def save(self, user: User):
         return user
 
     def list(self):
         users = []
-        table = self.dynamodb.Table(TABLE_NAME)
-        response = table.scan()
+        response = self.table.scan()
         items = response["Items"]
         for item in items:
             user = User(

@@ -8,8 +8,10 @@ from src.applications.medical.domain.medication_user_repository import Medicatio
 
 class DynamoDBMedicationUserRepository(MedicationUserRepository):
     def __init__(self):
-        self.TABLE_NAME = ""  # os.environ["MEDICATION_USER_TABLE"]
+        stage = os.environ["STAGE"]
         self.dynamodb = boto3.resource("dynamodb")
+        self.table = self.dynamodb.Table(f"tfm-{stage}-medication-appointment")
+
 
     def save(self, medicationuser: MedicationUser):
         table = self.dynamodb.Table(self.TABLE_NAME)

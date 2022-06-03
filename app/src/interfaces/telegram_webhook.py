@@ -3,14 +3,10 @@ try:
 except ImportError:
     pass
 
-import time
 import os
 import json
 import telegram
-from src.conversational_bot.user_expression import UserExpression
 from src.sso.domain.user import User
-
-# from infrastructure.gpt3.gpt3_nlu import GPT3NLU
 from src.storage.dynamodb_user_expression_repository import (
     DynamoDBUserExpressionRepository,
 )
@@ -22,14 +18,9 @@ from src.factories.command_manager_factory import CommandManagerFactory
 from src.language_models.dialogflow.dialogflow_language_model import (
     DialogflowLanguageModel,
 )
-
-# from src.language_models.dummy.dummy_language_model import DummyLanguageModel
 from src.conversational_bot.reactive_bot import ReactiveBOT
 
 repository = DynamoDBUserExpressionRepository()
-SERVICE_STATUS = os.environ.get("SERVICE_STATUS") or 0
-
-# languageModel = DummyLanguageModel()
 languageModel = DialogflowLanguageModel()
 
 nlu = NLU(languageModel)

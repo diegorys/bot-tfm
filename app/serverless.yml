@@ -5,13 +5,7 @@ provider:
   name: aws
   runtime: python3.8
   environment:
-    DIALOGS_TABLE: "${self:service}-${opt:stage, self:provider.stage}-dialogs"
-    USERS_TABLE: "${self:service}-${opt:stage, self:provider.stage}-users"
-    STATUS_TABLE: "${self:service}-${opt:stage, self:provider.stage}-status"
-    MEDICINES_TABLE: "${self:service}-${opt:stage, self:provider.stage}-medicines"
-    DATES_TABLE: "${self:service}-${opt:stage, self:provider.stage}-dates"
-    ANECDOTES_TABLE: "${self:service}-${opt:stage, self:provider.stage}-anecdotes"
-    DATASET_TABLE: "${self:service}-${opt:stage, self:provider.stage}-dataset"
+    STAGE: "${opt:stage, self:provider.stage}"    
     GPT3_ENGINE: "text-davinci-002"
     OPENAI_API_KEY: ${self:custom.env.OPENAI_API_KEY.${opt:stage, self:provider.stage}}
     TELEGRAM_TOKEN: ${self:custom.env.TELEGRAM_TOKEN.${opt:stage, self:provider.stage}}
@@ -32,7 +26,7 @@ provider:
             - dynamodb:GetRecords
             - dynamodb:GetShardIterator
             - dynamodb:ListStreams
-          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.DIALOGS_TABLE}"
+          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:service}-${opt:stage, self:provider.stage}-dialogs"
         - Effect: Allow
           Action:
             - dynamodb:Query
@@ -45,7 +39,7 @@ provider:
             - dynamodb:GetRecords
             - dynamodb:GetShardIterator
             - dynamodb:ListStreams
-          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.USERS_TABLE}"
+          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:service}-${opt:stage, self:provider.stage}-users"
         - Effect: Allow
           Action:
             - dynamodb:Query
@@ -58,7 +52,7 @@ provider:
             - dynamodb:GetRecords
             - dynamodb:GetShardIterator
             - dynamodb:ListStreams
-          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.STATUS_TABLE}"
+          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:service}-${opt:stage, self:provider.stage}-status"
         - Effect: Allow
           Action:
             - dynamodb:Query
@@ -71,7 +65,7 @@ provider:
             - dynamodb:GetRecords
             - dynamodb:GetShardIterator
             - dynamodb:ListStreams
-          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.MEDICINES_TABLE}"
+          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:service}-${opt:stage, self:provider.stage}-medication-user"
         - Effect: Allow
           Action:
             - dynamodb:Query
@@ -84,33 +78,7 @@ provider:
             - dynamodb:GetRecords
             - dynamodb:GetShardIterator
             - dynamodb:ListStreams
-          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.DATES_TABLE}"
-        - Effect: Allow
-          Action:
-            - dynamodb:Query
-            - dynamodb:Scan
-            - dynamodb:GetItem
-            - dynamodb:PutItem
-            - dynamodb:UpdateItem
-            - dynamodb:DeleteItem
-            - dynamodb:DescribeStream
-            - dynamodb:GetRecords
-            - dynamodb:GetShardIterator
-            - dynamodb:ListStreams
-          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.ANECDOTES_TABLE}"
-        - Effect: Allow
-          Action:
-            - dynamodb:Query
-            - dynamodb:Scan
-            - dynamodb:GetItem
-            - dynamodb:PutItem
-            - dynamodb:UpdateItem
-            - dynamodb:DeleteItem
-            - dynamodb:DescribeStream
-            - dynamodb:GetRecords
-            - dynamodb:GetShardIterator
-            - dynamodb:ListStreams
-          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.DATASET_TABLE}"
+          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:service}-${opt:stage, self:provider.stage}-medical-appointments"
 plugins:
   - serverless-python-requirements
 package:
@@ -122,7 +90,6 @@ package:
     - "src/**/*.json"    
     - boto3
     - google-cloud-dialogflow
-    # - openai
     - python-telegram-bot
 
 functions:
@@ -149,18 +116,12 @@ custom:
     TELEGRAM_TOKEN:
       test: "***REMOVED***"
       prod: "***REMOVED***"
-    TFM_MODE:
-      test: 1
-      prod: 1
-    SERVICE_STATUS:
-      test: 1
-      prod: 1
 resources:
   Resources:
     DialogsTable:
       Type: "AWS::DynamoDB::Table"
       Properties:
-        TableName: ${self:provider.environment.DIALOGS_TABLE}
+        TableName: ${self:service}-${opt:stage, self:provider.stage}-dialogs
         AttributeDefinitions:
           - AttributeName: id
             AttributeType: S
@@ -173,7 +134,7 @@ resources:
     UsersTable:
       Type: "AWS::DynamoDB::Table"
       Properties:
-        TableName: ${self:provider.environment.USERS_TABLE}
+        TableName: ${self:service}-${opt:stage, self:provider.stage}-users
         AttributeDefinitions:
           - AttributeName: id
             AttributeType: S
@@ -186,7 +147,7 @@ resources:
     StatusTable:
       Type: "AWS::DynamoDB::Table"
       Properties:
-        TableName: ${self:provider.environment.STATUS_TABLE}
+        TableName: ${self:service}-${opt:stage, self:provider.stage}-status
         AttributeDefinitions:
           - AttributeName: id
             AttributeType: S
@@ -196,10 +157,10 @@ resources:
         ProvisionedThroughput:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
-    MedicinesTable:
+    MedicationUserTable:
       Type: "AWS::DynamoDB::Table"
       Properties:
-        TableName: ${self:provider.environment.MEDICINES_TABLE}
+        TableName: ${self:service}-${opt:stage, self:provider.stage}-medication-user
         AttributeDefinitions:
           - AttributeName: id
             AttributeType: S
@@ -209,10 +170,10 @@ resources:
         ProvisionedThroughput:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
-    DatesTable:
+    MedicalAppointmentsTable:
       Type: "AWS::DynamoDB::Table"
       Properties:
-        TableName: ${self:provider.environment.DATES_TABLE}
+        TableName: ${self:service}-${opt:stage, self:provider.stage}-medical-appointments
         AttributeDefinitions:
           - AttributeName: id
             AttributeType: S
@@ -222,29 +183,3 @@ resources:
         ProvisionedThroughput:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
-    AnecdotesTable:
-      Type: "AWS::DynamoDB::Table"
-      Properties:
-        TableName: ${self:provider.environment.ANECDOTES_TABLE}
-        AttributeDefinitions:
-          - AttributeName: id
-            AttributeType: S
-        KeySchema:
-          - AttributeName: id
-            KeyType: HASH
-        ProvisionedThroughput:
-          ReadCapacityUnits: 1
-          WriteCapacityUnits: 1
-    # DatasetTable:
-    #   Type: "AWS::DynamoDB::Table"
-    #   Properties:
-    #     TableName: ${self:provider.environment.DATASET_TABLE}
-    #     AttributeDefinitions:
-    #       - AttributeName: id
-    #         AttributeType: S
-    #     KeySchema:
-    #       - AttributeName: id
-    #         KeyType: HASH
-    #     ProvisionedThroughput:
-    #       ReadCapacityUnits: 1
-    #       WriteCapacityUnits: 1
