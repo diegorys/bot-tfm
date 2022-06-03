@@ -2,7 +2,7 @@ from src.sso.domain.user import User
 
 
 class Event:
-    def __init__(self, user: User, intent: str, entities, date):
+    def __init__(self, user: User, intent: str, entities, date: str):
         self.user = user
         self.intent = intent
         self.entities = entities
