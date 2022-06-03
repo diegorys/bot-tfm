@@ -13,15 +13,13 @@ class DynamoDBMedicalAppointmentRepository(MedicationUserRepository):
 
     def save(self, medicalAppointment: MedicalAppointment):
         timestamp = str(time.time())
-        response = self.table.put_item(
-            Item={
-                "id": str(timestamp),
-                "user": medicalAppointment.user.username,
-                "medication": medicalAppointment.speciality.name,
-                "date": medicalAppointment.date.date,
-                "createdAt": timestamp,
-                "updatedAt": timestamp,
-            }
-        )
-        print(response)
+        item = {
+            "id": str(timestamp),
+            "user": medicalAppointment.user.metadata["telegram_id"],
+            "medication": medicalAppointment.speciality.name,
+            "date": medicalAppointment.date.date,
+            "createdAt": timestamp,
+            "updatedAt": timestamp,
+        }
+        response = self.table.put_item(Item=item)
         return response
