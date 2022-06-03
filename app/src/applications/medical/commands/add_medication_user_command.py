@@ -13,7 +13,7 @@ class AddMedicationUserCommand(Command):
     def execute(self, user: User, args):
         print(f"AddMedicationCommand execute")
         medication = Medication(args["medicamento"])
-        dateTime = Date(args["date-time"])
+        dateTime = Date(args["cuando"])
         medicationUser = MedicationUser(user, medication, dateTime)
 
         return self.useCase.execute(medicationUser)

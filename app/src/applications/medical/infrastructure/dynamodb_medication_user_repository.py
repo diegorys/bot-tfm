@@ -10,25 +10,22 @@ class DynamoDBMedicationUserRepository(MedicationUserRepository):
     def __init__(self):
         stage = os.environ["STAGE"]
         self.dynamodb = boto3.resource("dynamodb")
-        self.table = self.dynamodb.Table(f"tfm-{stage}-medication-appointment")
+        self.table = self.dynamodb.Table(f"tfm-{stage}-medication-user")
 
 
     def save(self, medicationuser: MedicationUser):
-        table = self.dynamodb.Table(self.TABLE_NAME)
         timestamp = str(time.time())
-        response = table.put_item(
+        response = self.table.put_item(
             Item={
-                # "id": str(dialog.id),
-                # "date": str(dialog.date),
-                # "user": {"id": dialog.userid, "name": dialog.username},
-                # "text": dialog.text,
-                # "domain": dialog.domain,
-                # "intent": dialog.intent,
-                # "entities": dialog.entities,
-                # "response": dialog.response,
-                # "createdAt": timestamp,
-                # "updatedAt": timestamp,
+                "id": str(timestamp),
+                "user": medicationuser.user.username,
+                "medication": medicationuser.medication.name,
+                "date": medicationuser.date.date,
+                "createdAt": timestamp,
+                "updatedAt": timestamp
             }
         )
+        stage = os.environ["STAGE"]
+        print(f"tfm-{stage}-medication-user")
         print(response)
         return response

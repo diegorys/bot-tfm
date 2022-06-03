@@ -14,8 +14,9 @@ class CommandManager:
         if frame.intent in self.commands.keys():
             try:
                 self.commands[frame.intent].execute(frame.user, frame.entities)
-            except:
-                print(f"[Error][CommandManager][execute] Command {frame.intent} fails")    
+            except Exception as e:
+                print(f"[Error][CommandManager][execute] Command {frame.intent} fails")
+                print(e)  
         else:
             print(f"[Warning][CommandManager][execute] Command {frame.intent} not found")
             return None

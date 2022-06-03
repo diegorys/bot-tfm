@@ -1,10 +1,7 @@
 import os
 import boto3
-
 from src.sso.domain.user import User
 from src.sso.domain.user_repository import UserRepository
-
-TABLE_NAME = os.environ["USERS_TABLE"]
 
 
 class DynamoDBUsersRepository(UserRepository):

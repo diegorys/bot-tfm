@@ -5,7 +5,7 @@ from src.applications.medical.domain.medication_user import MedicationUser
 from src.applications.medical.domain.medication_user_repository import MedicationUserRepository
 
 
-class DynamoDBMedicationUserRepository(MedicationUserRepository):
+class DynamoDBMedicalAppointmentRepository(MedicationUserRepository):
     def __init__(self):
         stage = os.environ["STAGE"]
         self.dynamodb = boto3.resource("dynamodb")

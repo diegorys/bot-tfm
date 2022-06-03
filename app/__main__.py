@@ -11,7 +11,6 @@ from src.storage.dynamodb_user_expression_repository import DynamoDBUserExpressi
 
 def startConversationalBOT():
     os.environ["STAGE"] = "test"
-    # languageModel = DummyLanguageModel()
     userExpressionRepository = DynamoDBUserExpressionRepository()
     languageModel = DialogflowLanguageModel()
     nlu = NLU(languageModel)
