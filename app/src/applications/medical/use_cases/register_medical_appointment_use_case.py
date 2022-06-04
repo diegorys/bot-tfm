@@ -16,8 +16,8 @@ class RegisterMedicalAppointmentUseCase:
             f"SAVE MEDICAL APPOINTMENT {medicalAppointment.speciality.name} AT {medicalAppointment.date.date}"
         )
         event: Event = Event(
-            "RECORDAR_CITA_MEDICA",
             medicalAppointment.user,
+            "RECORDAR_CITA_MEDICA",
             {"cita": medicalAppointment.speciality.name},
             medicalAppointment.date.date,
         )

@@ -79,6 +79,19 @@ provider:
             - dynamodb:GetShardIterator
             - dynamodb:ListStreams
           Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:service}-${opt:stage, self:provider.stage}-medical-appointments"
+        - Effect: Allow
+          Action:
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+            - dynamodb:DescribeStream
+            - dynamodb:GetRecords
+            - dynamodb:GetShardIterator
+            - dynamodb:ListStreams
+          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:service}-${opt:stage, self:provider.stage}-events"
 plugins:
   - serverless-python-requirements
 package:
@@ -174,6 +187,19 @@ resources:
       Type: "AWS::DynamoDB::Table"
       Properties:
         TableName: ${self:service}-${opt:stage, self:provider.stage}-medical-appointments
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+    EventsTable:
+      Type: "AWS::DynamoDB::Table"
+      Properties:
+        TableName: ${self:service}-${opt:stage, self:provider.stage}-events
         AttributeDefinitions:
           - AttributeName: id
             AttributeType: S
