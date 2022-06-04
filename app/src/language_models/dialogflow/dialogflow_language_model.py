@@ -1,4 +1,5 @@
 import os
+from typing import Dict
 from google.cloud import dialogflow
 from google.protobuf.json_format import MessageToDict
 from src.conversational_bot.frame import Frame
@@ -34,12 +35,8 @@ class DialogflowLanguageModel(LanguageModel):
         parameters = response_json["queryResult"]["parameters"]
         entities = {}
         for entityName in parameters.keys():
-            print(parameters)
             if entityName == "date-time":
-                if len(parameters["date-time"]) > 0:
-                    entities["cuando"] = parameters["date-time"][0]  # TODO: esto es un parche
-                else:
-                    entities["cuando"] = ""
+                entities["cuando"] = self.parseDateTime(parameters["date-time"])
             else:
                 entities[entityName] = parameters[entityName][0]
         self.lastResponse = response.query_result.fulfillment_messages[0].text.text[
@@ -53,3 +50,24 @@ class DialogflowLanguageModel(LanguageModel):
 
     def generateText(self, frame: Frame) -> str:
         return self.lastResponse
+
+    def parseDateTime(self, dateTime):
+        cuando = ""
+        print(dateTime)
+        if len(dateTime) > 0:
+            e = dateTime[0]
+            if type(e) is dict:
+                if "date_time" in e.keys():
+                    cuando = e["date_time"]
+                elif "endDateTime" in e.keys():
+                    cuando = e["endDateTime"]
+                elif "endDate" in e.keys():
+                    cuando = e["endDate"]
+                elif "endTime" in e.keys():
+                    cuando = e["endTime"]
+            else:
+                cuando = e
+        print("cuando")
+        print(cuando)
+        return cuando
+

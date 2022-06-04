@@ -25,6 +25,4 @@ class DynamoDBMedicationUserRepository(MedicationUserRepository):
             }
         )
         stage = os.environ["STAGE"]
-        print(f"tfm-{stage}-medication-user")
-        print(response)
         return response

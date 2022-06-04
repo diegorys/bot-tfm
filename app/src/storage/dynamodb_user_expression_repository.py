@@ -18,15 +18,6 @@ class DynamoDBUserExpressionRepository(UserExpressionRepository):
         if exists:
             raise Exception(f"Error at insert duplicated message")
         timestamp = str(time.time())
-        print("PUT ITEM")
-        print(userExpression.id)
-        print(str(userExpression.date))
-        print(userExpression.user.username)
-        print(userExpression.user.metadata)
-        print(userExpression.text)
-        print(userExpression.intent)
-        print(userExpression.entities)
-        print(userExpression.response)
         response = self.table.put_item(
             Item={
                 "id": str(userExpression.id),
@@ -43,14 +34,10 @@ class DynamoDBUserExpressionRepository(UserExpressionRepository):
                 "updatedAt": timestamp,
             }
         )
-        print("DONE")
-        print(response)
         return response
 
     def list(self):
         response = self.table.scan()
-
-        print(len(response["Items"]), TABLE_NAME)
         return response["Items"]
 
     def _exists(self, userExpression: UserExpression):
