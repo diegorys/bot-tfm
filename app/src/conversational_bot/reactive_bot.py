@@ -21,7 +21,7 @@ class ReactiveBOT:
         dialogManager: DialogManager,
         responseGenerator: ResponseGenerator,
         commandManager: CommandManager,
-        userExpressionRepository: UserExpressionRepository
+        userExpressionRepository: UserExpressionRepository,
     ):
         self.nlu: NLU = nlu
         self.dialogManager = dialogManager
@@ -30,6 +30,16 @@ class ReactiveBOT:
         self.userExpressionRepository = userExpressionRepository
 
     def execute(self, user: User, text: str, date) -> Response:
+        try:
+            return self._execute(user, text, date)
+        except Exception as e:
+            print("Error!!!")
+            print(e)
+            return Response(
+                user, "Lo siento, ahora mismo estoy teniendo problemas técnicos...", "ERROR", {}
+            )
+
+    def _execute(self, user: User, text: str, date) -> Response:
         frame: Frame = self.nlu.execute(user, text)
         if frame.isComplete():
             response = self.responseGenerator.execute(frame)
