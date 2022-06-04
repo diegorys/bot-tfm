@@ -8,5 +8,5 @@ class EventRepository:
     def markAsNotified(self, event: Event) -> None:
         pass
 
-    def getPendingEvents(self):
+    def getPendingEvents(self, nextTick: str):
         pass

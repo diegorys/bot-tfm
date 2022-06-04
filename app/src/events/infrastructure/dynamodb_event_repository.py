@@ -1,10 +1,11 @@
 import os
 import time
 import boto3
+from src.events.domain.event_repository import EventRepository
 from src.events.domain.event import Event
 
 
-class DynamoDBEventRepository:
+class DynamoDBEventRepository(EventRepository):
     def __init__(self):
         stage = os.environ["STAGE"]
         self.dynamodb = boto3.resource("dynamodb")
@@ -30,5 +31,5 @@ class DynamoDBEventRepository:
         )
         return response
 
-    def getPendingEvents(self):
+    def getPendingEvents(self, nextTick: str):
         pass

@@ -112,8 +112,8 @@ functions:
       - httpApi:
           path: /telegram
           method: post
-  # cron:
-  #   handler: cron/cron.handle
+  # events:
+  #   handler: events/cron.handle
   #   events:
   #     - schedule: rate(1 minute)
   notify:
