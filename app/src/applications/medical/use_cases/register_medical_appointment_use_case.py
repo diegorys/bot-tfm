@@ -19,7 +19,7 @@ class RegisterMedicalAppointmentUseCase:
             medicalAppointment.user,
             "RECORDAR_CITA_MEDICA",
             {"cita": medicalAppointment.speciality.name},
-            medicalAppointment.date.date,
+            medicalAppointment.date.timestamp,
         )
         saved = self.repository.save(medicalAppointment)
         self.eventRepository.save(event)

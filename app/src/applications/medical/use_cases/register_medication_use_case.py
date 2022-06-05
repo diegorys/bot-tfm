@@ -17,7 +17,7 @@ class RegisterMedicationUseCase:
             medicationUser.user,
             "RECORDAR_MEDICACION",
             {"medicamento": medicationUser.medication.name},
-            medicationUser.date.date,
+            medicationUser.date.timestamp,
         )
         saved = self.repository.save(medicationUser)
         self.eventRepository.save(event)

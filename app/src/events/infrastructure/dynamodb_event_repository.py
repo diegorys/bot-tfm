@@ -1,6 +1,8 @@
+from decimal import Decimal
 import os
 import time
 import boto3
+from src.sso.domain.user import User
 from src.events.domain.event_repository import EventRepository
 from src.events.domain.event import Event
 
@@ -18,18 +20,25 @@ class DynamoDBEventRepository(EventRepository):
             "user": event.user.metadata["telegram_id"],
             "intent": event.intent,
             "entities": event.entities,
-            "date": event.date,
+            "timestamp": Decimal(event.timestamp),
             "createdAt": timestamp,
             "updatedAt": timestamp,
         }
         response = self.table.put_item(Item=item)
-        return response
+        if 200 != response["ResponseMetadata"]["HTTPStatusCode"]:
+            raise Exception("Error saving event!")
 
     def markAsNotified(self, event: Event) -> None:
-        response = self.table.delete_item(
-            Key={"id": event.id}
-        )
+        response = self.table.delete_item(Key={"id": event.id})
         return response
 
-    def getPendingEvents(self, nextTick: str):
-        pass
+    def list(self):
+        response = self.table.scan()["Items"]
+        events = []
+        for item in response:
+            user = User("", {"telegram_id": item["user"]})
+            event = Event(
+                user, item["intent"], item["entities"], float(item["timestamp"]), item["id"]
+            )
+            events.append(event)
+        return events

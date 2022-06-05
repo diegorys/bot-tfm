@@ -11,7 +11,7 @@ os.environ["STAGE"] = "test"
 def test_execute():
     command = AddMedicationUserCommandMother.getValid()
     user = UserMother.getValid()
-    args = {"medicamento": "medicationtest", "cuando": "18:00"}
+    args = {"medicamento": "medicationtest", "cuando": "2022-11-22T12:00:00+02:00"}
 
     medicationUser: MedicationUser = command.execute(user, args)
 

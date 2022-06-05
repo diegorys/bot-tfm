@@ -136,3 +136,4 @@ dmypy.json
 # App
 logs
 database/*.db
+.vscode
