@@ -13,5 +13,5 @@ def handle(event, context):
     eventRepository = DynamoDBEventRepository()
     telegramClient: Client = TelegramClient(os.environ.get("TELEGRAM_TOKEN"))
     useCase = RememberUseCase(eventRepository, telegramClient)
-    useCase.execute(1)
+    useCase.execute(15)
     print("EXECUTED")

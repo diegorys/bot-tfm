@@ -115,7 +115,7 @@ functions:
   events:
     handler: src/interfaces/event_bridge.handle
     events:
-      - schedule: rate(1 hour)
+      - schedule: rate(10 minutes)
       # - httpApi:
       #     path: /events
       #     method: get

@@ -17,7 +17,12 @@ slots = {
         "algidol": [],
         "rosa mosqueta": [],
         "valdispert": [],
-        "vitamina d": ["vitaminas", "vitamina"]
+        "vitamina d": ["vitaminas", "vitamina"],
+        "redoxon": ["redoxon"],
+        "pastillas": ["pastillas", "medicina", "medicinas", "medicamento", "medicamentos", "pastilla"],
+        "suplemento de hierro": ["suplemento de hierro", "hierro"],
+        "adiro 300": ["adiro 300"],
+        "antibiótico": ["antibiótico", "antibióticos"]
     },
     "cita": {
         "dentista": ["dentista", "odontólogo", "odontóloga", "odontología", "revisión dental"],
