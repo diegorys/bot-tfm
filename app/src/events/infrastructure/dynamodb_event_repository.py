@@ -1,7 +1,7 @@
-from decimal import Decimal
 import os
 import time
 import boto3
+from decimal import Decimal
 from src.sso.domain.user import User
 from src.events.domain.event_repository import EventRepository
 from src.events.domain.event import Event

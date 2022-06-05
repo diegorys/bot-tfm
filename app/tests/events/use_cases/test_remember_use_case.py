@@ -35,7 +35,7 @@ def test_remember_use_case_formatResponse():
     user = UserMother.getValid()
     event = Event(user, "RECORDAR_MEDICACION", {"medicamento": "rinialer"},
                   1654354871.0)
-    expected = "RECORDAR_MEDICACION, 17:01: medicamento rinialer"
+    expected = "RECORDAR_MEDICACION, 15:01: medicamento rinialer"
 
     received = useCase.formatResponse(event)
 
