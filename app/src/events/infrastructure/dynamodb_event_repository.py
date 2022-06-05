@@ -34,6 +34,7 @@ class DynamoDBEventRepository(EventRepository):
 
     def list(self):
         response = self.table.scan()["Items"]
+        print(response)
         events = []
         for item in response:
             user = User("", {"telegram_id": item["user"]})

@@ -10,8 +10,9 @@ class EventRepository:
         pass
 
     def getPendingEvents(self, delta: int):
-        timestamp = (datetime.now() + timedelta(minutes=delta)).timestamp()
+        timestamp = (datetime.now() + timedelta(minutes=delta) + timedelta(hours=2)).timestamp()
         allEvents = self.list()
+        print(f"Eventos: {len(allEvents)}")
         events = []
         for event in allEvents:
             if event.hasExpired(timestamp):

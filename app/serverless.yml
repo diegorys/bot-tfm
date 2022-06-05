@@ -5,10 +5,10 @@ provider:
   name: aws
   runtime: python3.8
   environment:
-    STAGE: "${opt:stage, self:provider.stage}"    
+    STAGE: "${sls:stage}"
     GPT3_ENGINE: "text-davinci-002"
-    OPENAI_API_KEY: ${self:custom.env.OPENAI_API_KEY.${opt:stage, self:provider.stage}}
-    TELEGRAM_TOKEN: ${self:custom.env.TELEGRAM_TOKEN.${opt:stage, self:provider.stage}}
+    OPENAI_API_KEY: ${self:custom.env.OPENAI_API_KEY.${sls:stage}, ''}
+    TELEGRAM_TOKEN: ${self:custom.env.TELEGRAM_TOKEN.${sls:stage}, ''}
     GOOGLE_APPLICATION_CREDENTIALS: "/credentials/google/key.json"
 
   iam:
@@ -26,7 +26,7 @@ provider:
             - dynamodb:GetRecords
             - dynamodb:GetShardIterator
             - dynamodb:ListStreams
-          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:service}-${opt:stage, self:provider.stage}-dialogs"
+          Resource: "arn:aws:dynamodb:${aws:region}:*:table/${self:service}-${sls:stage}-dialogs"
         - Effect: Allow
           Action:
             - dynamodb:Query
@@ -39,7 +39,7 @@ provider:
             - dynamodb:GetRecords
             - dynamodb:GetShardIterator
             - dynamodb:ListStreams
-          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:service}-${opt:stage, self:provider.stage}-users"
+          Resource: "arn:aws:dynamodb:${aws:region}:*:table/${self:service}-${sls:stage}-users"
         - Effect: Allow
           Action:
             - dynamodb:Query
@@ -52,7 +52,7 @@ provider:
             - dynamodb:GetRecords
             - dynamodb:GetShardIterator
             - dynamodb:ListStreams
-          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:service}-${opt:stage, self:provider.stage}-status"
+          Resource: "arn:aws:dynamodb:${aws:region}:*:table/${self:service}-${sls:stage}-status"
         - Effect: Allow
           Action:
             - dynamodb:Query
@@ -65,7 +65,7 @@ provider:
             - dynamodb:GetRecords
             - dynamodb:GetShardIterator
             - dynamodb:ListStreams
-          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:service}-${opt:stage, self:provider.stage}-medication-user"
+          Resource: "arn:aws:dynamodb:${aws:region}:*:table/${self:service}-${sls:stage}-medication-user"
         - Effect: Allow
           Action:
             - dynamodb:Query
@@ -78,7 +78,7 @@ provider:
             - dynamodb:GetRecords
             - dynamodb:GetShardIterator
             - dynamodb:ListStreams
-          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:service}-${opt:stage, self:provider.stage}-medical-appointments"
+          Resource: "arn:aws:dynamodb:${aws:region}:*:table/${self:service}-${sls:stage}-medical-appointments"
         - Effect: Allow
           Action:
             - dynamodb:Query
@@ -91,7 +91,7 @@ provider:
             - dynamodb:GetRecords
             - dynamodb:GetShardIterator
             - dynamodb:ListStreams
-          Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:service}-${opt:stage, self:provider.stage}-events"
+          Resource: "arn:aws:dynamodb:${aws:region}:*:table/${self:service}-${sls:stage}-events"
 plugins:
   - serverless-python-requirements
 package:
@@ -112,16 +112,16 @@ functions:
       - httpApi:
           path: /telegram
           method: post
-  # events:
-  #   handler: events/cron.handle
-  #   events:
-  #     - schedule: rate(1 minute)
-  notify:
-    handler: src/notifications/infrastructure/aws_telegram_notifications.handle
+  events:
+    handler: src/interfaces/event_bridge.handle
+    events:
+      - schedule: rate(1 hour)
+      # - httpApi:
+      #     path: /events
+      #     method: get
+  # notify:
+  #   handler: src/notifications/infrastructure/aws_telegram_notifications.handle
 custom:
-  pythonRequirements:
-    zip: true
-    slim: true
   env:
     OPENAI_API_KEY: 
       test: "***REMOVED***" # Diego de pago
@@ -134,7 +134,7 @@ resources:
     DialogsTable:
       Type: "AWS::DynamoDB::Table"
       Properties:
-        TableName: ${self:service}-${opt:stage, self:provider.stage}-dialogs
+        TableName: ${self:service}-${sls:stage}-dialogs
         AttributeDefinitions:
           - AttributeName: id
             AttributeType: S
@@ -147,7 +147,7 @@ resources:
     UsersTable:
       Type: "AWS::DynamoDB::Table"
       Properties:
-        TableName: ${self:service}-${opt:stage, self:provider.stage}-users
+        TableName: ${self:service}-${sls:stage}-users
         AttributeDefinitions:
           - AttributeName: id
             AttributeType: S
@@ -160,7 +160,7 @@ resources:
     StatusTable:
       Type: "AWS::DynamoDB::Table"
       Properties:
-        TableName: ${self:service}-${opt:stage, self:provider.stage}-status
+        TableName: ${self:service}-${sls:stage}-status
         AttributeDefinitions:
           - AttributeName: id
             AttributeType: S
@@ -173,7 +173,7 @@ resources:
     MedicationUserTable:
       Type: "AWS::DynamoDB::Table"
       Properties:
-        TableName: ${self:service}-${opt:stage, self:provider.stage}-medication-user
+        TableName: ${self:service}-${sls:stage}-medication-user
         AttributeDefinitions:
           - AttributeName: id
             AttributeType: S
@@ -186,7 +186,7 @@ resources:
     MedicalAppointmentsTable:
       Type: "AWS::DynamoDB::Table"
       Properties:
-        TableName: ${self:service}-${opt:stage, self:provider.stage}-medical-appointments
+        TableName: ${self:service}-${sls:stage}-medical-appointments
         AttributeDefinitions:
           - AttributeName: id
             AttributeType: S
@@ -199,7 +199,7 @@ resources:
     EventsTable:
       Type: "AWS::DynamoDB::Table"
       Properties:
-        TableName: ${self:service}-${opt:stage, self:provider.stage}-events
+        TableName: ${self:service}-${sls:stage}-events
         AttributeDefinitions:
           - AttributeName: id
             AttributeType: S

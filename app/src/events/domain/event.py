@@ -30,4 +30,5 @@ class Event:
         self.timestamp = timestamp
 
     def hasExpired(self, timestamp: float) -> bool:
+        print(f"{self.id} - ${self.timestamp} - ${timestamp}")
         return self.timestamp < timestamp

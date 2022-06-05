@@ -10,17 +10,21 @@ class RememberUseCase:
         self.repository = repository
         self.client = client
 
-    def execute(self, nextTick: str):
-        events = self.repository.getPendingEvents(nextTick)
+    def execute(self, delta: int):
+        print(f"Get pending events for delta {delta}")
+        events = self.repository.getPendingEvents(delta)
+        print(f"Pending events: {len(events)}")
         for event in events:
-            user = User("", {"telegram_id": event.user})
             text = self.formatResponse(event)
-            self.client.emit(user, text)
+            print(f"Response: {text}")
+            self.client.emit(event.user, text)
             self.repository.markAsNotified(event)
+            print(f"Done event {text}")
+        print("done all")
 
     def formatResponse(self, event: Event):
         timestamp = datetime.fromtimestamp(event.timestamp)
-        localeDate = timestamp + timedelta(hours=2)
+        localeDate = timestamp
         date = localeDate.strftime("%H:%M")
 
         text = f"{event.intent}, {date}: "
