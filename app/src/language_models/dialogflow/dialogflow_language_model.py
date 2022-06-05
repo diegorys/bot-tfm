@@ -41,7 +41,7 @@ class DialogflowLanguageModel(LanguageModel):
                 entities[entityName] = parameters[entityName][0]
         self.lastResponse = response.query_result.fulfillment_messages[0].text.text[
             0
-        ]  # TODO: coger de response_json
+        ]
         self.lastResponse = self.lastResponse.replace("date-time", "cuándo")
         return intent, entities
 

@@ -4,7 +4,7 @@ import pytest
 from src.events.infrastructure.dynamodb_event_repository import DynamoDBEventRepository
 from tests.events.mother.event_mother import EventMother
 
-
+@pytest.mark.skip(reason="DynamoDB")
 def test_save():
     clear()
     repository = DynamoDBEventRepository()
@@ -16,7 +16,7 @@ def test_save():
     except Exception as e:
         raise pytest.fail("{0}".format(e))
 
-
+@pytest.mark.skip(reason="DynamoDB")
 def test_list_empty():
     clear()
     repository = DynamoDBEventRepository()
@@ -25,7 +25,7 @@ def test_list_empty():
 
     assert 0 == len(events)
 
-
+@pytest.mark.skip(reason="DynamoDB")
 def test_list_five():
     clear()
     repository = DynamoDBEventRepository()

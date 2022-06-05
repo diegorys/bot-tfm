@@ -1,12 +1,11 @@
+from pickle import NONE
 import time
+from uuid import uuid4
 from src.sso.domain.user import User
 
 
 class Event:
-    def __init__(
-        self, user: User, intent: str, entities, timestamp: float,
-        id: str = str(time.time())
-    ):
+    def __init__(self, user: User, intent: str, entities, timestamp: float, id: str = None):
         if type(user) is not User:
             raise Exception(
                 f"""Arg user must be an object of User class.
@@ -19,10 +18,12 @@ class Event:
             )
         if type(timestamp) is not float:
             raise Exception(
-                f"""Arg timestamp must be an object of float class.
+                f"""Arg timestamp must be an object of User class.
                 Getted class {type(timestamp)}"""
             )
         self.id = id
+        if self.id is None:
+            self.id = str(uuid4())
         self.user = user
         self.intent = intent
         self.entities = entities
