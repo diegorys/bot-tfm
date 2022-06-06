@@ -15,5 +15,4 @@ class AddMedicalAppointmentCommand(Command):
         speciality = MedicalSpeciality(args["cita"])
         dateTime = Date(args["cuando"])
         medicalAppointment = MedicalAppointment(user, speciality, dateTime)
-
-        return self.useCase.execute(medicalAppointment)
+        self.useCase.execute(medicalAppointment)

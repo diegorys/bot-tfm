@@ -15,5 +15,4 @@ class AddMedicationUserCommand(Command):
         medication = Medication(args["medicamento"])
         dateTime = Date(args["cuando"])
         medicationUser = MedicationUser(user, medication, dateTime)
-
-        return self.useCase.execute(medicationUser)
+        self.useCase.execute(medicationUser)

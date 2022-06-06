@@ -18,7 +18,6 @@ class AskForUserStatusUseCase:
                 userInStatus = self.repository.getStatusOf(dependent)
                 dt_object = datetime.fromtimestamp(userInStatus.timestamp)
                 date = (dt_object + timedelta(hours=2)).strftime("%d-%m-%Y a las %H:%M:%S")
-                text += f"Estado de {userInStatus.user.username}: {userInStatus.status.name}, registrado el {date}. "
+                text += f"El estado de {userInStatus.user.username} el {date} era de {userInStatus.status.name}.\n"
         response.text = text.strip()
-        print(response.text)
         return response

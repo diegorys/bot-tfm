@@ -16,4 +16,4 @@ class RegisterUserStatusCommand(Command):
         print(f"RegisterUserStatusCommand execute")
         status = Status(args["estado"])
         userInStatus = UserInStatus(user, status, datetime.now().timestamp())
-        return self.useCase.execute(userInStatus)
+        self.useCase.execute(userInStatus)
