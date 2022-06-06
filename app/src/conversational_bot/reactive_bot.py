@@ -1,4 +1,5 @@
 import time
+import traceback
 from src.conversational_bot.command_manager import CommandManager
 from src.conversational_bot.dialog_manager import DialogManager
 from src.conversational_bot.frame import Frame
@@ -35,6 +36,7 @@ class ReactiveBOT:
         except Exception as e:
             print("Error!!!")
             print(e)
+            traceback.print_exc()
             return Response(
                 user, "Lo siento, ahora mismo estoy teniendo problemas técnicos...", "ERROR", {}
             )

@@ -28,18 +28,19 @@ class DynamoDBUserInStatusRepository(UserInStatusRepository):
         if 200 != response["ResponseMetadata"]["HTTPStatusCode"]:
             raise Exception("Error saving event!")
 
-    def getStatusOf(self, user: User):
+    def getStatusOf(self, user: User) -> UserInStatus:
         id = user.metadata["telegram_id"]
         response = self.table.scan()["Items"]
         foundUserInStatus = None
         currentTimestamp = 0
         for item in response:
             checkTimestamp = float(item["timestamp"])
-            if item["user"] == id and checkTimestamp > currentTimestamp:
+            userId = str(item["user"])
+            if userId == id and checkTimestamp > currentTimestamp:
                 currentTimestamp = checkTimestamp
                 status = Status(item["status"])
                 foundUserInStatus = UserInStatus(user, status, currentTimestamp)
 
         if foundUserInStatus is None:
-            raise Exception(f"User {id} not found")
+            raise Exception(f"User {id} not found finding status")
         return foundUserInStatus

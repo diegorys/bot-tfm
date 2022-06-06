@@ -1,3 +1,4 @@
+import traceback
 import telegram
 from telegram import Update
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
@@ -40,8 +41,9 @@ class TelegramBot:
             print(f"< BOT: {response.text}")
             context.bot.send_message(chat_id=update.effective_chat.id, text=response.text)
         except Exception as e:
-            text = "Lo siento, no te conozco."
+            text = "Lo siento, creo no te conozco..."
             print(e)
+            traceback.print_exc()
             context.bot.send_message(chat_id=update.effective_chat.id, text=text)
 
     def handleStartCommand(self, update: Update, context: CallbackContext):

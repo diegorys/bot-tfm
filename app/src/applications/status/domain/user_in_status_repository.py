@@ -6,5 +6,5 @@ class UserInStatusRepository:
     def save(userInStatus: UserInStatus):
         pass
 
-    def getStatusOf(self, user: User):
+    def getStatusOf(self, user: User) -> UserInStatus:
         pass

@@ -9,5 +9,4 @@ class AskForUserStatusCommand(Command):
 
     def execute(self, user: User, args):
         print(f"AskForUserStatusCommand execute")
-        # TODO: usuarios al cuidado
         return self.useCase.execute(user)
