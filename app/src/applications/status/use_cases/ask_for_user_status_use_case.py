@@ -22,6 +22,6 @@ class AskForUserStatusUseCase:
                     date = (dt_object + timedelta(hours=2)).strftime("%d-%m-%Y a las %H:%M:%S")
                     text += f"El estado de {userInStatus.user.username} el {date} era de {userInStatus.status.name}.\n"
                 except Exception as e:
-                    text += f"Desconozco el estado de {dependent.username}."                
+                    text += f"Desconozco el estado de {dependent.username}.\n"                
         response.text = text.strip()
         return response
