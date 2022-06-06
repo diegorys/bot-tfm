@@ -37,8 +37,10 @@ class DialogflowLanguageModel(LanguageModel):
         for entityName in parameters.keys():
             if entityName == "date-time":
                 entities["cuando"] = self.parseDateTime(parameters["date-time"])
-            else:
+            elif len(parameters[entityName]) > 0:
                 entities[entityName] = parameters[entityName][0]
+            else:
+                entities[entityName] = ""
         self.lastResponse = response.query_result.fulfillment_messages[0].text.text[
             0
         ]
