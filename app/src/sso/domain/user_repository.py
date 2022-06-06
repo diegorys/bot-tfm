@@ -7,3 +7,6 @@ class UserRepository:
 
     def list(self):
         pass
+
+    def getByMetadata(self, key, value):
+        pass

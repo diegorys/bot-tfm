@@ -1,4 +1,5 @@
 import os
+from src.sso.infrastructure.dynamodb_user_respository import DynamoDBUsersRepository
 from src.conversational_bot.reactive_bot import ReactiveBOT
 from src.conversational_bot.nlu import NLU
 from src.conversational_bot.dialog_manager import DialogManager
@@ -11,6 +12,7 @@ from src.storage.dynamodb_user_expression_repository import DynamoDBUserExpressi
 
 def startConversationalBOT():
     os.environ["STAGE"] = "test"
+    userRepository = DynamoDBUsersRepository()
     userExpressionRepository = DynamoDBUserExpressionRepository()
     languageModel = DialogflowLanguageModel()
     nlu = NLU(languageModel)
@@ -22,7 +24,7 @@ def startConversationalBOT():
     )
     print(f"STARTING CONVERSATIONAL BOT...")
     TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
-    telegramBot: TelegramBot = TelegramBot(TELEGRAM_TOKEN, bot)
+    telegramBot: TelegramBot = TelegramBot(TELEGRAM_TOKEN, bot, userRepository)
     print("WAITING FOR USER MESSAGE...")
     telegramBot.pool()
 
