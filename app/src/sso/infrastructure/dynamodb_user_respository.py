@@ -38,7 +38,6 @@ class DynamoDBUsersRepository(UserRepository):
             foundUser.relations["caregiver"] = userDict[foundUser.metadata["caregiver"]]
         if "dependents" in list(foundUser.metadata.keys()):
             foundUser.relations["dependents"] = []
-            print(6)
             for dependent in list(foundUser.metadata["dependents"]):
                 foundUser.relations["dependents"].append(userDict[str(dependent)])
         return foundUser

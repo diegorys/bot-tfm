@@ -2,6 +2,7 @@ import os
 import json
 import telegram
 from src.sso.domain.user import User
+from src.sso.infrastructure.dynamodb_user_respository import DynamoDBUsersRepository
 from src.storage.dynamodb_user_expression_repository import (
     DynamoDBUserExpressionRepository,
 )
@@ -15,6 +16,7 @@ from src.language_models.dialogflow.dialogflow_language_model import (
 )
 from src.conversational_bot.reactive_bot import ReactiveBOT
 
+usersRepository = DynamoDBUsersRepository()
 repository = DynamoDBUserExpressionRepository()
 languageModel = DialogflowLanguageModel()
 
@@ -69,10 +71,7 @@ def execute(event):
         print(event.get("body"))
         chat_id = update.message.chat.id
         text = update.message.text
-        user = User(
-            update.effective_chat.first_name,
-            {"telegram_id": update.effective_chat.id, "name": update.effective_chat.first_name},
-        )
+        user = usersRepository.getByMetadata("telegram_id", update.effective_chat.id)
         date = str(update.message.date)
         response = botExecute(text, user, date)
         bot.sendMessage(chat_id=chat_id, text=response.text)
