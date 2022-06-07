@@ -13,7 +13,7 @@ class AlertOfInactivityUseCase:
         users = self.userRepository.list()
         for user in users:
             dependent: User = user
-            if "caregiver" in dependent.relations.keys() and dependent.metadata["inactive"]:
+            if "caregiver" in dependent.relations.keys() and not dependent.isMarkedAsActive():
                 carevigne = dependent.relations["caregiver"]
                 message = f"La persona a su cargo, {dependent.username} no responde."
                 self.client.emit(carevigne, message)

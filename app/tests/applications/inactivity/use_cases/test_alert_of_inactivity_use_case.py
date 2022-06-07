@@ -9,7 +9,7 @@ from tests.conversational_bot.mocks.mock_client import MockClient
 def test_execute():
     userRepository = MockUsersRepository()
     caregiver, dependent = UserMother.getPairCaregiverDependentWithDependentName("Pepe")
-    dependent.metadata["inactive"] = True
+    dependent.markActive(False)
     userRepository.mockWith([caregiver, dependent])
     client: MockClient = MockClient()
     useCase = AlertOfInactivityUseCase(userRepository, client)
