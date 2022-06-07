@@ -1,5 +1,6 @@
 import os
 import json
+import traceback
 import telegram
 from src.sso.domain.user import User
 from src.sso.infrastructure.dynamodb_user_respository import DynamoDBUsersRepository
@@ -71,11 +72,17 @@ def execute(event):
         print(event.get("body"))
         chat_id = update.message.chat.id
         text = update.message.text
-        user = usersRepository.getByMetadata("telegram_id", update.effective_chat.id)
-        date = str(update.message.date)
-        response = botExecute(text, user, date)
-        bot.sendMessage(chat_id=chat_id, text=response.text)
-        print("Message sent")
+        try:
+            user = usersRepository.getByMetadata("telegram_id", update.effective_chat.id)
+            date = str(update.message.date)
+            response = botExecute(text, user, date)
+            bot.sendMessage(chat_id=chat_id, text=response.text)
+            print("Message sent")
+        except Exception as e:
+            text = "Lo siento, creo no te conozco..."
+            print(e)
+            traceback.print_exc()
+            bot.send_message(chat_id=chat_id, text=text)
 
 
 def botExecute(text: str, user: User, date):
