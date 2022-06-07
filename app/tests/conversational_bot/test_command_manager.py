@@ -16,18 +16,18 @@ def test_addCommand():
 def test_execute_existing():
     manager = CommandManager()
     command = CommandMother.getValid()
-    frameRequest = FrameMother.getValid()
-    manager.addCommand(frameRequest.intent, command)
+    frame = FrameMother.getValid()
+    manager.addCommand(frame.intent, command)
 
-    frameResponse = manager.execute(frameRequest)
+    response = manager.execute(frame)
 
-    assert frameResponse == frameRequest
+    assert response is not None
 
 
 def test_execute_not_existing():
     manager = CommandManager()
-    frameRequest = FrameMother.getValid()
+    frame = FrameMother.getValid()
 
-    frameResponse = manager.execute(frameRequest)
+    response = manager.execute(frame)
 
-    assert frameResponse == None
+    assert response is None

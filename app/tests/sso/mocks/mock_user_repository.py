@@ -3,11 +3,8 @@ from src.sso.domain.user_repository import UserRepository
 
 
 class MockUsersRepository(UserRepository):
-    def save(self, user: User):
-        return user
-
-    def list(self):
-        return [
+    def __init__(self):
+        self.users = [
             User(
                 "Diego",
                 {
@@ -18,3 +15,12 @@ class MockUsersRepository(UserRepository):
                 },
             )
         ]
+
+    def mockWith(self, users):
+        self.users = users
+
+    def save(self, user: User):
+        return self.users.append(user)
+
+    def list(self):
+        return self.users

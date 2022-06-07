@@ -1,16 +1,19 @@
 from datetime import datetime
-from sso.domain.user import User
-from sso.domain.user_repository import UserRepository
+from src.sso.domain.user import User
+from src.sso.domain.user_repository import UserRepository
+from src.conversational_bot.client import Client
 
 
 class AlertOfInactivityUseCase:
-    def __init__(self, userRepository: UserRepository):
+    def __init__(self, userRepository: UserRepository, client: Client):
         self.userRepository = userRepository
+        self.client = client
 
     def execute(self):
-        users = self.userRepository.list()        
+        users = self.userRepository.list()
         for user in users:
-            userC: User = user
-            if userC.metadata["inactive"]:
-                carevigne = userC.relations[""]
-                print(f"El usuario {userC.username} está inactivo. Avisar a su cuidador {carevigne}")
+            dependent: User = user
+            if "caregiver" in dependent.relations.keys() and dependent.metadata["inactive"]:
+                carevigne = dependent.relations["caregiver"]
+                message = f"La persona a su cargo, {dependent.username} no responde."
+                self.client.emit(carevigne, message)
