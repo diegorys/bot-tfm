@@ -15,7 +15,9 @@ OK_RESPONSE = {
 
 
 def handle(event, context):
+    print("-----------------------------")
     try:
+        print("TESTING INACTIVITY HANDLER")
         if not os.environ.get("TELEGRAM_TOKEN"):
             raise NotImplementedError
         telegramClient = TelegramClient(os.environ.get("TELEGRAM_TOKEN"))
@@ -25,4 +27,5 @@ def handle(event, context):
         print("Error!!!")
         print(e)
     finally:
+        print("-----------------------------")
         return OK_RESPONSE

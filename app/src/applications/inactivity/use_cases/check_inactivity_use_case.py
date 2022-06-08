@@ -9,18 +9,25 @@ class CheckInactivityUseCase:
         self.userRepository = userRepository
         self.client = client
 
-    # Execute at 13:00 and at 20:00. Checks 3 hours of inactivity.
     def execute(self):
+        print(f"[CheckInactivityUseCase][execute]")
         users = self.userRepository.list()
         for user in users:
             realUser: User = user
+            print(f"[CheckInactivityUseCase][execute]: {realUser.id}: {realUser.username}")
             if realUser.isDependant() and not realUser.isMarkedAsActive():
                 carevigne = realUser.relations["caregiver"]
-                message = f"La persona a su cargo, {realUser.username} no responde."
+                message = f"La persona a su cargo, {realUser.username}, no responde."
+                print(message)
                 self.client.emit(carevigne, message)
-            if realUser.isDependant() and not realUser.isActive():
+            elif realUser.isDependant() and not realUser.isActive():
                 realUser.markActive(False)
+                self.userRepository.save(realUser)
                 message = f"Hola {realUser.username}, hace un rato que no hablamos, ¿cómo estás?"
+                print(message)
                 self.client.emit(realUser, message)
             else:
+                message = f"Usuario {realUser.username} activo"
                 realUser.markActive(True)
+                self.userRepository.save(realUser)
+                print(message)

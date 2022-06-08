@@ -33,12 +33,15 @@ class User:
     def isActive(self) -> bool:
         last = float(self.metadata["last_activity"])
         threshold = (datetime.now() - timedelta(hours=3)).timestamp()
+        print(f"IS active? {self.username} {last} > {threshold} {last > threshold}")
         return last > threshold
 
     def registerActivity(self) -> None:
         self.metadata["last_activity"] = datetime.now().timestamp()
 
     def isDependant(self):
+        print(self.relations.keys())
+        print(self.metadata.keys())
         return "caregiver" in self.relations.keys()
 
     def isCaregiver(self):

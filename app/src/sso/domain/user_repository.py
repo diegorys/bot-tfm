@@ -19,11 +19,14 @@ class UserRepository:
                 foundUser = user
         if foundUser is None:
             raise Exception(f"User with metadata {key} - {value} not found")
-        if "caregiver" in list(foundUser.metadata.keys()):
-            foundUser.relations["caregiver"] = userDict[foundUser.metadata["caregiver"]]
-        if "dependents" in list(foundUser.metadata.keys()):
-            foundUser.relations["dependents"] = []
-            for dependent in list(foundUser.metadata["dependents"]):
-                foundUser.relations["dependents"].append(userDict[str(dependent)])
-        return foundUser
+        return self.addRelations(userDict, foundUser)
+
+    def addRelations(self, userDict, user):
+        if "caregiver" in list(user.metadata.keys()):
+            user.relations["caregiver"] = userDict[user.metadata["caregiver"]]
+        if "dependents" in list(user.metadata.keys()):
+            user.relations["dependents"] = []
+            for dependent in list(user.metadata["dependents"]):
+                user.relations["dependents"].append(userDict[str(dependent)])
+        return user
 

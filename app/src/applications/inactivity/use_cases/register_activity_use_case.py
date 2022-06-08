@@ -9,4 +9,5 @@ class RegisterActivityUseCase:
 
     def execute(self, user: User):
         user.setKey("last_activity", str(datetime.now().timestamp()))
+        user.setKey("active", True)
         self.userRepository.save(user)

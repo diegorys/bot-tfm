@@ -122,10 +122,11 @@ functions:
   inactivity:
     handler: src/applications/inactivity/api_aws_lambda/handler.handle
     events:
-      - schedule: rate(10 minutes)
-      # - httpApi:
-      #     path: /events
-      #     method: get
+      - schedule: cron(00 13 ? * * *)
+      - schedule: cron(00 20 ? * * *)
+      - httpApi:
+          path: /inactivity
+          method: get
   # notify:
   #   handler: src/notifications/infrastructure/aws_telegram_notifications.handle
 custom:

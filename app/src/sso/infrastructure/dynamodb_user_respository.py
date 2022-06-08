@@ -25,16 +25,19 @@ class DynamoDBUsersRepository(UserRepository):
         for key in user.metadata.keys():
             item[key] = user.metadata[key]
         item["updatedAt"] = timestamp
-        print(item)
         response = self.table.put_item(Item=item)
         if 200 != response["ResponseMetadata"]["HTTPStatusCode"]:
             raise Exception("Error saving event!")
 
     def list(self):
         users = []
+        userDict = {}
         response = self.table.scan()
         items = response["Items"]
         for item in items:
             user = DynamoDBUserFactory.create(item)
             users.append(user)
+            userDict[user.id] = user
+        for user in users:
+            self.addRelations(userDict, user)
         return users
