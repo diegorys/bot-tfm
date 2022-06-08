@@ -11,4 +11,8 @@ class DynamoDBUserFactory:
             user.metadata["dependents"] = []
             for dependent in item["dependents"]:
                 user.metadata["dependents"].append(int(dependent))
+        if "last_activity" in item.keys():
+            user.metadata["last_activity"] = item["last_activity"]
+        if "active" in item.keys():
+            user.metadata["active"] = item["active"]
         return user

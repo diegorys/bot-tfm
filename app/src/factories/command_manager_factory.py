@@ -1,3 +1,6 @@
+from src.applications.inactivity.use_cases.register_activity_use_case import (
+    RegisterActivityUseCase,
+)
 from src.applications.medical.use_cases.register_medical_appointment_use_case import (
     RegisterMedicalAppointmentUseCase,
 )
@@ -28,6 +31,7 @@ from src.applications.status.commands.ask_for_user_status_command import (
     AskForUserStatusUseCase,
 )
 from src.applications.status.commands.register_user_status_command import RegisterUserStatusCommand
+from src.sso.infrastructure.dynamodb_user_respository import DynamoDBUsersRepository
 
 
 class CommandManagerFactory:
@@ -35,6 +39,7 @@ class CommandManagerFactory:
         commandManager = CommandManager()
         CommandManagerFactory.addMedicalCommands(commandManager)
         CommandManagerFactory.addStatusCommands(commandManager)
+        CommandManagerFactory.addInactivityCommands(commandManager)
         return commandManager
 
     def addMedicalCommands(commandManager: CommandManager):
@@ -62,3 +67,8 @@ class CommandManagerFactory:
         askCommand = AskForUserStatusCommand(askForUserStatusUseCase)
         commandManager.addCommand("REGISTRAR_ESTADO_EMOCIONAL", registerCommand)
         commandManager.addCommand("CONSULTAR_ESTADO_PERSONA_MAYOR", askCommand)
+
+    def addInactivityCommands(commandManager: CommandManager):
+        userRepository = DynamoDBUsersRepository()
+        registerActivityUseCase = RegisterActivityUseCase(userRepository)
+        commandManager.addCommand("*", registerActivityUseCase)
