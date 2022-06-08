@@ -8,6 +8,6 @@ class UserMother:
     def getPairCaregiverDependentWithNames(caregiverName: str, dependantName: str):
         caregiver = UserMother.getValid(caregiverName)
         dependent = UserMother.getValid(dependantName)
-        dependent.relations["caregiver"] = caregiver
-        caregiver.relations["dependents"] = [dependent]
+        dependent.setCaregiver(caregiver)
+        caregiver.addDependent(dependent)
         return caregiver, dependent

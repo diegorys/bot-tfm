@@ -1,4 +1,6 @@
 import os
+import time
+from uuid import uuid4
 import boto3
 from src.sso.infrastructure.dynamodb_user_factory import DynamoDBUserFactory
 from src.sso.domain.user import User
@@ -12,7 +14,22 @@ class DynamoDBUsersRepository(UserRepository):
         self.table = self.dynamodb.Table(f"tfm-{stage}-users")
 
     def save(self, user: User):
-        return user
+        timestamp = str(time.time())
+        caregiverId = None
+        if user.id is None:
+            user.id = str(uuid4())
+        item = {
+            "id": user.id,
+            "name": user.username,
+            "createdAt": timestamp,
+            "updatedAt": timestamp,
+        }
+        for key in user.metadata.keys():
+            item[key] = user.metadata[key]
+        print(item)
+        response = self.table.put_item(Item=item)
+        if 200 != response["ResponseMetadata"]["HTTPStatusCode"]:
+            raise Exception("Error saving event!")
 
     def list(self):
         users = []

@@ -11,11 +11,21 @@ class User:
         self.relations = {}
         self.metadata["last_activity"] = 0
         self.metadata["active"] = False
+    
+    def setCaregiver(self, user):
+        self.relations["caregiver"] = user
+        self.metadata["caregiver"] = user.id
+
+    def addDependent(self, user):
+        if "dependents" not in self.relations.keys():
+            self.relations["dependents"] = []
+        if "dependents" not in self.metadata.keys():
+            self.metadata["dependents"] = []
+        self.relations["dependents"].append(user)
+        self.metadata["dependents"].append(user.id)
 
     def markActive(self, active: bool) -> None:
-        last = self.metadata["last_activity"]
         self.metadata["active"] = active
-        last = self.metadata["last_activity"]
 
     def isMarkedAsActive(self) -> bool:
         return self.metadata["active"]
@@ -30,3 +40,21 @@ class User:
 
     def isDependant(self):
         return "caregiver" in self.relations.keys()
+
+    def isCaregiver(self):
+        return "dependents" in self.relations.keys()
+
+    def getCaregiver(self):
+        if "caregiver" in self.relations.keys():
+            return self.relations["caregiver"]
+        return None
+
+    def getDependents(self):
+        if "dependents" in self.relations.keys():
+            return self.relations["dependents"]
+        return []
+
+    def getKey(self, key):
+        if key in self.relations.keys():
+            return self.metadata[key]
+        return None
