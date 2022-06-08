@@ -1,10 +1,10 @@
-from src.applications.inactivity.use_cases.mark_as_inactive_use_case import MarkASInactiveUseCase
+from src.applications.inactivity.use_cases.check_inactivity_use_case import CheckInactivityUseCase
 from tests.sso.mocks.mock_user_repository import MockUsersRepository
 from tests.sso.mothers.user_mother import UserMother
 from tests.conversational_bot.mocks.mock_client import MockClient
 
 
-def test_mark_as_inactive_use_case():
+def test_check_inactivity_use_case():
     userRepository = MockUsersRepository()
     client: MockClient = MockClient()
     # dependantA is active and marked as active.
@@ -41,7 +41,7 @@ def test_mark_as_inactive_use_case():
             dependantD,
         ]
     )
-    useCase = MarkASInactiveUseCase(userRepository, client)
+    useCase = CheckInactivityUseCase(userRepository, client)
     useCase.execute()
     received = client.mockText
     expected = f"Hola {dependantD.username}, hace un rato que no hablamos, ¿cómo estás?"
@@ -58,7 +58,7 @@ def test_execute_marked():
     dependent.markActive(False)
     userRepository.mockWith([caregiver, dependent])
     client: MockClient = MockClient()
-    useCase = MarkASInactiveUseCase(userRepository, client)
+    useCase = CheckInactivityUseCase(userRepository, client)
     expectedCar = f"La persona a su cargo, {dependent.username} no responde."
     expectedDep = f"Hola {dependent.username}, hace un rato que no hablamos, ¿cómo estás?"
 

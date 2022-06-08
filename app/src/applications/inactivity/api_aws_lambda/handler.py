@@ -1,7 +1,7 @@
 import json
 
 from src.sso.infrastructure.dynamodb_user_respository import DynamoDBUsersRepository
-from src.applications.inactivity.use_cases.mark_as_inactive_use_case import MarkASInactiveUseCase
+from src.applications.inactivity.use_cases.check_inactivity_use_case import CheckInactivityUseCase
 
 usersRepository = DynamoDBUsersRepository()
 
@@ -14,7 +14,7 @@ OK_RESPONSE = {
 
 def handle(event, context):
     try:
-        useCase = MarkASInactiveUseCase(usersRepository)
+        useCase = CheckInactivityUseCase(usersRepository)
         useCase.execute()
     except Exception as e:
         print("Error!!!")

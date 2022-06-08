@@ -4,7 +4,7 @@ from src.sso.domain.user import User
 from src.conversational_bot.client import Client
 
 
-class MarkASInactiveUseCase:
+class CheckInactivityUseCase:
     def __init__(self, userRepository: UserRepository, client: Client):
         self.userRepository = userRepository
         self.client = client
