@@ -1,3 +1,4 @@
+from regex import P
 from src.conversational_bot.response import Response
 from src.conversational_bot.frame import Frame
 from src.conversational_bot.command import Command
@@ -15,17 +16,22 @@ class CommandManager:
             self.commands[commandName] = command
 
     def execute(self, frame: Frame) -> Response or None:
+        response = None
         print(f"Manage command '{frame.intent}' with parameters:")
         if frame.intent in self.commands.keys():
             try:
-                return self.commands[frame.intent].execute(frame.user, frame.entities)
+                response = self.commands[frame.intent].execute(frame.user, frame.entities)
             except Exception as e:
                 print(f"[Error][CommandManager][execute] Command {frame.intent} fails")
                 print(e)
         else:
             print(f"[Warning][CommandManager][execute] Command {frame.intent} not found")
-            return None
+        print(f"[CommandManager][WilCardCommands] {len(self.wildCardCommands)}")
         for command in self.wildCardCommands:
-            command.execute(frame.user, frame.entities)
+            try:
+                command.execute(frame.user, frame.entities)
+            except Exception as e:
+                print("[Warning] Wilcard command failed!")
+                print(e)
 
-        return None
+        return response

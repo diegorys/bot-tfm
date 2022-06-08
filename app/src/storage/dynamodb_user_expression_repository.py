@@ -22,10 +22,7 @@ class DynamoDBUserExpressionRepository(UserExpressionRepository):
             Item={
                 "id": str(userExpression.id),
                 "date": str(userExpression.date),
-                "user": {
-                    "name": userExpression.user.username,
-                    "metadata": userExpression.user.metadata,
-                },
+                "user": {"name": userExpression.user.username, "id": userExpression.user.id},
                 "text": userExpression.text,
                 "intent": userExpression.intent,
                 "entities": userExpression.entities,

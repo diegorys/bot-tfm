@@ -31,7 +31,7 @@ class User:
         return self.metadata["active"]
 
     def isActive(self) -> bool:
-        last = self.metadata["last_activity"]
+        last = float(self.metadata["last_activity"])
         threshold = (datetime.now() - timedelta(hours=3)).timestamp()
         return last > threshold
 

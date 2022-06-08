@@ -8,5 +8,5 @@ class RegisterActivityUseCase:
         self.userRepository = userRepository
 
     def execute(self, user: User):
-        user.metadata["last_activity"] = datetime.now().timestamp()
+        user.setKey("last_activity", str(datetime.now().timestamp()))
         self.userRepository.save(user)

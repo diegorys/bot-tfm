@@ -15,17 +15,16 @@ class DynamoDBUsersRepository(UserRepository):
 
     def save(self, user: User):
         timestamp = str(time.time())
-        caregiverId = None
+        createdAt = None
         if user.id is None:
             user.id = str(uuid4())
-        item = {
-            "id": user.id,
-            "name": user.username,
-            "createdAt": timestamp,
-            "updatedAt": timestamp,
-        }
+            createdAt = timestamp
+        item = {"id": user.id, "name": user.username}
+        if createdAt is not None:
+            item["createdAt"] = createdAt
         for key in user.metadata.keys():
             item[key] = user.metadata[key]
+        item["updatedAt"] = timestamp
         print(item)
         response = self.table.put_item(Item=item)
         if 200 != response["ResponseMetadata"]["HTTPStatusCode"]:

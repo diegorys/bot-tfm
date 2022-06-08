@@ -1,3 +1,4 @@
+from src.applications.inactivity.commands.register_activity_command import RegisterActivityCommand
 from src.applications.inactivity.use_cases.register_activity_use_case import (
     RegisterActivityUseCase,
 )
@@ -69,6 +70,7 @@ class CommandManagerFactory:
         commandManager.addCommand("CONSULTAR_ESTADO_PERSONA_MAYOR", askCommand)
 
     def addInactivityCommands(commandManager: CommandManager):
-        userRepository = DynamoDBUsersRepository()
-        registerActivityUseCase = RegisterActivityUseCase(userRepository)
-        commandManager.addCommand("*", registerActivityUseCase)
+        repository = DynamoDBUsersRepository()
+        useCase = RegisterActivityUseCase(repository)
+        command = RegisterActivityCommand(useCase)
+        commandManager.addCommand("*", command)

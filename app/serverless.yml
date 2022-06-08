@@ -119,6 +119,13 @@ functions:
       # - httpApi:
       #     path: /events
       #     method: get
+  inactivity:
+    handler: src/applications/inactivity/api_aws_lambda/handler.handle
+    events:
+      - schedule: rate(10 minutes)
+      # - httpApi:
+      #     path: /events
+      #     method: get
   # notify:
   #   handler: src/notifications/infrastructure/aws_telegram_notifications.handle
 custom:
