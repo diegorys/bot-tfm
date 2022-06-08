@@ -8,7 +8,7 @@ from tests.conversational_bot.mocks.mock_client import MockClient
 
 def test_execute():
     userRepository = MockUsersRepository()
-    caregiver, dependent = UserMother.getPairCaregiverDependentWithDependentName("Pepe")
+    caregiver, dependent = UserMother.getPairCaregiverDependentWithNames("Cuidador", "Dependiente")
     dependent.markActive(False)
     userRepository.mockWith([caregiver, dependent])
     client: MockClient = MockClient()

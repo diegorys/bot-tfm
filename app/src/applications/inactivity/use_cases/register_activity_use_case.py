@@ -1,6 +1,6 @@
 from datetime import datetime
-from sso.domain.user import User
-from sso.domain.user_repository import UserRepository
+from src.sso.domain.user import User
+from src.sso.domain.user_repository import UserRepository
 
 
 class RegisterActivityUseCase:
@@ -8,5 +8,5 @@ class RegisterActivityUseCase:
         self.userRepository = userRepository
 
     def execute(self, user: User):
-        user.metadata["last_activity"] = datetime.now().timestamp
+        user.metadata["last_activity"] = datetime.now().timestamp()
         self.userRepository.save(user)

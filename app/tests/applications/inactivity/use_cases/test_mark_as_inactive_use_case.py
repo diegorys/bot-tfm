@@ -1,4 +1,3 @@
-from atexit import register
 from src.applications.inactivity.use_cases.mark_as_inactive_use_case import MarkASInactiveUseCase
 from tests.sso.mocks.mock_user_repository import MockUsersRepository
 from tests.sso.mothers.user_mother import UserMother
@@ -7,18 +6,18 @@ from tests.sso.mothers.user_mother import UserMother
 def test_mark_as_inactive_use_case():
     userRepository = MockUsersRepository()
     # dependantA is active and marked as active.
-    caregiverA, dependantA = UserMother.getPairCaregiverDependentWithDependentName("User A")
+    caregiverA, dependantA = UserMother.getPairCaregiverDependentWithNames("Cuidador A", "Dependiente A")
     dependantA.registerActivity()
     dependantA.markActive(True)
     # dependantB is active and marked as inactive.
-    caregiverB, dependantB = UserMother.getPairCaregiverDependentWithDependentName("User B")
+    caregiverB, dependantB = UserMother.getPairCaregiverDependentWithNames("Cuidador B", "Dependiente B")
     dependantB.registerActivity()
     dependantB.markActive(False)
     # dependantC is inactive and marked as active.
-    caregiverC, dependantC = UserMother.getPairCaregiverDependentWithDependentName("User C")
+    caregiverC, dependantC = UserMother.getPairCaregiverDependentWithNames("Cuidador C", "Dependiente C")
     dependantC.markActive(True)
     # dependantD is inactive and marked as inactive.
-    caregiverD, dependantD = UserMother.getPairCaregiverDependentWithDependentName("User D")
+    caregiverD, dependantD = UserMother.getPairCaregiverDependentWithNames("Cuidador D", "Dependiente D")
     dependantD.markActive(False)
     userRepository.mockWith(
         [
@@ -33,7 +32,9 @@ def test_mark_as_inactive_use_case():
         ]
     )
     useCase = MarkASInactiveUseCase(userRepository)
-
     useCase.execute()
-
-    assert dependantB.isActive()
+    
+    assert dependantA.isMarkedAsActive() is True
+    assert dependantB.isMarkedAsActive() is True
+    assert dependantC.isMarkedAsActive() is False
+    assert dependantD.isMarkedAsActive() is False
