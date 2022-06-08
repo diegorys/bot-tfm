@@ -8,6 +8,8 @@ def test_save_list():
     caregiver, dependent = UserMother.getPairCaregiverDependentWithNames(
         "Cuidador A", "Dependiente A"
     )
+    caregiver.setKey("a_key", "a_value")
+    dependent.setKey("b_key", "b_value")
     receivedCaregiver = None
     receivedDependent = None
 
@@ -20,10 +22,13 @@ def test_save_list():
             receivedCaregiver = realUser
         elif realUser.username == "Dependiente A":
             receivedDependent = realUser
+        
 
     assert receivedCaregiver is not None
     assert receivedDependent is not None
-    
+    assert "a_value" == receivedCaregiver.getKey("a_key")
+    assert "b_value" == receivedDependent.getKey("b_key")
+
     receivedCaregiver.addDependent(receivedDependent)
     receivedDependent.setCaregiver(receivedCaregiver)
 

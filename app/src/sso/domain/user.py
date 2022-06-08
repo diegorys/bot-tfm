@@ -11,7 +11,7 @@ class User:
         self.relations = {}
         self.metadata["last_activity"] = 0
         self.metadata["active"] = False
-    
+
     def setCaregiver(self, user):
         self.relations["caregiver"] = user
         self.metadata["caregiver"] = user.id
@@ -55,6 +55,9 @@ class User:
         return []
 
     def getKey(self, key):
-        if key in self.relations.keys():
+        if key in self.metadata.keys():
             return self.metadata[key]
         return None
+
+    def setKey(self, key: str, value: any):
+        self.metadata[key] = value
