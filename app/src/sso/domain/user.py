@@ -2,11 +2,11 @@ from datetime import datetime, timedelta
 
 
 class User:
-    def __init__(self, username, metadata = None):
+    def __init__(self, username, metadata=None):
         self.username = username
         self.metadata = metadata
         if metadata is None:
-            self.metadata = {}            
+            self.metadata = {}
         self.id = None
         self.relations = {}
         self.metadata["last_activity"] = 0
