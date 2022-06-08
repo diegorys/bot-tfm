@@ -1,7 +1,9 @@
+import os
 import json
 
 from src.sso.infrastructure.dynamodb_user_respository import DynamoDBUsersRepository
 from src.applications.inactivity.use_cases.check_inactivity_use_case import CheckInactivityUseCase
+from src.interfaces.telegram_client import TelegramClient
 
 usersRepository = DynamoDBUsersRepository()
 
@@ -14,7 +16,10 @@ OK_RESPONSE = {
 
 def handle(event, context):
     try:
-        useCase = CheckInactivityUseCase(usersRepository)
+        if not os.environ.get("TELEGRAM_TOKEN"):
+            raise NotImplementedError
+        telegramClient = TelegramClient(os.environ.get("TELEGRAM_TOKEN"))
+        useCase = CheckInactivityUseCase(usersRepository, telegramClient)
         useCase.execute()
     except Exception as e:
         print("Error!!!")
