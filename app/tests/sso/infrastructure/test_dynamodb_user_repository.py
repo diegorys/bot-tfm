@@ -45,5 +45,8 @@ def test_save_list():
             updatedCaregiver = realUser
         elif updatedDependent is None and realUser.username == "Dependiente A":
             updatedDependent = realUser
+    print(f"-----------DEPENDENTS {updatedCaregiver.id}")
+    print(updatedCaregiver.metadata["dependents"])
     assert updatedCaregiver is not None
+    assert len(updatedCaregiver.getDependents()) == 1
     assert updatedDependent is not None

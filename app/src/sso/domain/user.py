@@ -21,7 +21,7 @@ class User:
         if "dependents" not in self.relations.keys():
             self.relations["dependents"] = []
         if "dependents" not in self.metadata.keys():
-            self.metadata["dependents"] = []        
+            self.metadata["dependents"] = []
         dependentsList = [str(x.id) for x in self.relations["dependents"]]
         if user.id is not None and user.id not in str(dependentsList):
             self.relations["dependents"].append(user)
@@ -67,3 +67,13 @@ class User:
 
     def setKey(self, key: str, value: any):
         self.metadata[key] = value
+
+    def clearDependentsMetadata(self):
+        if "dependents" in self.metadata.keys():
+            dependents = self.metadata["dependents"]
+            self.metadata["dependents"] = []
+            for dependent in dependents:
+                strDependent = str(dependent)
+                if strDependent not in self.metadata["dependents"]:
+                    self.metadata["dependents"].append(strDependent)
+    

@@ -14,6 +14,7 @@ class DynamoDBUsersRepository(UserRepository):
         self.table = self.dynamodb.Table(f"tfm-{stage}-users")
 
     def save(self, user: User):
+        user.clearDependentsMetadata()
         timestamp = str(time.time())
         createdAt = None
         if user.id is None:
