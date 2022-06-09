@@ -13,7 +13,7 @@ class RegisterUserStatusUseCase:
         saved = self.repository.save(userInStatus)
         if userInStatus.status.name in self.blackList and userInStatus.user.isDependant():
             caregiver = userInStatus.user.getCaregiver()
-            message = f"Hola {caregiver.username}, el estado de la persona a la que cuidas, {userInStatus.user.username} es de {userInStatus.status.name}"
+            message = f"Hola {caregiver.username}, el estado de la persona a la que cuidas, {userInStatus.user.username}, es de {userInStatus.status.name}"
             print(message)
             self.client.emit(caregiver, message)
         return saved

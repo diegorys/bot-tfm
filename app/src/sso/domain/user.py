@@ -21,9 +21,11 @@ class User:
         if "dependents" not in self.relations.keys():
             self.relations["dependents"] = []
         if "dependents" not in self.metadata.keys():
-            self.metadata["dependents"] = []
-        self.relations["dependents"].append(user)
-        self.metadata["dependents"].append(user.id)
+            self.metadata["dependents"] = []        
+        dependentsList = [str(x.id) for x in self.relations["dependents"]]
+        if user.id is not None and user.id not in str(dependentsList):
+            self.relations["dependents"].append(user)
+            self.metadata["dependents"].append(user.id)
 
     def markActive(self, active: bool) -> None:
         self.metadata["active"] = active

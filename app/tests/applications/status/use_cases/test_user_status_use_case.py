@@ -18,7 +18,7 @@ def test_register_use_case_execute_negative_status():
     userInStatus = UserInStatusMother.forStatusNow(badStatus)
     caregiver = UserMother.getValid("caregiver")
     userInStatus.user.setCaregiver(caregiver)
-    expected = f"Hola {caregiver.username}, el estado de la persona a la que cuidas, {userInStatus.user.username} es de {userInStatus.status.name}"
+    expected = f"Hola {caregiver.username}, el estado de la persona a la que cuidas, {userInStatus.user.username}, es de {userInStatus.status.name}"
 
     useCase.execute(userInStatus)
     received = client.mockText

@@ -25,6 +25,9 @@ class DynamoDBUsersRepository(UserRepository):
         for key in user.metadata.keys():
             item[key] = user.metadata[key]
         item["updatedAt"] = timestamp
+        print('SAVE ITEM')
+        print(item)
+        print("---------")
         response = self.table.put_item(Item=item)
         if 200 != response["ResponseMetadata"]["HTTPStatusCode"]:
             raise Exception("Error saving event!")

@@ -23,7 +23,6 @@ def test_save_list():
             receivedCaregiver = realUser
         elif realUser.username == "Dependiente A":
             receivedDependent = realUser
-        
 
     assert receivedCaregiver is not None
     assert receivedDependent is not None
@@ -41,10 +40,10 @@ def test_save_list():
     users = userRepository.list()
     for user in users:
         realUser: User = user
-        if realUser.username == "Cuidador A":
+        print(f"{realUser.id}, {realUser.metadata}")
+        if updatedCaregiver is None and realUser.username == "Cuidador A":
             updatedCaregiver = realUser
-        elif realUser.username == "Dependiente A":
+        elif updatedDependent is None and realUser.username == "Dependiente A":
             updatedDependent = realUser
-
     assert updatedCaregiver is not None
     assert updatedDependent is not None

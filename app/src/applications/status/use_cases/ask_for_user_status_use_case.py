@@ -15,7 +15,7 @@ class AskForUserStatusUseCase:
         response: Response = Response(user, text, "RESPONDER_ESTADO_PERSONA_MAYOR", {})
         if "dependents" in list(user.relations.keys()):
             text = ""
-            for dependent in user.relations["dependents"]:
+            for dependent in user.getDependents():
                 try:
                     userInStatus = self.repository.getStatusOf(dependent)
                     dt_object = datetime.fromtimestamp(userInStatus.timestamp)

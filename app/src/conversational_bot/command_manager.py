@@ -1,4 +1,3 @@
-from regex import P
 from src.conversational_bot.response import Response
 from src.conversational_bot.frame import Frame
 from src.conversational_bot.command import Command
