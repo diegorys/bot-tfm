@@ -1,3 +1,4 @@
+import os
 from src.applications.inactivity.commands.register_activity_command import RegisterActivityCommand
 from src.applications.inactivity.use_cases.register_activity_use_case import (
     RegisterActivityUseCase,
@@ -33,7 +34,7 @@ from src.applications.status.commands.ask_for_user_status_command import (
 )
 from src.applications.status.commands.register_user_status_command import RegisterUserStatusCommand
 from src.sso.infrastructure.dynamodb_user_respository import DynamoDBUsersRepository
-
+from src.interfaces.telegram_client import TelegramClient
 
 class CommandManagerFactory:
     def create():
@@ -62,7 +63,9 @@ class CommandManagerFactory:
 
     def addStatusCommands(commandManager: CommandManager):
         repository = DynamoDBUserInStatusRepository()
-        registerUserStatusUseCase = RegisterUserStatusUseCase(repository)
+        TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
+        client = TelegramClient(TELEGRAM_TOKEN)
+        registerUserStatusUseCase = RegisterUserStatusUseCase(repository, client)
         askForUserStatusUseCase = AskForUserStatusUseCase(repository)
         registerCommand = RegisterUserStatusCommand(registerUserStatusUseCase)
         askCommand = AskForUserStatusCommand(askForUserStatusUseCase)
