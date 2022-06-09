@@ -125,9 +125,9 @@ functions:
       - schedule: cron(00 10 ? * * *)
       - schedule: cron(00 14 ? * * *)
       - schedule: cron(00 18 ? * * *)
-      - httpApi:
-          path: /inactivity
-          method: get
+      # - httpApi:
+      #     path: /inactivity
+      #     method: get
   # notify:
   #   handler: src/notifications/infrastructure/aws_telegram_notifications.handle
 custom:

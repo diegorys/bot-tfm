@@ -10,6 +10,9 @@ class RegisterUserStatusUseCase:
         self.client = client
 
     def execute(self, userInStatus: UserInStatus):
+        print(f"[RegisterUserStatusUseCase][execute] {userInStatus.user.username}: {userInStatus.status.name}")
+        print(userInStatus.user.metadata)
+        print(userInStatus.user.relations.keys())
         saved = self.repository.save(userInStatus)
         if userInStatus.status.name in self.blackList and userInStatus.user.isDependant():
             caregiver = userInStatus.user.getCaregiver()

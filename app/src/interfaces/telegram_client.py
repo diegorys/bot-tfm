@@ -8,7 +8,9 @@ class TelegramClient(Client):
         self.telegramBot = telegram.Bot(token)
 
     def emit(self, user: User, text: str) -> None:
-        telegramId = str(user.metadata["telegram_id"])
+        telegramId = ""
+        if "telegram_id" in user.metadata.keys():
+            telegramId = str(user.metadata["telegram_id"])
         # allowedUsers = ["1009284987"]
         if telegramId == "":
             print(f"El usuario {user.username} no tiene Telegram.")
