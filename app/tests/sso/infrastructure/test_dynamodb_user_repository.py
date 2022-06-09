@@ -17,6 +17,7 @@ def test_save_list():
     userRepository.save(dependent)
     users = userRepository.list()
     for user in users:
+        print(f"{user.id}: {user.username}")
         realUser: User = user
         if realUser.username == "Cuidador A":
             receivedCaregiver = realUser

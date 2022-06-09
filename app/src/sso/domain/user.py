@@ -15,6 +15,7 @@ class User:
     def setCaregiver(self, user):
         self.relations["caregiver"] = user
         self.metadata["caregiver"] = user.id
+        print(f"set caregiver!!!! - {user.id}")
 
     def addDependent(self, user):
         if "dependents" not in self.relations.keys():
