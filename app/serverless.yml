@@ -122,8 +122,9 @@ functions:
   inactivity:
     handler: src/applications/inactivity/api_aws_lambda/handler.handle
     events:
-      - schedule: cron(00 13 ? * * *)
-      - schedule: cron(00 20 ? * * *)
+      - schedule: cron(00 10 ? * * *)
+      - schedule: cron(00 14 ? * * *)
+      - schedule: cron(00 18 ? * * *)
       - httpApi:
           path: /inactivity
           method: get

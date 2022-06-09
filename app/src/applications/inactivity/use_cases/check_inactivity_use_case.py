@@ -14,7 +14,10 @@ class CheckInactivityUseCase:
         users = self.userRepository.list()
         for user in users:
             realUser: User = user
-            print(f"[CheckInactivityUseCase][execute]: {realUser.id}: {realUser.username}")
+            markedActive: bool = realUser.isMarkedAsActive()
+            print(
+                f"[CheckInactivityUseCase][execute]: {realUser.id}: {realUser.username} | {markedActive}"
+            )
             if realUser.isDependant() and not realUser.isMarkedAsActive():
                 carevigne = realUser.relations["caregiver"]
                 message = f"La persona a su cargo, {realUser.username}, no responde."
