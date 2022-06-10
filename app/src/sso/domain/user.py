@@ -29,9 +29,12 @@ class User:
 
     def markActive(self, active: bool) -> None:
         self.metadata["active"] = active
+        print(f"[User][markActive] {self.username}: {active}")
 
     def isMarkedAsActive(self) -> bool:
-        return self.metadata["active"]
+        active = "active" in self.metadata.keys() and self.metadata["active"] is True
+        print(f"[User][isMarkedAsActive] {self.username}: {active}")
+        return active
 
     def isActive(self) -> bool:
         last = float(self.metadata["last_activity"])
@@ -76,4 +79,3 @@ class User:
                 strDependent = str(dependent)
                 if strDependent not in self.metadata["dependents"]:
                     self.metadata["dependents"].append(strDependent)
-    

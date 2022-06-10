@@ -22,9 +22,12 @@ class UserRepository:
         return self.addRelations(userDict, foundUser)
 
     def addRelations(self, userDict, user: User):
+        print(f"USER!!!! {user.username}")
         if "caregiver" in list(user.metadata.keys()) and user.metadata["caregiver"] is not None:
+            print("Tiene cuidador")
             user.relations["caregiver"] = userDict[user.metadata["caregiver"]]
         if "dependents" in list(user.metadata.keys()) and user.metadata["dependents"] is not None:
+            print("Tiene dependientes")
             user.relations["dependents"] = []
             for dependent in list(user.metadata["dependents"]):
                 if dependent is not None and userDict[str(dependent)] is not None:

@@ -20,7 +20,7 @@ class MockUsersRepository(UserRepository):
         self.users = users
 
     def save(self, user: User):
-        return self.users.append(user)
+        return user
 
     def list(self):
         return self.users
