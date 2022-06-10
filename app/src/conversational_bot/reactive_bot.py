@@ -45,7 +45,7 @@ class ReactiveBOT:
         frame: Frame = self.nlu.execute(user, text)
         if frame.isComplete():
             response = self.commandManager.execute(frame)
-            if response is None:
+            if not isinstance(response, Response):
                 response = self.responseGenerator.execute(frame)
             now = str(time.time())
             userExpression = UserExpression(
