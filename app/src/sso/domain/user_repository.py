@@ -1,10 +1,13 @@
+from abc import abstractmethod
 from src.sso.domain.user import User
 
 
 class UserRepository:
+    @abstractmethod
     def save(self, user: User):
         pass
 
+    @abstractmethod
     def list(self):
         pass
 
@@ -33,4 +36,3 @@ class UserRepository:
                 if dependent is not None and userDict[str(dependent)] is not None:
                     user.addDependent(userDict[str(dependent)])
         return user
-

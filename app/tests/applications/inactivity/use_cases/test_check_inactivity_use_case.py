@@ -1,4 +1,3 @@
-import pytest
 from src.applications.inactivity.use_cases.check_inactivity_use_case import CheckInactivityUseCase
 from tests.sso.mocks.mock_user_repository import MockUsersRepository
 from tests.sso.mothers.user_mother import UserMother
@@ -96,22 +95,3 @@ def test_check_inactivity_use_case_inactive_marked_inactive():
 
     assert dependantD.isMarkedAsActive() is False
     assert received == expected
-
-
-def test_execute_marked():
-    assert True == True
-    # userRepository = MockUsersRepository()
-    # caregiver, dependent = UserMother.getPairCaregiverDependentWithNames("Cuidador", "Dependiente")
-    # dependent.markActive(False)
-    # userRepository.mockWith([caregiver, dependent])
-    # client: MockClient = MockClient()
-    # useCase = CheckInactivityUseCase(userRepository, client)
-    # expectedCar = f"La persona a su cargo, {dependent.username} no responde."
-    # expectedDep = f"Hola {dependent.username}, hace un rato que no hablamos, ¿cómo estás?"
-
-    # useCase.execute()
-    # receivedCar = client.mockTexts[-2]
-    # receivedDep = client.mockTexts[-1]
-
-    # assert receivedCar == expectedCar
-    # assert receivedDep == expectedDep

@@ -1,4 +1,3 @@
-import pytest
 from src.conversational_bot.frame import Frame
 from src.sso.domain.user import User
 from tests.conversational_bot.mother.frame_mother import FrameMother
@@ -24,20 +23,6 @@ def test_generate_ok():
 
     assert received == expected
 
-
-@pytest.mark.skip(reason="Por ahora consideramos frames válidos")
-def test_generate_ko():
-    frame = Frame(
-        "REGISTRAR_TOMA_MEDICAMENTO",
-        User("diego"),
-        "",
-        {"cosa": "ibuprofeno", "cuando": "a las 3"},
-    )
-    expected = "Necesito que me indices medicamento"
-
-    received = frame.generate("Tienes que tomar [medicamento] [cuando]")
-
-    assert received == expected
 
 def test_is_complete_true():
     frame = FrameMother.getValid()

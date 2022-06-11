@@ -6,3 +6,7 @@ class CommandMother:
     def getValid() -> Command:
         command = MockCommand()
         return command
+    
+    def getWithRaiseException() -> Command:
+        command = MockCommand(True)
+        return command
