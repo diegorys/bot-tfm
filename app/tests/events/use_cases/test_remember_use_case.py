@@ -24,8 +24,9 @@ def test_remember_use_case_execute():
         eventRepository.save(event)
     expected = 5
 
-    pendingEvents = eventRepository.getPendingEvents(30)
-    received = len(pendingEvents)
+    useCase.execute(30)
+
+    received = len(client.mockTexts)
 
     assert received == expected
 

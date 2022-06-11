@@ -11,7 +11,7 @@ class MockUserInStatusRepository(UserInStatusRepository):
         self._list.append(userInStatus)
 
     def getStatusOf(self, user: User) -> UserInStatus:
-        for item in self._list():
+        for item in self._list:
             userInStatus: UserInStatus = item
             if user.id == userInStatus.user.id:
                 return userInStatus
