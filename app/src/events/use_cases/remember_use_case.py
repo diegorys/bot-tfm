@@ -1,5 +1,4 @@
-from datetime import datetime, timedelta
-from src.sso.domain.user import User
+from datetime import datetime
 from src.conversational_bot.client import Client
 from src.events.domain.event import Event
 from src.events.domain.event_repository import EventRepository

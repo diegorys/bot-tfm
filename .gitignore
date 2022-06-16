@@ -137,3 +137,4 @@ dmypy.json
 logs
 database/*.db
 .vscode
+poc/credentials

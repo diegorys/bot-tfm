@@ -6,7 +6,7 @@ from src.conversational_bot.language_model import LanguageModel
 # GPT3_ENGINE = os.environ["GPT3_ENGINE"]
 
 
-class GPT3NLU(LanguageModel):
+class GPT3LanguageModel(LanguageModel):
     def identifyIntent(self, text: str):
         prompt = (
             "Ej: Hola.\nIntent: SALUDAR\nEj: Buenas tardes.\nIntent: SALUDAR\nEj: Tomar ibuprofeno.\nIntent: REGISTRAR_MEDICACION\nEj: Digo algo por decir.\nIntent: DESCONOCIDA\nEj: Me siento triste.\nIntent: REGISTRAR_ESTADO\nEj: "

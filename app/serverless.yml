@@ -114,17 +114,17 @@ functions:
           method: post
   events:
     handler: src/interfaces/event_bridge.handle
-    events:
-      - schedule: rate(10 minutes)
+    # events:
+    #   - schedule: rate(10 minutes)
       # - httpApi:
       #     path: /events
       #     method: get
   inactivity:
     handler: src/applications/inactivity/api_aws_lambda/handler.handle
-    events:
-      - schedule: cron(00 10 ? * * *)
-      - schedule: cron(00 14 ? * * *)
-      - schedule: cron(00 18 ? * * *)
+    # events:
+    #   - schedule: cron(00 10 ? * * *)
+    #   - schedule: cron(00 14 ? * * *)
+    #   - schedule: cron(00 18 ? * * *)
       # - httpApi:
       #     path: /inactivity
       #     method: get

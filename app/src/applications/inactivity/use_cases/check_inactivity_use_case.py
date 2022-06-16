@@ -1,4 +1,3 @@
-from datetime import datetime
 from src.sso.domain.user_repository import UserRepository
 from src.sso.domain.user import User
 from src.conversational_bot.client import Client
