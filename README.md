@@ -1,6 +1,10 @@
 # BOT para Telegram para acompañar y cuidar a personas mayores
 
-BOT para Telegram para acompañar y cuidar a personas mayores  
+Este repositorio contiene el código fuente necesario para el desarrollo del TFM.
 
+Requisitos:
 
-serverless plugin install -n serverless-python-requirements
+- Docker
+- Cuenta en AWS
+- Cuenta en Google para DialogFlow
+- Cuenta en Telegram para crear el BOT
