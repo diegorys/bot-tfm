@@ -53,7 +53,7 @@ def detect_intent_texts(project_id, session_id, texts, language_code):
             
 
 
-PROJECT_ID = "***REMOVED***"
+PROJECT_ID = "REPLACE_KEY"
 SESSION = "123456789"
 LANGUAGE_CODE = "es"
 

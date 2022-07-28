@@ -6,7 +6,7 @@ from src.conversational_bot.frame import Frame
 from src.conversational_bot.language_model import LanguageModel
 
 
-PROJECT_ID = "***REMOVED***"
+PROJECT_ID = "REPLACE_KEY"
 SESSION = "123456789"
 LANGUAGE_CODE = "es"
 

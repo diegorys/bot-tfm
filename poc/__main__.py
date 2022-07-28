@@ -33,7 +33,7 @@ def detect_intent_texts(project_id, session_id, texts, language_code):
         print("Fulfillment text: {}\n".format(response.query_result.fulfillment_text))
 
 
-PROJECT_ID = "***REMOVED***"
+PROJECT_ID = "REPLACE_KEY"
 SESSION = "123456789"
 LANGUAGE_CODE = "es"
 
