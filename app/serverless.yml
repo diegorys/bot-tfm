@@ -133,11 +133,11 @@ functions:
 custom:
   env:
     OPENAI_API_KEY: 
-      test: "***REMOVED***" # Diego de pago
-      prod: "***REMOVED***"
+      test: "REPLACE_KEY"
+      prod: "REPLACE_KEY"
     TELEGRAM_TOKEN:
-      test: "***REMOVED***"
-      prod: "***REMOVED***"
+      test: "REPLACE_KEY"
+      prod: "REPLACE_KEY"
 resources:
   Resources:
     DialogsTable:
